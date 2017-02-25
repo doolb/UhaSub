@@ -48,7 +48,7 @@
                 <Button Content="" ToolTip="New Sub"/>
             </StackPanel>
             
-            <local:Ass x:Name="ass" DockPanel.Dock="Right"
+            <local:Sub x:Name="ass" DockPanel.Dock="Right"
                        Grid.Row="1"/>
         
             <StackPanel Grid.Row="2">
