@@ -35,6 +35,22 @@ namespace UhaSub
              * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
              */
             subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+
+            /* 
+             * locate to row which end-time is zero
+             */
+            for(int i=0;i<subs.Items.Count -1;i++)
+            {
+                Ass ass = subs.Items[i] as Ass;
+                if (ass.End == TimeSpan.FromMilliseconds(0))
+                {
+                    subs.Items.MoveCurrentTo(ass);
+                }
+            }
+            // the is a test
+            //(subs.Items.CurrentItem as Ass).End = TimeSpan.FromMilliseconds(3);
+            //subs.Items.Refresh();
+            
         }
         
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)

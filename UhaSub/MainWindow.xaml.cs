@@ -38,15 +38,11 @@ namespace UhaSub
             dt.Start();
         }
 
-        DateTime old;
-
+        
         private void OnProcessViewports(object sender, EventArgs e)
         {
             //timeText.Text = DateTime.Now.ToString("HH:mm:ss.fff");
-            DateTime n = DateTime.Now;
-            double delta = (n - old).TotalMilliseconds;
-            old = n;
-
+            
             psText.Text = TimeSpan.FromMilliseconds(video.Time).ToString().Substring(0, 8);
             asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString().Substring(0, 8);
 

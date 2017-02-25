@@ -15,7 +15,7 @@
                     FontSize="15"
                     
                     HeadersVisibility="Column"
-                    RowHeight="32"
+                    RowHeight="27"
                     
                     InitializingNewItem="subs_InitializingNewItem">
 
@@ -25,6 +25,11 @@
             -->
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#666666" />
+                </Style>
+                
+                <Style TargetType="DataGridCell">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
                 </Style>
             </DataGrid.Resources>
         </DataGrid>

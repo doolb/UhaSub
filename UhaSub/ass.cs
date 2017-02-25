@@ -24,7 +24,7 @@ namespace UhaSub
             {
                 ID = 1,
                 Start = TimeSpan.FromSeconds(0),
-                End = TimeSpan.FromSeconds(0),
+                End = TimeSpan.FromSeconds(1),
                 Text = ""
             });
 
