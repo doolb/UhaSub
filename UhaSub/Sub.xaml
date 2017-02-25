@@ -15,7 +15,9 @@
                     FontSize="15"
                     
                     HeadersVisibility="Column"
-                    RowHeight="32" AddingNewItem="subs_AddingNewItem">
+                    RowHeight="32"
+                    
+                    InitializingNewItem="subs_InitializingNewItem">
 
             <DataGrid.Resources>
                 <!-- set style for head 

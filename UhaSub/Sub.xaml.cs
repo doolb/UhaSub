@@ -36,16 +36,17 @@ namespace UhaSub
              */
             subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
         }
-
-        private void subs_AddingNewItem(object sender, AddingNewItemEventArgs e)
+        
+        private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
         {
+
             /*
              * at now we just support ass
              */
-            
+                
             // new item
             Ass ass = e.NewItem as Ass;
-            ass.ID = subs.AlternationCount + 1;
+            ass.ID = subs.Items.Count - 1;
         }
 
     }
