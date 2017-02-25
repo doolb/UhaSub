@@ -47,9 +47,11 @@ namespace UhaSub
             double delta = (n - old).TotalMilliseconds;
             old = n;
 
-            //psText.Text = video.Position.ToString();
+            psText.Text = TimeSpan.FromMilliseconds(video.Time).ToString().Substring(0, 8);
+            asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString().Substring(0, 8);
 
-            //time.Value = (double)video.Position;
+            if(time_drag_end)
+                time.Value = (double)video.Position;
 
         }
 
@@ -58,8 +60,11 @@ namespace UhaSub
         {
             switch (e.Key)
             {
-                //case Key.Right: video.Pause(); video.Position += 10; video.Play(); break;
-                //case Key.Left:  video.Pause(); video.Position -= 10; video.Play(); break;
+                //case Key.Right: video.Pause(); video.Time += 3000; video.Play(); break;
+                //case Key.Left: video.Pause();   video.Time -= 3000; video.Play(); break;
+
+                case Key.Right: video.Time += 3000; break;
+                case Key.Left:  video.Time -= 3000; break;
             }
         }
 
@@ -73,9 +78,27 @@ namespace UhaSub
             if (fileDialog.ShowDialog() == true)
             {
                 video.Source = new Uri(fileDialog.FileName);    
-                //video.Play();
+                video.Play();
+ 
+                asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString().Substring(0, 8);
             }
         }
+
+        /*
+         * use slider change play position
+         */
+        bool time_drag_end = true;
+        private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
+        {
+            time_drag_end = true;
+            video.Position = (float)time.Value;
+        }
+
+        private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
+        {
+            time_drag_end = false;
+        }
+
 
     }
 }

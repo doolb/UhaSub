@@ -48,8 +48,7 @@ namespace UhaSub
         public IVideoPlayer m_player;
         public IMedia m_media;
 
-        private volatile bool m_isDrag;
-
+        
 
         void LoadVlc()
         {
@@ -77,7 +76,7 @@ namespace UhaSub
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                InitControls();
+                
             }));
         }
 
@@ -85,22 +84,17 @@ namespace UhaSub
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                InitControls();
+                
             }));
         }
 
-        private void InitControls()
-        {
-            //slider1.Value = 0;
-            //label1.Content = "00:00:00";
-            //label3.Content = "00:00:00";
-        }
 
         void Events_TimeChanged(object sender, MediaPlayerTimeChanged e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                //label1.Content = TimeSpan.FromMilliseconds(e.NewTime).ToString().Substring(0, 8);
+                time = e.NewTime;
+                
             }));
         }
 
@@ -108,13 +102,14 @@ namespace UhaSub
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                if (!m_isDrag)
-                {
-                   // slider1.Value = (double)e.NewPosition;
-                }
+                position = e.NewPosition;
             }));
         }
 
+        /*
+         * open a media 
+         * but not play it
+         */
         private void OpenMedia()
         {
                 m_media = m_factory.CreateMedia<IMediaFromFile>(source.OriginalString);
@@ -125,14 +120,8 @@ namespace UhaSub
                     Events_StateChanged);
 
                 m_player.Open(m_media);
-                m_player.Play();
-            
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            m_player.Play();
-        }
 
         void Events_StateChanged(object sender, MediaStateChange e)
         {
@@ -146,16 +135,27 @@ namespace UhaSub
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                //label3.Content = TimeSpan.FromMilliseconds(e.NewDuration).ToString().Substring(0, 8);
+                totalTime = e.NewDuration;
             }));
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+
+        /*  
+         * play 
+         * pause
+         * and stop
+         */
+        public void Play()
+        {
+            m_player.Play();
+        }
+
+        public void Pause()
         {
             m_player.Pause();
         }
 
-        private void button4_Click(object sender, RoutedEventArgs e)
+        public void Stop()
         {
             m_player.Stop();
         }
@@ -165,25 +165,9 @@ namespace UhaSub
             m_player.ToggleMute();
         }
 
-        private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (m_player != null)
-            {
-                m_player.Volume = (int)e.NewValue;
-            }
-        }
-
-        private void slider1_DragCompleted(object sender, DragCompletedEventArgs e)
-        {
-            //m_player.Position = (float)slider1.Value;
-            m_isDrag = false;
-        }
-
-        private void slider1_DragStarted(object sender, DragStartedEventArgs e)
-        {
-            m_isDrag = true;
-        }
-
+        /* 
+         * the source file to play
+         */
         private Uri source;
         public Uri Source
         {
@@ -191,7 +175,62 @@ namespace UhaSub
             set { source = value; OpenMedia(); }
         }
 
+        /*  
+         * the media current position
+         * between 0 and 1
+         */
+        private float position;
+        public float Position
+        {
+            get { return position; }
+            set 
+            {   
+                position = value;
+                m_player.Position = value;
+            }
+        }
 
+
+        /* 
+         * current time for media
+         * as 1ms
+         */
+        private float time;
+        public float Time
+        {
+            get { return time; }
+            set 
+            { 
+                time = value;
+                m_player.Time = (long)value;
+            }
+        }
+
+        /* 
+         * current time for media
+         * as 1ms
+         * // read only
+         */
+        private float totalTime;
+        public float TotalTime
+        {
+            get { return totalTime; }
+        }
+
+        /*
+         * volume of play
+         * between 0 and 100
+         */
+        private int volume;
+        public int Volume
+        {
+            get { return volume; }
+            set 
+            { 
+                volume = value;
+                m_player.Volume = value;
+            }
+        }
     }
 
 }
