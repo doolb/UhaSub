@@ -4,7 +4,8 @@
         xmlns:local="clr-namespace:UhaSub"
         Title="MainWindow" Height="350" Width="725"
         Background="#333333"
-        WindowState="Maximized" KeyDown="Window_KeyDown">
+        WindowState="Maximized" 
+        KeyDown="Window_KeyDown">
 
     <Window.Resources>
         <Style TargetType="Button">
@@ -14,17 +15,27 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.8*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
-            
-            <local:Video x:Name="video" DockPanel.Dock="Top"/>
-            <local:Audio    x:Name="audio"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
-        <Grid Grid.Column="1">
+        <local:Video    x:Name="video" 
+                        Grid.Column="0" Grid.Row="0"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"/>
+
+        <local:Audio    x:Name="audio"
+                        Grid.Column="0" Grid.Row="1"/>
+        
+        <Grid Grid.Column="1"
+              Grid.RowSpan="3">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>

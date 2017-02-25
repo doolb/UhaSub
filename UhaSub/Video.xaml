@@ -3,17 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:ffme="clr-namespace:Unosquare.FFmpegMediaElement;assembly=Unosquare.FFmpegMediaElement"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        
-        <MediaElement Name="mePlayer" 
-                      LoadedBehavior="Manual"/>
-        
-        <ffme:MediaElement Background="Gray" 
-                           Name="mePlayerex"
-                           LoadedBehavior="Manual" 
-                           UnloadedBehavior="Manual" Visibility="Collapsed"/>
+    <Grid Background="#333333">
+        <Grid>
+            <!--
+            <Button Height="23" HorizontalAlignment="Left"
+                    Name="button1" 
+                    VerticalAlignment="Bottom" 
+                    Width="50" 
+                    Click="button1_Click" 
+                    Grid.Row="1">Open</Button>
+            
+            <Button Height="23" HorizontalAlignment="Left" 
+                    Name="button2" VerticalAlignment="Bottom" Width="54" Click="button2_Click" Grid.Row="1">Pause</Button>
+            <Button Height="23" 
+                    Name="button3" VerticalAlignment="Bottom" Click="button3_Click" Grid.Row="1">Play</Button>
+            <Button Height="23" 
+                    Name="button4" VerticalAlignment="Bottom" Click="button4_Click" HorizontalAlignment="Right" Width="49" Grid.Row="1">Stop</Button>
+            <Button Height="23" HorizontalAlignment="Left" 
+                    Name="button5" VerticalAlignment="Bottom" Width="45" Click="button5_Click" Grid.Row="1">Mute</Button>
+            <Slider Name="slider1" 
+                    Maximum="1" Minimum="0" 
+                    Thumb.DragCompleted="slider1_DragCompleted" 
+                    Thumb.DragStarted="slider1_DragStarted" 
+                    Grid.Row="1" 
+                    Value="{Binding Mode=OneWay, Path=Position}" />
+            <Slider Height="22" HorizontalAlignment="Left" 
+                    Name="slider2" VerticalAlignment="Bottom" Width="100" Grid.Row="1" ValueChanged="slider2_ValueChanged" Maximum="100" />
+
+            <TextBlock Height="21" 
+                       Name="textBlock1" VerticalAlignment="Bottom" Grid.Row="1" />
+
+            <Label Height="28" HorizontalAlignment="Right" 
+                   Name="label1" VerticalAlignment="Bottom" Width="60" Grid.Row="1">00:00:00</Label>
+
+            <Label Height="28" HorizontalAlignment="Right" 
+                   Name="label2" VerticalAlignment="Bottom" Width="34" Grid.Row="1">/</Label>
+            <Label Height="28" HorizontalAlignment="Right" 
+                   Name="label3" VerticalAlignment="Bottom" Width="62" Grid.Row="1">00:00:00</Label>
+            
+            -->
+
+            
+            <WindowsFormsHost   Name="windowsFormsHost1"/>
+            
+        </Grid>
     </Grid>
 </UserControl>

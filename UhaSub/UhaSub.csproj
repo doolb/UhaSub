@@ -34,6 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Declarations">
+      <HintPath>nvlc\Declarations.dll</HintPath>
+    </Reference>
+    <Reference Include="Implementation">
+      <HintPath>nvlc\Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVlcWrapper">
+      <HintPath>nvlc\LibVlcWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>nvlc\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -47,9 +59,6 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="UIAutomationProvider" />
-    <Reference Include="Unosquare.FFmpegMediaElement">
-      <HintPath>.\Unosquare.FFmpegMediaElement.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
