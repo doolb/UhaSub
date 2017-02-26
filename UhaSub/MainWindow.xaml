@@ -56,7 +56,8 @@
                         ToolTip="{x:Static p:Resources.OpenFile}" 
                         Click="OnOpenFile"/>
                 <Button Content="" 
-                        ToolTip="{x:Static p:Resources.NewSub}"/>
+                        ToolTip="{x:Static p:Resources.OpenSub}"
+                        Click="OnOpenSub"/>
             </StackPanel>
             
             <local:Sub x:Name="sub" DockPanel.Dock="Right"

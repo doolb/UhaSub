@@ -109,16 +109,32 @@ namespace UhaSub
 
             if (fileDialog.ShowDialog() == true)
             {
+
+                // open video
                 video.Source = new Uri(fileDialog.FileName);    
                 video.Play();
 
+                // open sub
+                sub.Open(fileDialog.FileName);
+
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
                     fileDialog.FileName;
-                asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).
-                    ToString(@"hh\:mm\:ss\.fff");
+                asText.Text = video.TotalTime.
+                    ToString();
             }
         }
 
+        private void OnOpenSub(object sender, RoutedEventArgs e)
+        {
+            var fileDialog = new OpenFileDialog();
+            fileDialog.Filter =
+                "Text files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
+
+            if (fileDialog.ShowDialog() == true)
+            {
+                sub.Open(fileDialog.FileName);
+            }
+        }
         /*
          * use slider change play position
          */

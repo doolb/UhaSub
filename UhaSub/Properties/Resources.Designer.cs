@@ -61,11 +61,11 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create a new sub file.
+        ///   Looks up a localized string similar to Sorry,we can&apos;t open this file: .
         /// </summary>
-        public static string NewSub {
+        public static string FileNotSupport {
             get {
-                return ResourceManager.GetString("NewSub", resourceCulture);
+                return ResourceManager.GetString("FileNotSupport", resourceCulture);
             }
         }
         
@@ -75,6 +75,24 @@ namespace UhaSub.Properties {
         public static string OpenFile {
             get {
                 return ResourceManager.GetString("OpenFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry,we can&apos;t open file:.
+        /// </summary>
+        public static string OpenFileError {
+            get {
+                return ResourceManager.GetString("OpenFileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open a sub file (txt,ass).
+        /// </summary>
+        public static string OpenSub {
+            get {
+                return ResourceManager.GetString("OpenSub", resourceCulture);
             }
         }
         

@@ -36,10 +36,19 @@ namespace UhaSub
              */
             subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
 
+            locate();        
+        }
+
+        string FileName = null;
+        string FileNameExt = null;
+        string SubHeader=null;
+        
+        void locate()
+        {
             /* 
              * locate to row which end-time is zero
              */
-            for(int i=0;i<subs.Items.Count;i++)
+            for (int i = 0; i < subs.Items.Count; i++)
             {
                 Ass ass = subs.Items[i] as Ass;
                 if (ass.End == 0)
@@ -55,7 +64,6 @@ namespace UhaSub
             //subs.Items.Refresh();
 
         }
-        
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
         {
 
@@ -86,6 +94,60 @@ namespace UhaSub
         public void Save()
         {
 
+        }
+
+        public void Open(string file_name)
+        {
+            // compute the correct file name for sub
+            GetFileName(file_name);
+
+            // load ass header
+            LoadHeader(FileName, FileNameExt);
+
+            // load ass
+            subs.ItemsSource = Ass.Load(FileName,FileNameExt);
+
+                      
+            // locate to no 0 line
+            locate();
+        }
+
+        void LoadHeader(string file_name,string ext)
+        {
+            switch (ext)
+            {
+                case "txt":
+                    // load default header
+                    SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
+                    break;
+                case "ass": SubHeader = Ass.LoadHeader(file_name); break;
+                default:
+                    break;
+            }
+        }
+
+        void GetFileName(string file_name)
+        {
+            string[] ss = file_name.Split('.');
+
+            switch (ss.Last())
+            {
+                case "txt": FileNameExt = "txt"; FileName = file_name; return;
+                case "ass": FileNameExt = "ass";
+                    FileName = file_name; return;   // needn't compute file name
+                default:    break;
+            }
+
+            /* 
+             * now we will compute the true file name
+             */
+            for (int i = 0; i < ss.Length - 1; i++)
+            {
+                FileName += ss[i];
+            }
+            FileName += ".ass";
+
+            FileNameExt = "ass";
         }
 
         // select the before item
