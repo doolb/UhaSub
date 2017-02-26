@@ -59,7 +59,7 @@
                         ToolTip="{x:Static p:Resources.NewSub}"/>
             </StackPanel>
             
-            <local:Sub x:Name="ass" DockPanel.Dock="Right"
+            <local:Sub x:Name="sub" DockPanel.Dock="Right"
                        Grid.Row="1"/>
         
             <StackPanel Grid.Row="2">

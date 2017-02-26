@@ -36,6 +36,8 @@ namespace UhaSub
             dt.Interval = TimeSpan.FromMilliseconds(1);
             dt.Tick += new EventHandler(OnProcessViewports);
             dt.Start();
+
+
         }
 
         
@@ -51,17 +53,35 @@ namespace UhaSub
 
         }
 
+        Config cfg = new Config();
     
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.Key)
-            {
-                //case Key.Right: video.Pause(); video.Time += 3000; video.Play(); break;
-                //case Key.Left: video.Pause();   video.Time -= 3000; video.Play(); break;
+            /*
+             * video control
+             */
+            if(e.Key == cfg.After)  {video.Time += 3000;return;}
 
-                case Key.Right: video.Time += 3000; break;
-                case Key.Left:  video.Time -= 3000; break;
+            if(e.Key == cfg.Before) {video.Time -= 3000;return;}
+
+            if (e.Key == cfg.Pause) {video.Pause();return;}
+
+
+            /* 
+             * sub control
+             */
+            if(e.Key == cfg.Special)
+            {
+                if(e.IsDown )   { sub.Start(video.Time);return;}
+                else            { sub.End(video.Time);  return; }
             }
+
+            if (e.Key == cfg.Start) { sub.Start(video.Time); return; }
+
+            if (e.Key == cfg.End)   { sub.End(video.Time); return; }
+
+            if (e.Key == cfg.Save)  { sub.Save(); return; }
+
         }
 
         private void OnOpenFile(object sender, RoutedEventArgs e)

@@ -67,5 +67,19 @@ namespace UhaSub
             ass.ID = subs.Items.Count - 1;
         }
 
+        public void Start(long time)
+        {
+
+        }
+
+        public void End(long time)
+        {
+
+        }
+
+        public void Save()
+        {
+
+        }
     }
 }
