@@ -33,7 +33,7 @@ namespace UhaSub
             InitializeComponent();
 
             DispatcherTimer dt = new DispatcherTimer();
-            dt.Interval = TimeSpan.FromMilliseconds(16);
+            dt.Interval = TimeSpan.FromMilliseconds(1);
             dt.Tick += new EventHandler(OnProcessViewports);
             dt.Start();
         }
@@ -42,9 +42,9 @@ namespace UhaSub
         private void OnProcessViewports(object sender, EventArgs e)
         {
             //timeText.Text = DateTime.Now.ToString("HH:mm:ss.fff");
-            
-            psText.Text = TimeSpan.FromMilliseconds(video.Time).ToString().Substring(0, 8);
-            asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString().Substring(0, 8);
+
+            psText.Text = TimeSpan.FromMilliseconds(video.Time).ToString(@"hh\:mm\:ss\.ff");
+            asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString(@"hh\:mm\:ss\.ff");
 
             if(time_drag_end)
                 time.Value = (double)video.Position;

@@ -44,7 +44,9 @@ namespace UhaSub
                 Ass ass = subs.Items[i] as Ass;
                 if (ass.End == TimeSpan.FromMilliseconds(0))
                 {
-                    subs.Items.MoveCurrentTo(ass);
+                    subs.Items.MoveCurrentTo(ass);  // set current item
+                    subs.SelectedIndex = i;         // select current index
+                    break;
                 }
             }
             // the is a test

@@ -45,3 +45,9 @@ D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\NLog.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Sub.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Sub.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\zh-CN\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\zh-CN\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\en\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.en.resources
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\en\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.zh-CN.resources

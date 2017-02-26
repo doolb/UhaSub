@@ -179,14 +179,14 @@ namespace UhaSub
          * the media current position
          * between 0 and 1
          */
-        private float position;
-        public float Position
+        private double position;
+        public double Position
         {
             get { return position; }
             set 
             {   
                 position = value;
-                m_player.Position = value;
+                m_player.Position = (float)value;
             }
         }
 
@@ -195,14 +195,14 @@ namespace UhaSub
          * current time for media
          * as 1ms
          */
-        private float time;
-        public float Time
+        private long time;
+        public long Time
         {
             get { return time; }
             set 
             { 
                 time = value;
-                m_player.Time = (long)value;
+                m_player.Time = value;
             }
         }
 
@@ -211,8 +211,8 @@ namespace UhaSub
          * as 1ms
          * // read only
          */
-        private float totalTime;
-        public float TotalTime
+        private long totalTime;
+        public long TotalTime
         {
             get { return totalTime; }
         }

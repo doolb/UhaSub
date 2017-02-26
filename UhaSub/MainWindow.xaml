@@ -2,15 +2,23 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:UhaSub"
-        Title="MainWindow" Height="350" Width="725"
-        Background="#333333"
+        xmlns:p="clr-namespace:UhaSub.Properties"
+        Title="{x:Static p:Resources.Title}" 
+        Height="350" Width="725"
+        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
+        Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"
         WindowState="Maximized" 
         KeyDown="Window_KeyDown">
+    
+        <!-- bind app setting 
+            refer:http://stackoverflow.com/questions/154533/best-way-to-bind-wpf-properties-to-applicationsettings-in-c
+    -->
 
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
         </Style>
+        
     </Window.Resources>
     
     <Grid>
@@ -44,8 +52,11 @@
             
             <!-- buttons are all here-->
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Content="" ToolTip="Open File" Click="OnOpenFile"/>
-                <Button Content="" ToolTip="New Sub"/>
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.OpenFile}" 
+                        Click="OnOpenFile"/>
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.NewSub}"/>
             </StackPanel>
             
             <local:Sub x:Name="ass" DockPanel.Dock="Right"
@@ -54,9 +65,10 @@
             <StackPanel Grid.Row="2">
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="psText" Foreground="White"/>
-                    <TextBlock Text="/" Foreground="White"/>
-                    <TextBlock Name="asText" Foreground="White" Text="00:00:00"/>
+                    <TextBlock Name="psText"/>
+                    <TextBlock Text="/"/>
+                    <TextBlock Name="asText"
+                               Text="00:00:00"/>
                 </StackPanel>
                 
                 <Slider Name="time"
