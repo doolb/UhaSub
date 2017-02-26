@@ -56,7 +56,10 @@ namespace UhaSub
             p.BackColor = System.Drawing.Color.FromArgb(33,33,33);
             windowsFormsHost1.Child = p;
 
-            m_factory = new MediaPlayerFactory();
+            // find vlc = true
+            // so you can install you own vlc
+            m_factory = new MediaPlayerFactory(true);
+
             m_player = m_factory.CreatePlayer<IVideoPlayer>();
 
 
