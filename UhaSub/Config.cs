@@ -35,8 +35,18 @@ namespace UhaSub
         public Key Special { get { return special; } }
 
 
+        private Key up;
+        public Key Up { get { return up; } }
+
+        private Key down;
+        public Key Down { get { return down; } }
+
+
+
         private Key save;
         public Key Save { get { return save; } }
+
+
         public Config()
         {
             /* 
@@ -52,6 +62,8 @@ namespace UhaSub
             pause = Key.F;
             save = Key.S;
 
+            up = Key.Up;
+            down = Key.Down;
         }
     }
 }

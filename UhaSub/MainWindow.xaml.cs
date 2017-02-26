@@ -45,8 +45,8 @@ namespace UhaSub
         {
             //timeText.Text = DateTime.Now.ToString("HH:mm:ss.fff");
 
-            psText.Text = TimeSpan.FromMilliseconds(video.Time).ToString(@"hh\:mm\:ss\.ff");
-            asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString(@"hh\:mm\:ss\.ff");
+            psText.Text = video.Time.ToString();
+            asText.Text = video.TotalTime.ToString();
 
             if(time_drag_end)
                 time.Value = (double)video.Position;
@@ -54,7 +54,8 @@ namespace UhaSub
         }
 
         Config cfg = new Config();
-    
+        bool special_start = false;
+
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             /*
@@ -64,7 +65,7 @@ namespace UhaSub
 
             if(e.Key == cfg.Before) {video.Time -= 3000;return;}
 
-            if (e.Key == cfg.Pause) {video.Pause();return;}
+            if (e.Key == cfg.Pause) {video.Pause();     return;}
 
 
             /* 
@@ -72,15 +73,30 @@ namespace UhaSub
              */
             if(e.Key == cfg.Special)
             {
-                if(e.IsDown )   { sub.Start(video.Time);return;}
-                else            { sub.End(video.Time);  return; }
+                if(e.IsDown)   
+                {
+                    if (special_start)      return;
+                    
+                    sub.Start(video.Time);
+                    special_start = true;
+                    return;
+                }
+                if(e.IsUp)            
+                { 
+                    sub.End(video.Time);
+                    special_start = false;
+                    return; 
+                }
             }
 
-            if (e.Key == cfg.Start) { sub.Start(video.Time); return; }
+            if (e.Key == cfg.Start) { sub.Start(video.Time);    return; }
 
-            if (e.Key == cfg.End)   { sub.End(video.Time); return; }
+            if (e.Key == cfg.End)   { sub.End(video.Time);      return; }
 
-            if (e.Key == cfg.Save)  { sub.Save(); return; }
+            if (e.Key == cfg.Save)  { sub.Save();   return; }
+
+            if (e.Key == cfg.Up)    { sub.Up();     return; }
+            if (e.Key == cfg.Down)  { sub.Down();   return; }
 
         }
 
@@ -95,8 +111,11 @@ namespace UhaSub
             {
                 video.Source = new Uri(fileDialog.FileName);    
                 video.Play();
- 
-                asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).ToString().Substring(0, 8);
+
+                this.Title = UhaSub.Properties.Resources.Title + "  -  " +
+                    fileDialog.FileName;
+                asText.Text = TimeSpan.FromMilliseconds(video.TotalTime).
+                    ToString(@"hh\:mm\:ss\.fff");
             }
         }
 

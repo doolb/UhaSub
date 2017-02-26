@@ -198,8 +198,8 @@ namespace UhaSub
          * current time for media
          * as 1ms
          */
-        private long time;
-        public long Time
+        private Time time = 0;
+        public Time Time
         {
             get { return time; }
             set 
@@ -214,8 +214,8 @@ namespace UhaSub
          * as 1ms
          * // read only
          */
-        private long totalTime;
-        public long TotalTime
+        private Time totalTime = 0;
+        public Time TotalTime
         {
             get { return totalTime; }
         }

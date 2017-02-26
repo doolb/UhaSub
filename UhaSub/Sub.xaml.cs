@@ -39,20 +39,21 @@ namespace UhaSub
             /* 
              * locate to row which end-time is zero
              */
-            for(int i=0;i<subs.Items.Count -1;i++)
+            for(int i=0;i<subs.Items.Count;i++)
             {
                 Ass ass = subs.Items[i] as Ass;
-                if (ass.End == TimeSpan.FromMilliseconds(0))
+                if (ass.End == 0)
                 {
-                    subs.Items.MoveCurrentTo(ass);  // set current item
+                    //subs.Items.MoveCurrentTo(ass);  // set current item
                     subs.SelectedIndex = i;         // select current index
                     break;
                 }
             }
             // the is a test
             //(subs.Items.CurrentItem as Ass).End = TimeSpan.FromMilliseconds(3);
+            //(subs.SelectedItem as Ass).End = new Time(3);
             //subs.Items.Refresh();
-            
+
         }
         
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
@@ -65,21 +66,44 @@ namespace UhaSub
             // new item
             Ass ass = e.NewItem as Ass;
             ass.ID = subs.Items.Count - 1;
+            ass.Start = 0;
+            ass.End = 0;
         }
 
         public void Start(long time)
         {
-
+            (subs.SelectedItem as Ass).Start = time;
+            subs.Items.Refresh();
         }
 
         public void End(long time)
         {
-
+            (subs.SelectedItem as Ass).End = time;
+            subs.SelectedIndex += 1;    // go to next line
+            subs.Items.Refresh();
         }
 
         public void Save()
         {
 
+        }
+
+        // select the before item
+        public void Up()
+        {
+            if (subs.SelectedIndex == 0)
+                return;
+
+            subs.SelectedIndex -= 1;
+        }
+
+        // select next item
+        public void Down()
+        {
+            if (subs.SelectedIndex == subs.Items.Count -1 )
+                return;
+
+            subs.SelectedIndex += 1;
         }
     }
 }

@@ -9,8 +9,8 @@ namespace UhaSub
     public class Ass
     {
         public int ID { get; set; }
-        public TimeSpan Start { get; set; }
-        public TimeSpan End { get; set; }
+        public Time Start { get; set; }
+        public Time End { get; set; }
         public String   Text{ get; set; }
 
         /* 
@@ -23,16 +23,16 @@ namespace UhaSub
             list.Add(new Ass
             {
                 ID = 1,
-                Start = TimeSpan.FromSeconds(0),
-                End = TimeSpan.FromSeconds(1),
+                Start = 0,
+                End = 1,
                 Text = ""
             });
 
             list.Add(new Ass
             {
                 ID = 2,
-                Start = TimeSpan.FromSeconds(0),
-                End = TimeSpan.FromSeconds(0),
+                Start = 0,
+                End = 0,
                 Text = ""
             });
 
@@ -50,4 +50,6 @@ namespace UhaSub
             return list;
         }
     }
+
+    
 }

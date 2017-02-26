@@ -16,7 +16,7 @@
                     
                     HeadersVisibility="Column"
                     RowHeight="27"
-                    
+                    IsReadOnly="True"
                     InitializingNewItem="subs_InitializingNewItem">
 
             <DataGrid.Resources>
@@ -32,6 +32,7 @@
                     <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
                 </Style>
             </DataGrid.Resources>
+            
         </DataGrid>
     </Grid>
 </UserControl>
