@@ -102,5 +102,24 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 this["EndTime"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ffmpeg -i {0} -filter_complex showspectrumpic=s={1}x{2}:color=fruit:scale=sqrt {3" +
+            "}.spec.png")]
+        public string FFmpegSpectrum {
+            get {
+                return ((string)(this["FFmpegSpectrum"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("../")]
+        public string FFmpegPath {
+            get {
+                return ((string)(this["FFmpegPath"]));
+            }
+        }
     }
 }

@@ -20,23 +20,55 @@ namespace UhaSub
     /// </summary>
     public partial class Audio : UserControl
     {
+
         public Audio()
         {
             InitializeComponent();
         }
 
-        public bool SetTime(double t)
+
+        private double position=0;
+        public double Position
         {
-            if (t < this.viewAudio.ScrollableWidth)
+            get { return position; }
+            set
             {
-                viewAudio.ScrollToHorizontalOffset(t);
-                return true;
+                if (position == value) return;
+
+                position = value;
+                viewAudio.ScrollToHorizontalOffset(value*
+                    viewAudio.ScrollableWidth);
             }
-            return false;
         }
-        public double GetMax()
+
+        private Uri source=null;
+        public Uri Source
         {
-            return this.viewAudio.ScrollableWidth;
+            get { return source; }
+            set
+            {
+                if (source == value) return;
+                source = value;
+
+                /*
+                 * set source
+                 * refer:http://stackoverflow.com/questions/350027/setting-wpf-image-source-in-code
+                 */
+                img.Source = new BitmapImage(value);
+            }
         }
+
+        private Video video = null;
+        public Video Video
+        {
+            get { return video; }
+            set
+            {
+                if (value == null) return;
+                video = value;
+            }
+        }
+
+        
     }
 }

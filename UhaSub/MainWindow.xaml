@@ -40,7 +40,8 @@
                         VerticalAlignment="Stretch"/>
 
         <local:Audio    x:Name="audio"
-                        Grid.Column="0" Grid.Row="1"/>
+                        Grid.Column="0" Grid.Row="1"
+                        Source="r:\spec.png"/>
         
         <Grid Grid.Column="1"
               Grid.RowSpan="3">

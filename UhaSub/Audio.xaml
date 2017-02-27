@@ -6,14 +6,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Disabled"
-                          HorizontalScrollBarVisibility="Hidden"
-                          Name="viewAudio">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="r:/1.png"/>
-                <Image Source="r:/2.png"/>
-                <Image Source="r:/2.png"/>
+        <ScrollViewer   VerticalScrollBarVisibility="Visible"
+                        HorizontalScrollBarVisibility="Visible"
+                        Name="viewAudio">
+            <StackPanel>
+                <Image Name="img"
+                       />
             </StackPanel>
+            
         </ScrollViewer>
 
     </Grid>
