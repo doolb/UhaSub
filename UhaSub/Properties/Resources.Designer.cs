@@ -61,11 +61,11 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry,we can&apos;t open this file: .
+        ///   Looks up a localized string similar to Sorry  we could load this file,please select *.txt or *.ass..
         /// </summary>
-        public static string FileNotSupport {
+        public static string FileNoSupport {
             get {
-                return ResourceManager.GetString("FileNotSupport", resourceCulture);
+                return ResourceManager.GetString("FileNoSupport", resourceCulture);
             }
         }
         
@@ -79,20 +79,21 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry,we can&apos;t open file:.
-        /// </summary>
-        public static string OpenFileError {
-            get {
-                return ResourceManager.GetString("OpenFileError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Open a sub file (txt,ass).
         /// </summary>
         public static string OpenSub {
             get {
                 return ResourceManager.GetString("OpenSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry we can&apos;t open sub file for this video,
+        ///Please select a sub file..
+        /// </summary>
+        public static string SubFileNoFound {
+            get {
+                return ResourceManager.GetString("SubFileNoFound", resourceCulture);
             }
         }
         

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,8 +41,7 @@ namespace UhaSub
             locate();        
         }
 
-        string FileName = null;
-        string FileNameExt = null;
+        string SubFileName = null;  // sub file name will used to store
         string SubHeader=null;
         
         void locate()
@@ -102,53 +103,91 @@ namespace UhaSub
             GetFileName(file_name);
 
             // load ass header
-            LoadHeader(FileName, FileNameExt);
+            LoadFile();
 
-            // load ass
-            subs.ItemsSource = Ass.Load(FileName,FileNameExt);
-
+            
                       
             // locate to no 0 line
             locate();
         }
 
-        void LoadHeader(string file_name,string ext)
+        public void OpenNewSub(string file_name)
         {
-            switch (ext)
+            string[] ss = file_name.Split('.');
+
+            switch(ss.Last())
             {
                 case "txt":
+                    // load txt 
+                    this.subs.ItemsSource = Ass.LoadTxt(file_name);    
                     // load default header
                     SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
                     break;
-                case "ass": SubHeader = Ass.LoadHeader(file_name); break;
+
+                case "ass":
+                    this.subs.ItemsSource = Ass.LoadAss(file_name, ref SubHeader);
+                    break;                
+
                 default:
+                    MessageBox.Show(UhaSub.Properties.Resources.FileNoSupport);
                     break;
             }
+
+            // locate to no 0 line
+            locate();
         }
 
         void GetFileName(string file_name)
         {
+            /*
+             * file-name should be a video file-name
+             */
+
             string[] ss = file_name.Split('.');
 
-            switch (ss.Last())
-            {
-                case "txt": FileNameExt = "txt"; FileName = file_name; return;
-                case "ass": FileNameExt = "ass";
-                    FileName = file_name; return;   // needn't compute file name
-                default:    break;
-            }
-
             /* 
-             * now we will compute the true file name
+             * compute the correct file name
              */
+            StringBuilder s = new StringBuilder();
             for (int i = 0; i < ss.Length - 1; i++)
             {
-                FileName += ss[i];
+                s.Append(ss[i]);
             }
-            FileName += ".ass";
+            s.Append(".ass");
 
-            FileNameExt = "ass";
+            SubFileName = s.ToString();
         }
+
+        void LoadFile()
+        {
+
+            // try to open sub file
+            if (!File.Exists(SubFileName))
+            {
+                MessageBox.Show(UhaSub.Properties.Resources.SubFileNoFound);
+
+                // sub file is not exist
+                // so need open a txt file 
+                var fd = new OpenFileDialog();
+                fd.Filter = "Text files (*.txt,*ass)|*.txt,*ass|All files (*.*)|*.*";
+
+                if(fd.ShowDialog() == true)
+                {
+                    OpenNewSub(fd.FileName);
+                }
+                return;
+            }
+            
+
+            /*
+             * ass file is exist
+             * so just open it
+             */
+            this.subs.ItemsSource = Ass.LoadAss(SubFileName,ref SubHeader);
+
+        }
+
+        
 
         // select the before item
         public void Up()

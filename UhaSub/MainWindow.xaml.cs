@@ -81,7 +81,7 @@ namespace UhaSub
                     special_start = true;
                     return;
                 }
-                if(e.IsUp)            
+                if(e.IsToggled)       
                 { 
                     sub.End(video.Time);
                     special_start = false;
@@ -112,29 +112,34 @@ namespace UhaSub
 
                 // open video
                 video.Source = new Uri(fileDialog.FileName);    
-                video.Play();
 
                 // open sub
                 sub.Open(fileDialog.FileName);
+
 
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
                     fileDialog.FileName;
                 asText.Text = video.TotalTime.
                     ToString();
+
+                video.Play();
+
             }
         }
-
         private void OnOpenSub(object sender, RoutedEventArgs e)
         {
+
             var fileDialog = new OpenFileDialog();
             fileDialog.Filter =
-                "Text files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
+                "Video files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
 
             if (fileDialog.ShowDialog() == true)
             {
-                sub.Open(fileDialog.FileName);
+                // open sub
+                sub.OpenNewSub(fileDialog.FileName);
             }
         }
+
         /*
          * use slider change play position
          */

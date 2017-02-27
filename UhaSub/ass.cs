@@ -41,28 +41,12 @@ namespace UhaSub
             return list;
         }
 
-        /*
-         * load sub from file
-         */
-        static public List<Ass> Load(string file_name,string ext)
-        {
-            switch (ext)
-            {
-                case "txt": return LoadTxt(file_name);
-                case "ass": return LoadAss(file_name);
-                default:
-                    MessageBox.Show(UhaSub.Properties.Resources.FileNotSupport + file_name);
-                    return Load(); // load a default data
-            }
-        }
-
         /* 
          * load txt file 
          */
         static public List<Ass> LoadTxt(string file_name)
         {
             List<Ass> list = new List<Ass>();
-
 
             StreamReader sr = new StreamReader(file_name);
             // file should existed
@@ -91,7 +75,7 @@ namespace UhaSub
         /* 
          * load ass file 
          */
-        static public List<Ass> LoadAss(string file_name)
+        static public List<Ass> LoadAss(string file_name,ref string header)
         {
             /*
              * ass general format
@@ -104,12 +88,7 @@ namespace UhaSub
             return list;
         }
         
-        public static string LoadHeader(string file_name)
-        {
-            string h = null;
 
-            return h;
-        }
     }
 
     
