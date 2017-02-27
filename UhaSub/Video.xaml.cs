@@ -33,14 +33,27 @@ namespace UhaSub
     /// <summary>
     /// Interaction logic for Video.xaml
     /// </summary>
-    public partial class Video : UserControl
+    public partial class Video : UserControl, INotifyPropertyChanged
     {
-        public Video()
+        public Video() 
         {
             InitializeComponent();
 
             LoadVlc();
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // This method is called by the Set accessor of each property.
+        // The CallerMemberName attribute that is applied to the optional propertyName
+        // parameter causes the property name of the caller to be substituted as an argument.
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
         // varial for nVlc
@@ -97,7 +110,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 time = e.NewTime;
-                
+                NotifyPropertyChanged("Time");
             }));
         }
 
@@ -106,6 +119,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 position = e.NewPosition;
+                NotifyPropertyChanged("Position");
             }));
         }
 
@@ -139,6 +153,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 totalTime = e.NewDuration;
+                NotifyPropertyChanged("TotalTime");
             }));
         }
 
@@ -187,7 +202,8 @@ namespace UhaSub
         {
             get { return position; }
             set 
-            {   
+            {
+                if (value == position) return;
                 position = value;
                 m_player.Position = (float)value;
             }
@@ -203,7 +219,8 @@ namespace UhaSub
         {
             get { return time; }
             set 
-            { 
+            {
+                if (value == time) return;
                 time = value;
                 m_player.Time = value;
             }

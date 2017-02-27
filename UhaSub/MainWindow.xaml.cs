@@ -32,26 +32,13 @@ namespace UhaSub
         {
             InitializeComponent();
 
-            DispatcherTimer dt = new DispatcherTimer();
-            dt.Interval = TimeSpan.FromMilliseconds(1);
-            dt.Tick += new EventHandler(OnProcessViewports);
-            dt.Start();
-
-
+            /*
+             * fix notifychanged issue
+             * refer:http://stackoverflow.com/questions/8062436/inotifypropertychanged-in-wpf
+             */
+            this.DataContext = video;
         }
 
-        
-        private void OnProcessViewports(object sender, EventArgs e)
-        {
-            //timeText.Text = DateTime.Now.ToString("HH:mm:ss.fff");
-
-            psText.Text = video.Time.ToString();
-            asText.Text = video.TotalTime.ToString();
-
-            if(time_drag_end)
-                time.Value = (double)video.Position;
-
-        }
 
         Config cfg = new Config();
         bool special_start = false;
@@ -61,7 +48,7 @@ namespace UhaSub
             /*
              * video control
              */
-            if(e.Key == cfg.After)  {video.Time += 3000;return;}
+            if (e.Key == cfg.After)  {video.Time += 3000;return;}
 
             if(e.Key == cfg.Before) {video.Time -= 3000;return;}
 
@@ -122,8 +109,6 @@ namespace UhaSub
 
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
                     fileDialog.FileName;
-                asText.Text = video.TotalTime.
-                    ToString();
 
                 video.Play();
 
@@ -150,7 +135,7 @@ namespace UhaSub
         private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
             time_drag_end = true;
-            video.Position = (float)time.Value;
+            video.Position = (float)(sender as Slider).Value;
         }
 
         private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)

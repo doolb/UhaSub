@@ -67,19 +67,20 @@
         
             <StackPanel Grid.Row="2">
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="psText"/>
-                    <TextBlock Text="/"/>
-                    <TextBlock Name="asText"
-                               Text="00:00:00"/>
-                </StackPanel>
                 
-                <Slider Name="time"
-                        Focusable="False"
+                
+                <Slider Focusable="False"
+                        Value="{Binding Position,Mode=OneWay}"
                         Maximum="1" Minimum="0"
                         Thumb.DragCompleted="time_DragCompleted"
                         Thumb.DragStarted="time_DragStarted"/>
 
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Time}"/>
+                    <TextBlock Text="/"/>
+                    <TextBlock Text="{Binding TotalTime}"/>
+                </StackPanel>
+                
             </StackPanel>
         </Grid>
     </Grid>
