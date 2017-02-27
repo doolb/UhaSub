@@ -73,20 +73,11 @@ namespace UhaSub
              */
             if(e.Key == cfg.Special)
             {
-                if(e.IsDown)   
-                {
                     if (special_start)      return;
 
                     sub.Start(video.Time - cfg.StartTime);
                     special_start = true;
                     return;
-                }
-                if(e.IsToggled)       
-                {
-                    sub.End(video.Time + cfg.EndTime);
-                    special_start = false;
-                    return; 
-                }
             }
 
             if (e.Key == cfg.Start) { sub.Start(video.Time - cfg.StartTime);    return; }
@@ -100,6 +91,18 @@ namespace UhaSub
 
         }
 
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == cfg.Special)
+            {
+                if (special_start)
+                {
+                    sub.End(video.Time + cfg.EndTime);
+                    special_start = false;
+                    return;
+                }
+            }
+        }
         private void OnOpenFile(object sender, RoutedEventArgs e)
         {
 
@@ -154,6 +157,8 @@ namespace UhaSub
         {
             time_drag_end = false;
         }
+
+        
 
 
     }
