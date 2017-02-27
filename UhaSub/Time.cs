@@ -13,7 +13,7 @@ namespace UhaSub
     public class Time
     {
         // time as ms
-        private long time;
+        public long time;
 
         public override string ToString()
         {

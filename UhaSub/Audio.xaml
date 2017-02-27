@@ -6,15 +6,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
         <ScrollViewer   VerticalScrollBarVisibility="Visible"
                         HorizontalScrollBarVisibility="Visible"
-                        Name="viewAudio">
-            <StackPanel>
-                <Image Name="img"
-                       />
-            </StackPanel>
-            
+                        Name="viewAudio"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="6">
+            <Image Name="img" HorizontalAlignment="Stretch"/>
         </ScrollViewer>
 
+        <Rectangle Width="3"
+                   HorizontalAlignment="Right"
+                   Fill="White"/>
     </Grid>
 </UserControl>

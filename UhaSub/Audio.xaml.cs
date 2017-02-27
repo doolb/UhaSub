@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace UhaSub
 {
@@ -24,6 +25,39 @@ namespace UhaSub
         public Audio()
         {
             InitializeComponent();
+
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromMilliseconds(10);
+            dt.Tick += new EventHandler(OnProcessViewports);
+            dt.Start();
+
+            this.viewAudio.Loaded += viewAudio_Loaded;
+        }
+
+        void viewAudio_Loaded(object sender, RoutedEventArgs e)
+        {
+            /*
+                 * scroll vertical
+                 */
+            viewAudio.ScrollToVerticalOffset(0.85 * viewAudio.ScrollableHeight);
+        }
+
+        double scroll = 0;
+        double scrollto = 0;
+
+        private void OnProcessViewports(object sender, EventArgs e)
+        {
+            // check video
+            if (video == null || video.TotalTime==0) 
+                return;
+
+            if (scroll == 0)
+                scroll = 10.0f / video.TotalTime.time * viewAudio.ScrollableWidth;
+
+            scrollto += scroll;
+            this.viewAudio.ScrollToHorizontalOffset(
+                scrollto);
+            
         }
 
 
@@ -55,6 +89,8 @@ namespace UhaSub
                  * refer:http://stackoverflow.com/questions/350027/setting-wpf-image-source-in-code
                  */
                 img.Source = new BitmapImage(value);
+
+                
             }
         }
 
