@@ -60,7 +60,15 @@ namespace UhaSub
         {
             if (value.Equals(null))
                 return 0;
-            return value.time;
+            return value.time; 
+        }
+
+        public static Time Parse(string s)
+        {
+            TimeSpan t = TimeSpan.Parse(s);
+            Time tm = (long)t.TotalMilliseconds;
+
+            return tm;
         }
     }
 }
