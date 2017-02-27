@@ -56,7 +56,7 @@ namespace UhaSub
                 {
                     //subs.Items.MoveCurrentTo(ass);  // set current item
                     subs.SelectedIndex = i;         // select current index
-                    break;
+                    return ;
                 }
             }
             // the is a test
@@ -64,6 +64,8 @@ namespace UhaSub
             //(subs.SelectedItem as Ass).End = new Time(3);
             //subs.Items.Refresh();
 
+
+            subs.SelectedIndex = 0;
         }
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
         {
@@ -92,9 +94,11 @@ namespace UhaSub
             subs.Items.Refresh();
         }
 
-        public void Save()
+        public async void Save()
         {
-
+            if (SubFileName == null)
+                return;
+            await Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
         }
 
         public void Open(string file_name)
@@ -169,7 +173,7 @@ namespace UhaSub
                 // sub file is not exist
                 // so need open a txt file 
                 var fd = new OpenFileDialog();
-                fd.Filter = "Text files (*.txt,*ass)|*.txt,*ass|All files (*.*)|*.*";
+                fd.Filter = "Text files (*.txt)|*.txt;*ass|All files (*.*)|*.*";
 
                 if(fd.ShowDialog() == true)
                 {
@@ -192,7 +196,7 @@ namespace UhaSub
         // select the before item
         public void Up()
         {
-            if (subs.SelectedIndex == 0)
+            if (subs.SelectedIndex == 0 )
                 return;
 
             subs.SelectedIndex -= 1;

@@ -17,6 +17,7 @@ namespace UhaSub
 
         private String Style;
 
+        private int Layer;
         /* 
          * create a default ass list
          */
@@ -30,7 +31,8 @@ namespace UhaSub
                 Start = 0,
                 End = 1,
                 Text = "",
-                Style="Default"
+                Style="Default",
+                Layer=0
             });
 
             list.Add(new Ass
@@ -39,7 +41,8 @@ namespace UhaSub
                 Start = 0,
                 End = 0,
                 Text = "",
-                Style = "Default"
+                Style = "Default",
+                Layer = 0
             });
 
             return list;
@@ -67,7 +70,8 @@ namespace UhaSub
                     Start = 0,
                     End = 0,
                     Text = s,
-                    Style = "Default"
+                    Style = "Default",
+                    Layer = 0
                 });
             }
 
@@ -86,6 +90,7 @@ namespace UhaSub
              * ass general format
              * [Events]
                 Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+             *  Dialogue: 0,0:00:56.84,0:00:58.40,Default,,0,0,0,,text
              */
             List<Ass> list = new List<Ass>();
 
@@ -99,11 +104,11 @@ namespace UhaSub
             while(true)
             {
                 string l = sr.ReadLine();
-                s.Append(l);
+                s.Append(l+"\n");
 
                 if (l == "[Events]")
                 {
-                    s.Append(sr.ReadLine());    // read next line
+                    s.Append(sr.ReadLine() + "\n");    // read next line
                     break;
                 }
             }
@@ -128,6 +133,13 @@ namespace UhaSub
                     t.Append(ls[j] + ",");
                 t.Length -= 1; // skip the finaly ','
 
+                /*
+                 * compute layer id
+                 */
+                int start = l.IndexOf(':');
+                int end = l.IndexOf(',');
+                string sl = l.Substring(start + 1,end - start -1 );
+
                     /*
                      * add to list
                      */
@@ -137,12 +149,49 @@ namespace UhaSub
                         Start = Time.Parse(ls[1]),
                         End = Time.Parse(ls[2]),
                         Text = t.ToString(),
-                        Style = ls[3]
+                        Style = ls[3],
+                        Layer = int.Parse(sl)
                     });
             }
 
             sr.Close();
             return list;
+        }
+
+        public static async Task<bool> Save(List<Ass> list,string head,string path)
+        {
+            StreamWriter sw = new StreamWriter(path);
+
+            // write header
+            await sw.WriteAsync(head);
+
+
+            /*
+             * write content
+             *  Dialogue: 0,0:00:56.84,0:00:58.40,Default,,0,0,0,,text
+             */
+            StringBuilder s = new StringBuilder();
+            foreach (Ass ass in list)
+            {
+                /*
+                 * build current line
+                 */
+                s.Append("Dialogue: ");
+                s.Append(ass.Layer.ToString() + ",");
+                s.Append(ass.Start.ToString() + ",");
+                s.Append(ass.End.ToString() + ",");
+                s.Append(ass.Style + ",,0,0,0,,");
+                s.Append(ass.Text);
+
+                // write
+                await sw.WriteLineAsync(s.ToString());
+
+                s.Clear();
+            }
+
+            await sw.FlushAsync();
+            sw.Close();
+            return true;
         }
         
 

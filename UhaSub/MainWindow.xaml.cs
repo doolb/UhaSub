@@ -93,7 +93,7 @@ namespace UhaSub
 
             if (e.Key == cfg.End)   { sub.End(video.Time);      return; }
 
-            if (e.Key == cfg.Save)  { sub.Save();   return; }
+            if (e.Key == cfg.Save) { sub.Save(); return; }
 
             if (e.Key == cfg.Up)    { sub.Up();     return; }
             if (e.Key == cfg.Down)  { sub.Down();   return; }

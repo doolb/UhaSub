@@ -18,7 +18,7 @@ namespace UhaSub
         public override string ToString()
         {
             return TimeSpan.FromMilliseconds(time).
-                ToString(@"hh\:mm\:ss\.fff");
+                ToString(@"h\:mm\:ss\.ff");
         }
 
         public Time()
