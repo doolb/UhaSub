@@ -76,22 +76,22 @@ namespace UhaSub
                 if(e.IsDown)   
                 {
                     if (special_start)      return;
-                    
-                    sub.Start(video.Time);
+
+                    sub.Start(video.Time - cfg.StartTime);
                     special_start = true;
                     return;
                 }
                 if(e.IsToggled)       
-                { 
-                    sub.End(video.Time);
+                {
+                    sub.End(video.Time + cfg.EndTime);
                     special_start = false;
                     return; 
                 }
             }
 
-            if (e.Key == cfg.Start) { sub.Start(video.Time);    return; }
+            if (e.Key == cfg.Start) { sub.Start(video.Time - cfg.StartTime);    return; }
 
-            if (e.Key == cfg.End)   { sub.End(video.Time);      return; }
+            if (e.Key == cfg.End)   { sub.End(video.Time + cfg.EndTime);      return; }
 
             if (e.Key == cfg.Save) { sub.Save(); return; }
 

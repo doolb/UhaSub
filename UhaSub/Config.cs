@@ -47,6 +47,9 @@ namespace UhaSub
         public Key Save { get { return save; } }
 
 
+        public int StartTime;
+        public int EndTime;
+
         public Config()
         {
             /* 
@@ -64,6 +67,9 @@ namespace UhaSub
 
             up = Key.Up;
             down = Key.Down;
+
+            StartTime = UhaSub.Properties.Settings.Default.StartTime;
+            EndTime = UhaSub.Properties.Settings.Default.EndTime;
         }
     }
 }

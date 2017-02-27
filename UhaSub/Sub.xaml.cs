@@ -189,6 +189,7 @@ namespace UhaSub
              */
             this.subs.ItemsSource = Ass.LoadAss(SubFileName,ref SubHeader);
 
+            locate();
         }
 
         
