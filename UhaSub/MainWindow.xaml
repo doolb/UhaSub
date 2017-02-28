@@ -41,7 +41,8 @@
 
         <local:Audio    x:Name="audio"
                         Grid.Column="0" Grid.Row="1"
-                        Source="r:\spec.png"/>
+                        Source="r:\spec.png"
+                        Position="{Binding Position}"/>
         
         <Grid Grid.Column="1"
               Grid.RowSpan="3">

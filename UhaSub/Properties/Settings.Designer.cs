@@ -105,8 +105,8 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ffmpeg -i {0} -filter_complex showspectrumpic=s={1}x{2}:color=fruit:scale=sqrt {3" +
-            "}.spec.png")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}.spec." +
+            "png")]
         public string FFmpegSpectrum {
             get {
                 return ((string)(this["FFmpegSpectrum"]));
@@ -115,7 +115,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("../")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\project\\Windows\\NET\\uhasub\\UhaSub\\ffmpeg")]
         public string FFmpegPath {
             get {
                 return ((string)(this["FFmpegPath"]));

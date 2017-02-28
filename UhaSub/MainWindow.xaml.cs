@@ -107,7 +107,10 @@ namespace UhaSub
                 // open sub
                 sub.Open(fileDialog.FileName);
 
+                // open audio
+                audio.Open(fileDialog.FileName);
 
+                // set title
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
                     fileDialog.FileName;
 

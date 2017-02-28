@@ -32,6 +32,8 @@ namespace UhaSub
             dt.Start();
 
             this.viewAudio.Loaded += viewAudio_Loaded;
+
+            
         }
 
         void viewAudio_Loaded(object sender, RoutedEventArgs e)
@@ -60,21 +62,39 @@ namespace UhaSub
             
         }
 
-
-        private double position=0;
-        public double Position
+        public void Open(string path)
         {
-            get { return position; }
-            set
-            {
-                if (position == value) return;
+            string s = FFmpeg.Spec(path);
 
-                position = value;
-                viewAudio.ScrollToHorizontalOffset(value*
-                    viewAudio.ScrollableWidth);
-            }
+            Source = new Uri(s);
+
+            viewAudio.ScrollToLeftEnd();
         }
 
+        /*
+         * create a bindable position
+         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
+         */
+        public double Position
+        {
+            get { return (double)this.GetValue(StateProperty); }
+            set { this.SetValue(StateProperty, value); }
+        }
+        public static readonly DependencyProperty StateProperty = DependencyProperty.Register(
+          "Position", typeof(double), typeof(Audio), new PropertyMetadata(OnPositionChanged));
+
+        private static void OnPositionChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Audio a = d as Audio;
+            a.OnPositionChanged(e);
+        }
+
+        private void OnPositionChanged(DependencyPropertyChangedEventArgs e)
+        {
+            double v = (double)e.NewValue;
+            this.viewAudio.ScrollToHorizontalOffset(v*viewAudio.ScrollableWidth); 
+        }  
+        
         private Uri source=null;
         public Uri Source
         {

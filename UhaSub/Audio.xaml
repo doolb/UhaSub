@@ -4,13 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             MinHeight="180">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -19,12 +16,24 @@
                         HorizontalScrollBarVisibility="Visible"
                         Name="viewAudio"
                         Grid.Column="0"
-                        Grid.ColumnSpan="6">
-            <Image Name="img" HorizontalAlignment="Stretch"/>
+                        Grid.ColumnSpan="2">
+            <Image Name="img" HorizontalAlignment="Stretch">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="2"/>
+                        <TranslateTransform Y="-150"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
         </ScrollViewer>
 
-        <Rectangle Width="3"
-                   HorizontalAlignment="Right"
-                   Fill="White"/>
+        <Canvas Grid.ColumnSpan="2">
+            <Rectangle Width="3"
+                   HorizontalAlignment="Center"
+                   Fill="Cyan"
+                   Height="180"
+                   Canvas.Left="30"/>
+        </Canvas>
+        
     </Grid>
 </UserControl>

@@ -38,10 +38,10 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">-100</Value>
     </Setting>
     <Setting Name="FFmpegSpectrum" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ffmpeg -i {0} -filter_complex showspectrumpic=s={1}x{2}:color=fruit:scale=sqrt {3}.spec.png</Value>
+      <Value Profile="(Default)">-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}.spec.png</Value>
     </Setting>
     <Setting Name="FFmpegPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">../</Value>
+      <Value Profile="(Default)">D:\project\Windows\NET\uhasub\UhaSub\ffmpeg</Value>
     </Setting>
   </Settings>
 </SettingsFile>
