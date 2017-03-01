@@ -7,33 +7,7 @@
              d:DesignHeight="300" d:DesignWidth="300"
              MinHeight="180">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <ScrollViewer   VerticalScrollBarVisibility="Visible"
-                        HorizontalScrollBarVisibility="Visible"
-                        Name="viewAudio"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2">
-            <Image Name="img" HorizontalAlignment="Stretch">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="2"/>
-                        <TranslateTransform Y="-150"/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </ScrollViewer>
-
-        <Canvas Grid.ColumnSpan="2">
-            <Rectangle Width="3"
-                   HorizontalAlignment="Center"
-                   Fill="Cyan"
-                   Height="180"
-                   Canvas.Left="30"/>
-        </Canvas>
+       
         
     </Grid>
 </UserControl>

@@ -110,6 +110,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 time = e.NewTime;
+                this.ctText.Text = time.ToString();
                 NotifyPropertyChanged("Time");
             }));
         }
@@ -119,6 +120,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 position = e.NewPosition;
+                this.tmSlider.Value = position;
                 NotifyPropertyChanged("Position");
             }));
         }
@@ -129,14 +131,18 @@ namespace UhaSub
          */
         private void OpenMedia()
         {
-                m_media = m_factory.CreateMedia<IMediaFromFile>(source.OriginalString);
+            m_media = m_factory.CreateMedia<IMediaFromFile>(source.OriginalString);
 
-                m_media.Events.DurationChanged += new EventHandler<MediaDurationChange>(
+            m_media.Events.DurationChanged += new EventHandler<MediaDurationChange>(
                     Events_DurationChanged);
-                m_media.Events.StateChanged += new EventHandler<MediaStateChange>(
+            m_media.Events.StateChanged += new EventHandler<MediaStateChange>(
                     Events_StateChanged);
 
-                m_player.Open(m_media);
+            // open mediao
+            m_player.Open(m_media);
+
+            // set volume
+            m_player.Volume = (int)vlSlider.Value;
         }
 
 
@@ -144,7 +150,7 @@ namespace UhaSub
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-
+                
             }));
         }
 
@@ -153,6 +159,7 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 totalTime = e.NewDuration;
+                this.ttText.Text = totalTime.ToString();
                 NotifyPropertyChanged("TotalTime");
             }));
         }
@@ -203,6 +210,7 @@ namespace UhaSub
             get { return position; }
             set 
             {
+                if (value < 0) return;
                 if (value == position) return;
                 position = value;
                 m_player.Position = (float)value;
@@ -237,20 +245,65 @@ namespace UhaSub
             get { return totalTime; }
         }
 
+        
+
         /*
-         * volume of play
-         * between 0 and 100
+         * use slider change play position
          */
-        private int volume;
-        public int Volume
+        bool time_drag_end = true;
+        private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
-            get { return volume; }
-            set 
-            { 
-                volume = value;
-                m_player.Volume = value;
-            }
+            time_drag_end = true;
+            m_player.Position = (float)(sender as Slider).Value;
         }
+
+        private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
+        {
+            time_drag_end = false;
+        }
+
+        /*
+         * chage volume
+         */
+        private void vlSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (m_player == null) return;
+            m_player.Volume = (int)e.NewValue;
+        }
+
+        /*
+         * play state
+         */
+        private bool is_playing = false;
+
+        private string s_play = "";
+        private string s_play_tip = "Play";
+        private string s_pause = "";
+        private string s_pause_tip = "Pause";
+
+        private void OnPlayClick(object sender, RoutedEventArgs e)
+        {
+            if (m_media == null)
+                return;
+
+            Button btn = this.plBtn;
+            if (is_playing)
+            {
+                btn.Content = s_play;
+                btn.ToolTip = s_play_tip;
+                m_player.Pause();
+            }
+            else
+            {
+                btn.Content = s_pause;
+                btn.ToolTip = s_pause_tip;   
+                m_player.Play();
+            }
+
+            is_playing = !is_playing;
+        }
+
+        
     }
 
 }

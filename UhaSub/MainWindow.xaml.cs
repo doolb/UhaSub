@@ -37,7 +37,6 @@ namespace UhaSub
              * refer:http://stackoverflow.com/questions/8062436/inotifypropertychanged-in-wpf
              */
             this.DataContext = video;
-            this.audio.Video = video;
         }
 
 
@@ -107,14 +106,10 @@ namespace UhaSub
                 // open sub
                 sub.Open(fileDialog.FileName);
 
-                // open audio
-                audio.Open(fileDialog.FileName);
-
+                
                 // set title
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
                     fileDialog.FileName;
-
-                video.Play();
 
             }
         }
@@ -132,20 +127,7 @@ namespace UhaSub
             }
         }
 
-        /*
-         * use slider change play position
-         */
-        bool time_drag_end = true;
-        private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
-        {
-            time_drag_end = true;
-            video.Position = (float)(sender as Slider).Value;
-        }
-
-        private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
-        {
-            time_drag_end = false;
-        }
+        
 
         
 

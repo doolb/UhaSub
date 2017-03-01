@@ -105,8 +105,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}.spec." +
-            "png")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}")]
         public string FFmpegSpectrum {
             get {
                 return ((string)(this["FFmpegSpectrum"]));
