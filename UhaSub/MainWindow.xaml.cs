@@ -32,11 +32,7 @@ namespace UhaSub
         {
             InitializeComponent();
 
-            /*
-             * fix notifychanged issue
-             * refer:http://stackoverflow.com/questions/8062436/inotifypropertychanged-in-wpf
-             */
-            this.DataContext = video;
+            this.sub.SubSelected += this.video.OnSubChanged;
         }
 
 

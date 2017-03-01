@@ -211,5 +211,21 @@ namespace UhaSub
 
             subs.SelectedIndex += 1;
         }
+
+        /*
+         * show-sub callback
+         * refer:http://stackoverflow.com/questions/1746332/delegates-and-callbacks
+         */
+        public delegate void SubCallBackDemo(Ass ass);
+
+        public event SubCallBackDemo SubSelected;
+
+        private void subs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.subs.SelectedItem == null) return;
+            SubSelected(this.subs.SelectedItem as Ass);
+            this.subs.ScrollIntoView(this.subs.SelectedItem);
+        }
+
     }
 }

@@ -316,6 +316,17 @@ namespace UhaSub
             this.Pause();
         }
 
+
+        /*
+         * sub selected changed
+         */
+        public void OnSubChanged(Ass ass)
+        {
+            this.sub.Text = ass.Text;
+        }
+
+
+        
         
     }
 

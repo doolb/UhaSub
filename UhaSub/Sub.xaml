@@ -13,11 +13,12 @@
                     
                     Foreground="Azure"
                     FontSize="15"
-                    
+                    Focusable="True"
                     HeadersVisibility="Column"
                     RowHeight="27"
                     IsReadOnly="True"
-                    InitializingNewItem="subs_InitializingNewItem">
+                    InitializingNewItem="subs_InitializingNewItem" SelectionChanged="subs_SelectionChanged"
+                    >
 
             <DataGrid.Resources>
                 <!-- set style for head 
