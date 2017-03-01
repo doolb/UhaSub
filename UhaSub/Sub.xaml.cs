@@ -201,6 +201,8 @@ namespace UhaSub
                 return;
 
             subs.SelectedIndex -= 1;
+            this.subs.ScrollIntoView(this.subs.SelectedItem);
+
         }
 
         // select next item
@@ -210,6 +212,8 @@ namespace UhaSub
                 return;
 
             subs.SelectedIndex += 1;
+            this.subs.ScrollIntoView(this.subs.SelectedItem);
+
         }
 
         /*

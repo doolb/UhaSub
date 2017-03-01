@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:UhaSub.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Background="#333333">
@@ -20,9 +21,7 @@
                 <Setter Property="Background"   Value="{x:Null}"/>
                 <Setter Property="Foreground"   Value="White"/>
                 <Setter Property="BorderBrush"  Value="{x:Null}"/>
-                <Setter Property="FontSize"     Value="21"/>
-                <Setter Property="Width"        Value="30"/>
-                <Setter Property="Height"        Value="30"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
             </Style>
         </Grid.Resources>
         
@@ -32,8 +31,8 @@
         <StackPanel Grid.Row="1">
             
             <!-- sub preview -->
-            <TextBlock Name="sub"
-                       Text="sdf"
+            <TextBlock Name="subView"
+                       Text="Sub Preview"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="18"
@@ -49,11 +48,8 @@
 
             <DockPanel>
                 <TextBlock Text="0:00:00.00" Name="ctText" HorizontalAlignment="Left"/>
-                <TextBlock Text="/" HorizontalAlignment="Left"/>
+                <TextBlock Text=" / " HorizontalAlignment="Left"/>
                 <TextBlock Text="0:00:00.00" Name="ttText" HorizontalAlignment="Left"/>
-
-
-
 
 
                 <!-- volume -->
@@ -64,11 +60,42 @@
                             Maximum="100" Minimum="0"
                             ValueChanged="vlSlider_ValueChanged"
                             DockPanel.Dock="Right"/>
+                <!-- mutex -->
+                <Button     Content=""
+                            DockPanel.Dock="Right"
+                            Click="OnMutexClick"
+                            VerticalAlignment="Top"/>
 
+                <!-- open setting -->
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.OpenSetting}" 
+                        Click="OnOpenSetting"
+                        Margin="0 0 10 0"
+                        DockPanel.Dock="Right"/>
+                
+                <!-- open sub -->
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.OpenSub}" 
+                        Click="OnOpenSub"
+                        Margin="0 0 10 0"
+                        DockPanel.Dock="Right"/>
+
+                <!-- open video and sub -->
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.OpenFile}" 
+                        Click="OnOpenFile"
+                        Margin="10 0 10 0"
+                        DockPanel.Dock="Right"/>
+                
+                
+                
                 <Button     Content="&#xE213;"
                             ToolTip="Play"
                             Name="plBtn"
-                            VerticalAlignment="Center"
+                            FontSize="24"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Width="30" Height="30"
                             Click="OnPlayClick"/>
 
             </DockPanel>

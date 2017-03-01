@@ -33,6 +33,7 @@ namespace UhaSub
             InitializeComponent();
 
             this.sub.SubSelected += this.video.OnSubChanged;
+            this.video.main = this;
         }
 
 
@@ -86,7 +87,7 @@ namespace UhaSub
                 }
             }
         }
-        private void OnOpenFile(object sender, RoutedEventArgs e)
+        public void OnOpenFile(object sender, RoutedEventArgs e)
         {
 
             var fileDialog = new OpenFileDialog();
@@ -109,7 +110,7 @@ namespace UhaSub
 
             }
         }
-        private void OnOpenSub(object sender, RoutedEventArgs e)
+        public void OnOpenSub(object sender, RoutedEventArgs e)
         {
 
             var fileDialog = new OpenFileDialog();
@@ -123,7 +124,10 @@ namespace UhaSub
             }
         }
 
-        
+        public void OnOpenSetting(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
         
 

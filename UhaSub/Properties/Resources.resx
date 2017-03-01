@@ -123,6 +123,9 @@
   <data name="OpenFile" xml:space="preserve">
     <value>Open File</value>
   </data>
+  <data name="OpenSetting" xml:space="preserve">
+    <value>Chage setting</value>
+  </data>
   <data name="OpenSub" xml:space="preserve">
     <value>Open a sub file (txt,ass)</value>
   </data>

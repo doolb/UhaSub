@@ -79,6 +79,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chage setting.
+        /// </summary>
+        public static string OpenSetting {
+            get {
+                return ResourceManager.GetString("OpenSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open a sub file (txt,ass).
         /// </summary>
         public static string OpenSub {

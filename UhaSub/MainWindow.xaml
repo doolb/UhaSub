@@ -28,36 +28,21 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
         <local:Video    x:Name="video" 
-                        Grid.Column="0" Grid.Row="0"
+                        Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"/>
 
+        <local:Sub      x:Name="sub" DockPanel.Dock="Right"
+                        Grid.Column="1" Grid.Row="0"
+                        Focusable="False"/>
 
-        
-        <Grid Grid.Column="1">
-            
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            
-            <!-- buttons are all here-->
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Content="" 
-                        ToolTip="{x:Static p:Resources.OpenFile}" 
-                        Click="OnOpenFile"/>
-                <Button Content="" 
-                        ToolTip="{x:Static p:Resources.OpenSub}" 
-                        Click="OnOpenSub"/>
-            </StackPanel>
-            
-            <local:Sub      x:Name="sub" DockPanel.Dock="Right"
-                            Grid.Row="1"
-                            Focusable="False"/>
-            <local:Audio    x:Name="audio"
-                            Grid.Row="2"/>
-        </Grid>
+        <local:Audio    x:Name="audio"
+                        Grid.Column="1" Grid.Row="0"/>
     </Grid>
 </Window>

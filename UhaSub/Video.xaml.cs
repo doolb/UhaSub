@@ -223,10 +223,6 @@ namespace UhaSub
             m_player.Stop();
         }
 
-        private void button5_Click(object sender, RoutedEventArgs e)
-        {
-            m_player.ToggleMute();
-        }
 
         /* 
          * the source file to play
@@ -266,6 +262,7 @@ namespace UhaSub
             get { return time; }
             set 
             {
+                if (m_media == null) return;
                 if (value == time) return;
                 time = value;
                 m_player.Time = value;
@@ -322,12 +319,58 @@ namespace UhaSub
          */
         public void OnSubChanged(Ass ass)
         {
-            this.sub.Text = ass.Text;
+            this.subView.Text = ass.Text;
+        }
+
+        /*
+         * mutex
+         */
+        private bool is_mutex = false;
+
+        private string s_mutex = "";
+        private string s_mutex_tip = "Mutex";
+        private string s_no_mutex = "";
+        private string s_no_mutex_tip = "Open sound";
+
+        private void OnMutexClick(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+
+            if(is_mutex)
+            {
+                btn.Content = s_no_mutex;
+                btn.ToolTip = s_no_mutex_tip;
+                m_player.ToggleMute();
+            }
+            else
+            {
+                btn.Content = s_mutex;
+                btn.ToolTip = s_mutex_tip;
+                m_player.ToggleMute();
+            }
+
+            is_mutex = !is_mutex;
         }
 
 
-        
-        
+        /*
+         * open file
+         */
+        public MainWindow main;
+        public void OnOpenFile(object sender, RoutedEventArgs e)
+        {
+            main.OnOpenFile(sender, e);
+        }
+
+        public void OnOpenSub(object sender, RoutedEventArgs e)
+        {
+            main.OnOpenSub(sender, e);
+        }
+
+        public void OnOpenSetting(object sender, RoutedEventArgs e)
+        {
+            main.OnOpenSetting(sender, e);
+        }
     }
 
 }
