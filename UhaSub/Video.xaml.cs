@@ -131,6 +131,11 @@ namespace UhaSub
          */
         private void OpenMedia()
         {
+            if (m_media != null)
+            {
+                m_media.Dispose();
+            }
+
             m_media = m_factory.CreateMedia<IMediaFromFile>(source.OriginalString);
 
             m_media.Events.DurationChanged += new EventHandler<MediaDurationChange>(
@@ -143,6 +148,11 @@ namespace UhaSub
 
             // set volume
             m_player.Volume = (int)vlSlider.Value;
+
+            // chage button to play
+            is_playing = false;
+            plBtn.Content = s_play;
+            plBtn.ToolTip = s_play_tip;
         }
 
 
@@ -175,9 +185,37 @@ namespace UhaSub
             m_player.Play();
         }
 
+        /*
+         * play state
+         */
+        private bool is_playing = false;
+
+        private string s_play = "";
+        private string s_play_tip = "Play";
+        private string s_pause = "";
+        private string s_pause_tip = "Pause";
         public void Pause()
         {
-            m_player.Pause();
+            if (m_media == null)
+                return;
+
+            Button btn = this.plBtn;
+
+            if (is_playing)
+            {
+                btn.Content = s_play;
+                btn.ToolTip = s_play_tip;
+                m_player.Pause();
+            }
+            else
+            {
+
+                btn.Content = s_pause;
+                btn.ToolTip = s_pause_tip;
+                m_player.Play();
+            }
+
+            is_playing = !is_playing;
         }
 
         public void Stop()
@@ -271,36 +309,11 @@ namespace UhaSub
             m_player.Volume = (int)e.NewValue;
         }
 
-        /*
-         * play state
-         */
-        private bool is_playing = false;
 
-        private string s_play = "";
-        private string s_play_tip = "Play";
-        private string s_pause = "";
-        private string s_pause_tip = "Pause";
 
         private void OnPlayClick(object sender, RoutedEventArgs e)
         {
-            if (m_media == null)
-                return;
-
-            Button btn = this.plBtn;
-            if (is_playing)
-            {
-                btn.Content = s_play;
-                btn.ToolTip = s_play_tip;
-                m_player.Pause();
-            }
-            else
-            {
-                btn.Content = s_pause;
-                btn.ToolTip = s_pause_tip;   
-                m_player.Play();
-            }
-
-            is_playing = !is_playing;
+            this.Pause();
         }
 
         
