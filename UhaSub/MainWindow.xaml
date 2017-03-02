@@ -43,6 +43,6 @@
                         Focusable="False"/>
 
         <local:Audio    x:Name="audio"
-                        Grid.Column="1" Grid.Row="0"/>
+                        Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Window>

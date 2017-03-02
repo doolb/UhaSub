@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSCore">
+      <HintPath>.\CSCore.dll</HintPath>
+    </Reference>
     <Reference Include="Declarations">
       <HintPath>nvlc\Declarations.dll</HintPath>
     </Reference>
@@ -86,7 +89,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ass.cs" />
+    <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="wave\GradientCalculator.cs" />
+    <Compile Include="wave\ISpectrumProvider.cs" />
+    <Compile Include="wave\LineSpectrum.cs" />
     <Compile Include="Properties\Resources.zh-CN.Designer.cs">
       <DependentUpon>Resources.zh-CN.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -97,6 +104,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="wave\ScalingStrategy.cs" />
+    <Compile Include="wave\SpectrumBase.cs" />
     <Compile Include="Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
@@ -104,6 +113,7 @@
     <Compile Include="Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wave\VoicePrint3DSpectrum.cs" />
     <Page Include="Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

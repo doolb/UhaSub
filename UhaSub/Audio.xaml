@@ -3,11 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              MinHeight="180">
     <Grid>
-       
+        
+        <!-- use wf control 
+        refer :http://www.codescratcher.com/wpf/windows-forms-controls-in-wpf/
+        -->
+        <ScrollViewer>
+            <WindowsFormsHost HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch">
+                <wf:PictureBox x:Name="wave_box"/>
+            </WindowsFormsHost>
+        </ScrollViewer>
         
     </Grid>
 </UserControl>

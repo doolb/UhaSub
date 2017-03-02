@@ -34,6 +34,13 @@ namespace UhaSub
 
             this.sub.SubSelected += this.video.OnSubChanged;
             this.video.main = this;
+
+            this.Closed += MainWindow_Closed;
+        }
+
+        void MainWindow_Closed(object sender, EventArgs e)
+        {
+            audio.Close();    
         }
 
 
