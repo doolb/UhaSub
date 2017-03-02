@@ -6,18 +6,18 @@
              xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
-             MinHeight="180">
+             MinHeight="180"
+             SizeChanged="AudioSizeChanged">
     <Grid>
         
         <!-- use wf control 
         refer :http://www.codescratcher.com/wpf/windows-forms-controls-in-wpf/
         -->
-        <ScrollViewer>
-            <WindowsFormsHost HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch">
-                <wf:PictureBox x:Name="wave_box"/>
-            </WindowsFormsHost>
-        </ScrollViewer>
-        
+        <WindowsFormsHost HorizontalAlignment="Stretch"
+                              VerticalAlignment="Top">
+            <wf:PictureBox x:Name="wave_box"
+                               Width="270" Height="81"/>
+        </WindowsFormsHost>
+
     </Grid>
 </UserControl>

@@ -171,6 +171,11 @@ namespace UhaSub
             }
         }
 
+        private void AudioSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //this.wave_box.Height = (int)e.NewSize.Height/3*2;
+        }
+
  
 
 
