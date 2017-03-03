@@ -13,7 +13,7 @@ namespace UhaSub.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    public sealed partial class UI : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class UI : global::System.Configuration.ApplicationSettingsBase {
         
         private static UI defaultInstance = ((UI)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new UI())));
         
@@ -41,12 +41,15 @@ namespace UhaSub.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("en")]
         public string localization {
             get {
                 return ((string)(this["localization"]));
+            }
+            set {
+                this["localization"] = value;
             }
         }
         

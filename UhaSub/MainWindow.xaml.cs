@@ -133,7 +133,8 @@ namespace UhaSub
 
         public void OnOpenSetting(object sender, RoutedEventArgs e)
         {
-            
+            var set = new setting.Setting();
+            set.Show();
         }
 
         

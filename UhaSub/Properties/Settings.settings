@@ -2,15 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UhaSub.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="background" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">#333333</Value>
-    </Setting>
-    <Setting Name="foreground" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">SkyBlue</Value>
-    </Setting>
-    <Setting Name="localization" Type="System.String" Scope="User">
-      <Value Profile="(Default)">en</Value>
-    </Setting>
     <Setting Name="AssHeader" Type="System.String" Scope="Application">
       <Value Profile="(Default)">[Script Info]
 ; // this is a ass header example
@@ -37,17 +28,8 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="EndTime" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">-100</Value>
     </Setting>
-    <Setting Name="FFmpegSpectrum" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}</Value>
-    </Setting>
-    <Setting Name="FFmpegPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">D:\project\Windows\NET\uhasub\UhaSub\ffmpeg</Value>
-    </Setting>
-    <Setting Name="background_code" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">51</Value>
-    </Setting>
-    <Setting Name="foreground_code" Type="System.String" Scope="User">
-      <Value Profile="(Default)">180</Value>
+    <Setting Name="RunFirst" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

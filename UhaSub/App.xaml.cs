@@ -20,13 +20,19 @@ namespace UhaSub
          */
         App()
         {
+            // set run-first to true
+            //UhaSub.Properties.Settings.Default.RunFirst = true;
+            //UhaSub.Properties.Settings.Default.Save();
+
+            if (UhaSub.Properties.Settings.Default.RunFirst)
+                RunFirst();
 
 
             /* 
              * get localization from app-setting
              * refer:https://social.msdn.microsoft.com/Forums/vstudio/en-US/de49dd67-f9c9-461b-a082-a1dc441b4c9c/wpf-application-settings?forum=wpf
              */
-            string l = UhaSub.Properties.Settings.Default.localization;
+            string l = UhaSub.Properties.UI.Default.localization;
 
 
             /* 
@@ -36,6 +42,34 @@ namespace UhaSub
             System.Threading.Thread.CurrentThread.CurrentUICulture = 
                 new System.Globalization.CultureInfo(l);
             
-        } 
+        }
+
+        
+        void RunFirst()
+        {
+            // set application if the first run
+
+            /*
+             * set language
+             */
+            string l = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+            switch(l)
+            {
+                case "en-US": UhaSub.Properties.UI.Default.localization = "en"; break;
+                case "zh-CN": UhaSub.Properties.UI.Default.localization = "zh-CN"; break;
+
+
+                default: UhaSub.Properties.UI.Default.localization = "en"; break;
+            }
+
+
+
+            /*
+             * update setting
+             * refer:https://social.msdn.microsoft.com/Forums/vstudio/en-US/0d86ddc6-83c3-49fd-a478-fbc9b032dc8b/how-to-set-application-setting-in-wpf?forum=wpf
+             */
+            UhaSub.Properties.Settings.Default.RunFirst = false;
+            UhaSub.Properties.Settings.Default.Save();
+        }
     }
 }

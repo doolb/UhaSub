@@ -25,36 +25,6 @@ namespace UhaSub.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#333333")]
-        public string background {
-            get {
-                return ((string)(this["background"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SkyBlue")]
-        public string foreground {
-            get {
-                return ((string)(this["foreground"]));
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en")]
-        public string localization {
-            get {
-                return ((string)(this["localization"]));
-            }
-            set {
-                this["localization"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(@"[Script Info]
 ; // this is a ass header example
 Title: ass
@@ -103,42 +73,15 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-i {0} -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt {2}")]
-        public string FFmpegSpectrum {
-            get {
-                return ((string)(this["FFmpegSpectrum"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\project\\Windows\\NET\\uhasub\\UhaSub\\ffmpeg")]
-        public string FFmpegPath {
-            get {
-                return ((string)(this["FFmpegPath"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("51")]
-        public int background_code {
-            get {
-                return ((int)(this["background_code"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("180")]
-        public string foreground_code {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RunFirst {
             get {
-                return ((string)(this["foreground_code"]));
+                return ((bool)(this["RunFirst"]));
             }
             set {
-                this["foreground_code"] = value;
+                this["RunFirst"] = value;
             }
         }
     }
