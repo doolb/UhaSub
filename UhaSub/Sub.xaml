@@ -3,21 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:UhaSub.Properties"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             BorderBrush="{x:Null}">
     <Grid>
         <DataGrid   Name="subs" 
-                    Background="#333333" 
+                    Background="{Binding Source={x:Static p:UI.Default}, Path=background}" 
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
                     
-                    Foreground="Azure"
+                    Foreground="{Binding Source={x:Static p:UI.Default}, Path=foreground}" 
                     FontSize="15"
+                    BorderBrush="{x:Null}"
                     Focusable="True"
                     HeadersVisibility="Column"
                     RowHeight="27"
                     IsReadOnly="True"
-                    InitializingNewItem="subs_InitializingNewItem" SelectionChanged="subs_SelectionChanged"
+                    InitializingNewItem="subs_InitializingNewItem" 
+                    SelectionChanged="subs_SelectionChanged" Cursor="Hand"
                     >
 
             <DataGrid.Resources>

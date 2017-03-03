@@ -27,6 +27,7 @@ using Declarations.Players;
 using Implementation;
 using Microsoft.Win32;
 using System.Windows.Controls.Primitives;
+using System.Drawing;
 
 namespace UhaSub
 {
@@ -66,7 +67,11 @@ namespace UhaSub
         void LoadVlc()
         {
             System.Windows.Forms.Panel p = new System.Windows.Forms.Panel();
-            p.BackColor = System.Drawing.Color.FromArgb(33,33,33);
+            
+            // backgroud
+            // use html type
+            // refer:http://stackoverflow.com/questions/1914487/how-to-create-a-system-drawing-color-from-its-hexadecimal-rgb-string
+            p.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.UI.Default.background);
             windowsFormsHost1.Child = p;
 
             // find vlc = true

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UhaSub.Properties" GeneratedClassName="UI">
+  <Profiles />
+  <Settings>
+    <Setting Name="background" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">#333333</Value>
+    </Setting>
+    <Setting Name="foreground" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SkyBlue</Value>
+    </Setting>
+    <Setting Name="localization" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

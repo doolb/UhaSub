@@ -51,3 +51,5 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.en.re
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\en\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.zh-CN.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Setting.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Setting.g.cs

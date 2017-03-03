@@ -89,6 +89,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ass.cs" />
+    <Compile Include="Properties\UI.Designer.cs">
+      <DependentUpon>UI.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="setting\Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="wave\GradientCalculator.cs" />
@@ -114,6 +122,10 @@
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
     <Compile Include="wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="setting\Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +180,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\UI.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UI.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -120,5 +120,26 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 return ((string)(this["FFmpegPath"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("51")]
+        public int background_code {
+            get {
+                return ((int)(this["background_code"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("180")]
+        public string foreground_code {
+            get {
+                return ((string)(this["foreground_code"]));
+            }
+            set {
+                this["foreground_code"] = value;
+            }
+        }
     }
 }

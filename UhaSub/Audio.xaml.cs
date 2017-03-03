@@ -6,7 +6,7 @@ using CSCore.Streams;
 using CSCore.Streams.Effects;
 using System;
 using System.Collections.Generic;
-
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -160,9 +160,14 @@ namespace UhaSub
 
         private void GenerateLineSpectrum()
         {
+            
             System.Drawing.Image image = wave_box.Image;
+
             var newImage = _lineSpectrum.CreateSpectrumLine(wave_box.Size,
-                System.Drawing.Color.Green, System.Drawing.Color.Red, System.Drawing.Color.Black, true);
+                System.Drawing.Color.Green, System.Drawing.Color.Red, 
+                ColorTranslator.FromHtml(
+                UhaSub.Properties.UI.Default.background), true);
+
             if (newImage != null)
             {
                 wave_box.Image = newImage;
