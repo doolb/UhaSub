@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ColorPicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>color_picker\ColorPicker.exe</HintPath>
+    </Reference>
     <Reference Include="CSCore">
       <HintPath>.\CSCore.dll</HintPath>
     </Reference>
@@ -89,13 +93,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ass.cs" />
-    <Compile Include="Properties\UI.Designer.cs">
-      <DependentUpon>UI.settings</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    <Compile Include="setting\Key.xaml.cs">
+      <DependentUpon>Key.xaml</DependentUpon>
     </Compile>
     <Compile Include="setting\Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="setting\Sub.xaml.cs">
+      <DependentUpon>Sub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="setting\UI.xaml.cs">
+      <DependentUpon>UI.xaml</DependentUpon>
     </Compile>
     <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="Config.cs" />
@@ -122,7 +130,19 @@
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
     <Compile Include="wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="setting\Key.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="setting\Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="setting\Sub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="setting\UI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,10 +200,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\UI.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>UI1.Designer.cs</LastGenOutput>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

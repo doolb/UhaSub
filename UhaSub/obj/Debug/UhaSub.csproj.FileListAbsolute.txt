@@ -52,4 +52,10 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\en\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.zh-CN.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Setting.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Setting.g.cs
-D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\UI.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\UI.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Key.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Sub.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Key.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Sub.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\ColorPicker.exe

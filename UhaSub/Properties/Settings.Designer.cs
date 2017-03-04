@@ -84,5 +84,53 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 this["RunFirst"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SkyBlue")]
+        public string foreground {
+            get {
+                return ((string)(this["foreground"]));
+            }
+            set {
+                this["foreground"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("#333333")]
+        public string background {
+            get {
+                return ((string)(this["background"]));
+            }
+            set {
+                this["background"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en")]
+        public string lang {
+            get {
+                return ((string)(this["lang"]));
+            }
+            set {
+                this["lang"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Azure")]
+        public string text {
+            get {
+                return ((string)(this["text"]));
+            }
+            set {
+                this["text"] = value;
+            }
+        }
     }
 }

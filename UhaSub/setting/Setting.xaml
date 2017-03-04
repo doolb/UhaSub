@@ -4,9 +4,42 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Title="Setting" Height="300" Width="300"
         WindowStyle="ToolWindow"
-        Background="{Binding Source={x:Static p:UI.Default}, Path=background}"
-        Foreground="{Binding Source={x:Static p:UI.Default}, Path=foreground}">
+        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
+        Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+                <Setter Property="FontSize" Value="32"/>
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"/>
+                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+            </Style>
+        </Grid.Resources>
+        
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0">
+            <Button Content=""
+                    ToolTip="{x:Static p:Resources.UISetting}"
+                    Click="OnNavigate"
+                    Tag="ui"/>
+            <Button Content=""
+                    ToolTip="{x:Static p:Resources.KeySetting}"
+                    Click="OnNavigate"
+                    Tag="key"/>
+            <Button Content=""
+                    ToolTip="{x:Static p:Resources.SubSetting}"
+                    Click="OnNavigate"
+                    Tag="sub"/>
+
+        </StackPanel>
+        
+        <Grid   Grid.Column="1"
+                Name="host"/>
     </Grid>
 </Window>

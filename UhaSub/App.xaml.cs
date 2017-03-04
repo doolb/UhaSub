@@ -32,7 +32,7 @@ namespace UhaSub
              * get localization from app-setting
              * refer:https://social.msdn.microsoft.com/Forums/vstudio/en-US/de49dd67-f9c9-461b-a082-a1dc441b4c9c/wpf-application-settings?forum=wpf
              */
-            string l = UhaSub.Properties.UI.Default.localization;
+            string l = UhaSub.Properties.Settings.Default.lang;
 
 
             /* 
@@ -55,11 +55,11 @@ namespace UhaSub
             string l = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
             switch(l)
             {
-                case "en-US": UhaSub.Properties.UI.Default.localization = "en"; break;
-                case "zh-CN": UhaSub.Properties.UI.Default.localization = "zh-CN"; break;
+                case "en-US": UhaSub.Properties.Settings.Default.lang= "en"; break;
+                case "zh-CN": UhaSub.Properties.Settings.Default.lang= "zh-CN"; break;
 
 
-                default: UhaSub.Properties.UI.Default.localization = "en"; break;
+                default: UhaSub.Properties.Settings.Default.lang= "en"; break;
             }
 
 

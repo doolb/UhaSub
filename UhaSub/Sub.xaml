@@ -9,11 +9,11 @@
              BorderBrush="{x:Null}">
     <Grid>
         <DataGrid   Name="subs" 
-                    Background="{Binding Source={x:Static p:UI.Default}, Path=background}" 
+                    Background="{Binding Source={x:Static p:Settings.Default}, Path=background}" 
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
                     
-                    Foreground="{Binding Source={x:Static p:UI.Default}, Path=foreground}" 
+                    Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}" 
                     FontSize="15"
                     BorderBrush="{x:Null}"
                     Focusable="True"
@@ -76,7 +76,7 @@
                 <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
                     <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
                     <Setter Property="Foreground" 
-                            Value="{Binding Source={x:Static p:UI.Default}, Path=foreground}" />
+                            Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" />
                     <Setter Property="Background" 
                             Value="Gray" />
                     <Setter Property="Width" Value="10" />

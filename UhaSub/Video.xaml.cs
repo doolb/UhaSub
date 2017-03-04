@@ -71,7 +71,7 @@ namespace UhaSub
             // backgroud
             // use html type
             // refer:http://stackoverflow.com/questions/1914487/how-to-create-a-system-drawing-color-from-its-hexadecimal-rgb-string
-            p.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.UI.Default.background);
+            p.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.Settings.Default.background);
             windowsFormsHost1.Child = p;
 
             // find vlc = true

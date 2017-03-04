@@ -31,5 +31,17 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="RunFirst" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="foreground" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SkyBlue</Value>
+    </Setting>
+    <Setting Name="background" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#333333</Value>
+    </Setting>
+    <Setting Name="lang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
+    <Setting Name="text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Azure</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -46,7 +46,7 @@ namespace UhaSub
 
         Config cfg = new Config();
         bool special_start = false;
-
+        
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             /*

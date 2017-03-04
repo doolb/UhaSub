@@ -6,7 +6,7 @@
              xmlns:p="clr-namespace:UhaSub.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="300">
-    <Grid Background="{Binding Source={x:Static p:UI.Default}, Path=background}">
+    <Grid Background="{Binding Source={x:Static p:Settings.Default}, Path=background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="7.5*"/>
             <RowDefinition Height="*"/>
@@ -14,12 +14,12 @@
         
         <Grid.Resources>
             <Style TargetType="TextBlock">
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:UI.Default},Path=foreground}"/>
+                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},Path=text}"/>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
                 <Setter Property="Background"   Value="{x:Null}"/>
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:UI.Default},Path=foreground}"/>
+                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},Path=foreground}"/>
                 <Setter Property="BorderBrush"  Value="{x:Null}"/>
                 <Setter Property="VerticalAlignment" Value="Top"/>
             </Style>
@@ -43,7 +43,7 @@
                                 <Track x:Name="PART_Track">
                                     <Track.Thumb>
                                         <Thumb Width="10" Height="20" 
-                                               Background="{Binding Source={x:Static p:UI.Default}, Path=foreground}" 
+                                               Background="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" 
                                                Cursor="SizeWE"/>
                                     </Track.Thumb>
                                 </Track>
@@ -57,7 +57,7 @@
                 <Setter Property="SelectionEnd" 
                         Value="{Binding Value, RelativeSource={RelativeSource Self}}" />
                 <Setter Property="Foreground" 
-                        Value="{Binding Source={x:Static p:UI.Default}, Path=foreground}" />
+                        Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" />
             </Style>
             
         </Grid.Resources>

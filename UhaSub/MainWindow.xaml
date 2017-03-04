@@ -5,8 +5,8 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Title="{x:Static p:Resources.Title}" 
         Height="350" Width="725"
-        Background="{Binding Source={x:Static p:UI.Default}, Path=background}"
-        Foreground="{Binding Source={x:Static p:UI.Default}, Path=foreground}"
+        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
+        Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"
         WindowState="Maximized" 
         KeyDown="Window_KeyDown"
         KeyUp="Window_KeyUp">

@@ -70,6 +70,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to keyboard setting.
+        /// </summary>
+        public static string KeySetting {
+            get {
+                return ResourceManager.GetString("KeySetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open File.
         /// </summary>
         public static string OpenFile {
@@ -107,11 +116,29 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to sub setting.
+        /// </summary>
+        public static string SubSetting {
+            get {
+                return ResourceManager.GetString("SubSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UhaSub.
         /// </summary>
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color.
+        /// </summary>
+        public static string UISetting {
+            get {
+                return ResourceManager.GetString("UISetting", resourceCulture);
             }
         }
     }
