@@ -223,4 +223,13 @@ For more information, please see http://github.com/doolb/UhaSub
   <data name="String1" xml:space="preserve">
     <value />
   </data>
+  <data name="sub_head_end" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="sub_head_start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="sub_head_text" xml:space="preserve">
+    <value>Text</value>
+  </data>
 </root>

@@ -231,4 +231,13 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="String1" xml:space="preserve">
     <value>s</value>
   </data>
+  <data name="sub_head_end" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="sub_head_start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="sub_head_text" xml:space="preserve">
+    <value>文本</value>
+  </data>
 </root>

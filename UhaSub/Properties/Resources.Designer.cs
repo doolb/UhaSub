@@ -265,6 +265,33 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End.
+        /// </summary>
+        public static string sub_head_end {
+            get {
+                return ResourceManager.GetString("sub_head_end", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string sub_head_start {
+            get {
+                return ResourceManager.GetString("sub_head_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string sub_head_text {
+            get {
+                return ResourceManager.GetString("sub_head_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save Success!.
         /// </summary>
         public static string sub_save_success {

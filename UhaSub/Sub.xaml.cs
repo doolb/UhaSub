@@ -39,6 +39,33 @@ namespace UhaSub
              */
             subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
 
+            /*
+             * change data-grid head
+             * refer:http://stackoverflow.com/questions/13192823/update-the-wpf-datagrid-column-header-text-via-code-behind
+             */
+            var template = new DataTemplate();
+            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
+            // head-0
+            template = new DataTemplate();
+            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
+            template.VisualTree.SetValue(TextBlock.TextProperty, "#");
+            subs.Columns[0].HeaderTemplate = template;
+            // head-1
+            template = new DataTemplate();
+            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
+            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_start);
+            subs.Columns[1].HeaderTemplate = template;
+            // head-2
+            template = new DataTemplate();
+            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
+            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_end);
+            subs.Columns[2].HeaderTemplate = template;
+            // head-3
+            template = new DataTemplate();
+            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
+            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_text);
+            subs.Columns[3].HeaderTemplate = template;
+
             locate();        
         }
 
