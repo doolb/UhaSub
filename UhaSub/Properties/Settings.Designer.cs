@@ -135,7 +135,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("q")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Q")]
         public string sub_start {
             get {
                 return ((string)(this["sub_start"]));
@@ -147,7 +147,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("w")]
+        [global::System.Configuration.DefaultSettingValueAttribute("W")]
         public string sub_end {
             get {
                 return ((string)(this["sub_end"]));
@@ -159,7 +159,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("E")]
         public string sub_time {
             get {
                 return ((string)(this["sub_time"]));
@@ -171,7 +171,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("s")]
+        [global::System.Configuration.DefaultSettingValueAttribute("S")]
         public string sub_save {
             get {
                 return ((string)(this["sub_save"]));
@@ -183,7 +183,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("f")]
+        [global::System.Configuration.DefaultSettingValueAttribute("F")]
         public string play_pause {
             get {
                 return ((string)(this["play_pause"]));
@@ -195,7 +195,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        [global::System.Configuration.DefaultSettingValueAttribute("A")]
         public string go_before {
             get {
                 return ((string)(this["go_before"]));
@@ -207,7 +207,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("d")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D")]
         public string go_after {
             get {
                 return ((string)(this["go_after"]));

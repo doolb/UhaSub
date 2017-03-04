@@ -44,25 +44,25 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">Azure</Value>
     </Setting>
     <Setting Name="sub_start" Type="System.String" Scope="User">
-      <Value Profile="(Default)">q</Value>
+      <Value Profile="(Default)">Q</Value>
     </Setting>
     <Setting Name="sub_end" Type="System.String" Scope="User">
-      <Value Profile="(Default)">w</Value>
+      <Value Profile="(Default)">W</Value>
     </Setting>
     <Setting Name="sub_time" Type="System.String" Scope="User">
-      <Value Profile="(Default)">e</Value>
+      <Value Profile="(Default)">E</Value>
     </Setting>
     <Setting Name="sub_save" Type="System.String" Scope="User">
-      <Value Profile="(Default)">s</Value>
+      <Value Profile="(Default)">S</Value>
     </Setting>
     <Setting Name="play_pause" Type="System.String" Scope="User">
-      <Value Profile="(Default)">f</Value>
+      <Value Profile="(Default)">F</Value>
     </Setting>
     <Setting Name="go_before" Type="System.String" Scope="User">
-      <Value Profile="(Default)">a</Value>
+      <Value Profile="(Default)">A</Value>
     </Setting>
     <Setting Name="go_after" Type="System.String" Scope="User">
-      <Value Profile="(Default)">d</Value>
+      <Value Profile="(Default)">D</Value>
     </Setting>
   </Settings>
 </SettingsFile>
