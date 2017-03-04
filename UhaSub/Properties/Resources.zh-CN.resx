@@ -139,7 +139,7 @@
     <value>设置开始时间</value>
   </data>
   <data name="cfg_key_sub_time" xml:space="preserve">
-    <value>按下设置开始时间，
+    <value>按下设置开始时间
 释放设置结束时间</value>
   </data>
   <data name="cfg_key_video" xml:space="preserve">

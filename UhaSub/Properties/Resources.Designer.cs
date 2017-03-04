@@ -145,7 +145,7 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press to set start time,
+        ///   Looks up a localized string similar to Press to set start time
         ///release to set end time.
         /// </summary>
         public static string cfg_key_sub_time {

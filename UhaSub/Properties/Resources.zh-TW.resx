@@ -118,115 +118,126 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cfg_key_go_after" xml:space="preserve">
-    <value>Go after 3 sec</value>
+    <value>後退3秒</value>
   </data>
   <data name="cfg_key_go_before" xml:space="preserve">
-    <value>Go before 3 sec</value>
+    <value>前進3秒</value>
   </data>
   <data name="cfg_key_play_pause" xml:space="preserve">
-    <value>Play or Pause</value>
+    <value>播放或暫停</value>
   </data>
   <data name="cfg_key_sub" xml:space="preserve">
-    <value>Control sub</value>
+    <value>字幕</value>
   </data>
   <data name="cfg_key_sub_end" xml:space="preserve">
-    <value>Set end time</value>
+    <value>設置結束時間</value>
   </data>
   <data name="cfg_key_sub_save" xml:space="preserve">
-    <value>Save sub</value>
+    <value>保存字幕</value>
   </data>
   <data name="cfg_key_sub_start" xml:space="preserve">
-    <value>Set start time</value>
+    <value>設置開始時間</value>
   </data>
   <data name="cfg_key_sub_time" xml:space="preserve">
-    <value>Press to set start time
-release to set end time</value>
+    <value>按下設置開始時間
+釋放設置結束時間</value>
   </data>
   <data name="cfg_key_video" xml:space="preserve">
-    <value>Control video</value>
+    <value>視頻</value>
   </data>
   <data name="cfg_sub_end" xml:space="preserve">
-    <value>End delay time</value>
+    <value>結束反應時間</value>
   </data>
   <data name="cfg_sub_start" xml:space="preserve">
-    <value>Start delay time</value>
+    <value>開始反應時間</value>
   </data>
   <data name="cfg_ui_lang" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="cfg_ui_lang_change" xml:space="preserve">
-    <value>Change language need restart.</value>
+    <value>語言</value>
   </data>
   <data name="cfg_ui_text" xml:space="preserve">
-    <value>Text</value>
+    <value>文字</value>
   </data>
   <data name="cfg_ui_theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>主题</value>
   </data>
   <data name="FileNoSupport" xml:space="preserve">
-    <value>Sorry  we could load this file,please select *.txt or *.ass.</value>
+    <value>對不起，我們不能加載這個文件，請選擇 *.txt 或者 *.ass文件。</value>
+    <comment>Sorry  we could load this file,please select *.txt or *.ass.</comment>
   </data>
   <data name="KeySetting" xml:space="preserve">
-    <value>keyboard setting</value>
+    <value>鍵盤設置</value>
   </data>
   <data name="OpenFile" xml:space="preserve">
-    <value>Open video file
-and try to open relational ass file </value>
+    <value>打開視頻文件
+同時嘗試打開相應的 ass 字幕文件。</value>
+    <comment>Open video file
+and try to open relational ass file</comment>
   </data>
   <data name="OpenSetting" xml:space="preserve">
-    <value>change setting</value>
+    <value>更改設置</value>
   </data>
   <data name="OpenSub" xml:space="preserve">
-    <value>Open a sub file 
-(txt,ass)</value>
+    <value>打開字幕文件</value>
+    <comment>Open a sub file</comment>
   </data>
   <data name="SubFileNoFound" xml:space="preserve">
-    <value>Sorry we can't open sub file for this video,
-Please select a sub file.</value>
+    <value>未找到相應的字幕文件，請選擇要導入的字幕</value>
+    <comment>Sorry we can't open sub file for this video,
+Please select a sub file.</comment>
   </data>
   <data name="SubSetting" xml:space="preserve">
-    <value>sub setting</value>
-  </data>
-  <data name="sub_save_success" xml:space="preserve">
-    <value>Save Success!</value>
+    <value>字幕設置</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>UhaSub</value>
   </data>
   <data name="UISetting" xml:space="preserve">
-    <value>user interface setting</value>
+    <value>界面設置</value>
   </data>
   <data name="video_mutex_tip" xml:space="preserve">
-    <value>Mutex</value>
+    <value>靜音</value>
   </data>
   <data name="video_nomutex_tip" xml:space="preserve">
-    <value>Mutex Off</value>
+    <value>關閉靜音</value>
   </data>
   <data name="video_pause_tip" xml:space="preserve">
-    <value>Pause</value>
+    <value>暫停</value>
   </data>
   <data name="video_play_tip" xml:space="preserve">
-    <value>Play</value>
+    <value>播放</value>
   </data>
   <data name="video_sub_preview" xml:space="preserve">
-    <value>Sub Preview</value>
+    <value>字幕預覽</value>
+  </data>
+  <data name="cfg_ui_lang_change" xml:space="preserve">
+    <value>更改語言需要重啟才能生效</value>
+  </data>
+  <data name="sub_save_success" xml:space="preserve">
+    <value>保存成功！</value>
+    <comment>Save Success!</comment>
   </data>
   <data name="about" xml:space="preserve">
-    <value>This sub is developed as a alternative for popsub.
+    <value>這個軟件是作為PopSub的替代而開發的。
+這是個開源軟件，如果要獲取更多信息，請訪問
+http://github.com/doolb/UhaSub</value>
+    <comment>This sub is developed as a alternative for popsub.
 It's an open-source software.
-For more information, please see http://github.com/doolb/UhaSub
-</value>
+For more information, please see http://github.com/doolb/UhaSub</comment>
   </data>
   <data name="AboutSetting" xml:space="preserve">
-    <value>About</value>
+    <value>關於</value>
+    <comment>About</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>s</value>
   </data>
   <data name="sub_head_end" xml:space="preserve">
-    <value>End</value>
+    <value>結束</value>
   </data>
   <data name="sub_head_start" xml:space="preserve">
-    <value>Start</value>
+    <value>開始</value>
   </data>
   <data name="sub_head_text" xml:space="preserve">
-    <value>Text</value>
+    <value>文本</value>
   </data>
 </root>

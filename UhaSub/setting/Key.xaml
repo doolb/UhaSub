@@ -13,6 +13,7 @@
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="12 12 0 0"/>
             </Style>
             
@@ -129,7 +130,7 @@
             <TextBlock Text="{x:Static p:Resources.cfg_key_sub_time}"
                        Grid.Column="0" Grid.Row="3"
                        FontSize="15"
-                       Margin="0"/>
+                       Margin="9 0 0 0"/>
 
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 

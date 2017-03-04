@@ -139,7 +139,7 @@
     <value>Set start time</value>
   </data>
   <data name="cfg_key_sub_time" xml:space="preserve">
-    <value>Press to set start time,
+    <value>Press to set start time
 release to set end time</value>
   </data>
   <data name="cfg_key_video" xml:space="preserve">
