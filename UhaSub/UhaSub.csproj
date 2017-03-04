@@ -55,7 +55,7 @@
       <HintPath>color_picker\ColorPicker.exe</HintPath>
     </Reference>
     <Reference Include="CSCore">
-      <HintPath>.\CSCore.dll</HintPath>
+      <HintPath>wave\CSCore.dll</HintPath>
     </Reference>
     <Reference Include="Declarations">
       <HintPath>nvlc\Declarations.dll</HintPath>
@@ -93,6 +93,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ass.cs" />
+    <Compile Include="Properties\Resources.zh-CN.Designer.cs">
+      <DependentUpon>Resources.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="setting\Key.xaml.cs">
       <DependentUpon>Key.xaml</DependentUpon>
     </Compile>
@@ -110,16 +120,6 @@
     <Compile Include="wave\GradientCalculator.cs" />
     <Compile Include="wave\ISpectrumProvider.cs" />
     <Compile Include="wave\LineSpectrum.cs" />
-    <Compile Include="Properties\Resources.zh-CN.Designer.cs">
-      <DependentUpon>Resources.zh-CN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Properties\Resources.en.Designer.cs">
-      <DependentUpon>Resources.en.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="wave\ScalingStrategy.cs" />
     <Compile Include="wave\SpectrumBase.cs" />
     <Compile Include="Sub.xaml.cs">

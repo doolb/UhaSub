@@ -25,6 +25,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="Foreground"
@@ -41,6 +43,18 @@
                            MouseUp="OnMouseUp"
                            Tag="text"
                    Grid.Column="1" Grid.Row="1"/>
+
+        <TextBlock Text="Language"
+                   Grid.Column="0" Grid.Row="2"/>
+        <ComboBox  Width="90" Height="30"
+                   Grid.Column="1" Grid.Row="2"
+                   Loaded="LangLoaded" 
+                   SelectionChanged="LangSelectionChanged"
+                   Foreground="Gray">
+           
+            <ComboBoxItem Content="en"/>
+            <ComboBoxItem Content="zh-CN"/>
+        </ComboBox>
 
     </Grid>
 </UserControl>

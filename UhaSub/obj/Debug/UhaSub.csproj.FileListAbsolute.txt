@@ -59,3 +59,5 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Sub.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Key.g.cs
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\Sub.g.cs
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\ColorPicker.exe
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\CSCore.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache

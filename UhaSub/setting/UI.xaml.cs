@@ -68,6 +68,39 @@ namespace UhaSub.setting
             UhaSub.Properties.Settings.Default.Save();
         }
 
+
+
+        private void LangLoaded(object sender, RoutedEventArgs e)
+        {
+            // get current language
+            string l = UhaSub.Properties.Settings.Default.lang;
+
+            ComboBox box = sender as ComboBox;
+
+            // select language
+            for (int i=0;i<box.Items.Count;i++)
+            {
+                var c = (ComboBoxItem)box.Items[i];
+                if((string)c.Content == l)
+                {
+                    box.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        private void LangSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string l = (string)((sender as ComboBox).SelectedItem as ComboBoxItem).Content as string;
+            if (l == UhaSub.Properties.Settings.Default.lang)
+                return;
+            
+            UhaSub.Properties.Settings.Default.lang = l;
+
+            UhaSub.Properties.Settings.Default.Save();
+            MessageBox.Show("change language need restart.");
+        }
+
         
 
     }

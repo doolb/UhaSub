@@ -28,3 +28,14 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Release\zh-CN\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\en\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\UhaSub.exe
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\UhaSub.pdb
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Key.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Sub.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Key.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Setting.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Sub.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\UI.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\bin\Release\ColorPicker.exe
+D:\project\Windows\NET\uhasub\UhaSub\bin\Release\CSCore.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\UhaSub.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\Setting.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\UI.baml
