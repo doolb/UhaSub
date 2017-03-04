@@ -216,4 +216,19 @@ Please select a sub file.</comment>
     <value>保存成功！</value>
     <comment>Save Success!</comment>
   </data>
+  <data name="about" xml:space="preserve">
+    <value>这个软件是作为PopSub的替代而开发的。
+这是个开源软件，如果要获取更多信息，请访问
+http://github.com/doolb/UhaSub</value>
+    <comment>This sub is developed as a alternative for popsub.
+It's an open-source software.
+For more information, please see http://github.com/doolb/UhaSub</comment>
+  </data>
+  <data name="AboutSetting" xml:space="preserve">
+    <value>关于</value>
+    <comment>About</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>s</value>
+  </data>
 </root>

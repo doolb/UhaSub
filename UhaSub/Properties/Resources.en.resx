@@ -211,4 +211,16 @@ Please select a sub file.</value>
   <data name="sub_save_success" xml:space="preserve">
     <value>Save Success!</value>
   </data>
+  <data name="about" xml:space="preserve">
+    <value>This sub is developed as a alternative for popsub.
+It's an open-source software.
+For more information, please see http://github.com/doolb/UhaSub
+</value>
+  </data>
+  <data name="AboutSetting" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
 </root>

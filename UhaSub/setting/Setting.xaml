@@ -36,6 +36,10 @@
                     ToolTip="{x:Static p:Resources.SubSetting}"
                     Click="OnNavigate"
                     Tag="sub"/>
+            <Button Content=""
+                    ToolTip="{x:Static p:Resources.AboutSetting}"
+                    Click="OnNavigate"
+                    Tag="about"/> 
 
         </StackPanel>
         

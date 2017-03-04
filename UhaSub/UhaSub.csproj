@@ -103,6 +103,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="setting\about.xaml.cs">
+      <DependentUpon>about.xaml</DependentUpon>
+    </Compile>
     <Compile Include="setting\Key.xaml.cs">
       <DependentUpon>Key.xaml</DependentUpon>
     </Compile>
@@ -130,6 +133,10 @@
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
     <Compile Include="wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="setting\about.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="setting\Key.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

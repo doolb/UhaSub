@@ -30,6 +30,7 @@ namespace UhaSub.setting
         UI ui = new UI();
         Key key = new Key();
         Sub sub = new Sub();
+        about abt = new about();
 
 
         private void OnNavigate(object sender, RoutedEventArgs e)
@@ -45,6 +46,7 @@ namespace UhaSub.setting
                 case "ui": host.Children.Add(ui); break;
                 case "key": host.Children.Add(key); break;
                 case "sub": host.Children.Add(sub); break;
+                case "about": host.Children.Add(abt); break;
                 default: return;
             }
 

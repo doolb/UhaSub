@@ -61,6 +61,27 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This sub is developed as a alternative for popsub.
+        ///It&apos;s an open-source software.
+        ///For more information, please see http://github.com/doolb/UhaSub
+        ///.
+        /// </summary>
+        public static string about {
+            get {
+                return ResourceManager.GetString("about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string AboutSetting {
+            get {
+                return ResourceManager.GetString("AboutSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go after 3 sec.
         /// </summary>
         public static string cfg_key_go_after {
