@@ -12,7 +12,7 @@ namespace UhaSub
         /*
          * video control
          */
-        private Key pause;
+        private Key pause; // play or pause
         public Key Pause { get { return pause; } }
 
         private Key before;

@@ -7,6 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              BorderBrush="{x:Null}">
+	<UserControl.Resources>
+		<Storyboard x:Key="stb_save_success">
+			<DoubleAnimationUsingKeyFrames 
+                Storyboard.TargetProperty="(UIElement.Opacity)" 
+                Storyboard.TargetName="tb_save">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
     <Grid>
         <DataGrid   Name="subs" 
                     Background="{Binding Source={x:Static p:Settings.Default}, Path=background}" 
@@ -148,5 +159,10 @@
             </DataGrid.Resources>
             
         </DataGrid>
+        <TextBlock x:Name="tb_save" Text="save_success"
+                   Foreground="Cyan"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom" Opacity="0"/>
     </Grid>
 </UserControl>

@@ -3,10 +3,117 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:UhaSub.Properties"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="540">
     <Grid>
-        <TextBlock Text="key" Foreground="AliceBlue"/>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="15"/>
+            </Style>
+            
+            <Style TargetType="Button">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width"  Value="90"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- video control-->
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- video title -->
+            <TextBlock Text="video_control"
+                       Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                       HorizontalAlignment="Center"/>
+            <!-- play or pause -->
+            <TextBlock Text="play_pause"
+                       Grid.Column="0" Grid.Row="1"/>
+            
+            <Button    Grid.Column="1" Grid.Row="1"/>
+
+
+            <!-- go before -->
+            <TextBlock Text="go_before"
+                       Grid.Column="0" Grid.Row="2"/>
+
+            <Button    Grid.Column="1" Grid.Row="2"/>
+
+
+            <!-- go after -->
+            <TextBlock Text="go_after"
+                       Grid.Column="0" Grid.Row="3"/>
+
+            <Button    Grid.Column="1" Grid.Row="3"/>
+
+        </Grid>
+
+        <!-- sub control-->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- sub title -->
+            <TextBlock Text="sub_control"
+                       Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                       HorizontalAlignment="Center"/>
+
+            <!-- set_start -->
+            <TextBlock Text="set_start"
+                       Grid.Column="0" Grid.Row="1"/>
+
+            <Button    Grid.Column="1" Grid.Row="1"/>
+
+
+            <!-- set_end -->
+            <TextBlock Text="set_end"
+                       Grid.Column="0" Grid.Row="2"/>
+
+            <Button    Grid.Column="1" Grid.Row="2"/>
+
+
+            <!-- set_time 
+            press down to set start
+            and release to set end
+            -->
+            <TextBlock Text="set_time"
+                       Grid.Column="0" Grid.Row="3"/>
+
+            <Button    Grid.Column="1" Grid.Row="3"/>
+
+            <!-- save sub -->
+            <TextBlock Text="save_sub"
+                       Grid.Column="0" Grid.Row="4"/>
+
+            <Button    Grid.Column="1" Grid.Row="4"/>
+        </Grid>
 
     </Grid>
 </UserControl>

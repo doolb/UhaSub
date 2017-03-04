@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -101,11 +102,13 @@ namespace UhaSub
             subs.Items.Refresh();
         }
 
-        public async void Save()
+        public void Save()
         {
             if (SubFileName == null)
                 return;
-            await Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
+            Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
+
+            (this.Resources["stb_save_success"] as Storyboard).Begin();
         }
 
         public void Open(string file_name)

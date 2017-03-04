@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,9 @@ namespace UhaSub
         private String Style;
 
         private int Layer;
+
+        
+
         /* 
          * create a default ass list
          */
@@ -158,12 +162,13 @@ namespace UhaSub
             return list;
         }
 
-        public static async Task<bool> Save(List<Ass> list,string head,string path)
+        public static bool Save(List<Ass> list,string head,string path)
         {
+
             StreamWriter sw = new StreamWriter(path);
 
             // write header
-            await sw.WriteAsync(head);
+            sw.Write(head);
 
 
             /*
@@ -184,13 +189,14 @@ namespace UhaSub
                 s.Append(ass.Text);
 
                 // write
-                await sw.WriteLineAsync(s.ToString());
+                sw.WriteLine(s.ToString());
 
                 s.Clear();
             }
 
-            await sw.FlushAsync();
+            sw.Flush();
             sw.Close();
+
             return true;
         }
         
