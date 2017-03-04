@@ -135,6 +135,8 @@ namespace UhaSub
         {
             var set = new setting.Setting();
             set.ShowDialog();
+
+            cfg.ReLoad();
         }
 
         

@@ -24,5 +24,33 @@ namespace UhaSub.setting
         {
             InitializeComponent();
         }
+
+        /*
+         * update change
+         */
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            TextBox tb = sender as TextBox;
+
+            int t = int.Parse(tb.Text);
+
+            switch(tb.Tag as string)
+            {
+                case "start":
+                    UhaSub.Properties.Settings.Default.StartTime = t;
+                    break;
+                case "end":
+                    UhaSub.Properties.Settings.Default.EndTime = t;
+                    break;
+
+                default: return;
+            }
+            
+            
+            
+            UhaSub.Properties.Settings.Default.Save();
+
+        }
     }
 }

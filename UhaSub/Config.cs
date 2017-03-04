@@ -52,9 +52,12 @@ namespace UhaSub
 
         public Config()
         {
-            /* 
-             * now we use a static key
-             */
+            ReLoad();
+        }
+
+        public void ReLoad()
+        {
+            
             start = Key.Q;
             end = Key.W;
             special = Key.E;

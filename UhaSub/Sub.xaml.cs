@@ -83,12 +83,19 @@ namespace UhaSub
 
         public void Start(long time)
         {
+            if (time < 0)
+                time = 0;
+
             (subs.SelectedItem as Ass).Start = time;
             subs.Items.Refresh();
         }
 
         public void End(long time)
         {
+            if (time < 0)
+                time = 0;
+
+
             (subs.SelectedItem as Ass).End = time;
             subs.SelectedIndex += 1;    // go to next line
             subs.Items.Refresh();

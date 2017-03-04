@@ -63,7 +63,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-100")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public int EndTime {
             get {
                 return ((int)(this["EndTime"]));
@@ -130,6 +130,18 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
             }
             set {
                 this["text"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Start {
+            get {
+                return ((int)(this["Start"]));
+            }
+            set {
+                this["Start"] = value;
             }
         }
     }

@@ -26,7 +26,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">300</Value>
     </Setting>
     <Setting Name="EndTime" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">-100</Value>
+      <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="RunFirst" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -42,6 +42,9 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     </Setting>
     <Setting Name="text" Type="System.String" Scope="User">
       <Value Profile="(Default)">Azure</Value>
+    </Setting>
+    <Setting Name="Start" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>
