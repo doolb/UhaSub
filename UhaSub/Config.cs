@@ -57,17 +57,47 @@ namespace UhaSub
 
         public void ReLoad()
         {
-            
-            start = Key.Q;
-            end = Key.W;
-            special = Key.E;
+            /*
+             * key-converter
+             * refer:http://stackoverflow.com/questions/6245887/string-to-system-windows-input-key
+             */
+            KeyConverter kc = new KeyConverter();
 
-            before = Key.A;
-            after = Key.D;
+            /*
+             * sub control
+             */
+            // set start time 
+            start = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.sub_start);
 
-            pause = Key.F;
-            save = Key.S;
+            // set end time 
+            end = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.sub_end);
 
+            // set start-or-end time
+            special = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.sub_time);
+           
+            // save sub
+            save = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.sub_save);
+
+            /*
+             * video control
+             */
+            // go before
+            before = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.go_before);
+            // go after
+            after = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.go_after);
+            // play or pause
+            pause = (Key)kc.ConvertFromString(
+                UhaSub.Properties.Settings.Default.play_pause);
+
+
+            // select sub
+            // up and down work fine
             up = Key.Up;
             down = Key.Down;
 

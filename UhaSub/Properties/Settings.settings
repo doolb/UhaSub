@@ -43,8 +43,26 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="text" Type="System.String" Scope="User">
       <Value Profile="(Default)">Azure</Value>
     </Setting>
-    <Setting Name="Start" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="sub_start" Type="System.String" Scope="User">
+      <Value Profile="(Default)">q</Value>
+    </Setting>
+    <Setting Name="sub_end" Type="System.String" Scope="User">
+      <Value Profile="(Default)">w</Value>
+    </Setting>
+    <Setting Name="sub_time" Type="System.String" Scope="User">
+      <Value Profile="(Default)">e</Value>
+    </Setting>
+    <Setting Name="sub_save" Type="System.String" Scope="User">
+      <Value Profile="(Default)">s</Value>
+    </Setting>
+    <Setting Name="play_pause" Type="System.String" Scope="User">
+      <Value Profile="(Default)">f</Value>
+    </Setting>
+    <Setting Name="go_before" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="go_after" Type="System.String" Scope="User">
+      <Value Profile="(Default)">d</Value>
     </Setting>
   </Settings>
 </SettingsFile>

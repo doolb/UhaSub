@@ -135,13 +135,85 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int Start {
+        [global::System.Configuration.DefaultSettingValueAttribute("q")]
+        public string sub_start {
             get {
-                return ((int)(this["Start"]));
+                return ((string)(this["sub_start"]));
             }
             set {
-                this["Start"] = value;
+                this["sub_start"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("w")]
+        public string sub_end {
+            get {
+                return ((string)(this["sub_end"]));
+            }
+            set {
+                this["sub_end"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("e")]
+        public string sub_time {
+            get {
+                return ((string)(this["sub_time"]));
+            }
+            set {
+                this["sub_time"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("s")]
+        public string sub_save {
+            get {
+                return ((string)(this["sub_save"]));
+            }
+            set {
+                this["sub_save"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("f")]
+        public string play_pause {
+            get {
+                return ((string)(this["play_pause"]));
+            }
+            set {
+                this["play_pause"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string go_before {
+            get {
+                return ((string)(this["go_before"]));
+            }
+            set {
+                this["go_before"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("d")]
+        public string go_after {
+            get {
+                return ((string)(this["go_after"]));
+            }
+            set {
+                this["go_after"] = value;
             }
         }
     }

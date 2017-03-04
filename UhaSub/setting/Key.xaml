@@ -47,22 +47,28 @@
             <!-- play or pause -->
             <TextBlock Text="play_pause"
                        Grid.Column="0" Grid.Row="1"/>
-            
-            <Button    Grid.Column="1" Grid.Row="1"/>
+
+            <Button    Grid.Column="1" Grid.Row="1"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=play_pause}"/>
 
 
             <!-- go before -->
             <TextBlock Text="go_before"
                        Grid.Column="0" Grid.Row="2"/>
 
-            <Button    Grid.Column="1" Grid.Row="2"/>
+            <Button    Grid.Column="1" Grid.Row="2"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=go_before}"/>
 
 
             <!-- go after -->
             <TextBlock Text="go_after"
                        Grid.Column="0" Grid.Row="3"/>
 
-            <Button    Grid.Column="1" Grid.Row="3"/>
+            <Button    Grid.Column="1" Grid.Row="3"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=go_after}"/>
 
         </Grid>
 
@@ -89,14 +95,18 @@
             <TextBlock Text="set_start"
                        Grid.Column="0" Grid.Row="1"/>
 
-            <Button    Grid.Column="1" Grid.Row="1"/>
+            <Button    Grid.Column="1" Grid.Row="1"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_start}"/>
 
 
             <!-- set_end -->
             <TextBlock Text="set_end"
                        Grid.Column="0" Grid.Row="2"/>
 
-            <Button    Grid.Column="1" Grid.Row="2"/>
+            <Button    Grid.Column="1" Grid.Row="2"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_end}"/>
 
 
             <!-- set_time 
@@ -106,13 +116,17 @@
             <TextBlock Text="set_time"
                        Grid.Column="0" Grid.Row="3"/>
 
-            <Button    Grid.Column="1" Grid.Row="3"/>
+            <Button    Grid.Column="1" Grid.Row="3"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_time}"/>
 
             <!-- save sub -->
             <TextBlock Text="save_sub"
                        Grid.Column="0" Grid.Row="4"/>
 
-            <Button    Grid.Column="1" Grid.Row="4"/>
+            <Button    Grid.Column="1" Grid.Row="4"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_save}"/>
         </Grid>
 
     </Grid>
