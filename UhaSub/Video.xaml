@@ -6,7 +6,8 @@
              xmlns:p="clr-namespace:UhaSub.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="300">
-    <Grid Background="{Binding Source={x:Static p:Settings.Default}, Path=background}">
+    <Grid Background="{Binding Source={x:Static p:Settings.Default}, 
+        Path=background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="7.5*"/>
             <RowDefinition Height="*"/>
@@ -14,12 +15,14 @@
         
         <Grid.Resources>
             <Style TargetType="TextBlock">
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},Path=text}"/>
+                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},
+                    Path=text}"/>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
                 <Setter Property="Background"   Value="{x:Null}"/>
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},Path=foreground}"/>
+                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},
+                    Path=foreground}"/>
                 <Setter Property="BorderBrush"  Value="{x:Null}"/>
                 <Setter Property="VerticalAlignment" Value="Top"/>
             </Style>
@@ -69,7 +72,7 @@
             
             <!-- sub preview -->
             <TextBlock Name="subView"
-                       Text="Sub Preview"
+                       Text="{x:Static p:Resources.video_sub_preview}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="18"
@@ -101,6 +104,7 @@
                 <Button     Content=""
                             DockPanel.Dock="Right"
                             Click="OnMutexClick"
+                            ToolTip="{x:Static p:Resources.video_mutex_tip}"
                             VerticalAlignment="Top"/>
 
                 <!-- open setting -->
@@ -127,7 +131,7 @@
                 
                 
                 <Button     Content="&#xE213;"
-                            ToolTip="Play"
+                            ToolTip="{x:Static p:Resources.video_play_tip}"
                             Name="plBtn"
                             FontSize="24"
                             HorizontalAlignment="Center"

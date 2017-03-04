@@ -31,14 +31,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Foreground"
+        <TextBlock Text="{x:Static p:Resources.cfg_ui_theme}"
                    Grid.Column="0" Grid.Row="0"/>
         <Rectangle Width="90" Height="30"
                            Fill="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" 
                            MouseUp="OnMouseUp"
                            Tag="foreground"
                    Grid.Column="1" Grid.Row="0"/>
-        <TextBlock Text="Text"
+        <TextBlock Text="{x:Static p:Resources.cfg_ui_text}"
                    Grid.Column="0" Grid.Row="1"/>
         <Rectangle Width="90" Height="30"
                            Fill="{Binding Source={x:Static p:Settings.Default}, Path=text}" 
@@ -46,7 +46,7 @@
                            Tag="text"
                    Grid.Column="1" Grid.Row="1"/>
 
-        <TextBlock Text="Language"
+        <TextBlock Text="{x:Static p:Resources.cfg_ui_lang}"
                    Grid.Column="0" Grid.Row="2"/>
         <ComboBox  Width="90" Height="30"
                    Grid.Column="1" Grid.Row="2"

@@ -98,7 +98,7 @@ namespace UhaSub.setting
             UhaSub.Properties.Settings.Default.lang = l;
 
             UhaSub.Properties.Settings.Default.Save();
-            MessageBox.Show("change language need restart.");
+            MessageBox.Show(UhaSub.Properties.Resources.cfg_ui_lang_change);
         }
 
         

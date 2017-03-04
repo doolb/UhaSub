@@ -13,8 +13,9 @@
                 Storyboard.TargetProperty="(UIElement.Opacity)" 
                 Storyboard.TargetName="tb_save">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.667" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tb_save">
 				<EasingDoubleKeyFrame KeyTime="0" Value="-10"/>
@@ -164,7 +165,8 @@
             </DataGrid.Resources>
             
         </DataGrid>
-        <TextBlock x:Name="tb_save" Text="save_success"
+        <TextBlock x:Name="tb_save" 
+                   Text="{x:Static p:Resources.sub_save_success}"
                    Foreground="Cyan"
                    FontSize="24"
                    HorizontalAlignment="Center"

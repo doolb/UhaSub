@@ -117,32 +117,103 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="cfg_key_go_after" xml:space="preserve">
+    <value>后退3秒</value>
+  </data>
+  <data name="cfg_key_go_before" xml:space="preserve">
+    <value>前进3秒</value>
+  </data>
+  <data name="cfg_key_play_pause" xml:space="preserve">
+    <value>播放或暂停</value>
+  </data>
+  <data name="cfg_key_sub" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="cfg_key_sub_end" xml:space="preserve">
+    <value>设置结束时间</value>
+  </data>
+  <data name="cfg_key_sub_save" xml:space="preserve">
+    <value>保存字幕</value>
+  </data>
+  <data name="cfg_key_sub_start" xml:space="preserve">
+    <value>设置开始时间</value>
+  </data>
+  <data name="cfg_key_sub_time" xml:space="preserve">
+    <value>按下设置开始时间，
+释放设置结束时间</value>
+  </data>
+  <data name="cfg_key_video" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="cfg_sub_end" xml:space="preserve">
+    <value>结束反应时间</value>
+  </data>
+  <data name="cfg_sub_start" xml:space="preserve">
+    <value>开始反应时间</value>
+  </data>
+  <data name="cfg_ui_lang" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="cfg_ui_text" xml:space="preserve">
+    <value>文字</value>
+  </data>
+  <data name="cfg_ui_theme" xml:space="preserve">
+    <value>主题</value>
+  </data>
   <data name="FileNoSupport" xml:space="preserve">
-    <value>Sorry  we could load this file,please select *.txt or *.ass.</value>
+    <value>对不起，我们不能加载这个文件，请选择 *.txt 或者 *.ass文件。</value>
+    <comment>Sorry  we could load this file,please select *.txt or *.ass.</comment>
   </data>
   <data name="KeySetting" xml:space="preserve">
-    <value>keyboard setting</value>
+    <value>键盘设置</value>
   </data>
   <data name="OpenFile" xml:space="preserve">
-    <value>打开文件</value>
+    <value>打开视频文件
+同时尝试打开相应的 ass 字幕文件。</value>
+    <comment>Open video file
+and try to open relational ass file</comment>
   </data>
   <data name="OpenSetting" xml:space="preserve">
-    <value>打开设置</value>
+    <value>更改设置</value>
   </data>
   <data name="OpenSub" xml:space="preserve">
-    <value>Open a sub file (txt,ass)</value>
+    <value>打开字幕文件</value>
+    <comment>Open a sub file</comment>
   </data>
   <data name="SubFileNoFound" xml:space="preserve">
-    <value>Sorry we can't open sub file for this video,
-Please select a sub file.</value>
+    <value>未找到相应的字幕文件，请选择要导入的字幕</value>
+    <comment>Sorry we can't open sub file for this video,
+Please select a sub file.</comment>
   </data>
   <data name="SubSetting" xml:space="preserve">
-    <value>sub setting</value>
+    <value>字幕设置</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>UhaSub</value>
   </data>
   <data name="UISetting" xml:space="preserve">
-    <value>Color</value>
+    <value>界面设置</value>
+  </data>
+  <data name="video_mutex_tip" xml:space="preserve">
+    <value>静音</value>
+  </data>
+  <data name="video_nomutex_tip" xml:space="preserve">
+    <value>关闭静音</value>
+  </data>
+  <data name="video_pause_tip" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="video_play_tip" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="video_sub_preview" xml:space="preserve">
+    <value>字幕预览</value>
+  </data>
+  <data name="cfg_ui_lang_change" xml:space="preserve">
+    <value>更改语言需要重启才能生效</value>
+  </data>
+  <data name="sub_save_success" xml:space="preserve">
+    <value>保存成功！</value>
+    <comment>Save Success!</comment>
   </data>
 </root>

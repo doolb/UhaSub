@@ -157,7 +157,7 @@ namespace UhaSub
             // chage button to play
             is_playing = false;
             plBtn.Content = s_play;
-            plBtn.ToolTip = s_play_tip;
+            plBtn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
         }
 
 
@@ -196,9 +196,7 @@ namespace UhaSub
         private bool is_playing = false;
 
         private string s_play = "";
-        private string s_play_tip = "Play";
         private string s_pause = "";
-        private string s_pause_tip = "Pause";
         public void Pause()
         {
             if (m_media == null)
@@ -209,14 +207,14 @@ namespace UhaSub
             if (is_playing)
             {
                 btn.Content = s_play;
-                btn.ToolTip = s_play_tip;
+                btn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
                 m_player.Pause();
             }
             else
             {
 
                 btn.Content = s_pause;
-                btn.ToolTip = s_pause_tip;
+                btn.ToolTip = UhaSub.Properties.Resources.video_pause_tip;
                 m_player.Play();
             }
 
@@ -333,9 +331,7 @@ namespace UhaSub
         private bool is_mutex = false;
 
         private string s_mutex = "";
-        private string s_mutex_tip = "Mutex";
         private string s_no_mutex = "";
-        private string s_no_mutex_tip = "Open sound";
 
         private void OnMutexClick(object sender, RoutedEventArgs e)
         {
@@ -344,13 +340,13 @@ namespace UhaSub
             if(is_mutex)
             {
                 btn.Content = s_no_mutex;
-                btn.ToolTip = s_no_mutex_tip;
+                btn.ToolTip = UhaSub.Properties.Resources.video_mutex_tip;
                 m_player.ToggleMute();
             }
             else
             {
                 btn.Content = s_mutex;
-                btn.ToolTip = s_mutex_tip;
+                btn.ToolTip = UhaSub.Properties.Resources.video_nomutex_tip;
                 m_player.ToggleMute();
             }
 

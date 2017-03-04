@@ -13,7 +13,7 @@
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="15"/>
+                <Setter Property="Margin" Value="12 12 0 0"/>
             </Style>
             
             <Style TargetType="Button">
@@ -44,11 +44,11 @@
             </Grid.RowDefinitions>
             
             <!-- video title -->
-            <TextBlock Text="video_control"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_video}"
                        Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
                        HorizontalAlignment="Center"/>
             <!-- play or pause -->
-            <TextBlock Text="play_pause"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_play_pause}"
                        Grid.Column="0" Grid.Row="1"/>
 
             <Button    Grid.Column="1" Grid.Row="1"
@@ -59,7 +59,7 @@
 
 
             <!-- go before -->
-            <TextBlock Text="go_before"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_go_before}"
                        Grid.Column="0" Grid.Row="2"/>
 
             <Button    Grid.Column="1" Grid.Row="2"
@@ -70,7 +70,7 @@
 
 
             <!-- go after -->
-            <TextBlock Text="go_after"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_go_after}"
                        Grid.Column="0" Grid.Row="3"/>
 
             <Button    Grid.Column="1" Grid.Row="3"
@@ -96,12 +96,12 @@
             </Grid.RowDefinitions>
 
             <!-- sub title -->
-            <TextBlock Text="sub_control"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub}"
                        Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
                        HorizontalAlignment="Center"/>
 
             <!-- set_start -->
-            <TextBlock Text="set_start"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_start}"
                        Grid.Column="0" Grid.Row="1"/>
 
             <Button    Grid.Column="1" Grid.Row="1"
@@ -112,7 +112,7 @@
 
 
             <!-- set_end -->
-            <TextBlock Text="set_end"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_end}"
                        Grid.Column="0" Grid.Row="2"/>
 
             <Button    Grid.Column="1" Grid.Row="2"
@@ -126,8 +126,10 @@
             press down to set start
             and release to set end
             -->
-            <TextBlock Text="set_time"
-                       Grid.Column="0" Grid.Row="3"/>
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_time}"
+                       Grid.Column="0" Grid.Row="3"
+                       FontSize="15"
+                       Margin="0"/>
 
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
@@ -136,7 +138,7 @@
                        Click="Button_Click"/>
 
             <!-- save sub -->
-            <TextBlock Text="save_sub"
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_save}"
                        Grid.Column="0" Grid.Row="4"/>
 
             <Button    Grid.Column="1" Grid.Row="4"

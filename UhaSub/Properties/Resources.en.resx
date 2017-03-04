@@ -117,6 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="cfg_key_go_after" xml:space="preserve">
+    <value>Go after 3 sec</value>
+  </data>
+  <data name="cfg_key_go_before" xml:space="preserve">
+    <value>Go before 3 sec</value>
+  </data>
+  <data name="cfg_key_play_pause" xml:space="preserve">
+    <value>Play or Pause</value>
+  </data>
+  <data name="cfg_key_sub" xml:space="preserve">
+    <value>Control sub</value>
+  </data>
+  <data name="cfg_key_sub_end" xml:space="preserve">
+    <value>Set end time</value>
+  </data>
+  <data name="cfg_key_sub_save" xml:space="preserve">
+    <value>Save sub</value>
+  </data>
+  <data name="cfg_key_sub_start" xml:space="preserve">
+    <value>Set start time</value>
+  </data>
+  <data name="cfg_key_sub_time" xml:space="preserve">
+    <value>Press to set start time,
+release to set end time</value>
+  </data>
+  <data name="cfg_key_video" xml:space="preserve">
+    <value>Control video</value>
+  </data>
+  <data name="cfg_sub_end" xml:space="preserve">
+    <value>End delay time</value>
+  </data>
+  <data name="cfg_sub_start" xml:space="preserve">
+    <value>Start delay time</value>
+  </data>
+  <data name="cfg_ui_lang" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="cfg_ui_text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="cfg_ui_theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
   <data name="FileNoSupport" xml:space="preserve">
     <value>Sorry  we could load this file,please select *.txt or *.ass.</value>
   </data>
@@ -124,13 +167,15 @@
     <value>keyboard setting</value>
   </data>
   <data name="OpenFile" xml:space="preserve">
-    <value>Open File</value>
+    <value>Open video file
+and try to open relational ass file </value>
   </data>
   <data name="OpenSetting" xml:space="preserve">
-    <value>Chage setting</value>
+    <value>change setting</value>
   </data>
   <data name="OpenSub" xml:space="preserve">
-    <value>Open a sub file (txt,ass)</value>
+    <value>Open a sub file 
+(txt,ass)</value>
   </data>
   <data name="SubFileNoFound" xml:space="preserve">
     <value>Sorry we can't open sub file for this video,
@@ -143,6 +188,27 @@ Please select a sub file.</value>
     <value>UhaSub</value>
   </data>
   <data name="UISetting" xml:space="preserve">
-    <value>Color</value>
+    <value>user interface setting</value>
+  </data>
+  <data name="video_mutex_tip" xml:space="preserve">
+    <value>Mutex</value>
+  </data>
+  <data name="video_nomutex_tip" xml:space="preserve">
+    <value>Mutex Off</value>
+  </data>
+  <data name="video_pause_tip" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="video_play_tip" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="video_sub_preview" xml:space="preserve">
+    <value>Sub Preview</value>
+  </data>
+  <data name="cfg_ui_lang_change" xml:space="preserve">
+    <value>Change language need restart.</value>
+  </data>
+  <data name="sub_save_success" xml:space="preserve">
+    <value>Save Success!</value>
   </data>
 </root>
