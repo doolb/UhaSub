@@ -9,8 +9,8 @@
     <Grid Background="{Binding Source={x:Static p:Settings.Default}, 
         Path=background}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="7.5*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Grid.Resources>
@@ -68,7 +68,8 @@
         <WindowsFormsHost   Name="windowsFormsHost1"
                             Grid.Row="0"/>
         <!-- video status -->
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Top">
             
             <!-- sub preview -->
             <TextBlock Name="subView"
@@ -136,6 +137,7 @@
                             FontSize="24"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"
+                            VerticalContentAlignment="Top"
                             Width="30" Height="30"
                             Click="OnPlayClick"/>
 

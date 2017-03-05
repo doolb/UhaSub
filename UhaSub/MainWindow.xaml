@@ -29,9 +29,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="7.2*"/>
+            <RowDefinition Height="7.3*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <local:Video    x:Name="video" 
