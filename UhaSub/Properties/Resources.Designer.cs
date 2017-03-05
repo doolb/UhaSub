@@ -236,6 +236,24 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save Sub.
+        /// </summary>
+        public static string on_save {
+            get {
+                return ResourceManager.GetString("on_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Sub to another file.
+        /// </summary>
+        public static string on_save_as {
+            get {
+                return ResourceManager.GetString("on_save_as", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open video file
         ///and try to open relational ass file .
         /// </summary>

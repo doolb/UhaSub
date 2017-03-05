@@ -26,19 +26,23 @@
 	</UserControl.Resources>
     <Grid>
         <DataGrid   Name="subs" 
-                    Background="{Binding Source={x:Static p:Settings.Default}, Path=background}" 
+                    Background="{Binding Source={x:Static p:Settings.Default}, 
+            Path=background}" 
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
                     
-                    Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}" 
+                    Foreground="{Binding Source={x:Static p:Settings.Default}, 
+            Path=text}" 
                     FontSize="15"
                     BorderBrush="{x:Null}"
                     Focusable="True"
                     HeadersVisibility="Column"
                     RowHeight="27"
-                    IsReadOnly="True"
+                    IsReadOnly="False"
                     InitializingNewItem="subs_InitializingNewItem" 
                     SelectionChanged="subs_SelectionChanged" Cursor="Hand"
+                    BeginningEdit="subs_BeginningEdit"
+                    CellEditEnding="subs_CellEditEnding"
                     >
 
             <DataGrid.Resources>

@@ -372,6 +372,16 @@ namespace UhaSub
         {
             main.OnOpenSetting(sender, e);
         }
+
+        public void OnSaveAs(object sender, RoutedEventArgs e)
+        {
+            main.OnSaveAs(sender, e);
+        }
+
+        public void OnSave(object sender, RoutedEventArgs e)
+        {
+            main.OnSave(sender, e);
+        }
     }
 
 }

@@ -114,7 +114,21 @@
                         Click="OnOpenSetting"
                         Margin="0 0 10 0"
                         DockPanel.Dock="Right"/>
-                
+
+                <!-- save as -->
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.on_save_as}" 
+                        Click="OnSaveAs"
+                        Margin="0 0 10 0"
+                        DockPanel.Dock="Right"/>
+
+                <!-- save sub -->
+                <Button Content="" 
+                        ToolTip="{x:Static p:Resources.on_save}" 
+                        Click="OnSave"
+                        Margin="0 0 10 0"
+                        DockPanel.Dock="Right"/>
+
                 <!-- open sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenSub}" 

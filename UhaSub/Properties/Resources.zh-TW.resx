@@ -240,4 +240,10 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="sub_head_text" xml:space="preserve">
     <value>文本</value>
   </data>
+  <data name="on_save" xml:space="preserve">
+    <value>保存字幕</value>
+  </data>
+  <data name="on_save_as" xml:space="preserve">
+    <value>保存字幕到另个文件</value>
+  </data>
 </root>

@@ -28,7 +28,7 @@
                     ToolTip="{x:Static p:Resources.UISetting}"
                     Click="OnNavigate"
                     Tag="ui"/>
-            <Button Content=""
+            <Button Content=""
                     ToolTip="{x:Static p:Resources.KeySetting}"
                     Click="OnNavigate"
                     Tag="key"/>

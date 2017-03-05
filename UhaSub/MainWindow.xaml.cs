@@ -49,6 +49,9 @@ namespace UhaSub
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            // if is editing now, skip
+            if (sub.is_editing) return;
+
             /*
              * video control
              */
@@ -139,7 +142,15 @@ namespace UhaSub
             cfg.ReLoad();
         }
 
-        
+        public void OnSaveAs(object sender, RoutedEventArgs e)
+        {
+            sub.SaveAs();
+        }
+
+        public void OnSave(object sender, RoutedEventArgs e)
+        {
+            sub.Save();
+        }
 
 
     }

@@ -31,14 +31,13 @@ namespace UhaSub
             subs.Loaded += subs_Loaded;
         }
 
-        void subs_Loaded(object sender, RoutedEventArgs e)
-        {
-            /* 
-             * set for last column
-             * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
-             */
-            subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+        public bool is_editing = false;
 
+        // can sub edit
+        int writeable = 1;
+
+        void custom_head()
+        {
             /*
              * change data-grid head
              * refer:http://stackoverflow.com/questions/13192823/update-the-wpf-datagrid-column-header-text-via-code-behind
@@ -66,6 +65,18 @@ namespace UhaSub
             template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_text);
             subs.Columns[3].HeaderTemplate = template;
 
+            
+        }
+        void subs_Loaded(object sender, RoutedEventArgs e)
+        {
+            /* 
+             * set for last column
+             * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
+             */
+            subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+
+            custom_head();
+
             locate();        
         }
 
@@ -80,6 +91,9 @@ namespace UhaSub
             for (int i = 0; i < subs.Items.Count; i++)
             {
                 Ass ass = subs.Items[i] as Ass;
+                if (ass == null)
+                    break;
+
                 if (ass.End == 0)
                 {
                     //subs.Items.MoveCurrentTo(ass);  // set current item
@@ -134,6 +148,23 @@ namespace UhaSub
             if (SubFileName == null)
                 return;
             Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
+
+            (this.Resources["stb_save_success"] as Storyboard).Begin();
+        }
+
+        public void SaveAs()
+        {
+            var sd = new SaveFileDialog();
+            sd.Filter = "Ass files (*.ass)|*ass|All files (*.*)|*.*";
+
+            if (sd.ShowDialog() != true)
+                return;
+
+            // load default head
+            if (SubHeader == null)
+                SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
+
+            Ass.Save(subs.ItemsSource as List<Ass>, SubHeader, sd.FileName) ;
 
             (this.Resources["stb_save_success"] as Storyboard).Begin();
         }
@@ -245,7 +276,7 @@ namespace UhaSub
         // select next item
         public void Down()
         {
-            if (subs.SelectedIndex == subs.Items.Count -1 )
+            if (subs.SelectedIndex == subs.Items.Count  - 1)
                 return;
 
             subs.SelectedIndex += 1;
@@ -263,9 +294,21 @@ namespace UhaSub
 
         private void subs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (this.subs.SelectedItem == null) return;
-            SubSelected(this.subs.SelectedItem as Ass);
+            Ass ass = this.subs.SelectedItem as Ass;
+            if (ass == null) return;
+            SubSelected(ass);
             this.subs.ScrollIntoView(this.subs.SelectedItem);
+
+        }
+
+        private void subs_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
+        {
+            this.is_editing = true;
+        }
+
+        private void subs_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            this.is_editing = false;
         }
 
     }

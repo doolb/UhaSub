@@ -65,3 +65,4 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\setting\about.baml
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\zh-TW\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.zh-TW.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\zh-TW\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache
