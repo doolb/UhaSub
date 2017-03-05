@@ -5,18 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
-             MinHeight="180"
-             SizeChanged="AudioSizeChanged">
+             d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         
         <!-- use wf control 
         refer :http://www.codescratcher.com/wpf/windows-forms-controls-in-wpf/
         -->
         <WindowsFormsHost HorizontalAlignment="Stretch"
-                              VerticalAlignment="Top">
-            <wf:PictureBox x:Name="wave_box"
-                               Width="270" Height="81"/>
+                              VerticalAlignment="Stretch">
+            <wf:PictureBox x:Name="wave_box"/>
         </WindowsFormsHost>
 
     </Grid>

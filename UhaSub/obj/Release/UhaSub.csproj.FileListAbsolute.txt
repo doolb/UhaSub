@@ -43,3 +43,4 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\about.g.cs
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\setting\about.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\UhaSub.Properties.Resources.zh-TW.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Release\zh-TW\UhaSub.resources.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Release\UhaSub.csprojResolveAssemblyReference.cache

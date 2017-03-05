@@ -29,8 +29,9 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.2*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <local:Video    x:Name="video" 
@@ -38,11 +39,12 @@
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"/>
 
-        <local:Sub      x:Name="sub" DockPanel.Dock="Right"
+        <local:Sub      x:Name="sub"
                         Grid.Column="1" Grid.Row="0"
                         Focusable="False"/>
 
         <local:Audio    x:Name="audio"
-                        Grid.Column="1" Grid.Row="1"/>
+                        Grid.Column="1" Grid.Row="1"
+                        VerticalAlignment="Stretch"/>
     </Grid>
 </Window>

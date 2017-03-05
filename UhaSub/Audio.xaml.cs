@@ -110,7 +110,7 @@ namespace UhaSub
             {
                 SpectrumProvider = spectrumProvider,
                 UseAverage = true,
-                BarCount = 25,
+                BarCount = 18,
                 BarSpacing = 2,
                 IsXLogScale = true,
                 ScalingStrategy = ScalingStrategy.Sqrt
@@ -174,11 +174,6 @@ namespace UhaSub
                 if (image != null)
                     image.Dispose();
             }
-        }
-
-        private void AudioSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //this.wave_box.Height = (int)e.NewSize.Height/3*2;
         }
 
  
