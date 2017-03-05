@@ -177,7 +177,7 @@ namespace UhaSub
             // load ass header
             LoadFile();
 
-            
+            custom_head();
                       
             // locate to no 0 line
             locate();
