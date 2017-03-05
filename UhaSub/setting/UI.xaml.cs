@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -98,6 +98,7 @@ namespace UhaSub.setting
             UhaSub.Properties.Settings.Default.lang = l;
 
             UhaSub.Properties.Settings.Default.Save();
+
             MessageBox.Show(UhaSub.Properties.Resources.cfg_ui_lang_change);
         }
 
