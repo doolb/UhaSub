@@ -93,20 +93,23 @@
                 <TextBlock Text="0:00:00.00" Name="ttText" HorizontalAlignment="Left"/>
 
 
+                <!-- mutex -->
+                <Button     Content=""
+                            DockPanel.Dock="Left"
+                            Click="OnMutexClick"
+                            ToolTip="{x:Static p:Resources.video_mutex_tip}"
+                            VerticalAlignment="Top"
+                            Margin="20 0 0 0"/>
+                
                 <!-- volume -->
                 <Slider     Name="vlSlider"
                             Value="80"
                             Focusable="False"
                             Width="100"
+                            VerticalAlignment="Top"
                             Maximum="100" Minimum="0"
                             ValueChanged="vlSlider_ValueChanged"
-                            DockPanel.Dock="Right"/>
-                <!-- mutex -->
-                <Button     Content=""
-                            DockPanel.Dock="Right"
-                            Click="OnMutexClick"
-                            ToolTip="{x:Static p:Resources.video_mutex_tip}"
-                            VerticalAlignment="Top"/>
+                            DockPanel.Dock="Left"/>
 
                 <!-- open setting -->
                 <Button Content="" 
