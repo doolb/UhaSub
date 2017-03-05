@@ -225,5 +225,41 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 return ((string)(this["version"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool cfg_disable_sub {
+            get {
+                return ((bool)(this["cfg_disable_sub"]));
+            }
+            set {
+                this["cfg_disable_sub"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4.4")]
+        public double cfg_col_size_1 {
+            get {
+                return ((double)(this["cfg_col_size_1"]));
+            }
+            set {
+                this["cfg_col_size_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double cfg_col_size_2 {
+            get {
+                return ((double)(this["cfg_col_size_2"]));
+            }
+            set {
+                this["cfg_col_size_2"] = value;
+            }
+        }
     }
 }

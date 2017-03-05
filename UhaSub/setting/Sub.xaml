@@ -38,6 +38,14 @@
                 <Setter Property="Margin" Value="0 12 0 0"/>
             </Style>
 
+            <Style TargetType="CheckBox">
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="12 12 0 0"/>
+            </Style>
+
         </Grid.Resources>
         
         <!-- start time -->
@@ -69,6 +77,16 @@
                    Grid.Column="2" Grid.Row="1"
                    HorizontalAlignment="Left"
                    Margin="3"/>
+
+        <!-- disable internel sub -->
+        <CheckBox  Content="{x:Static p:Resources.cfg_disable_sub}" 
+                   Grid.Column="0" Grid.Row="2"
+                   Loaded="CheckBox_Loaded"
+                   Checked="CheckBox_Checked"
+                   Unchecked="CheckBox_Unchecked"
+                   Tag="disable_sub"/>
+         
+        
 
     </Grid>
 </UserControl>

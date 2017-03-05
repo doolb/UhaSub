@@ -238,4 +238,7 @@ For more information, please see http://github.com/doolb/UhaSub
   <data name="on_save_as" xml:space="preserve">
     <value>Save Sub to another file</value>
   </data>
+  <data name="cfg_disable_sub" xml:space="preserve">
+    <value>disable internel sub</value>
+  </data>
 </root>

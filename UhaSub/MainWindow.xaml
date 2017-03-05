@@ -24,8 +24,9 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4.4*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4.4*" x:Name="col_def1" MinWidth="300"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"    x:Name="col_def2" MinWidth="100"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -38,12 +39,22 @@
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"/>
 
+        
+        <!-- splite thumb -->
+        <Thumb      Foreground="Gray"
+                    Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+                    DragStarted="Thumb_DragStarted"
+                    DragDelta="Thumb_DragDelta"
+                    DragCompleted="Thumb_DragCompleted"
+                    Cursor="SizeWE"/>
+        
         <local:Sub      x:Name="sub"
-                        Grid.Column="1" Grid.Row="0"
+                        Grid.Column="2" Grid.Row="0"
                         Focusable="False"/>
 
         <local:Audio    x:Name="audio"
-                        Grid.Column="1" Grid.Row="1"
+                        Grid.Column="2" Grid.Row="1"
                         VerticalAlignment="Stretch"/>
+        
     </Grid>
 </Window>

@@ -36,6 +36,12 @@ namespace UhaSub
             this.video.main = this;
 
             this.Closed += MainWindow_Closed;
+
+            /*
+             * set column width from config
+             */
+            col_def1.Width = new GridLength(UhaSub.Properties.Settings.Default.cfg_col_size_1, GridUnitType.Star);
+            col_def2.Width = new GridLength(UhaSub.Properties.Settings.Default.cfg_col_size_2, GridUnitType.Star);
         }
 
         void MainWindow_Closed(object sender, EventArgs e)
@@ -150,6 +156,40 @@ namespace UhaSub
         public void OnSave(object sender, RoutedEventArgs e)
         {
             sub.Save();
+        }
+
+
+
+        /*
+         * change size 
+         * refer:[Microsoft_Press]_Programming_Windows_6th_Edition (book)
+         */
+        private void Thumb_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
+        {
+            // store original size
+            col_def1.Width = new GridLength(col_def1.ActualWidth, GridUnitType.Star);
+            col_def2.Width = new GridLength(col_def2.ActualWidth, GridUnitType.Star); 
+        }
+
+
+
+        private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        {
+            // compute new size
+            double newWidth1 = Math.Max(0, col_def1.Width.Value + e.HorizontalChange); 
+            double newWidth2 = Math.Max(0, col_def2.Width.Value - e.HorizontalChange);
+            
+            // set new size
+            col_def1.Width = new GridLength(newWidth1, GridUnitType.Star);
+            col_def2.Width = new GridLength(newWidth2, GridUnitType.Star); 
+        }
+
+        private void Thumb_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
+        {
+            UhaSub.Properties.Settings.Default.cfg_col_size_1 = col_def1.Width.Value + e.HorizontalChange;
+            UhaSub.Properties.Settings.Default.cfg_col_size_2 = col_def2.Width.Value + e.HorizontalChange;
+
+            UhaSub.Properties.Settings.Default.Save();
         }
 
 

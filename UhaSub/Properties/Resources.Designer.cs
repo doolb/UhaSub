@@ -82,6 +82,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to disable internel sub.
+        /// </summary>
+        public static string cfg_disable_sub {
+            get {
+                return ResourceManager.GetString("cfg_disable_sub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go after 3 sec.
         /// </summary>
         public static string cfg_key_go_after {

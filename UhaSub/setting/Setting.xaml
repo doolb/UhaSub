@@ -43,6 +43,10 @@
 
         </StackPanel>
         
+        <Rectangle Fill="Gray"
+                   Grid.Column="0"
+                   Panel.ZIndex="-1"/>
+        
         <Grid   Grid.Column="1"
                 Name="host"/>
     </Grid>

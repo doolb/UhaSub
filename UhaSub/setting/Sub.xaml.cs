@@ -52,5 +52,26 @@ namespace UhaSub.setting
             UhaSub.Properties.Settings.Default.Save();
 
         }
+
+        private void CheckBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            (sender as CheckBox).IsChecked = UhaSub.Properties.Settings.Default.cfg_disable_sub;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            UhaSub.Properties.Settings.Default.cfg_disable_sub =
+                (sender as CheckBox).IsChecked.Value;
+
+            UhaSub.Properties.Settings.Default.Save();
+
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            UhaSub.Properties.Settings.Default.cfg_disable_sub =
+                (sender as CheckBox).IsChecked.Value;
+            UhaSub.Properties.Settings.Default.Save();
+        }
     }
 }

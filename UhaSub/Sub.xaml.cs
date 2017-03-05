@@ -205,6 +205,8 @@ namespace UhaSub
                     break;
             }
 
+            custom_head();
+
             // locate to no 0 line
             locate();
         }

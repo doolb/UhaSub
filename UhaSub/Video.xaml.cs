@@ -148,8 +148,10 @@ namespace UhaSub
             m_media.Events.StateChanged += new EventHandler<MediaStateChange>(
                     Events_StateChanged);
 
+
             // open mediao
             m_player.Open(m_media);
+
 
             // set volume
             m_player.Volume = (int)vlSlider.Value;

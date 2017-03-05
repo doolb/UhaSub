@@ -246,4 +246,7 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="on_save_as" xml:space="preserve">
     <value>保存字幕到另个文件</value>
   </data>
+  <data name="cfg_disable_sub" xml:space="preserve">
+    <value>禁用内置的字幕</value>
+  </data>
 </root>
