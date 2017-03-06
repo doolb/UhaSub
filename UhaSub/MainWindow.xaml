@@ -24,9 +24,9 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4.4*" x:Name="col_def1" MinWidth="300"/>
+            <ColumnDefinition Width="4.4*" x:Name="col_def1" MinWidth="600"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"    x:Name="col_def2" MinWidth="100"/>
+            <ColumnDefinition Width="*"    x:Name="col_def2" MinWidth="200"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>

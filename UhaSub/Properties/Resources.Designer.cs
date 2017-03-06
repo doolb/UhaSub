@@ -245,6 +245,16 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, we can run without vlc,
+        ///Please install vlc or down libvlc..
+        /// </summary>
+        public static string msg_vlc_no_found {
+            get {
+                return ResourceManager.GetString("msg_vlc_no_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save Sub.
         /// </summary>
         public static string on_save {

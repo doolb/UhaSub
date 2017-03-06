@@ -28,6 +28,7 @@ using Implementation;
 using Microsoft.Win32;
 using System.Windows.Controls.Primitives;
 using System.Drawing;
+using Implementation.Exceptions;
 
 namespace UhaSub
 {
@@ -74,23 +75,34 @@ namespace UhaSub
             p.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.Settings.Default.background);
             windowsFormsHost1.Child = p;
 
-            // find vlc = true
-            // so you can install you own vlc
-            m_factory = new MediaPlayerFactory(true);
+            try
+            {
+                // find vlc = true
+                // so you can install you own vlc
+                m_factory = new MediaPlayerFactory(true);
 
-            m_player = m_factory.CreatePlayer<IVideoPlayer>();
+                m_player = m_factory.CreatePlayer<IVideoPlayer>();
 
 
-            m_player.Events.PlayerPositionChanged += new EventHandler<MediaPlayerPositionChanged>(
-              Events_PlayerPositionChanged);
-            m_player.Events.TimeChanged += new EventHandler<MediaPlayerTimeChanged>(
-                Events_TimeChanged);
-            m_player.Events.MediaEnded += new EventHandler(
-              Events_MediaEnded);
-            m_player.Events.PlayerStopped += new EventHandler(
-              Events_PlayerStopped);
+                m_player.Events.PlayerPositionChanged += new EventHandler<MediaPlayerPositionChanged>(
+                  Events_PlayerPositionChanged);
+                m_player.Events.TimeChanged += new EventHandler<MediaPlayerTimeChanged>(
+                    Events_TimeChanged);
+                m_player.Events.MediaEnded += new EventHandler(
+                  Events_MediaEnded);
+                m_player.Events.PlayerStopped += new EventHandler(
+                  Events_PlayerStopped);
 
-            m_player.WindowHandle = p.Handle;
+                m_player.WindowHandle = p.Handle;
+            }
+            catch (Exception)
+            {
+                /*
+                 * exit when can't load libvlc
+                 */
+                MessageBox.Show(UhaSub.Properties.Resources.msg_vlc_no_found);
+                Environment.Exit(-1);
+            }
         }
 
         void Events_PlayerStopped(object sender, EventArgs e)

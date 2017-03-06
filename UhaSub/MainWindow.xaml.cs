@@ -162,7 +162,7 @@ namespace UhaSub
 
         /*
          * change size 
-         * refer:[Microsoft_Press]_Programming_Windows_6th_Edition (book)
+         * refer:[Microsoft_Press]_Programming_Windows_6th_Edition (book-270)
          */
         private void Thumb_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
         {

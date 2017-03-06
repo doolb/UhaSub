@@ -238,4 +238,8 @@ For more information, please see http://github.com/doolb/UhaSub
   <data name="cfg_disable_sub" xml:space="preserve">
     <value>disable internel sub</value>
   </data>
+  <data name="msg_vlc_no_found" xml:space="preserve">
+    <value>Sorry, we can run without vlc,
+Please install vlc or down libvlc.</value>
+  </data>
 </root>
