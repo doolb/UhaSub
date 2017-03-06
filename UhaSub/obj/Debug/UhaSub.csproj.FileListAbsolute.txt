@@ -38,10 +38,6 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\MainWindow.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.g.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csproj.GenerateResource.Cache
-D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Declarations.dll
-D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Implementation.dll
-D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\LibVlcWrapper.dll
-D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\NLog.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Sub.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Sub.g.cs
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\zh-CN\UhaSub.resources.dll
@@ -66,3 +62,7 @@ D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\zh-TW\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.Properties.Resources.zh-TW.resources
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\zh-TW\UhaSub.resources.dll
 D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\UhaSub.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Core.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Core.Interops.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Forms.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Wpf.dll

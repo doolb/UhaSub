@@ -55,22 +55,11 @@
   <ItemGroup>
     <Reference Include="ColorPicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>color_picker\ColorPicker.exe</HintPath>
+      <HintPath>..\vendor\color_picker\ColorPicker.exe</HintPath>
     </Reference>
-    <Reference Include="CSCore">
-      <HintPath>wave\CSCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Declarations">
-      <HintPath>nvlc\Declarations.dll</HintPath>
-    </Reference>
-    <Reference Include="Implementation">
-      <HintPath>nvlc\Implementation.dll</HintPath>
-    </Reference>
-    <Reference Include="LibVlcWrapper">
-      <HintPath>nvlc\LibVlcWrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>nvlc\NLog.dll</HintPath>
+    <Reference Include="CSCore, Version=1.1.6271.39620, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\vendor\wave\CSCore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -85,6 +74,18 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="UIAutomationProvider" />
+    <Reference Include="Vlc.DotNet.Core">
+      <HintPath>..\vendor\vlc\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops">
+      <HintPath>..\vendor\vlc\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms">
+      <HintPath>..\vendor\vlc\Vlc.DotNet.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Wpf">
+      <HintPath>..\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -126,13 +127,7 @@
     <Compile Include="setting\UI.xaml.cs">
       <DependentUpon>UI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="wave\GradientCalculator.cs" />
-    <Compile Include="wave\ISpectrumProvider.cs" />
-    <Compile Include="wave\LineSpectrum.cs" />
-    <Compile Include="wave\ScalingStrategy.cs" />
-    <Compile Include="wave\SpectrumBase.cs" />
     <Compile Include="Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
@@ -140,6 +135,12 @@
     <Compile Include="Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wave\BasicSpectrumProvider.cs" />
+    <Compile Include="wave\GradientCalculator.cs" />
+    <Compile Include="wave\ISpectrumProvider.cs" />
+    <Compile Include="wave\LineSpectrum.cs" />
+    <Compile Include="wave\ScalingStrategy.cs" />
+    <Compile Include="wave\SpectrumBase.cs" />
     <Compile Include="wave\VoicePrint3DSpectrum.cs" />
     <Page Include="setting\about.xaml">
       <SubType>Designer</SubType>

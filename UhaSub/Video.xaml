@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:p="clr-namespace:UhaSub.Properties"
+             xmlns:vlc="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="900" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="900">
     <Grid Background="{Binding Source={x:Static p:Settings.Default}, 
         Path=background}">
         <Grid.RowDefinitions>
@@ -65,8 +66,8 @@
             
         </Grid.Resources>
         
-        <WindowsFormsHost   Name="windowsFormsHost1"
-                            Grid.Row="0"/>
+        <vlc:VlcControl Grid.Row="0" x:Name="vlc"/>
+        
         <!-- video status -->
         <StackPanel Grid.Row="1"
                     VerticalAlignment="Top">

@@ -17,85 +17,54 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-/*
- * using for nVlc
- */
-using Declarations;
-using Declarations.Events;
-using Declarations.Media;
-using Declarations.Players;
-using Implementation;
+
+
 using Microsoft.Win32;
 using System.Windows.Controls.Primitives;
 using System.Drawing;
-using Implementation.Exceptions;
+using Vlc.DotNet.Core;
+using System.IO;
 
 namespace UhaSub
 {
     /// <summary>
     /// Interaction logic for Video.xaml
     /// </summary>
-    public partial class Video : UserControl, INotifyPropertyChanged
+    public partial class Video : UserControl
     {
         public Video() 
         {
+
             InitializeComponent();
 
             LoadVlc();
 
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        // This method is called by the Set accessor of each property.
-        // The CallerMemberName attribute that is applied to the optional propertyName
-        // parameter causes the property name of the caller to be substituted as an argument.
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        // varial for nVlc
-        IMediaPlayerFactory m_factory;
-        public IVideoPlayer m_player;
-        public IMedia m_media;
-
         
 
         void LoadVlc()
         {
-            System.Windows.Forms.Panel p = new System.Windows.Forms.Panel();
-            
-            // backgroud
-            // use html type
-            // refer:http://stackoverflow.com/questions/1914487/how-to-create-a-system-drawing-color-from-its-hexadecimal-rgb-string
-            p.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.Settings.Default.background);
-            windowsFormsHost1.Child = p;
-
             try
             {
-                // find vlc = true
-                // so you can install you own vlc
-                m_factory = new MediaPlayerFactory(true);
+                // set libvlc dir
+                vlc.MediaPlayer.VlcLibDirectoryNeeded +=
+                    OnVlcControlNeedsLibDirectory;
 
-                m_player = m_factory.CreatePlayer<IVideoPlayer>();
+                vlc.MediaPlayer.EndInit();
 
+                vlc.MediaPlayer.BackColor = ColorTranslator.FromHtml(UhaSub.Properties.Settings.Default.background);
 
-                m_player.Events.PlayerPositionChanged += new EventHandler<MediaPlayerPositionChanged>(
+                vlc.MediaPlayer.PositionChanged += new EventHandler<VlcMediaPlayerPositionChangedEventArgs>(
                   Events_PlayerPositionChanged);
-                m_player.Events.TimeChanged += new EventHandler<MediaPlayerTimeChanged>(
+                vlc.MediaPlayer.TimeChanged += new EventHandler<VlcMediaPlayerTimeChangedEventArgs>(
                     Events_TimeChanged);
-                m_player.Events.MediaEnded += new EventHandler(
-                  Events_MediaEnded);
-                m_player.Events.PlayerStopped += new EventHandler(
-                  Events_PlayerStopped);
 
-                m_player.WindowHandle = p.Handle;
+                vlc.MediaPlayer.LengthChanged += new EventHandler<VlcMediaPlayerLengthChangedEventArgs>(
+                    Events_LengthChanged);
+
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 /*
                  * exit when can't load libvlc
@@ -104,43 +73,46 @@ namespace UhaSub
                 Environment.Exit(-1);
             }
         }
-
-        void Events_PlayerStopped(object sender, EventArgs e)
+        private void OnVlcControlNeedsLibDirectory(object sender, Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs e)
         {
-            this.Dispatcher.BeginInvoke(new Action(delegate
-            {
-                
-            }));
-        }
-
-        void Events_MediaEnded(object sender, EventArgs e)
-        {
-            this.Dispatcher.BeginInvoke(new Action(delegate
-            {
-                
-            }));
+            var currentAssembly = System.Reflection.Assembly.GetEntryAssembly();
+            var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
+            if (currentDirectory == null)
+                return;
+            
+            // now only support x86
+            //e.VlcLibDirectory = new DirectoryInfo(System.IO.Path.Combine(currentDirectory, @"..\..\..\lib\x86\"));
+            e.VlcLibDirectory = new DirectoryInfo(currentDirectory);
         }
 
 
-        void Events_TimeChanged(object sender, MediaPlayerTimeChanged e)
+        void Events_TimeChanged(object sender, VlcMediaPlayerTimeChangedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 time = e.NewTime;
                 this.ctText.Text = time.ToString();
-                NotifyPropertyChanged("Time");
             }));
         }
 
-        void Events_PlayerPositionChanged(object sender, MediaPlayerPositionChanged e)
+        void Events_PlayerPositionChanged(object sender, VlcMediaPlayerPositionChangedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 position = e.NewPosition;
                 this.tmSlider.Value = position;
-                NotifyPropertyChanged("Position");
             }));
         }
+
+        void Events_LengthChanged(object sender, VlcMediaPlayerLengthChangedEventArgs e)
+        {
+            this.Dispatcher.BeginInvoke(new Action(delegate
+            {
+                totalTime = (long)e.NewLength;
+                this.ttText.Text = totalTime.ToString();
+            }));
+        }
+
 
         /*
          * open a media 
@@ -148,50 +120,22 @@ namespace UhaSub
          */
         private void OpenMedia()
         {
-            if (m_media != null)
-            {
-                m_media.Dispose();
-            }
-
-            m_media = m_factory.CreateMedia<IMediaFromFile>(source.OriginalString);
-
-            m_media.Events.DurationChanged += new EventHandler<MediaDurationChange>(
-                    Events_DurationChanged);
-            m_media.Events.StateChanged += new EventHandler<MediaStateChange>(
-                    Events_StateChanged);
-
-
-            // open mediao
-            m_player.Open(m_media);
+            // open media
+            vlc.MediaPlayer.SetMedia(new FileInfo(source.OriginalString), null);
 
 
             // set volume
-            m_player.Volume = (int)vlSlider.Value;
+            vlc.MediaPlayer.Audio.Volume = (int)vlSlider.Value;
 
-            // chage button to play
+            // change button to play
             is_playing = false;
             plBtn.Content = s_play;
             plBtn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
         }
 
 
-        void Events_StateChanged(object sender, MediaStateChange e)
-        {
-            this.Dispatcher.BeginInvoke(new Action(delegate
-            {
-                
-            }));
-        }
 
-        void Events_DurationChanged(object sender, MediaDurationChange e)
-        {
-            this.Dispatcher.BeginInvoke(new Action(delegate
-            {
-                totalTime = e.NewDuration;
-                this.ttText.Text = totalTime.ToString();
-                NotifyPropertyChanged("TotalTime");
-            }));
-        }
+      
 
 
         /*  
@@ -201,7 +145,7 @@ namespace UhaSub
          */
         public void Play()
         {
-            m_player.Play();
+            vlc.MediaPlayer.Play();
         }
 
         /*
@@ -213,8 +157,6 @@ namespace UhaSub
         private string s_pause = "";
         public void Pause()
         {
-            if (m_media == null)
-                return;
 
             Button btn = this.plBtn;
 
@@ -222,14 +164,14 @@ namespace UhaSub
             {
                 btn.Content = s_play;
                 btn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
-                m_player.Pause();
+                vlc.MediaPlayer.Pause();
             }
             else
             {
 
                 btn.Content = s_pause;
                 btn.ToolTip = UhaSub.Properties.Resources.video_pause_tip;
-                m_player.Play();
+                vlc.MediaPlayer.Play();
             }
 
             is_playing = !is_playing;
@@ -237,7 +179,7 @@ namespace UhaSub
 
         public void Stop()
         {
-            m_player.Stop();
+            vlc.MediaPlayer.Stop();
         }
 
 
@@ -264,7 +206,7 @@ namespace UhaSub
                 if (value < 0) return;
                 if (value == position) return;
                 position = value;
-                m_player.Position = (float)value;
+                vlc.MediaPlayer.Position = (float)value;
             }
         }
 
@@ -279,10 +221,9 @@ namespace UhaSub
             get { return time; }
             set 
             {
-                if (m_media == null) return;
                 if (value == time) return;
                 time = value;
-                m_player.Time = value;
+                vlc.MediaPlayer.Time = value;
             }
         }
 
@@ -306,7 +247,7 @@ namespace UhaSub
         private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
             time_drag_end = true;
-            m_player.Position = (float)(sender as Slider).Value;
+            vlc.MediaPlayer.Position = (float)(sender as Slider).Value;
         }
 
         private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
@@ -319,8 +260,8 @@ namespace UhaSub
          */
         private void vlSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (m_player == null) return;
-            m_player.Volume = (int)e.NewValue;
+            if (vlc.MediaPlayer.Audio == null) return;
+            vlc.MediaPlayer.Audio.Volume = (int)e.NewValue;
         }
 
 
@@ -355,13 +296,14 @@ namespace UhaSub
             {
                 btn.Content = s_no_mutex;
                 btn.ToolTip = UhaSub.Properties.Resources.video_mutex_tip;
-                m_player.ToggleMute();
+                vlc.MediaPlayer.Audio.ToggleMute();
+                
             }
             else
             {
                 btn.Content = s_mutex;
                 btn.ToolTip = UhaSub.Properties.Resources.video_nomutex_tip;
-                m_player.ToggleMute();
+                vlc.MediaPlayer.Audio.ToggleMute();
             }
 
             is_mutex = !is_mutex;
