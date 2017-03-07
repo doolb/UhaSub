@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -33,51 +34,10 @@ namespace UhaSub
 
         public bool is_editing = false;
 
-        // can sub edit
-        int writeable = 1;
-
-        void custom_head()
-        {
-            /*
-             * change data-grid head
-             * refer:http://stackoverflow.com/questions/13192823/update-the-wpf-datagrid-column-header-text-via-code-behind
-             */
-            var template = new DataTemplate();
-            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
-            // head-0
-            template = new DataTemplate();
-            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
-            template.VisualTree.SetValue(TextBlock.TextProperty, "#");
-            subs.Columns[0].HeaderTemplate = template;
-            // head-1
-            template = new DataTemplate();
-            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
-            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_start);
-            subs.Columns[1].HeaderTemplate = template;
-            // head-2
-            template = new DataTemplate();
-            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
-            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_end);
-            subs.Columns[2].HeaderTemplate = template;
-            // head-3
-            template = new DataTemplate();
-            template.VisualTree = new FrameworkElementFactory(typeof(TextBlock));
-            template.VisualTree.SetValue(TextBlock.TextProperty, UhaSub.Properties.Resources.sub_head_text);
-            subs.Columns[3].HeaderTemplate = template;
-
-            
-        }
         void subs_Loaded(object sender, RoutedEventArgs e)
         {
-            /* 
-             * set for last column
-             * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
-             */
-            subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+           // locate();
 
-            custom_head();
-
-            locate();        
         }
 
         private string subFileName= null;  // sub file name will used to store
@@ -87,7 +47,10 @@ namespace UhaSub
         }
 
         string SubHeader=null;
-        
+
+        /*
+         * locate to no 0 row
+         */
         void locate()
         {
             /* 
@@ -114,6 +77,11 @@ namespace UhaSub
 
             subs.SelectedIndex = 0;
         }
+
+        void check()
+        {
+        }
+            
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
         {
 
@@ -138,6 +106,7 @@ namespace UhaSub
 
 
             ass.Start = time;
+
             subs.Items.Refresh();
         }
 
@@ -156,6 +125,7 @@ namespace UhaSub
             subs.Items.Refresh();
         }
 
+        
         public void Save()
         {
             if (SubFileName == null)
@@ -194,8 +164,6 @@ namespace UhaSub
 
             // load ass header
             LoadFile();
-
-            custom_head();
                       
             // locate to no 0 line
             locate();
@@ -222,8 +190,6 @@ namespace UhaSub
                     MessageBox.Show(UhaSub.Properties.Resources.FileNoSupport);
                     break;
             }
-
-            custom_head();
 
             // locate to no 0 line
             locate();
@@ -288,12 +254,13 @@ namespace UhaSub
         // select the before item
         public void Up()
         {
-            if (subs.SelectedIndex == 0 )
+            if (subs.SelectedIndex == 0 || subs.SelectedIndex == -1)
                 return;
 
             subs.SelectedIndex -= 1;
             this.subs.ScrollIntoView(this.subs.SelectedItem);
-
+            DataGridCell v = new DataGridCell();
+            
         }
 
         // select next item
@@ -334,5 +301,11 @@ namespace UhaSub
             this.is_editing = false;
         }
 
+        
+       
+
     }
+
+
+
 }

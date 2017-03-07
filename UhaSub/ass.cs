@@ -20,6 +20,12 @@ namespace UhaSub
 
         private int Layer;
 
+        // error type
+        // 0 : none
+        // 1 : overlap
+        // 2 : too short or too long
+        // 3 : start > end
+        public int Error { get; set; }
         
 
         /* 
@@ -36,7 +42,8 @@ namespace UhaSub
                 End = 1,
                 Text = "",
                 Style="Default",
-                Layer=0
+                Layer=0,
+                Error=1
             });
 
             list.Add(new Ass
@@ -46,7 +53,8 @@ namespace UhaSub
                 End = 0,
                 Text = "",
                 Style = "Default",
-                Layer = 0
+                Layer = 0,
+                Error = 2
             });
 
             return list;
@@ -75,7 +83,8 @@ namespace UhaSub
                     End = 0,
                     Text = s,
                     Style = "Default",
-                    Layer = 0
+                    Layer = 0,
+                    Error = 0
                 });
             }
 

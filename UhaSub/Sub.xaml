@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:p="clr-namespace:UhaSub.Properties"
+             xmlns:local="clr-namespace:UhaSub"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              BorderBrush="{x:Null}">
@@ -23,14 +24,18 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="18"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
-	</UserControl.Resources>
+
+        
+
+
+    </UserControl.Resources>
     <Grid>
         <DataGrid   Name="subs" 
                     Background="{Binding Source={x:Static p:Settings.Default}, 
             Path=background}" 
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
-                    
+                    AutoGenerateColumns="False"
                     Foreground="{Binding Source={x:Static p:Settings.Default}, 
             Path=text}" 
                     FontSize="15"
@@ -42,9 +47,34 @@
                     InitializingNewItem="subs_InitializingNewItem" 
                     SelectionChanged="subs_SelectionChanged" Cursor="Hand"
                     BeginningEdit="subs_BeginningEdit"
-                    CellEditEnding="subs_CellEditEnding"
-                    >
+                    CellEditEnding="subs_CellEditEnding" >
 
+            <!-- manaul add column
+            refer:http://stackoverflow.com/questions/15644105/change-the-background-color-of-entire-column-of-wpf-datagrid-at-runtime
+            -->
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="ticketNoColumn" 
+                                    Header="#" 
+                                    IsReadOnly="True" 
+                                    Width="Auto"
+                                    Binding="{Binding Path=ID}"/>
+                
+                <DataGridTextColumn x:Name="seatRowColumn" 
+                                    Header="{x:Static p:Resources.sub_head_start}" 
+                                    Width="Auto"
+                                    Binding="{Binding Path=Start}"/>
+                
+                <DataGridTextColumn x:Name="seatNumberColumn" 
+                                    Header="{x:Static p:Resources.sub_head_end}" 
+                                    Width="Auto"
+                                    Binding="{Binding Path=End}"/>
+                
+                <DataGridTextColumn x:Name="seatNumberCon" 
+                                    Header="{x:Static p:Resources.sub_head_text}" 
+                                    Width="*"
+                                    Binding="{Binding Path=Text}"/>
+            </DataGrid.Columns>
+            
             <DataGrid.Resources>
                 <!-- set style for head 
                 refer:http://stackoverflow.com/questions/4486977/how-to-change-column-headers-background-color-when-using-wpf-datagrid
@@ -56,6 +86,7 @@
                 <Style TargetType="DataGridCell">
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                    
                 </Style>
 
                 <!-- Scrollbar style
@@ -165,9 +196,52 @@
                         </Setter.Value>
                     </Setter>
                 </Style>
+
+
                 
+
             </DataGrid.Resources>
-            
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        
+                        <!-- multidatatigger and self binding !!!!!
+                        refer:http://stackoverflow.com/questions/5868965/usage-datatrigger-in-wpf
+                        -->
+                        <!-- overlap -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="1"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="SkyBlue"/>
+                        </MultiDataTrigger>
+
+                        <!-- too long or too short -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="2"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="Gold"/>
+                        </MultiDataTrigger>
+
+                        <!-- start > end, it's must be error -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="3"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="Red"/>
+                        </MultiDataTrigger>
+
+
+
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
         </DataGrid>
         <TextBlock x:Name="tb_save" 
                    Text="{x:Static p:Resources.sub_save_success}"
