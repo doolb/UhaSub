@@ -94,7 +94,8 @@ namespace UhaSub
             // check too short or long
             // 10 sec or 100 ms
             long dis = ass.End - ass.Start;
-            if(dis >= 10000 || dis <= 100)
+            if(dis >= UhaSub.Properties.Settings.Default.cfg_sub_max 
+                || dis <= UhaSub.Properties.Settings.Default.cfg_sub_min)
             {
                 ass.Error = 2;
                 return;

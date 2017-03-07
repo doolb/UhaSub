@@ -228,18 +228,6 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool cfg_disable_sub {
-            get {
-                return ((bool)(this["cfg_disable_sub"]));
-            }
-            set {
-                this["cfg_disable_sub"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("4.4")]
         public double cfg_col_size_1 {
             get {
@@ -259,6 +247,30 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
             }
             set {
                 this["cfg_col_size_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100000")]
+        public long cfg_sub_max {
+            get {
+                return ((long)(this["cfg_sub_max"]));
+            }
+            set {
+                this["cfg_sub_max"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public long cfg_sub_min {
+            get {
+                return ((long)(this["cfg_sub_min"]));
+            }
+            set {
+                this["cfg_sub_min"] = value;
             }
         }
     }

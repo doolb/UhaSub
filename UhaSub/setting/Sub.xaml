@@ -18,6 +18,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.Resources>
@@ -78,16 +79,36 @@
                    HorizontalAlignment="Left"
                    Margin="3"/>
 
-        <!-- disable internel sub -->
-        <CheckBox  Content="{x:Static p:Resources.cfg_disable_sub}" 
-                   Grid.Column="0" Grid.Row="2"
-                   Loaded="CheckBox_Loaded"
-                   Checked="CheckBox_Checked"
-                   Unchecked="CheckBox_Unchecked"
-                   Tag="disable_sub"
-                   Visibility="Hidden"/>
-         
-        
+
+        <!-- timeline max time-->
+        <TextBlock Text="{x:Static p:Resources.cfg_sub_max}" 
+                   Grid.Column="0" Grid.Row="2"/>
+
+        <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_sub_max,Mode=OneWay}"
+                 Grid.Column="1" Grid.Row="2"
+                 TextChanged="TextBox_TextChanged"
+                 Tag="max"/>
+
+        <TextBlock Text="ms" 
+                   Grid.Column="2" Grid.Row="2"
+                   HorizontalAlignment="Left"
+                   Margin="3"/>
+
+
+        <!-- timeline min time -->
+        <TextBlock Text="{x:Static p:Resources.cfg_sub_min}" 
+                   Grid.Column="0" Grid.Row="3"/>
+
+        <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_sub_min,Mode=OneWay}"
+                 Grid.Column="1" Grid.Row="3"
+                 TextChanged="TextBox_TextChanged"
+                 Tag="min"/>
+
+        <TextBlock Text="ms" 
+                   Grid.Column="2" Grid.Row="3"
+                   HorizontalAlignment="Left"
+                   Margin="3"/>
+
 
     </Grid>
 </UserControl>

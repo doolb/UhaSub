@@ -250,4 +250,10 @@ Please install vlc or down libvlc.</value>
     <value>Disable </value>
     <comment>disable sub</comment>
   </data>
+  <data name="cfg_sub_max" xml:space="preserve">
+    <value>Timeline max time</value>
+  </data>
+  <data name="cfg_sub_min" xml:space="preserve">
+    <value>Timeline min time</value>
+  </data>
 </root>

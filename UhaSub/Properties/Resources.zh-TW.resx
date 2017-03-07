@@ -260,4 +260,10 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
     <value>禁用</value>
     <comment>disable sub</comment>
   </data>
+  <data name="cfg_sub_max" xml:space="preserve">
+    <value>时间轴最长时间</value>
+  </data>
+  <data name="cfg_sub_min" xml:space="preserve">
+    <value>时间轴最短时间</value>
+  </data>
 </root>

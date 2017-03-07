@@ -182,6 +182,24 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Timeline max time.
+        /// </summary>
+        public static string cfg_sub_max {
+            get {
+                return ResourceManager.GetString("cfg_sub_max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timeline min time.
+        /// </summary>
+        public static string cfg_sub_min {
+            get {
+                return ResourceManager.GetString("cfg_sub_min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start delay time.
         /// </summary>
         public static string cfg_sub_start {
