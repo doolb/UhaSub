@@ -252,4 +252,12 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="msg_vlc_no_found" xml:space="preserve">
     <value>对不起，无法找到vlc,请安装Vlc 或 下载 libvlc。</value>
   </data>
+  <data name="menu_sub_now" xml:space="preserve">
+    <value>当前编辑的字幕</value>
+    <comment>load current work sub</comment>
+  </data>
+  <data name="menu_sub_nul" xml:space="preserve">
+    <value>禁用</value>
+    <comment>disable sub</comment>
+  </data>
 </root>

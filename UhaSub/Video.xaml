@@ -138,7 +138,24 @@
                         ToolTip="{x:Static p:Resources.OpenSub}" 
                         Click="OnOpenSub"
                         Margin="0 0 10 0"
-                        DockPanel.Dock="Right"/>
+                        DockPanel.Dock="Right">
+                    <Button.ContextMenu>
+                        <!-- context meun 
+                        refer:http://stackoverflow.com/questions/4305565/wpf-context-menu-on-left-click
+                        -->
+                        <ContextMenu Loaded="ContextMenu_Loaded">
+                            <MenuItem Header="{x:Static p:Resources.menu_sub_nul}" 
+                                      Tag="nul"
+                                      Name="mi_nul"
+                                      Click="MenuItem_Click"/>
+                                <MenuItem Header="{x:Static p:Resources.menu_sub_now}" 
+                                      Tag="now"
+                                      Name="mi_now"
+                                      Click="MenuItem_Click"/>
+                            <Separator />
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
 
                 <!-- open video and sub -->
                 <Button Content="" 

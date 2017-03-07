@@ -80,7 +80,12 @@ namespace UhaSub
             locate();        
         }
 
-        string SubFileName = null;  // sub file name will used to store
+        private string subFileName= null;  // sub file name will used to store
+        public string SubFileName
+        {
+            get { return subFileName; }
+        }
+
         string SubHeader=null;
         
         void locate()
@@ -125,20 +130,28 @@ namespace UhaSub
 
         public void Start(long time)
         {
+            Ass ass =subs.SelectedItem as Ass;
+            if(ass ==null) return;
+
             if (time < 0)
                 time = 0;
 
-            (subs.SelectedItem as Ass).Start = time;
+
+            ass.Start = time;
             subs.Items.Refresh();
         }
 
         public void End(long time)
         {
+            Ass ass = subs.SelectedItem as Ass;
+            if (ass == null) return;
+
+
             if (time < 0)
                 time = 0;
 
 
-            (subs.SelectedItem as Ass).End = time;
+            ass.End = time;
             subs.SelectedIndex += 1;    // go to next line
             subs.Items.Refresh();
         }
@@ -147,6 +160,11 @@ namespace UhaSub
         {
             if (SubFileName == null)
                 return;
+
+            // load a default head
+            if (SubHeader == null)
+                SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
+
             Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
 
             (this.Resources["stb_save_success"] as Storyboard).Begin();
@@ -229,7 +247,7 @@ namespace UhaSub
             }
             s.Append(".ass");
 
-            SubFileName = s.ToString();
+            subFileName = s.ToString();
         }
 
         void LoadFile()
@@ -238,7 +256,10 @@ namespace UhaSub
             // try to open sub file
             if (!File.Exists(SubFileName))
             {
-                MessageBox.Show(UhaSub.Properties.Resources.SubFileNoFound);
+                var r =MessageBox.Show(UhaSub.Properties.Resources.SubFileNoFound," ",MessageBoxButton.OKCancel);
+
+                if (r != MessageBoxResult.OK)
+                    return;
 
                 // sub file is not exist
                 // so need open a txt file 

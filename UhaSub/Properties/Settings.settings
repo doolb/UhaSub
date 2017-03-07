@@ -65,7 +65,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">D</Value>
     </Setting>
     <Setting Name="version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">1.0.0(beta)</Value>
+      <Value Profile="(Default)">v1.0-beta.3</Value>
     </Setting>
     <Setting Name="cfg_disable_sub" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

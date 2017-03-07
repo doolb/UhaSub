@@ -105,7 +105,7 @@ namespace UhaSub
             /* 
              * load header
              */
-            while(true)
+            while (!sr.EndOfStream)
             {
                 string l = sr.ReadLine();
                 s.Append(l+"\n");

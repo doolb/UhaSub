@@ -84,7 +84,8 @@
                    Loaded="CheckBox_Loaded"
                    Checked="CheckBox_Checked"
                    Unchecked="CheckBox_Unchecked"
-                   Tag="disable_sub"/>
+                   Tag="disable_sub"
+                   Visibility="Hidden"/>
          
         
 

@@ -118,7 +118,6 @@ namespace UhaSub
 
                 // open sub
                 sub.Open(fileDialog.FileName);
-
                 
                 // set title
                 this.Title = UhaSub.Properties.Resources.Title + "  -  " +
@@ -137,6 +136,7 @@ namespace UhaSub
             {
                 // open sub
                 sub.OpenNewSub(fileDialog.FileName);
+                
             }
         }
 

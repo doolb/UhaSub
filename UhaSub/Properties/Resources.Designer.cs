@@ -245,6 +245,24 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Work.
+        /// </summary>
+        public static string menu_sub_now {
+            get {
+                return ResourceManager.GetString("menu_sub_now", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable .
+        /// </summary>
+        public static string menu_sub_nul {
+            get {
+                return ResourceManager.GetString("menu_sub_nul", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, we can run without vlc,
         ///Please install vlc or down libvlc..
         /// </summary>

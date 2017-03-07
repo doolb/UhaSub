@@ -41,6 +41,7 @@ namespace UhaSub
 
         }
 
+
         
 
         void LoadVlc()
@@ -338,6 +339,52 @@ namespace UhaSub
         {
             main.OnSave(sender, e);
         }
+
+        
+        /*
+         * select sub which will be show
+         * 
+         * chech menu, refer:https://social.msdn.microsoft.com/Forums/vstudio/en-US/8f0314b3-9afb-4c44-b684-c23cef325690/check-mark-in-wpf-context-menu?forum=wpf
+         * 
+         */
+
+        private void ContextMenu_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (vlc.MediaPlayer.SubTitles.Count == 0)
+            {
+                mi_nul.IsChecked = true;
+            }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if(vlc.MediaPlayer.SubTitles.Count ==0)
+                return;
+
+            MenuItem it = sender as MenuItem;
+            
+            switch(it.Tag as string)
+            {
+                case "nul": // disable sub
+                    vlc.MediaPlayer.SubTitles.Current = vlc.MediaPlayer.SubTitles.All.First();
+
+                    mi_now.IsChecked = false;
+                    break;
+                case "now": // use current work
+                    this.OnSave(null,null); // save sub
+                    
+                    // set sub
+                    vlc.MediaPlayer.SetSubTitles(main.sub.SubFileName);
+
+                    mi_nul.IsChecked = false;
+                    break;
+            }
+
+            it.IsChecked = true;
+
+        }
+
+        
     }
 
 }

@@ -242,4 +242,12 @@ For more information, please see http://github.com/doolb/UhaSub
     <value>Sorry, we can run without vlc,
 Please install vlc or down libvlc.</value>
   </data>
+  <data name="menu_sub_now" xml:space="preserve">
+    <value>Current Work</value>
+    <comment>load current work sub</comment>
+  </data>
+  <data name="menu_sub_nul" xml:space="preserve">
+    <value>Disable </value>
+    <comment>disable sub</comment>
+  </data>
 </root>
