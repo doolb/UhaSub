@@ -82,6 +82,37 @@ namespace UhaSub
 
         void check()
         {
+            Ass ass = subs.SelectedItem as Ass;
+
+            // check for start > end
+            if (ass.Start > ass.End)
+            {
+                ass.Error = 3;
+                return;
+            }
+
+            // check too short or long
+            // 10 sec or 100 ms
+            long dis = ass.End - ass.Start;
+            if(dis >= 10000 || dis <= 100)
+            {
+                ass.Error = 2;
+                return;
+            }
+    
+            // check overlap
+            if(subs.SelectedIndex>0)
+            {
+                Ass bf = subs.Items[subs.SelectedIndex - 1] as Ass;
+                if(ass.Start < bf.End)
+                {
+                    ass.Error = 1;
+                    return;
+                }
+            }
+
+            // no error
+            ass.Error = 0;
         }
             
         private void subs_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
@@ -109,6 +140,7 @@ namespace UhaSub
 
             ass.Start = time;
 
+            check();
             subs.Items.Refresh();
         }
 
@@ -123,6 +155,9 @@ namespace UhaSub
 
 
             ass.End = time;
+
+            check();
+
             subs.SelectedIndex += 1;    // go to next line
             subs.Items.Refresh();
         }
@@ -261,7 +296,6 @@ namespace UhaSub
 
             subs.SelectedIndex -= 1;
             this.subs.ScrollIntoView(this.subs.SelectedItem);
-            DataGridCell v = new DataGridCell();
             
         }
 
