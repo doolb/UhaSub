@@ -85,7 +85,7 @@ namespace UhaSub
 
                 if (e.Key == cfg.Start) { sub.Start(video.Time - cfg.StartTime); return; }
 
-                if (e.Key == cfg.End) { sub.End(video.Time + cfg.EndTime); return; }
+                if (e.Key == cfg.End) { sub.End(video.Time - cfg.EndTime); return; }
 
                 if (e.Key == cfg.Save) { sub.Save(); return; }
 
@@ -107,7 +107,7 @@ namespace UhaSub
                 {
                     if (special_start)
                     {
-                        sub.End(video.Time + cfg.EndTime);
+                        sub.End(video.Time - cfg.EndTime);
                         special_start = false;
                         return;
                     }
