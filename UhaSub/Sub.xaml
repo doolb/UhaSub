@@ -63,11 +63,13 @@
                 <DataGridTextColumn x:Name="seatRowColumn" 
                                     Header="{x:Static p:Resources.sub_head_start}" 
                                     Width="Auto"
+                                    IsReadOnly="True" 
                                     Binding="{Binding Path=Start}"/>
                 
                 <DataGridTextColumn x:Name="seatNumberColumn" 
                                     Header="{x:Static p:Resources.sub_head_end}" 
                                     Width="Auto"
+                                    IsReadOnly="True" 
                                     Binding="{Binding Path=End}"/>
                 
                 <DataGridTextColumn x:Name="seatNumberCon" 

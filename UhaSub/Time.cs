@@ -65,9 +65,16 @@ namespace UhaSub
 
         public static Time Parse(string s)
         {
-            TimeSpan t = TimeSpan.Parse(s);
-            Time tm = (long)t.TotalMilliseconds;
-
+            Time tm = null;
+            try
+            {
+                TimeSpan t = TimeSpan.Parse(s);
+                 tm = (long)t.TotalMilliseconds;
+            }
+            catch (Exception _e)
+            {
+                tm = 0;
+            }
             return tm;
         }
     }

@@ -143,6 +143,7 @@ namespace UhaSub
 
             check();
             subs.Items.Refresh();
+
         }
 
         public void End(long time)
@@ -161,6 +162,9 @@ namespace UhaSub
 
             subs.SelectedIndex += 1;    // go to next line
             subs.Items.Refresh();
+
+            this.subs.ScrollIntoView(this.subs.SelectedItem);
+
         }
 
         

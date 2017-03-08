@@ -202,8 +202,10 @@ namespace UhaSub
         public double Position
         {
             get { return position; }
-            set 
+            set
             {
+                if (!vlc.MediaPlayer.IsPlaying)
+                    return;
                 if (value < 0) return;
                 if (value == position) return;
                 position = value;
@@ -222,6 +224,8 @@ namespace UhaSub
             get { return time; }
             set 
             {
+                if (!vlc.MediaPlayer.IsPlaying)
+                    return;
                 if (value == time) return;
                 time = value;
                 vlc.MediaPlayer.Time = value;

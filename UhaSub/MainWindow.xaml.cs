@@ -55,88 +55,113 @@ namespace UhaSub
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            // if is editing now, skip
-            if (sub.is_editing) return;
 
-            /*
-             * video control
-             */
-            if (e.Key == cfg.After)  {video.Time += 3000;return;}
-
-            if(e.Key == cfg.Before) {video.Time -= 3000;return;}
-
-            if (e.Key == cfg.Pause) {video.Pause();     return;}
-
-
-            /* 
-             * sub control
-             */
-            if(e.Key == cfg.Special)
+            try
             {
-                    if (special_start)      return;
+                // if is editing now, skip
+                if (sub.is_editing) return;
+
+                /*
+                 * video control
+                 */
+                if (e.Key == cfg.After) { video.Time += 3000; return; }
+
+                if (e.Key == cfg.Before) { video.Time -= 3000; return; }
+
+                if (e.Key == cfg.Pause) { video.Pause(); return; }
+
+
+                /* 
+                 * sub control
+                 */
+                if (e.Key == cfg.Special)
+                {
+                    if (special_start) return;
 
                     sub.Start(video.Time - cfg.StartTime);
                     special_start = true;
                     return;
+                }
+
+                if (e.Key == cfg.Start) { sub.Start(video.Time - cfg.StartTime); return; }
+
+                if (e.Key == cfg.End) { sub.End(video.Time + cfg.EndTime); return; }
+
+                if (e.Key == cfg.Save) { sub.Save(); return; }
+
+                if (e.Key == cfg.Up) { sub.Up(); return; }
+                if (e.Key == cfg.Down) { sub.Down(); return; }
             }
+            catch (Exception _e)
+            {
 
-            if (e.Key == cfg.Start) { sub.Start(video.Time - cfg.StartTime);    return; }
-
-            if (e.Key == cfg.End)   { sub.End(video.Time + cfg.EndTime);      return; }
-
-            if (e.Key == cfg.Save) { sub.Save(); return; }
-
-            if (e.Key == cfg.Up)    { sub.Up();     return; }
-            if (e.Key == cfg.Down)  { sub.Down();   return; }
+            }
 
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == cfg.Special)
+            try
             {
-                if (special_start)
+                if (e.Key == cfg.Special)
                 {
-                    sub.End(video.Time + cfg.EndTime);
-                    special_start = false;
-                    return;
+                    if (special_start)
+                    {
+                        sub.End(video.Time + cfg.EndTime);
+                        special_start = false;
+                        return;
+                    }
                 }
+            }
+            catch (Exception _e)
+            {
+
             }
         }
         public void OnOpenFile(object sender, RoutedEventArgs e)
         {
-
-            var fileDialog = new OpenFileDialog();
-            fileDialog.Filter =
-                "Video files (*.mp4)|*.mp4;*.mkv|All files (*.*)|*.*";
-
-            if (fileDialog.ShowDialog() == true)
+            try
             {
+                var fileDialog = new OpenFileDialog();
+                fileDialog.Filter =
+                    "Video files (*.mp4)|*.mp4;*.mkv|All files (*.*)|*.*";
 
-                // open video
-                video.Source = new Uri(fileDialog.FileName);    
+                if (fileDialog.ShowDialog() == true)
+                {
 
-                // open sub
-                sub.Open(fileDialog.FileName);
-                
-                // set title
-                this.Title = UhaSub.Properties.Resources.Title + "  -  " +
-                    fileDialog.FileName;
+                    // open video
+                    video.Source = new Uri(fileDialog.FileName);
 
+                    // open sub
+                    sub.Open(fileDialog.FileName);
+
+                    // set title
+                    this.Title = UhaSub.Properties.Resources.Title + "  -  " +
+                        fileDialog.FileName;
+
+                }
             }
+            catch (Exception _e)
+            { }
         }
         public void OnOpenSub(object sender, RoutedEventArgs e)
         {
-
-            var fileDialog = new OpenFileDialog();
-            fileDialog.Filter =
-                "Video files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
-
-            if (fileDialog.ShowDialog() == true)
+            try
             {
-                // open sub
-                sub.OpenNewSub(fileDialog.FileName);
-                
+                var fileDialog = new OpenFileDialog();
+                fileDialog.Filter =
+                    "Video files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
+
+                if (fileDialog.ShowDialog() == true)
+                {
+                    // open sub
+                    sub.OpenNewSub(fileDialog.FileName);
+
+                }
+            }
+            catch (Exception _e)
+            {
+
             }
         }
 
@@ -150,12 +175,26 @@ namespace UhaSub
 
         public void OnSaveAs(object sender, RoutedEventArgs e)
         {
-            sub.SaveAs();
+            try
+            {
+                sub.SaveAs();
+            }
+            catch (Exception _e)
+            {
+
+            }
         }
 
         public void OnSave(object sender, RoutedEventArgs e)
         {
-            sub.Save();
+            try
+            {
+                sub.Save();
+            }
+            catch (Exception _e)
+            {
+
+            }
         }
 
 
