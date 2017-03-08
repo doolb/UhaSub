@@ -266,4 +266,10 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="cfg_sub_min" xml:space="preserve">
     <value>时间轴最短时间</value>
   </data>
+  <data name="tip_sub_timeline_ck" xml:space="preserve">
+    <value>时间轴检查：
+    红色：开始大于结束
+    黄色：太长或太短
+    蓝色：与上面一个重叠</value>
+  </data>
 </root>

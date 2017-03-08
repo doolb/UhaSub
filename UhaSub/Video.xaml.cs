@@ -348,7 +348,7 @@ namespace UhaSub
          * 
          */
 
-        private void ContextMenu_Loaded(object sender, RoutedEventArgs e)
+        private void MenuSubLoaded(object sender, RoutedEventArgs e)
         {
             if (vlc.MediaPlayer.SubTitles.Count == 0)
             {
@@ -356,7 +356,7 @@ namespace UhaSub
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuSubClick(object sender, RoutedEventArgs e)
         {
             if(vlc.MediaPlayer.SubTitles.Count ==0)
                 return;
@@ -382,6 +382,35 @@ namespace UhaSub
 
             it.IsChecked = true;
 
+        }
+
+        /*
+         * change play rate
+         */
+        private void MenuPlayRateClick(object sender, RoutedEventArgs e)
+        {
+            /*
+             * uncheck all item
+             */
+            foreach (var c in cm_play_rate.Items)
+            {
+                if(c is MenuItem)
+                    (c as MenuItem).IsChecked = false;
+            }
+            MenuItem m = sender as MenuItem;
+
+            switch(m.Header as string)
+            {
+                case "50%":  vlc.MediaPlayer.Rate = 0.5f;  break;
+                case "100%": vlc.MediaPlayer.Rate = 1.0f;  break;
+                case "125%": vlc.MediaPlayer.Rate = 1.25f; break;
+                case "150%": vlc.MediaPlayer.Rate = 1.5f;  break;
+                case "200%": vlc.MediaPlayer.Rate = 2.0f;  break;
+
+                default: return;
+            }
+
+            m.IsChecked = true;
         }
 
         

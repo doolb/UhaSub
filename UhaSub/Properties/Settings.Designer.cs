@@ -219,7 +219,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v1.0-beta.3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("(2017)v1.0-beta.4")]
         public string version {
             get {
                 return ((string)(this["version"]));

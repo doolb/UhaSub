@@ -47,7 +47,8 @@
                     InitializingNewItem="subs_InitializingNewItem" 
                     SelectionChanged="subs_SelectionChanged" Cursor="Hand"
                     BeginningEdit="subs_BeginningEdit"
-                    CellEditEnding="subs_CellEditEnding" >
+                    CellEditEnding="subs_CellEditEnding"
+                    ToolTip="{x:Static p:Resources.tip_sub_timeline_ck}">
 
             <!-- manaul add column
             refer:http://stackoverflow.com/questions/15644105/change-the-background-color-of-entire-column-of-wpf-datagrid-at-runtime

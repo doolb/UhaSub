@@ -393,6 +393,18 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Timeline check:
+        ///    Red:   start &gt; end
+        ///    Gold:  Timeline too long or too short
+        ///    Blue:  Timeline Overlap.
+        /// </summary>
+        public static string tip_sub_timeline_ck {
+            get {
+                return ResourceManager.GetString("tip_sub_timeline_ck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UhaSub.
         /// </summary>
         public static string Title {

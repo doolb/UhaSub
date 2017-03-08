@@ -143,15 +143,15 @@
                         <!-- context meun 
                         refer:http://stackoverflow.com/questions/4305565/wpf-context-menu-on-left-click
                         -->
-                        <ContextMenu Loaded="ContextMenu_Loaded">
-                            <MenuItem Header="{x:Static p:Resources.menu_sub_nul}" 
+                        <ContextMenu Loaded="MenuSubLoaded">
+                                <MenuItem Header="{x:Static p:Resources.menu_sub_nul}" 
                                       Tag="nul"
                                       Name="mi_nul"
-                                      Click="MenuItem_Click"/>
+                                      Click="MenuSubClick"/>
                                 <MenuItem Header="{x:Static p:Resources.menu_sub_now}" 
                                       Tag="now"
                                       Name="mi_now"
-                                      Click="MenuItem_Click"/>
+                                      Click="MenuSubClick"/>
                             <Separator />
                         </ContextMenu>
                     </Button.ContextMenu>
@@ -174,7 +174,29 @@
                             VerticalAlignment="Top"
                             VerticalContentAlignment="Top"
                             Width="30" Height="30"
-                            Click="OnPlayClick"/>
+                            Click="OnPlayClick">
+                    <Button.ContextMenu>
+                        <ContextMenu Name="cm_play_rate">
+                            <MenuItem Header="50%"
+                                      Click="MenuPlayRateClick"/>
+                            <Separator />
+
+                            <MenuItem Header="100%"
+                                      Click="MenuPlayRateClick"
+                                      IsChecked="True"/>
+                            <Separator />
+
+                            <MenuItem Header="125%"
+                                      Click="MenuPlayRateClick"/>
+
+                            <MenuItem Header="150%"
+                                      Click="MenuPlayRateClick"/>
+
+                            <MenuItem Header="200%"
+                                      Click="MenuPlayRateClick"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
 
             </DockPanel>
 

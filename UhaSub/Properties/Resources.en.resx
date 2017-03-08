@@ -259,4 +259,10 @@ Please install vlc or down libvlc.</value>
   <data name="cfg_sub_min" xml:space="preserve">
     <value>Timeline min time</value>
   </data>
+  <data name="tip_sub_timeline_ck" xml:space="preserve">
+    <value>Timeline check:
+    Red:   start &gt; end
+    Gold:  Timeline too long or too short
+    Blue:  Timeline Overlap</value>
+  </data>
 </root>
