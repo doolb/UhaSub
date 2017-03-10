@@ -29,8 +29,7 @@
         <Canvas >
             <Rectangle Name="tspec"
                        Width="1"
-                       Fill="Cyan"
-                       Canvas.Left="10"/>
+                       Fill="Cyan"/>
         </Canvas>
         
         <TextBlock Text="Now Loading."

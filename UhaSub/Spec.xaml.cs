@@ -34,8 +34,8 @@ namespace UhaSub
             /*
              * set a timer
              */
-            timer = new DispatcherTimer(DispatcherPriority.Render);
-            timer.Interval = TimeSpan.FromMilliseconds(20);
+            timer = new DispatcherTimer(DispatcherPriority.DataBind);
+            timer.Interval = TimeSpan.FromMilliseconds(16);
             timer.Tick += timer_Tick;
             old = DateTime.Now;
 
@@ -47,17 +47,22 @@ namespace UhaSub
 
         DateTime    old;
         double      scroll_per_ms=0;
-        double      offset=0;
+        double      offset = 0, offset_start = 128, offset_end = 128;
+
         void timer_Tick(object sender, EventArgs e)
         {
             if (scroll_per_ms == 0) return;
 
+
             // compute the delta time
-            int delta = (int)(DateTime.Now - old).TotalMilliseconds;
-            
+            double delta = (DateTime.Now - old).TotalMilliseconds;
+
+            if (delta > 100)
+                delta = 40;
+
             //this.fps.Text = (1000/delta).ToString();
 
-            offset += delta * scroll_per_ms;
+            offset += (delta+0.4) * scroll_per_ms;
 
 
             Canvas.SetLeft(this.tspec, offset);
@@ -68,7 +73,7 @@ namespace UhaSub
              * then stop
              */
             if (this.view.HorizontalOffset == this.view.ScrollableWidth &&
-                offset >= width)
+                offset + offset_end>= width)
                 timer.Stop();
 
 
@@ -85,6 +90,11 @@ namespace UhaSub
         public void Sync(long max_time)
         {
             this.scroll_per_ms = view.ScrollableWidth / max_time;
+
+
+            this.offset = offset_start;
+            this.view.ScrollToLeftEnd();
+
         }
 
         /*
@@ -116,6 +126,9 @@ namespace UhaSub
 
         public async void Open(string path)
         {
+            // stop timer
+            this.timer.Stop();
+
             string img = null;
 
             load.Visibility = Visibility.Visible;
