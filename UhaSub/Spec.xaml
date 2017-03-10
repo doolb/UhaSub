@@ -1,8 +1,35 @@
-﻿<Window x:Class="UhaSub.Spec"
+﻿<UserControl x:Class="UhaSub.Spec"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Spec" Height="300" Width="300">
+        xmlns:p="clr-namespace:UhaSub.Properties"
+        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
+        MaxHeight="200"
+        MaxWidth="2000"
+        SizeChanged="Window_SizeChanged">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Hidden"
+                      Name="view">
+            <Image Name="ispec"
+                   Source="r:\1.png"
+                   Stretch="None"
+                   VerticalAlignment="Stretch">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY ="2"/>
+                        <TranslateTransform Y="-128"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </ScrollViewer>
         
+        
+        <Canvas >
+            <Thumb Name="tspec"
+                   Height="{Binding Source=spec,Path=Height}"/>
+        </Canvas>
     </Grid>
-</Window>
+</UserControl>

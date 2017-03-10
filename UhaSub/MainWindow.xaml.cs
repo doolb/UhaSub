@@ -43,6 +43,7 @@ namespace UhaSub
             this.control.vlc = video.vlc;
             this.control.sub = this.sub;
             this.control.cfg = this.cfg;
+            this.control.spec = this.spec;
 
 
             this.Closed += MainWindow_Closed;
@@ -50,8 +51,38 @@ namespace UhaSub
             /*
              * set column width from config
              */
+            if (UhaSub.Properties.Settings.Default.cfg_col_size_1<0 ||
+                UhaSub.Properties.Settings.Default.cfg_col_size_2<0)
+            {
+                UhaSub.Properties.Settings.Default.cfg_col_size_1 = 4.4;
+                UhaSub.Properties.Settings.Default.cfg_col_size_2 = 1;
+                UhaSub.Properties.Settings.Default.Save();
+            }
             col_def1.Width = new GridLength(UhaSub.Properties.Settings.Default.cfg_col_size_1, GridUnitType.Star);
             col_def2.Width = new GridLength(UhaSub.Properties.Settings.Default.cfg_col_size_2, GridUnitType.Star);
+
+            update_spec();
+        }
+
+        void update_spec()
+        {
+            if(col_def1.Width.Value >(1.5f * col_def2.Width.Value))
+            {
+                // layout : video > sub
+                Grid.SetRowSpan(this.video, 2);
+                Grid.SetRowSpan(this.sub, 1);
+
+                Grid.SetColumn(this.spec, 2); // with sub
+            }
+            else
+            {
+
+                // layout : video < sub
+                Grid.SetRowSpan(this.sub, 2);
+                Grid.SetRowSpan(this.video, 1);
+
+                Grid.SetColumn(this.spec, 0); // with sub
+            }
         }
 
         void MainWindow_Closed(object sender, EventArgs e)
@@ -61,6 +92,8 @@ namespace UhaSub
 
 
         Config cfg = new Config();
+
+
         bool special_start = false;
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -160,6 +193,9 @@ namespace UhaSub
             UhaSub.Properties.Settings.Default.cfg_col_size_2 = col_def2.Width.Value + e.HorizontalChange;
 
             UhaSub.Properties.Settings.Default.Save();
+
+            update_spec();
+
         }
 
 

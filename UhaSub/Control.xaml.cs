@@ -32,6 +32,7 @@ namespace UhaSub
         public Sub sub;        // sub data-grid
         public VlcControl vlc; //  vlc player
         public MainWindow  main;
+        public Spec spec;
 
         public void OnOpenFile(object sender, RoutedEventArgs e)
         {
@@ -53,6 +54,8 @@ namespace UhaSub
                     // set title
                     main.Title = UhaSub.Properties.Resources.Title + "  -  " +
                         fileDialog.FileName;
+
+                    spec.Open(fileDialog.FileName);
 
                 }
             }

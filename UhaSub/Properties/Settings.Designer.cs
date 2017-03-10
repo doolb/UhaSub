@@ -219,7 +219,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("(2017)v1.0-beta.4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("(2017)v1.0-beta.4(project-spec)")]
         public string version {
             get {
                 return ((string)(this["version"]));
@@ -228,7 +228,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4.4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public double cfg_col_size_1 {
             get {
                 return ((double)(this["cfg_col_size_1"]));
@@ -240,7 +240,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
         public double cfg_col_size_2 {
             get {
                 return ((double)(this["cfg_col_size_2"]));
