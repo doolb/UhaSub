@@ -66,3 +66,7 @@ D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Core.dll
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Core.Interops.dll
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Forms.dll
 D:\project\Windows\NET\uhasub\UhaSub\bin\Debug\Vlc.DotNet.Wpf.dll
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Control.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Spec.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Control.g.cs
+D:\project\Windows\NET\uhasub\UhaSub\obj\Debug\Spec.g.cs

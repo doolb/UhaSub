@@ -32,8 +32,18 @@ namespace UhaSub
         {
             InitializeComponent();
 
-            this.sub.SubSelected += this.video.OnSubChanged;
-            this.video.main = this;
+            this.sub.SubSelected += this.control.OnSubChanged;
+
+            this.video.control = this.control;
+
+            /*
+             * set refer to control
+             */
+            this.control.main = this;
+            this.control.vlc = video.vlc;
+            this.control.sub = this.sub;
+            this.control.cfg = this.cfg;
+
 
             this.Closed += MainWindow_Closed;
 
@@ -68,7 +78,7 @@ namespace UhaSub
 
                 if (e.Key == cfg.Before) { video.Time -= 3000; return; }
 
-                if (e.Key == cfg.Pause) { video.Pause(); return; }
+                if (e.Key == cfg.Pause) { control.Pause(); return; }
 
 
                 /* 
@@ -118,85 +128,6 @@ namespace UhaSub
 
             }
         }
-        public void OnOpenFile(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var fileDialog = new OpenFileDialog();
-                fileDialog.Filter =
-                    "Video files (*.mp4)|*.mp4;*.mkv|All files (*.*)|*.*";
-
-                if (fileDialog.ShowDialog() == true)
-                {
-
-                    // open video
-                    video.Source = new Uri(fileDialog.FileName);
-
-                    // open sub
-                    sub.Open(fileDialog.FileName);
-
-                    // set title
-                    this.Title = UhaSub.Properties.Resources.Title + "  -  " +
-                        fileDialog.FileName;
-
-                }
-            }
-            catch (Exception _e)
-            { }
-        }
-        public void OnOpenSub(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var fileDialog = new OpenFileDialog();
-                fileDialog.Filter =
-                    "Video files (*.txt)|*.txt;*.ass|All files (*.*)|*.*";
-
-                if (fileDialog.ShowDialog() == true)
-                {
-                    // open sub
-                    sub.OpenNewSub(fileDialog.FileName);
-
-                }
-            }
-            catch (Exception _e)
-            {
-
-            }
-        }
-
-        public void OnOpenSetting(object sender, RoutedEventArgs e)
-        {
-            var set = new setting.Setting();
-            set.ShowDialog();
-
-            cfg.ReLoad();
-        }
-
-        public void OnSaveAs(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                sub.SaveAs();
-            }
-            catch (Exception _e)
-            {
-
-            }
-        }
-
-        public void OnSave(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                sub.Save();
-            }
-            catch (Exception _e)
-            {
-
-            }
-        }
-
 
 
         /*

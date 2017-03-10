@@ -97,6 +97,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ass.cs" />
+    <Compile Include="Control.xaml.cs">
+      <DependentUpon>Control.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.zh-TW.Designer.cs">
       <DependentUpon>Resources.zh-TW.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -128,6 +131,9 @@
       <DependentUpon>UI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="Spec.xaml.cs">
+      <DependentUpon>Spec.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
@@ -142,6 +148,10 @@
     <Compile Include="wave\ScalingStrategy.cs" />
     <Compile Include="wave\SpectrumBase.cs" />
     <Compile Include="wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="setting\about.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="setting\UI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Spec.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
