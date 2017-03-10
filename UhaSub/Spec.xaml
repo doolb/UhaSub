@@ -3,18 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:p="clr-namespace:UhaSub.Properties"
         Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
-        MaxHeight="200"
+        MaxHeight="270"
         MaxWidth="2000"
         SizeChanged="Window_SizeChanged">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"
                       Name="view">
             <Image Name="ispec"
-                   Source="r:\1.png"
                    Stretch="None"
                    VerticalAlignment="Stretch">
                 <Image.RenderTransform>
@@ -28,8 +27,28 @@
         
         
         <Canvas >
-            <Thumb Name="tspec"
-                   Height="{Binding Source=spec,Path=Height}"/>
+            <Rectangle Name="tspec"
+                       Width="1"
+                       Fill="Cyan"
+                       Canvas.Left="10"/>
         </Canvas>
+        
+        <TextBlock Text="Now Loading."
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   FontSize="27"
+                   Name="load"
+                   Visibility="Hidden"/>
+
+
+
+        <TextBlock Text="Now Loading."
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Foreground="White"
+                   Name="fps"
+                   Margin="10"
+                   Visibility="Hidden"/>
     </Grid>
 </UserControl>

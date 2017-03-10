@@ -102,12 +102,18 @@ namespace UhaSub
             }));
         }
 
+
+        public Spec spec;
         void Events_LengthChanged(object sender, VlcMediaPlayerLengthChangedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                totalTime = (long)e.NewLength;
+                //totalTime = (long)e.NewLength; // this lenght is error
+                totalTime = vlc.MediaPlayer.Length;
                 control.ttText.Text = totalTime.ToString();
+
+                // sync totaltime
+                spec.Sync(totalTime);
             }));
         }
 

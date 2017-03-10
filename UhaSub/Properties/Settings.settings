@@ -79,5 +79,8 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="cfg_sub_min" Type="System.Int64" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="cfg_volume" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">80</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

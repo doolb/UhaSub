@@ -48,6 +48,7 @@ namespace UhaSub
                     // open video
                     this.OpenMedia(fileDialog.FileName);
 
+
                     // open sub
                     sub.Open(fileDialog.FileName);
 
@@ -56,7 +57,6 @@ namespace UhaSub
                         fileDialog.FileName;
 
                     spec.Open(fileDialog.FileName);
-
                 }
             }
             catch (Exception _e)
@@ -139,6 +139,12 @@ namespace UhaSub
             if (vlc == null) return;
             if (vlc.MediaPlayer.Audio == null) return;
             vlc.MediaPlayer.Audio.Volume = (int)e.NewValue;
+
+            /*
+             * store setting
+             */
+            UhaSub.Properties.Settings.Default.cfg_volume = (int)e.NewValue;
+            UhaSub.Properties.Settings.Default.Save();
         }
 
 
@@ -204,6 +210,7 @@ namespace UhaSub
             is_playing = false;
             plBtn.Content = s_play;
             plBtn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
+
         }
 
 
@@ -224,16 +231,20 @@ namespace UhaSub
             {
                 btn.Content = s_play;
                 btn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
+                
                 vlc.MediaPlayer.Pause();
+                spec.Pause();
             }
             else
             {
-
                 btn.Content = s_pause;
                 btn.ToolTip = UhaSub.Properties.Resources.video_pause_tip;
+                
                 vlc.MediaPlayer.Play();
+                spec.Play();
             }
 
+            
             is_playing = !is_playing;
         }
 

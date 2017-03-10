@@ -273,5 +273,17 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 this["cfg_sub_min"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("80")]
+        public int cfg_volume {
+            get {
+                return ((int)(this["cfg_volume"]));
+            }
+            set {
+                this["cfg_volume"] = value;
+            }
+        }
     }
 }

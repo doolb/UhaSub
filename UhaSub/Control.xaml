@@ -98,7 +98,7 @@
 
                 <!-- volume -->
                 <Slider     Name="vlSlider"
-                            Value="80"
+                            Value="{Binding Source={x:Static p:Settings.Default}, Path=cfg_volume}"
                             Focusable="False"
                             Width="100"
                             VerticalAlignment="Top"

@@ -35,6 +35,7 @@ namespace UhaSub
             this.sub.SubSelected += this.control.OnSubChanged;
 
             this.video.control = this.control;
+            this.video.spec = this.spec;
 
             /*
              * set refer to control

@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace UhaSub
 {
@@ -30,26 +31,102 @@ namespace UhaSub
             var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
             ffmpeg_path = currentDirectory;
 
+            /*
+             * set a timer
+             */
+            timer = new DispatcherTimer(DispatcherPriority.Render);
+            timer.Interval = TimeSpan.FromMilliseconds(20);
+            timer.Tick += timer_Tick;
+            old = DateTime.Now;
+
 
             this.view.ScrollToEnd();
+        }
+
+        double      width=0;
+
+        DateTime    old;
+        double      scroll_per_ms=0;
+        double      offset=0;
+        void timer_Tick(object sender, EventArgs e)
+        {
+            if (scroll_per_ms == 0) return;
+
+            // compute the delta time
+            int delta = (int)(DateTime.Now - old).TotalMilliseconds;
+            
+            //this.fps.Text = (1000/delta).ToString();
+
+            offset += delta * scroll_per_ms;
+
+
+            Canvas.SetLeft(this.tspec, offset);
+
+
+            /*
+             * if scroll to right end
+             * then stop
+             */
+            if (this.view.HorizontalOffset == this.view.ScrollableWidth &&
+                offset >= width)
+                timer.Stop();
+
+
+            if (offset > width)
+            {
+                // one page end
+                this.view.PageRight();
+                offset = 0;
+            }
+
+            old = DateTime.Now;
+        }
+
+        public void Sync(long max_time)
+        {
+            this.scroll_per_ms = view.ScrollableWidth / max_time;
+        }
+
+        /*
+         * play and pause
+         */
+        public void Pause()
+        {
+            timer.Stop();
+        }
+        
+        public void Play()
+        {
+            timer.Start();
         }
 
         string ffmpeg_arg = "-i \"{0}\" -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt \"{2}\"";
         string ffmpeg_path;
 
-        static int sx = 20000;
+        static int sx = 48000;
+
+        DispatcherTimer timer;
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
         }
+
 
         public async void Open(string path)
         {
             string img = null;
+
+            load.Visibility = Visibility.Visible;
+            /*
+             * use task for long time run
+             * refer:http://stackoverflow.com/questions/27089263/running-and-interacting-with-a-async-task-from-a-wpf-gui
+             */
             await Task.Run(() => img = Load(path));
             
             ispec.Source = new BitmapImage(new Uri(img));
+            load.Visibility = Visibility.Hidden;
 
         }
 
