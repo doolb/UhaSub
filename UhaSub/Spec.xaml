@@ -4,7 +4,8 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
         MaxHeight="270"
-        MaxWidth="2000">
+        MaxWidth="2000"
+             KeyDown="UserControl_KeyDown">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -12,7 +13,6 @@
         </Grid.ColumnDefinitions>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"
-                      Name="view"
                       Grid.Column="0"
                       SizeChanged="ViewSizeChanged">
             <Image Name="img"

@@ -76,9 +76,10 @@ namespace UhaSub
             /*
              * if scroll to right end
              * then stop
-             */
+             
             if (IsEnd())
                 timer.Stop();
+            */
 
             old = DateTime.Now;
         }
@@ -86,7 +87,7 @@ namespace UhaSub
         #region image control
         public void Init(long max_time)
         {
-            this.scroll_per_ms = (view.ScrollableWidth - 2*offset_head) / max_time;
+            this.scroll_per_ms = (img.ActualWidth - 2*offset_head) / max_time;
 
 
             this.offset = 0;
@@ -94,6 +95,9 @@ namespace UhaSub
 
         }
 
+        /*
+         * sync with vlc
+         */
         public void Sync(long time)
         {
             double ow = time * scroll_per_ms;
@@ -134,56 +138,40 @@ namespace UhaSub
             //timer.Start();
         }
 
+        private double home, end;
         // scroll image to home
         internal void Home()
         {
-            trans.X = - offset_head * this.scale.ScaleX;
+            trans.X = home;
         }
 
         internal void End()
         {
-            //trans.X = (img.ActualWidth + offset_head - width) * this.scale.ScaleX;
-            trans.X = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width ;
+            trans.X = end ;
         }
 
-        internal bool IsEnd()
-        {
-            if (this.view.HorizontalOffset + offset_head == this.view.ScrollableWidth &&
-                offset >= width)
-                return true;
-            else
-                return false;
-        }
 
         internal void PageDown()
         {
-            double left = this.view.ScrollableWidth - this.view.HorizontalOffset -
-                offset_head;
-            if (left < width)
-            {
-                this.view.ScrollToHorizontalOffset(this.view.HorizontalOffset + left);
-                offset -= left;
-            }
-            else
-            {
-                this.view.PageRight();
-                offset = 0;
-            }
+            // go to next page
+            trans.X -= width;
+
+            if(end >0)
+                end = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
+
+            // is reach to end
+            if (trans.X <= end)
+                trans.X = end;
         }
 
         internal void PageUp()
         {
-            if(this.view.HorizontalOffset < width)
-            {
-                // get the left end
-                offset += this.view.HorizontalOffset;
-                this.view.ScrollToHorizontalOffset(offset_head);
-            }
-            else
-            {
-                this.view.PageLeft();
-                offset = 0;
-            }
+            // go to next page
+            trans.X += width;
+
+            // is reach to end
+            if (trans.X >= home)
+                trans.X = home;
         }
 
         #endregion
@@ -223,6 +211,7 @@ namespace UhaSub
             load.Visibility = Visibility.Hidden;
             
             prepared = true;
+
             Home();
 
         }
@@ -322,8 +311,24 @@ namespace UhaSub
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             scale.ScaleX = e.NewValue;
-            
-            Home();
+
+            home  = -offset_head * this.scale.ScaleX;
+            end   = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
+
+            trans.X = home;
+        }
+
+        private void UserControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.Key)
+            {
+                case Key.M:
+                    PageDown();
+                    break;
+                case Key.N:
+                    PageUp();
+                    break;
+            }
         }
     }
 }
