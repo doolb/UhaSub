@@ -272,4 +272,7 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
     黄色：太长或太短
     蓝色：与上面一个重叠</value>
   </data>
+  <data name="msg_ffmpeg_no_found" xml:space="preserve">
+    <value>对不起，无法找到 ffmpeg,请下载 ffmpeg。</value>
+  </data>
 </root>

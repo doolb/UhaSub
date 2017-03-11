@@ -108,9 +108,9 @@ namespace UhaSub
                 /*
                  * video control
                  */
-                if (e.Key == cfg.After) { video.Time += 3000; return; }
+                if (e.Key == cfg.After) { video.Time += 3000;return; }
 
-                if (e.Key == cfg.Before) { video.Time -= 3000; return; }
+                if (e.Key == cfg.Before) { video.Time -= 3000;return; }
 
                 if (e.Key == cfg.Pause) { control.Pause(); return; }
 

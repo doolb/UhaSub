@@ -4,29 +4,34 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
         MaxHeight="270"
-        MaxWidth="2000"
-        SizeChanged="Window_SizeChanged">
+        MaxWidth="2000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"
-                      Name="view">
-            <Image Name="ispec"
+                      Name="view"
+                      Grid.Column="0"
+                      SizeChanged="ViewSizeChanged">
+            <Image Name="img"
                    Stretch="None"
                    VerticalAlignment="Stretch">
                 <Image.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform ScaleY ="2"/>
-                        <TranslateTransform Y="-128"/>
+                        <ScaleTransform ScaleY ="2"
+                                        x:Name="scale"/>
+                        <TranslateTransform Y="-218"
+                                            x:Name="trans"/>
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
         </ScrollViewer>
-        
-        
-        <Canvas >
+
+
+        <Canvas 
+                      Grid.Column="0">
             <Rectangle Name="tspec"
                        Width="1"
                        Fill="Cyan"/>
@@ -49,5 +54,11 @@
                    Name="fps"
                    Margin="10"
                    Visibility="Hidden"/>
+        
+        <Slider    Orientation="Vertical"
+                   Grid.Column="1"
+                   Minimum="0.5" Maximum="2"
+                   Value="1"
+                   ValueChanged="Slider_ValueChanged"/>
     </Grid>
 </UserControl>

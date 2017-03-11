@@ -90,6 +90,9 @@ namespace UhaSub
             {
                 time = e.NewTime;
                 control.ctText.Text = time.ToString();
+
+                // sync time
+                spec.Sync(time);
             }));
         }
 
@@ -113,7 +116,7 @@ namespace UhaSub
                 control.ttText.Text = totalTime.ToString();
 
                 // sync totaltime
-                spec.Sync(totalTime);
+                spec.Init(totalTime);
             }));
         }
 

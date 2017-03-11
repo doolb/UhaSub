@@ -40,18 +40,25 @@ namespace UhaSub
             old = DateTime.Now;
 
 
-            this.view.ScrollToEnd();
         }
 
+
+
+
         double      width=0;
+        DispatcherTimer timer;
+
 
         DateTime    old;
         double      scroll_per_ms=0;
-        double      offset = 0, offset_start = 128, offset_end = 128;
+        double      offset = 0, offset_head = 115;
+        double      offset_base=0;
+        int         page=0;
 
         void timer_Tick(object sender, EventArgs e)
         {
             if (scroll_per_ms == 0) return;
+
 
 
             // compute the delta time
@@ -62,39 +69,56 @@ namespace UhaSub
 
             //this.fps.Text = (1000/delta).ToString();
 
-            offset += (delta+0.4) * scroll_per_ms;
+            offset += delta * scroll_per_ms;
 
-
-            Canvas.SetLeft(this.tspec, offset);
-
+            Canvas.SetLeft(this.tspec,offset_base + offset);
 
             /*
              * if scroll to right end
              * then stop
              */
-            if (this.view.HorizontalOffset == this.view.ScrollableWidth &&
-                offset + offset_end>= width)
+            if (IsEnd())
                 timer.Stop();
-
-
-            if (offset > width)
-            {
-                // one page end
-                this.view.PageRight();
-                offset = 0;
-            }
 
             old = DateTime.Now;
         }
 
-        public void Sync(long max_time)
+        #region image control
+        public void Init(long max_time)
         {
-            this.scroll_per_ms = view.ScrollableWidth / max_time;
+            this.scroll_per_ms = (view.ScrollableWidth - 2*offset_head) / max_time;
 
 
-            this.offset = offset_start;
-            this.view.ScrollToLeftEnd();
+            this.offset = 0;
+            Home();
 
+        }
+
+        public void Sync(long time)
+        {
+            double ow = time * scroll_per_ms;
+            double w = (time+450 + page *30) * scroll_per_ms;
+
+            offset_base = w % width;
+            offset = 0;
+         
+            /*
+             * page
+             */
+            int p = (int)(ow / width);
+
+            if (p > page)
+            {
+                for (int i = page; i < p;i++)
+                    PageDown();
+                page = p;
+            }
+            if (p < page)
+            {
+                for (int i = p; i < page; i++)
+                    PageUp();
+                page = p;
+            }
         }
 
         /*
@@ -107,22 +131,78 @@ namespace UhaSub
         
         public void Play()
         {
-            timer.Start();
+            //timer.Start();
         }
 
-        string ffmpeg_arg = "-i \"{0}\" -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt \"{2}\"";
-        string ffmpeg_path;
+        // scroll image to home
+        internal void Home()
+        {
+            trans.X = - offset_head * this.scale.ScaleX;
+        }
 
-        static int sx = 48000;
+        internal void End()
+        {
+            //trans.X = (img.ActualWidth + offset_head - width) * this.scale.ScaleX;
+            trans.X = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width ;
+        }
 
-        DispatcherTimer timer;
+        internal bool IsEnd()
+        {
+            if (this.view.HorizontalOffset + offset_head == this.view.ScrollableWidth &&
+                offset >= width)
+                return true;
+            else
+                return false;
+        }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        internal void PageDown()
+        {
+            double left = this.view.ScrollableWidth - this.view.HorizontalOffset -
+                offset_head;
+            if (left < width)
+            {
+                this.view.ScrollToHorizontalOffset(this.view.HorizontalOffset + left);
+                offset -= left;
+            }
+            else
+            {
+                this.view.PageRight();
+                offset = 0;
+            }
+        }
+
+        internal void PageUp()
+        {
+            if(this.view.HorizontalOffset < width)
+            {
+                // get the left end
+                offset += this.view.HorizontalOffset;
+                this.view.ScrollToHorizontalOffset(offset_head);
+            }
+            else
+            {
+                this.view.PageLeft();
+                offset = 0;
+            }
+        }
+
+        #endregion
+
+        private void ViewSizeChanged(object sender, SizeChangedEventArgs e)
         {
             this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
         }
 
+
+        #region load spectrum by ffmpeg
+        /*
+         * load spectrum for video
+         */
+        static int sx = 96000;
+        public bool prepared = false;
+        string ffmpeg_arg = "-i \"{0}\" -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt \"{2}\"";
+        string ffmpeg_path;
 
         public async void Open(string path)
         {
@@ -138,8 +218,12 @@ namespace UhaSub
              */
             await Task.Run(() => img = Load(path));
             
-            ispec.Source = new BitmapImage(new Uri(img));
+            this.img.Source = new BitmapImage(new Uri(img));
+            
             load.Visibility = Visibility.Hidden;
+            
+            prepared = true;
+            Home();
 
         }
 
@@ -172,7 +256,7 @@ namespace UhaSub
                 path, sx.ToString(), s);
 
             // start ffmpet
-            Start(arg);
+            StartFFmpeg(arg);
 
             return s;
         }
@@ -181,7 +265,7 @@ namespace UhaSub
          * start ffmpeg
          * refer:https://jasonjano.wordpress.com/2010/02/09/a-simple-c-wrapper-for-ffmpeg/
          */
-        bool Start(string param)
+        bool StartFFmpeg(string param)
         {
             //create a process info object so we can run our app
             ProcessStartInfo oInfo = new ProcessStartInfo(
@@ -216,6 +300,7 @@ namespace UhaSub
             }
             catch (Exception)
             {
+                MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_no_found);
                 output = string.Empty;
                 return false;
             }
@@ -229,6 +314,16 @@ namespace UhaSub
                 }
             }
             return true;
+        }
+
+        #endregion
+
+        // change image scale-x
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            scale.ScaleX = e.NewValue;
+            
+            Home();
         }
     }
 }

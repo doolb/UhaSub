@@ -262,4 +262,8 @@ Please install vlc or down libvlc.</value>
     Gold:  Timeline too long or too short
     Blue:  Timeline Overlap</value>
   </data>
+  <data name="msg_ffmpeg_no_found" xml:space="preserve">
+    <value>Sorry, we can run without ffmpeg,
+Please download ffmpeg.</value>
+  </data>
 </root>
