@@ -35,7 +35,7 @@ namespace UhaSub
              * set a timer
              */
             timer = new DispatcherTimer(DispatcherPriority.DataBind);
-            timer.Interval = TimeSpan.FromMilliseconds(16);
+            timer.Interval = TimeSpan.FromMilliseconds(1);
             timer.Tick += timer_Tick;
             old = DateTime.Now;
 
@@ -53,7 +53,6 @@ namespace UhaSub
         double      scroll_per_ms=0;
         double      offset = 0, offset_head = 115;
         double      offset_base=0;
-        int         page=0;
 
         void timer_Tick(object sender, EventArgs e)
         {
@@ -105,28 +104,18 @@ namespace UhaSub
          */
         public void Sync(long time)
         {
+
             double w = time * scroll_per_ms;
 
+            // compute offset
             offset_base = w % width;
             offset = 0;
 
             //Canvas.SetLeft(this.tspec, offset_base);
 
-            /*
-             * page
-             */
+            // compute page
             int p = (int)(w / width);
-
-            if (p > page)
-            {
-                PageDown( p -page );
-                page = p;
-            }
-            if (p < page)
-            {
-                PageUp(page - p);
-                page = p;
-            }
+            trans.X = home - p * width;
         }
 
         /*
@@ -154,29 +143,6 @@ namespace UhaSub
             trans.X = end ;
         }
 
-
-        internal void PageDown(int count =1)
-        {
-            // go to next page
-            trans.X -= count * width;
-
-            if(end >0)
-                end = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
-
-            // is reach to end
-            if (trans.X <= end)
-                trans.X = end;
-        }
-
-        internal void PageUp(int count = 1)
-        {
-            // go to next page
-            trans.X += count * width;
-
-            // is reach to end
-            if (trans.X >= home)
-                trans.X = home;
-        }
         
         #endregion
 
@@ -185,7 +151,6 @@ namespace UhaSub
             this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
 
-            calc_scroll_per_ms();
         }
 
 
@@ -330,6 +295,8 @@ namespace UhaSub
             end   = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
 
             calc_scroll_per_ms();
+
+            End();
         }
 
     }

@@ -68,6 +68,9 @@ namespace UhaSub
 
         void update_spec()
         {
+            col_def1.MinWidth = 450;
+            col_def2.MinWidth = 300;
+
             if(col_def1.Width.Value >(1.6f * col_def2.Width.Value))
             {
                 // layout : video > sub
