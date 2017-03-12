@@ -79,8 +79,7 @@
                         Name="tmSlider"
                         Value="0"
                         Maximum="1" Minimum="0"
-                        Thumb.DragCompleted="time_DragCompleted"
-                        Thumb.DragStarted="time_DragStarted"/>
+                        Thumb.DragCompleted="time_DragCompleted"/>
 
             <DockPanel>
                 <TextBlock Text="0:00:00.00" Name="ctText" HorizontalAlignment="Left"/>

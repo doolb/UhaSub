@@ -62,7 +62,7 @@ namespace UhaSub
 
                 vlc.MediaPlayer.EndReached += MediaPlayer_EndReached;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 /*
                  * exit when can't load libvlc

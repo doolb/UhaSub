@@ -57,29 +57,26 @@ namespace UhaSub
 
         void timer_Tick(object sender, EventArgs e)
         {
-            if (scroll_per_ms == 0) return;
+            if (scroll_per_ms == 0||
+                double.IsInfinity(scroll_per_ms)) return;
 
 
 
             // compute the delta time
             double delta = (DateTime.Now - old).TotalMilliseconds;
 
-            if (delta > 100)
-                delta = 40;
+            //if (delta > 100)
+              //  delta = 40;
 
             //this.fps.Text = (1000/delta).ToString();
 
             offset += delta * scroll_per_ms;
 
-            Canvas.SetLeft(this.tspec,offset_base + offset);
+            if (offset_base + offset > width)
+                Canvas.SetLeft(this.tspec, width);
+            else
+                Canvas.SetLeft(this.tspec, offset_base + offset);
 
-            /*
-             * if scroll to right end
-             * then stop
-             
-            if (IsEnd())
-                timer.Stop();
-            */
 
             old = DateTime.Now;
         }
@@ -87,12 +84,17 @@ namespace UhaSub
         long max_time = 0;
 
         #region image control
+
+        internal void calc_scroll_per_ms()
+        {
+            this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
+        }
         public void Init(long max_time)
         {
-            this.scroll_per_ms = (img.ActualWidth - 2*offset_head) * this.scale.ScaleX / max_time;
-
             this.max_time = max_time;
 
+            calc_scroll_per_ms();
+            
             this.offset = 0;
             Home();
 
@@ -107,7 +109,9 @@ namespace UhaSub
 
             offset_base = w % width;
             offset = 0;
-         
+
+            //Canvas.SetLeft(this.tspec, offset_base);
+
             /*
              * page
              */
@@ -135,7 +139,7 @@ namespace UhaSub
         
         public void Play()
         {
-            //timer.Start();
+            timer.Start();
         }
 
         private double home, end;
@@ -180,6 +184,8 @@ namespace UhaSub
         {
             this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
+
+            calc_scroll_per_ms();
         }
 
 
@@ -317,8 +323,7 @@ namespace UhaSub
             home  = -offset_head * this.scale.ScaleX;
             end   = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
 
-            this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
-
+            calc_scroll_per_ms();
         }
 
     }

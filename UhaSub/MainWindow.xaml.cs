@@ -56,7 +56,7 @@ namespace UhaSub
             if (UhaSub.Properties.Settings.Default.cfg_col_size_1<0 ||
                 UhaSub.Properties.Settings.Default.cfg_col_size_2<0)
             {
-                UhaSub.Properties.Settings.Default.cfg_col_size_1 = 4.4;
+                UhaSub.Properties.Settings.Default.cfg_col_size_1 = 1.4;
                 UhaSub.Properties.Settings.Default.cfg_col_size_2 = 1;
                 UhaSub.Properties.Settings.Default.Save();
             }
@@ -68,7 +68,7 @@ namespace UhaSub
 
         void update_spec()
         {
-            if(col_def1.Width.Value >(1.5f * col_def2.Width.Value))
+            if(col_def1.Width.Value >(1.6f * col_def2.Width.Value))
             {
                 // layout : video > sub
                 Grid.SetRowSpan(this.video, 2);
@@ -137,7 +137,7 @@ namespace UhaSub
                 if (e.Key == cfg.Up) { sub.Up(); return; }
                 if (e.Key == cfg.Down) { sub.Down(); return; }
             }
-            catch (Exception _e)
+            catch (Exception)
             {
 
             }
@@ -158,7 +158,7 @@ namespace UhaSub
                     }
                 }
             }
-            catch (Exception _e)
+            catch (Exception)
             {
 
             }

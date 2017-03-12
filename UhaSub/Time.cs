@@ -71,7 +71,7 @@ namespace UhaSub
                 TimeSpan t = TimeSpan.Parse(s);
                  tm = (long)t.TotalMilliseconds;
             }
-            catch (Exception _e)
+            catch (Exception)
             {
                 tm = 0;
             }

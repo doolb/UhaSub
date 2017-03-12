@@ -57,7 +57,7 @@
         <Slider    Orientation="Vertical"
                    Grid.Column="1"
                    Minimum="0.5" Maximum="2"
-                   Value="1"
+                   Value="1" IsSnapToTickEnabled="True" TickFrequency="0.1"
                    ValueChanged="Slider_ValueChanged"/>
     </Grid>
 </UserControl>

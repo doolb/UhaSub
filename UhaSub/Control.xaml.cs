@@ -65,7 +65,7 @@ namespace UhaSub
                     spec.Open(fileDialog.FileName);
                 }
             }
-            catch (Exception _e)
+            catch (Exception)
             { }
         }
         public void OnOpenSub(object sender, RoutedEventArgs e)
@@ -83,7 +83,7 @@ namespace UhaSub
 
                 }
             }
-            catch (Exception _e)
+            catch (Exception)
             {
 
             }
@@ -103,7 +103,7 @@ namespace UhaSub
             {
                 sub.SaveAs();
             }
-            catch (Exception _e)
+            catch (Exception)
             {
 
             }
@@ -115,7 +115,7 @@ namespace UhaSub
             {
                 sub.Save();
             }
-            catch (Exception _e)
+            catch (Exception)
             {
 
             }
@@ -125,16 +125,9 @@ namespace UhaSub
         /*
          * use slider change play position
          */
-        bool time_drag_end = true;
         private void time_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
-            time_drag_end = true;
             vlc.MediaPlayer.Position = (float)(sender as Slider).Value;
-        }
-
-        private void time_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
-        {
-            time_drag_end = false;
         }
 
         /*
