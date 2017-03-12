@@ -212,10 +212,18 @@ namespace UhaSub
              * use task for long time run
              * refer:http://stackoverflow.com/questions/27089263/running-and-interacting-with-a-async-task-from-a-wpf-gui
              */
-            await Task.Run(() => img = Load(path));
-            
-            this.img.Source = new BitmapImage(new Uri(img));
-            
+
+            try
+            {
+                await Task.Run(() => img = Load(path));
+
+                this.img.Source = new BitmapImage(new Uri(img));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_no_found);
+            }
+
             load.Visibility = Visibility.Hidden;
             
             prepared = true;
@@ -262,7 +270,7 @@ namespace UhaSub
          * start ffmpeg
          * refer:https://jasonjano.wordpress.com/2010/02/09/a-simple-c-wrapper-for-ffmpeg/
          */
-        bool StartFFmpeg(string param)
+        void StartFFmpeg(string param)
         {
             //create a process info object so we can run our app
             ProcessStartInfo oInfo = new ProcessStartInfo(
@@ -297,9 +305,8 @@ namespace UhaSub
             }
             catch (Exception)
             {
-                MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_no_found);
                 output = string.Empty;
-                return false;
+                throw new FileNotFoundException();
             }
             finally
             {
@@ -310,7 +317,6 @@ namespace UhaSub
                     srOutput.Dispose();
                 }
             }
-            return true;
         }
 
         #endregion

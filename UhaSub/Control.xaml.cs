@@ -46,6 +46,12 @@ namespace UhaSub
                 if (fileDialog.ShowDialog() == true)
                 {
 
+                    if (spec.working)
+                    {
+                        MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_now_work);
+                        return;
+                    }
+
                     // open video
                     this.OpenMedia(fileDialog.FileName);
 
@@ -56,12 +62,7 @@ namespace UhaSub
                     // set title
                     main.Title = UhaSub.Properties.Resources.Title + "  -  " +
                         fileDialog.FileName;
-
-                    if(spec.working)
-                    {
-                        MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_now_work);
-                        return;
-                    }    
+    
                     spec.Open(fileDialog.FileName);
                 }
             }
