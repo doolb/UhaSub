@@ -84,11 +84,14 @@ namespace UhaSub
             old = DateTime.Now;
         }
 
+        long max_time = 0;
+
         #region image control
         public void Init(long max_time)
         {
-            this.scroll_per_ms = (img.ActualWidth - 2*offset_head) / max_time;
+            this.scroll_per_ms = (img.ActualWidth - 2*offset_head) * this.scale.ScaleX / max_time;
 
+            this.max_time = max_time;
 
             this.offset = 0;
             Home();
@@ -100,8 +103,7 @@ namespace UhaSub
          */
         public void Sync(long time)
         {
-            double ow = time * scroll_per_ms;
-            double w = (time+450 + page *30) * scroll_per_ms;
+            double w = time * scroll_per_ms;
 
             offset_base = w % width;
             offset = 0;
@@ -109,18 +111,16 @@ namespace UhaSub
             /*
              * page
              */
-            int p = (int)(ow / width);
+            int p = (int)(w / width);
 
             if (p > page)
             {
-                for (int i = page; i < p;i++)
-                    PageDown();
+                PageDown( p -page );
                 page = p;
             }
             if (p < page)
             {
-                for (int i = p; i < page; i++)
-                    PageUp();
+                PageUp(page - p);
                 page = p;
             }
         }
@@ -151,10 +151,10 @@ namespace UhaSub
         }
 
 
-        internal void PageDown()
+        internal void PageDown(int count =1)
         {
             // go to next page
-            trans.X -= width;
+            trans.X -= count * width;
 
             if(end >0)
                 end = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
@@ -164,16 +164,16 @@ namespace UhaSub
                 trans.X = end;
         }
 
-        internal void PageUp()
+        internal void PageUp(int count = 1)
         {
             // go to next page
-            trans.X += width;
+            trans.X += count * width;
 
             // is reach to end
             if (trans.X >= home)
                 trans.X = home;
         }
-
+        
         #endregion
 
         private void ViewSizeChanged(object sender, SizeChangedEventArgs e)
@@ -189,11 +189,13 @@ namespace UhaSub
          */
         static int sx = 96000;
         public bool prepared = false;
+        public bool working = false;
         string ffmpeg_arg = "-i \"{0}\" -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt \"{2}\"";
         string ffmpeg_path;
 
         public async void Open(string path)
         {
+            working = true;
             // stop timer
             this.timer.Stop();
 
@@ -213,7 +215,7 @@ namespace UhaSub
             prepared = true;
 
             Home();
-
+            working = false;
         }
 
          /*
@@ -315,20 +317,9 @@ namespace UhaSub
             home  = -offset_head * this.scale.ScaleX;
             end   = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
 
-            trans.X = home;
+            this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
+
         }
 
-        private void UserControl_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch(e.Key)
-            {
-                case Key.M:
-                    PageDown();
-                    break;
-                case Key.N:
-                    PageUp();
-                    break;
-            }
-        }
     }
 }

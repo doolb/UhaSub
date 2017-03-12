@@ -4,8 +4,7 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
         MaxHeight="270"
-        MaxWidth="2000"
-             KeyDown="UserControl_KeyDown">
+        MaxWidth="2000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

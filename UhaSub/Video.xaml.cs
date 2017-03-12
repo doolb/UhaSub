@@ -60,6 +60,7 @@ namespace UhaSub
                 vlc.MediaPlayer.LengthChanged += new EventHandler<VlcMediaPlayerLengthChangedEventArgs>(
                     Events_LengthChanged);
 
+                vlc.MediaPlayer.EndReached += MediaPlayer_EndReached;
             }
             catch (Exception e)
             {
@@ -69,6 +70,17 @@ namespace UhaSub
                 MessageBox.Show(UhaSub.Properties.Resources.msg_vlc_no_found);
                 Environment.Exit(-1);
             }
+        }
+
+        bool is_end = false;
+
+        void MediaPlayer_EndReached(object sender, VlcMediaPlayerEndReachedEventArgs e)
+        {
+            this.Dispatcher.BeginInvoke(new Action(delegate
+                {
+                    is_end = true;
+                    control.ReachEnd();
+                }));
         }
         private void OnVlcControlNeedsLibDirectory(object sender, Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs e)
         {
@@ -170,9 +182,30 @@ namespace UhaSub
             get { return totalTime; }
         }
 
-        
+        public void Play()
+        {
+            if(is_end)
+            {
+                vlc.MediaPlayer.Play(new FileInfo(path));
+                is_end = false;
+            }
 
-        
+            vlc.MediaPlayer.Play();
+        }
+
+        public void Pause()
+        {
+            vlc.MediaPlayer.Pause();
+        }
+
+        string path;
+        public void Open(string path)
+        {
+            this.path = path;
+
+            vlc.MediaPlayer.SetMedia(new FileInfo(path), null);
+
+        }
         
     }
 

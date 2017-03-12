@@ -33,6 +33,7 @@ namespace UhaSub
         public VlcControl vlc; //  vlc player
         public MainWindow  main;
         public Spec spec;
+        public Video video;
 
         public void OnOpenFile(object sender, RoutedEventArgs e)
         {
@@ -56,6 +57,11 @@ namespace UhaSub
                     main.Title = UhaSub.Properties.Resources.Title + "  -  " +
                         fileDialog.FileName;
 
+                    if(spec.working)
+                    {
+                        MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_now_work);
+                        return;
+                    }    
                     spec.Open(fileDialog.FileName);
                 }
             }
@@ -200,8 +206,7 @@ namespace UhaSub
         private void OpenMedia(string path)
         {
             // open media
-            vlc.MediaPlayer.SetMedia(new FileInfo(path), null);
-
+            video.Open(path);
 
             // set volume
             vlc.MediaPlayer.Audio.Volume = (int)vlSlider.Value;
@@ -234,16 +239,16 @@ namespace UhaSub
             {
                 btn.Content = s_play;
                 btn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
-                
-                vlc.MediaPlayer.Pause();
+
+                video.Pause();
                 spec.Pause();
             }
             else
             {
                 btn.Content = s_pause;
                 btn.ToolTip = UhaSub.Properties.Resources.video_pause_tip;
-                
-                vlc.MediaPlayer.Play();
+
+                video.Play();
                 spec.Play();
             }
 
@@ -256,6 +261,16 @@ namespace UhaSub
             vlc.MediaPlayer.Stop();
         }
 
+        public void ReachEnd()
+        {
+            is_playing = false;
+
+            Button btn = this.plBtn;
+            btn.Content = s_play;
+            btn.ToolTip = UhaSub.Properties.Resources.video_play_tip;
+
+            spec.Pause();
+        }
 
         /*
          * select sub which will be show
@@ -290,6 +305,10 @@ namespace UhaSub
                     this.OnSave(null, null); // save sub
 
                     // set sub
+                    /*
+                     * custom function
+                     * refer:https://github.com/ericnewton76/nVLC
+                     */
                     vlc.MediaPlayer.SetSubTitles(main.sub.SubFileName);
 
                     mi_nul.IsChecked = false;

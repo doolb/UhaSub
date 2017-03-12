@@ -275,4 +275,7 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="msg_ffmpeg_no_found" xml:space="preserve">
     <value>对不起，无法找到 ffmpeg,请下载 ffmpeg。</value>
   </data>
+  <data name="msg_ffmpeg_now_work" xml:space="preserve">
+    <value>对不起，后台有进程在工作，请等待。</value>
+  </data>
 </root>

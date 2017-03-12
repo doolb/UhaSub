@@ -266,4 +266,7 @@ Please install vlc or down libvlc.</value>
     <value>Sorry, we can run without ffmpeg,
 Please download ffmpeg.</value>
   </data>
+  <data name="msg_ffmpeg_now_work" xml:space="preserve">
+    <value>Sorry, please wait ffmpeg finished.</value>
+  </data>
 </root>

@@ -291,6 +291,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, please wait ffmpeg finished..
+        /// </summary>
+        public static string msg_ffmpeg_now_work {
+            get {
+                return ResourceManager.GetString("msg_ffmpeg_now_work", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, we can run without vlc,
         ///Please install vlc or down libvlc..
         /// </summary>
