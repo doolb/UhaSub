@@ -224,7 +224,8 @@ namespace UhaSub
         public void Pause()
         {
             // wait for loading spectrume
-            if (!spec.prepared)
+            if (!spec.prepared || 
+                spec.working)
                 return;
 
             Button btn = this.plBtn;

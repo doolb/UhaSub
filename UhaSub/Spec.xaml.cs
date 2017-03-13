@@ -52,29 +52,24 @@ namespace UhaSub
         DateTime    old;
         double      scroll_per_ms=0;
         double      offset = 0, offset_head = 115;
-        double      offset_base=0;
+
 
         void timer_Tick(object sender, EventArgs e)
         {
             if (scroll_per_ms == 0||
                 double.IsInfinity(scroll_per_ms)) return;
 
-
-
             // compute the delta time
             double delta = (DateTime.Now - old).TotalMilliseconds;
 
-            //if (delta > 100)
-              //  delta = 40;
-
             //this.fps.Text = (1000/delta).ToString();
 
+            // calc offset
             offset += delta * scroll_per_ms;
+            if (offset > width)
+                offset = width;
 
-            if (offset_base + offset > width)
-                Canvas.SetLeft(this.tspec, width);
-            else
-                Canvas.SetLeft(this.tspec, offset_base + offset);
+            Canvas.SetLeft(this.tspec, offset);
 
 
             old = DateTime.Now;
@@ -108,8 +103,7 @@ namespace UhaSub
             double w = time * scroll_per_ms;
 
             // compute offset
-            offset_base = w % width;
-            offset = 0;
+            offset = w % width;
 
             //Canvas.SetLeft(this.tspec, offset_base);
 
