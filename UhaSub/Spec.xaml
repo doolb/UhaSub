@@ -27,7 +27,7 @@
                     <TransformGroup>
                         <ScaleTransform ScaleY ="2"
                                         x:Name="scale"/>
-                        <TranslateTransform Y="-218"
+                        <TranslateTransform Y="-200"
                                             x:Name="trans"/>
                     </TransformGroup>
                 </Image.RenderTransform>
@@ -63,9 +63,9 @@
             <Grid.Resources>
                 <Style TargetType="TextBlock">
                     <Setter Property="FontFamily" Value="pack://application:,,,/res/#digital-7"/>
+                    <Setter Property="FontSize" Value="18"/>
                 </Style>
             </Grid.Resources>
-            <TextBlock Text="s1230sfd"/>
         </Grid>
     </Grid>
 </UserControl>

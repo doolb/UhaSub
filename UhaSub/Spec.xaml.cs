@@ -34,25 +34,22 @@ namespace UhaSub
             /*
              * set a timer
              */
-            timer = new DispatcherTimer(DispatcherPriority.DataBind);
-            timer.Interval = TimeSpan.FromMilliseconds(1);
+            timer = new DispatcherTimer(DispatcherPriority.Render);
+            timer.Interval = TimeSpan.FromMilliseconds(16);
             timer.Tick += timer_Tick;
             old = DateTime.Now;
 
 
         }
 
-
-
-
-        double      width=0;
         DispatcherTimer timer;
 
 
+        #region Sync image and timeline
+        double      width=0;
         DateTime    old;
         double      scroll_per_ms=0;
         double      offset = 0, offset_head = 115;
-
 
         void timer_Tick(object sender, EventArgs e)
         {
@@ -65,6 +62,8 @@ namespace UhaSub
 
             // compute the delta time
             double delta = (DateTime.Now - old).TotalMilliseconds;
+            if (delta > 100)
+                delta = 40;
 
             //this.fps.Text = (1000/delta).ToString();
 
@@ -80,9 +79,6 @@ namespace UhaSub
         }
 
         long max_time = 0;
-
-        #region image control
-
         internal void calc_scroll_per_ms()
         {
             this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
@@ -92,7 +88,7 @@ namespace UhaSub
             this.max_time = max_time;
 
             calc_scroll_per_ms();
-            
+
             this.offset = 0;
             Home();
 
@@ -101,13 +97,20 @@ namespace UhaSub
         /*
          * sync with vlc
          */
+        int p_now = -1; // store current page index
+        long time_of_page = 0; // time of one page
+        bool need_update = false; // is need update image and timeline
         public void Sync(long time)
         {
             if (!prepared || working)
                 return;
 
-            if (scroll_per_ms <= 0)
+            if (scroll_per_ms <= 0||
+                time_of_page==0)
+            {
                 calc_scroll_per_ms();
+                time_of_page = (long)(width / scroll_per_ms);
+            }
 
             double w = time * scroll_per_ms;
 
@@ -118,9 +121,133 @@ namespace UhaSub
 
             // compute page
             int p = (int)(w / width);
-            trans.X = home - p * width;
+            if (p != p_now||
+                need_update)
+            {
+                need_update = false;
+
+                // update image
+                trans.X = home - p * width;
+
+                // update timeline 
+                long start_time = p * time_of_page;
+                UpdateTimeLine(start_time, start_time + time_of_page);
+
+                p_now = p;
+            }
         }
 
+        /*
+         * update time line
+         * refer:https://github.com/tjscience/audion
+         */
+        int maj_second_step = 1;
+        
+        void UpdateTimeLine(long start,long end)
+        {
+
+            time_line.Children.Clear();
+
+            // freeze brushes
+            var tickBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(UhaSub.Properties.Settings.Default.foreground));
+            var timeBrush = tickBrush;
+            tickBrush.Freeze();
+            timeBrush.Freeze();
+
+            // Draw the bottom border
+            var bottomBorder = new Border();
+            bottomBorder.Height = 1;
+            bottomBorder.Background = tickBrush;
+            bottomBorder.VerticalAlignment = VerticalAlignment.Bottom;
+            bottomBorder.HorizontalAlignment = HorizontalAlignment.Stretch;
+            time_line.Children.Add(bottomBorder);
+
+            /*
+             * is end is zero
+             */
+            if(end ==0)
+            {
+                // Major tick
+                var tick = new Border();
+                tick.Width = 1; tick.Background = tickBrush;
+
+                tick.VerticalAlignment = VerticalAlignment.Stretch;
+                tick.HorizontalAlignment = HorizontalAlignment.Left;
+                tick.Margin = new Thickness(0, 0, 0, 0);
+                time_line.Children.Add(tick);
+
+                // Add time label
+                var t = new TextBlock();
+                t.VerticalAlignment = VerticalAlignment.Bottom;
+                t.HorizontalAlignment = HorizontalAlignment.Left;
+                var ts = TimeSpan.FromSeconds(0);
+                t.Foreground = timeBrush;
+
+                t.Text = ts.ToString(@"mm\:ss");
+                t.Margin = new Thickness(0, 0, 0, 7);
+                time_line.Children.Add(t);
+
+                return;
+            }
+
+            // Determine the number of major ticks that we should display.
+            // This depends on the width of the timeline.
+            var width = time_line.RenderSize.Width;
+            var majorTickCount = Math.Floor(width / 100);
+            var totalSeconds = (end-start) / 1000;
+
+            var majorTickSecondInterval = Math.Floor(totalSeconds / majorTickCount);
+            majorTickSecondInterval = Math.Ceiling(majorTickSecondInterval / 10) * maj_second_step;
+
+            var minorTickInterval = majorTickSecondInterval / 5;
+            var minorTickCount = totalSeconds / minorTickInterval;
+
+            for (var i = 0; i < minorTickCount; i++)
+            {
+                var interval = i * minorTickInterval;
+                double positionPercent = interval / totalSeconds;
+                double x = positionPercent * width;
+
+                if (interval % majorTickSecondInterval != 0)
+                {
+                    // Minor tick
+                    var tick = new Border();
+                    tick.Width = 1;
+                    tick.Height = 7; tick.Background = tickBrush;
+
+                    tick.VerticalAlignment = VerticalAlignment.Bottom;
+                    tick.HorizontalAlignment = HorizontalAlignment.Left;
+                    tick.Margin = new Thickness(x, 0, 0, 0);
+                    time_line.Children.Add(tick);
+                }
+                else
+                {
+                    // Major tick
+                    var tick = new Border();
+                    tick.Width = 1; tick.Background = tickBrush;
+
+                    tick.VerticalAlignment = VerticalAlignment.Stretch;
+                    tick.HorizontalAlignment = HorizontalAlignment.Left;
+                    tick.Margin = new Thickness(x, 0, 0, 0);
+                    time_line.Children.Add(tick);
+
+                    // Add time label
+                    var t = new TextBlock();
+                    t.VerticalAlignment = VerticalAlignment.Bottom;
+                    t.HorizontalAlignment = HorizontalAlignment.Left;
+                    var ts = TimeSpan.FromSeconds(interval + start /1000);
+                    t.Foreground = timeBrush;
+
+                    t.Text = ts.TotalHours >= 1 ? ts.ToString(@"h\:mm\:ss") : ts.ToString(@"mm\:ss");
+                    t.Margin = new Thickness(x + 5, 0, 0, 7);
+                    time_line.Children.Add(t);
+                }
+            }
+        }
+#endregion 
+        #region image control
+
+        
         /*
          * play and pause
          */
@@ -154,6 +281,8 @@ namespace UhaSub
             this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
 
+            time_of_page = (long)(width / scroll_per_ms);
+            need_update = true;
         }
 
 
@@ -194,7 +323,11 @@ namespace UhaSub
             }
 
             load.Visibility = Visibility.Hidden;
-            
+
+
+            // update time-line
+            UpdateTimeLine(0, 0);
+
             prepared = true;
             Home();
             working = false;
@@ -232,6 +365,8 @@ namespace UhaSub
 
             // start ffmpet
             StartFFmpeg(arg);
+
+
 
             return s;
         }
@@ -301,6 +436,7 @@ namespace UhaSub
 
             calc_scroll_per_ms();
 
+            need_update = true;
             End();
         }
 
