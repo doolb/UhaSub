@@ -10,9 +10,15 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
         <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"
-                      Grid.Column="0"
+                      Grid.Column="0" Grid.Row="0"
                       SizeChanged="ViewSizeChanged">
             <Image Name="img"
                    Stretch="None"
@@ -30,7 +36,7 @@
 
 
         <Canvas 
-                      Grid.Column="0">
+                      Grid.Column="0" Grid.Row="0">
             <Rectangle Name="tspec"
                        Width="1"
                        Fill="Cyan"/>
@@ -45,19 +51,21 @@
                    Visibility="Hidden"/>
 
 
-
-        <TextBlock Text="Now Loading."
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Foreground="White"
-                   Name="fps"
-                   Margin="10"
-                   Visibility="Hidden"/>
-        
         <Slider    Orientation="Vertical"
-                   Grid.Column="1"
+                   Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
                    Minimum="0.5" Maximum="2"
                    Value="1" IsSnapToTickEnabled="True" TickFrequency="0.1"
                    ValueChanged="Slider_ValueChanged"/>
+        
+        <!-- time line-->
+        <Grid Grid.Column="0" Grid.Row="1"
+              Name="time_line">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontFamily" Value="pack://application:,,,/res/#digital-7"/>
+                </Style>
+            </Grid.Resources>
+            <TextBlock Text="s1230sfd"/>
+        </Grid>
     </Grid>
 </UserControl>

@@ -56,6 +56,10 @@ namespace UhaSub
 
         void timer_Tick(object sender, EventArgs e)
         {
+
+            if (!prepared || working)
+                return;
+            
             if (scroll_per_ms == 0||
                 double.IsInfinity(scroll_per_ms)) return;
 
@@ -99,6 +103,11 @@ namespace UhaSub
          */
         public void Sync(long time)
         {
+            if (!prepared || working)
+                return;
+
+            if (scroll_per_ms <= 0)
+                calc_scroll_per_ms();
 
             double w = time * scroll_per_ms;
 
@@ -166,6 +175,7 @@ namespace UhaSub
 
             string img = null;
 
+
             load.Visibility = Visibility.Visible;
             /*
              * use task for long time run
@@ -186,9 +196,10 @@ namespace UhaSub
             load.Visibility = Visibility.Hidden;
             
             prepared = true;
-
             Home();
             working = false;
+
+            
         }
 
          /*

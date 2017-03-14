@@ -35,6 +35,7 @@ namespace UhaSub
         public Spec spec;
         public Video video;
 
+        #region Button Click call back
         public void OnOpenFile(object sender, RoutedEventArgs e)
         {
             try
@@ -121,8 +122,8 @@ namespace UhaSub
 
             }
         }
-
-
+        #endregion
+        
         /*
          * use slider change play position
          */
@@ -224,9 +225,9 @@ namespace UhaSub
         public void Pause()
         {
             // wait for loading spectrume
-            if (!spec.prepared || 
-                spec.working)
-                return;
+//             if (!spec.prepared || 
+//                 spec.working)
+//                 return;
 
             Button btn = this.plBtn;
 
