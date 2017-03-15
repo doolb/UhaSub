@@ -62,8 +62,6 @@ namespace UhaSub
 
             // compute the delta time
             double delta = (DateTime.Now - old).TotalMilliseconds;
-            if (delta > 100)
-                delta = 40;
 
             //this.fps.Text = (1000/delta).ToString();
 
@@ -118,10 +116,10 @@ namespace UhaSub
             offset = w % width;
 
             //Canvas.SetLeft(this.tspec, offset_base);
-
+            
             // compute page
             int p = (int)(w / width);
-            if (p != p_now||
+            if (p != p_now ||
                 need_update)
             {
                 need_update = false;
@@ -276,6 +274,7 @@ namespace UhaSub
         
         #endregion
 
+        // change view size
         private void ViewSizeChanged(object sender, SizeChangedEventArgs e)
         {
             this.width = e.NewSize.Width;
@@ -284,6 +283,21 @@ namespace UhaSub
             time_of_page = (long)(width / scroll_per_ms);
             need_update = true;
         }
+
+        // change image scale-x
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            scale.ScaleX = e.NewValue;
+
+            home = -offset_head * this.scale.ScaleX;
+            end = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
+
+            calc_scroll_per_ms();
+            time_of_page = (long)(width / scroll_per_ms);
+
+            need_update = true;
+        }
+
 
 
         #region load spectrum by ffmpeg
@@ -426,19 +440,6 @@ namespace UhaSub
 
         #endregion
 
-        // change image scale-x
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            scale.ScaleX = e.NewValue;
-
-            home  = -offset_head * this.scale.ScaleX;
-            end   = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
-
-            calc_scroll_per_ms();
-
-            need_update = true;
-            End();
-        }
-
+        
     }
 }

@@ -230,6 +230,8 @@ namespace UhaSub
 //                 return;
 
             Button btn = this.plBtn;
+            if (vlc.MediaPlayer.GetCurrentMedia() == null)
+                return;
 
             if (is_playing)
             {
