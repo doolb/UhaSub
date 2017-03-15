@@ -46,7 +46,7 @@ namespace UhaSub
             this.control.cfg = this.cfg;
             this.control.spec = this.spec;
             this.control.video = this.video;
-
+            this.spec.video = this.video;
 
             this.Closed += MainWindow_Closed;
 

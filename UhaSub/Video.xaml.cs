@@ -98,13 +98,11 @@ namespace UhaSub
         public Control control = null;
         void Events_TimeChanged(object sender, VlcMediaPlayerTimeChangedEventArgs e)
         {
+            time = e.NewTime;
+            clock = DateTime.Now;
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                time = e.NewTime;
                 control.ctText.Text = time.ToString();
-
-                // sync time
-                spec.Sync(time);
             }));
         }
 
@@ -152,6 +150,15 @@ namespace UhaSub
             }
         }
 
+
+        /*
+         * current clock
+         */
+        private DateTime clock;
+        public DateTime Clock
+        {
+            get { return clock; }
+        }
 
         /* 
          * current time for media

@@ -65,7 +65,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">D</Value>
     </Setting>
     <Setting Name="version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">(2017)v1.0-beta.5(project-spec)</Value>
+      <Value Profile="(Default)">(2017)v1.0-beta.6</Value>
     </Setting>
     <Setting Name="cfg_col_size_1" Type="System.Double" Scope="User">
       <Value Profile="(Default)">1.4</Value>
