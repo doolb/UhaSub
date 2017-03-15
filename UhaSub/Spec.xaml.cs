@@ -37,19 +37,17 @@ namespace UhaSub
             timer = new DispatcherTimer(DispatcherPriority.Render);
             timer.Interval = TimeSpan.FromMilliseconds(16);
             timer.Tick += timer_Tick;
-            old = DateTime.Now;
 
 
         }
 
         DispatcherTimer timer;
-
+        public Video video;
 
         #region Sync image and timeline
         double      width=0;
-        DateTime    old;
         double      scroll_per_ms=0;
-        double      offset = 0, offset_head = 115;
+        double      offset = 0, offset_head = 115,offset_base=0;
 
         void timer_Tick(object sender, EventArgs e)
         {
@@ -60,20 +58,18 @@ namespace UhaSub
             if (scroll_per_ms == 0||
                 double.IsInfinity(scroll_per_ms)) return;
 
-            // compute the delta time
-            double delta = (DateTime.Now - old).TotalMilliseconds;
+            Sync(video.Time);
 
-            //this.fps.Text = (1000/delta).ToString();
+            // compute the delta time
+            double delta = (DateTime.Now - video.Clock).TotalMilliseconds;
+            if (delta > 300) return;
 
             // calc offset
-            offset += delta * scroll_per_ms;
-            if (offset > width)
-                offset = width;
-
-            Canvas.SetLeft(this.tspec, offset);
-
-
-            old = DateTime.Now;
+            offset = delta * scroll_per_ms;
+            if (offset_base + offset > width)
+                Canvas.SetLeft(this.tspec, width);
+            else
+                Canvas.SetLeft(this.tspec, offset_base + offset);
         }
 
         long max_time = 0;
@@ -100,8 +96,6 @@ namespace UhaSub
         bool need_update = false; // is need update image and timeline
         public void Sync(long time)
         {
-            if (!prepared || working)
-                return;
 
             if (scroll_per_ms <= 0||
                 time_of_page==0)
@@ -113,46 +107,36 @@ namespace UhaSub
             double w = time * scroll_per_ms;
 
             // compute offset
-            offset = w % width;
+            offset_base = w % width;
 
-            //Canvas.SetLeft(this.tspec, offset_base);
-            
             // compute page
             int p = (int)(w / width);
             if (p != p_now ||
                 need_update)
             {
                 need_update = false;
+                p_now = p;
 
                 // update image
                 trans.X = home - p * width;
 
-                // update timeline 
-                long start_time = p * time_of_page;
-                UpdateTimeLine(start_time, start_time + time_of_page);
+                UpdateTimeLine();
 
-                p_now = p;
+               
             }
         }
 
+        #region update time-line
         /*
          * update time line
          * refer:https://github.com/tjscience/audion
          */
-        int maj_second_step = 1;
-        
-        void UpdateTimeLine(long start,long end)
+        int maj_width_step = 100;
+
+        Brush tickBrush;
+        Brush timeBrush;
+        void add_bottom()
         {
-
-            time_line.Children.Clear();
-
-            // freeze brushes
-            var tickBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(UhaSub.Properties.Settings.Default.foreground));
-            var timeBrush = tickBrush;
-            tickBrush.Freeze();
-            timeBrush.Freeze();
-
-            // Draw the bottom border
             var bottomBorder = new Border();
             bottomBorder.Height = 1;
             bottomBorder.Background = tickBrush;
@@ -160,92 +144,116 @@ namespace UhaSub
             bottomBorder.HorizontalAlignment = HorizontalAlignment.Stretch;
             time_line.Children.Add(bottomBorder);
 
+        }
+
+        void add_major(double x,long second)
+        {
+
+            // Major tick
+            var tick = new Border();
+            tick.Width = 1; tick.Background = tickBrush;
+
+            tick.VerticalAlignment = VerticalAlignment.Stretch;
+            tick.HorizontalAlignment = HorizontalAlignment.Left;
+            tick.Margin = new Thickness(x, 0, 0, 0);
+            time_line.Children.Add(tick);
+
+            // Add time label
+            var t = new TextBlock();
+            t.VerticalAlignment = VerticalAlignment.Bottom;
+            t.HorizontalAlignment = HorizontalAlignment.Left;
+            var ts = TimeSpan.FromSeconds(second);
+            t.Foreground = timeBrush;
+
+            t.Text = ts.TotalHours >= 1 ? ts.ToString(@"h\:mm\:ss") : ts.ToString(@"mm\:ss");
+            t.Margin = new Thickness(x + 5, 0, 0, 7);
+            time_line.Children.Add(t);
+        }
+
+        void add_minor(double x)
+        {
+            // Minor tick
+            var tick = new Border();
+            tick.Width = 1;
+            tick.Height = 7; tick.Background = tickBrush;
+
+            tick.VerticalAlignment = VerticalAlignment.Bottom;
+            tick.HorizontalAlignment = HorizontalAlignment.Left;
+            tick.Margin = new Thickness(x, 0, 0, 0);
+            time_line.Children.Add(tick);
+        }
+        void UpdateTimeLine()
+        {
+
+            time_line.Children.Clear();
+
+            // freeze brushes
+            tickBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(UhaSub.Properties.Settings.Default.foreground));
+            timeBrush = tickBrush;
+            tickBrush.Freeze();
+            timeBrush.Freeze();
+
+            // Draw the bottom border
+            add_bottom();
+
             /*
              * is end is zero
              */
-            if(end ==0)
+            if(p_now == -1)
             {
-                // Major tick
-                var tick = new Border();
-                tick.Width = 1; tick.Background = tickBrush;
-
-                tick.VerticalAlignment = VerticalAlignment.Stretch;
-                tick.HorizontalAlignment = HorizontalAlignment.Left;
-                tick.Margin = new Thickness(0, 0, 0, 0);
-                time_line.Children.Add(tick);
-
-                // Add time label
-                var t = new TextBlock();
-                t.VerticalAlignment = VerticalAlignment.Bottom;
-                t.HorizontalAlignment = HorizontalAlignment.Left;
-                var ts = TimeSpan.FromSeconds(0);
-                t.Foreground = timeBrush;
-
-                t.Text = ts.ToString(@"mm\:ss");
-                t.Margin = new Thickness(0, 0, 0, 7);
-                time_line.Children.Add(t);
-
+                add_major(0,0);
                 return;
             }
 
-            // Determine the number of major ticks that we should display.
-            // This depends on the width of the timeline.
-            var width = time_line.RenderSize.Width;
-            var majorTickCount = Math.Floor(width / 100);
-            var totalSeconds = (end-start) / 1000;
+            /*
+             * calc major count and minor count
+             */
+            double start_time = p_now * time_of_page;
+            long start_second = (long)Math.Round(start_time / 1000);
+            
+            long total_second = time_of_page / 1000;
+            long maj_interval = (long)Math.Round(maj_width_step / scroll_per_ms / 1000) * 1000;
+            long maj_interval_second = maj_interval / 1000;
+            double minor_interval = (double)maj_interval / 10;
 
-            var majorTickSecondInterval = Math.Floor(totalSeconds / majorTickCount);
-            majorTickSecondInterval = Math.Ceiling(majorTickSecondInterval / 10) * maj_second_step;
+            // major start x-axis
+            double sx = start_time * scroll_per_ms;
+            sx %= width;
+            if (sx > width * 2 / 3)
+                sx = sx - width;
 
-            var minorTickInterval = majorTickSecondInterval / 5;
-            var minorTickCount = totalSeconds / minorTickInterval;
-
-            for (var i = 0; i < minorTickCount; i++)
+            // major interval x
+            double x = maj_interval * scroll_per_ms;
+            // minor interval x
+            double mx = minor_interval * scroll_per_ms;
+            
+            /*
+             * add major and time
+             */
+            double tx = sx;
+            for(long t =0;t<=total_second;t+=maj_interval_second)
             {
-                var interval = i * minorTickInterval;
-                double positionPercent = interval / totalSeconds;
-                double x = positionPercent * width;
+                add_major(tx,start_second + t);
 
-                if (interval % majorTickSecondInterval != 0)
-                {
-                    // Minor tick
-                    var tick = new Border();
-                    tick.Width = 1;
-                    tick.Height = 7; tick.Background = tickBrush;
+                // add minor
+                // calc minor width intervel
+                for(long i = 1; i < 10; i++)
+                    add_minor(tx + i * mx);
 
-                    tick.VerticalAlignment = VerticalAlignment.Bottom;
-                    tick.HorizontalAlignment = HorizontalAlignment.Left;
-                    tick.Margin = new Thickness(x, 0, 0, 0);
-                    time_line.Children.Add(tick);
-                }
-                else
-                {
-                    // Major tick
-                    var tick = new Border();
-                    tick.Width = 1; tick.Background = tickBrush;
-
-                    tick.VerticalAlignment = VerticalAlignment.Stretch;
-                    tick.HorizontalAlignment = HorizontalAlignment.Left;
-                    tick.Margin = new Thickness(x, 0, 0, 0);
-                    time_line.Children.Add(tick);
-
-                    // Add time label
-                    var t = new TextBlock();
-                    t.VerticalAlignment = VerticalAlignment.Bottom;
-                    t.HorizontalAlignment = HorizontalAlignment.Left;
-                    var ts = TimeSpan.FromSeconds(interval + start /1000);
-                    t.Foreground = timeBrush;
-
-                    t.Text = ts.TotalHours >= 1 ? ts.ToString(@"h\:mm\:ss") : ts.ToString(@"mm\:ss");
-                    t.Margin = new Thickness(x + 5, 0, 0, 7);
-                    time_line.Children.Add(t);
-                }
+                tx += x;
             }
+
+            /*
+             * add minor
+             */
+
+
         }
-#endregion 
+        #endregion
+        #endregion
         #region image control
 
-        
+
         /*
          * play and pause
          */
@@ -339,8 +347,9 @@ namespace UhaSub
             load.Visibility = Visibility.Hidden;
 
 
+            p_now = -1;
             // update time-line
-            UpdateTimeLine(0, 0);
+            UpdateTimeLine();
 
             prepared = true;
             Home();
