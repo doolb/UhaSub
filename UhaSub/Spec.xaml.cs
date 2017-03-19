@@ -65,7 +65,7 @@ namespace UhaSub
             if (delta > 300) return;
 
             // calc offset
-            offset = delta * scroll_per_ms;
+            offset = delta * scroll_per_ms * video.vlc.MediaPlayer.Rate;
             if (offset_base + offset > width)
                 Canvas.SetLeft(this.tspec, width);
             else
