@@ -281,6 +281,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Would like to save you work?.
+        /// </summary>
+        public static string msg_app_end {
+            get {
+                return ResourceManager.GetString("msg_app_end", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, we can run without ffmpeg,
         ///Please download ffmpeg..
         /// </summary>

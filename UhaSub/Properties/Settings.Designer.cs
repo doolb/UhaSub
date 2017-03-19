@@ -285,5 +285,29 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
                 this["cfg_volume"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int cfg_video_go_before {
+            get {
+                return ((int)(this["cfg_video_go_before"]));
+            }
+            set {
+                this["cfg_video_go_before"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int cfg_video_go_after {
+            get {
+                return ((int)(this["cfg_video_go_after"]));
+            }
+            set {
+                this["cfg_video_go_after"] = value;
+            }
+        }
     }
 }

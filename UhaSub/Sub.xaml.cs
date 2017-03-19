@@ -36,6 +36,8 @@ namespace UhaSub
 
         public bool is_editing = false;
 
+        public bool is_changed = false;
+
         void subs_Loaded(object sender, RoutedEventArgs e)
         {
            // locate();
@@ -144,6 +146,8 @@ namespace UhaSub
             check();
             subs.Items.Refresh();
 
+            this.is_changed = true;
+
         }
 
         public void End(long time)
@@ -165,6 +169,8 @@ namespace UhaSub
 
             this.subs.ScrollIntoView(this.subs.SelectedItem);
 
+            this.is_changed = true;
+
         }
 
         
@@ -179,6 +185,7 @@ namespace UhaSub
 
             Ass.Save(subs.ItemsSource as List<Ass>,SubHeader, SubFileName);
 
+            this.is_changed = false;
             (this.Resources["stb_save_success"] as Storyboard).Begin();
         }
 
@@ -340,6 +347,7 @@ namespace UhaSub
         private void subs_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             this.is_editing = false;
+            this.is_changed = true;
         }
 
         

@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cfg_key_go_after" xml:space="preserve">
-    <value>Go after 3 sec</value>
+    <value>Go after </value>
   </data>
   <data name="cfg_key_go_before" xml:space="preserve">
-    <value>Go before 3 sec</value>
+    <value>Go before </value>
   </data>
   <data name="cfg_key_play_pause" xml:space="preserve">
     <value>Play or Pause</value>
@@ -268,5 +268,11 @@ Please download ffmpeg.</value>
   </data>
   <data name="msg_ffmpeg_now_work" xml:space="preserve">
     <value>Sorry, please wait ffmpeg finished.</value>
+  </data>
+  <data name="msg_app_end" xml:space="preserve">
+    <value>Would like to save you work?</value>
+  </data>
+  <data name="txt_second" xml:space="preserve">
+    <value>Second</value>
   </data>
 </root>

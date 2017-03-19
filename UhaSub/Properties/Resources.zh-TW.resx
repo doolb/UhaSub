@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cfg_key_go_after" xml:space="preserve">
-    <value>後退3秒</value>
+    <value>後退</value>
   </data>
   <data name="cfg_key_go_before" xml:space="preserve">
-    <value>前進3秒</value>
+    <value>前進</value>
   </data>
   <data name="cfg_key_play_pause" xml:space="preserve">
     <value>播放或暫停</value>
@@ -277,5 +277,11 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   </data>
   <data name="msg_ffmpeg_now_work" xml:space="preserve">
     <value>对不起，后台有进程在工作，请等待。</value>
+  </data>
+  <data name="msg_app_end" xml:space="preserve">
+    <value>是否需要保存字幕？</value>
+  </data>
+  <data name="txt_second" xml:space="preserve">
+    <value>秒</value>
   </data>
 </root>

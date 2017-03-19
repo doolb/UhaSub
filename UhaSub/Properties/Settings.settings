@@ -82,5 +82,11 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="cfg_volume" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">80</Value>
     </Setting>
+    <Setting Name="cfg_video_go_before" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="cfg_video_go_after" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

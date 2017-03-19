@@ -48,7 +48,8 @@ namespace UhaSub
             this.control.video = this.video;
             this.spec.video = this.video;
 
-            this.Closed += MainWindow_Closed;
+            
+            this.Closing += MainWindow_Closing;
 
             /*
              * set column width from config
@@ -65,6 +66,21 @@ namespace UhaSub
 
             update_spec();
         }
+
+        void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            audio.Close();
+
+            if (sub.is_changed)
+            {
+                if (MessageBox.Show(UhaSub.Properties.Resources.msg_app_end, "", MessageBoxButton.YesNo)
+                   == MessageBoxResult.Yes)
+                {
+                    sub.Save();
+                }
+            }
+        }
+
 
         void update_spec()
         {
@@ -90,10 +106,6 @@ namespace UhaSub
             }
         }
 
-        void MainWindow_Closed(object sender, EventArgs e)
-        {
-            audio.Close();    
-        }
 
 
         Config cfg = new Config();
@@ -112,9 +124,9 @@ namespace UhaSub
                 /*
                  * video control
                  */
-                if (e.Key == cfg.After) { video.Time += 3000;return; }
+                if (e.Key == cfg.After) { video.Time += cfg.GoAfterTime;return; }
 
-                if (e.Key == cfg.Before) { video.Time -= 3000;return; }
+                if (e.Key == cfg.Before) { video.Time -= cfg.GoBeforeTime;return; }
 
                 if (e.Key == cfg.Pause) { control.Pause(); return; }
 

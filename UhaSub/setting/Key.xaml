@@ -23,6 +23,17 @@
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
                 <Setter Property="Background" Value="Gray"/>
             </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="Auto"/>
+                <Setter Property="Margin" Value="12 12 12 0"/>
+                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+            </Style>
         </Grid.Resources>
 
         <Grid.ColumnDefinitions>
@@ -60,8 +71,13 @@
 
 
             <!-- go before -->
-            <TextBlock Text="{x:Static p:Resources.cfg_key_go_before}"
-                       Grid.Column="0" Grid.Row="2"/>
+            <StackPanel Grid.Column="0" Grid.Row="2"
+                        Orientation="Horizontal">
+                <TextBlock Text="{x:Static p:Resources.cfg_key_go_before}"/>
+                <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_before}"
+                         Tag="after"/>
+                
+            </StackPanel>
 
             <Button    Grid.Column="1" Grid.Row="2"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
@@ -71,9 +87,13 @@
 
 
             <!-- go after -->
-            <TextBlock Text="{x:Static p:Resources.cfg_key_go_after}"
-                       Grid.Column="0" Grid.Row="3"/>
-
+            <StackPanel Grid.Column="0" Grid.Row="3"
+                        Orientation="Horizontal">
+                <TextBlock Text="{x:Static p:Resources.cfg_key_go_after}"/>
+                <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_after}"
+                         Tag="after"/>
+                
+            </StackPanel>
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=go_after}"

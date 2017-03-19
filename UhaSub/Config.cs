@@ -50,6 +50,9 @@ namespace UhaSub
         public int StartTime;
         public int EndTime;
 
+        public int GoBeforeTime;
+        public int GoAfterTime;
+
         public Config()
         {
             ReLoad();
@@ -103,6 +106,9 @@ namespace UhaSub
 
             StartTime = UhaSub.Properties.Settings.Default.StartTime;
             EndTime = UhaSub.Properties.Settings.Default.EndTime;
+
+            GoBeforeTime = UhaSub.Properties.Settings.Default.cfg_video_go_before * 1000;
+            GoAfterTime = UhaSub.Properties.Settings.Default.cfg_video_go_after * 1000;
         }
     }
 }
