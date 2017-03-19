@@ -91,7 +91,7 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go after 3 sec.
+        ///   Looks up a localized string similar to Go after .
         /// </summary>
         public static string cfg_key_go_after {
             get {
@@ -100,7 +100,7 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go before 3 sec.
+        ///   Looks up a localized string similar to Go before .
         /// </summary>
         public static string cfg_key_go_before {
             get {
@@ -438,6 +438,15 @@ namespace UhaSub.Properties {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second.
+        /// </summary>
+        public static string txt_second {
+            get {
+                return ResourceManager.GetString("txt_second", resourceCulture);
             }
         }
         

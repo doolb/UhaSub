@@ -115,6 +115,33 @@ namespace UhaSub.setting
             
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            try
+            {
+                int t = int.Parse(tb.Text);
+
+                switch (tb.Tag as string)
+                {
+                    case "after":
+                        UhaSub.Properties.Settings.Default.cfg_video_go_after = t;
+                        break;
+                    case "before":
+                        UhaSub.Properties.Settings.Default.cfg_video_go_before = t;
+                        break;
+
+
+                    default: return;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
 
 
     }

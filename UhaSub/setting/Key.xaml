@@ -75,8 +75,9 @@
                         Orientation="Horizontal">
                 <TextBlock Text="{x:Static p:Resources.cfg_key_go_before}"/>
                 <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_before}"
-                         Tag="after"/>
-                
+                         Tag="before"
+                         TextChanged="TextBox_TextChanged"/>
+                <TextBlock Text="{x:Static p:Resources.txt_second}"/>
             </StackPanel>
 
             <Button    Grid.Column="1" Grid.Row="2"
@@ -91,8 +92,10 @@
                         Orientation="Horizontal">
                 <TextBlock Text="{x:Static p:Resources.cfg_key_go_after}"/>
                 <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_after}"
-                         Tag="after"/>
-                
+                         Tag="after"
+                         TextChanged="TextBox_TextChanged"/>
+                <TextBlock Text="{x:Static p:Resources.txt_second}"/>
+
             </StackPanel>
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
