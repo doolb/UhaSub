@@ -78,7 +78,9 @@
             <Slider     Focusable="False"
                         Name="tmSlider"
                         Value="0"
+                        IsMoveToPointEnabled="True"
                         Maximum="1" Minimum="0"
+                        MouseUp="tmSlider_MouseUp"
                         Thumb.DragCompleted="time_DragCompleted"/>
 
             <DockPanel>
@@ -95,13 +97,16 @@
                             VerticalAlignment="Top"
                             Margin="20 0 0 0"/>
 
-                <!-- volume -->
+                <!-- volume 
+                control easiler,refer:http://stackoverflow.com/questions/18018920/c-sharp-wpf-slider-going-to-exact-position
+                -->
                 <Slider     Name="vlSlider"
                             Value="{Binding Source={x:Static p:Settings.Default}, Path=cfg_volume}"
                             Focusable="False"
                             Width="100"
                             VerticalAlignment="Top"
                             Maximum="100" Minimum="0"
+                            IsMoveToPointEnabled="True"
                             ValueChanged="vlSlider_ValueChanged"
                             DockPanel.Dock="Left"/>
 

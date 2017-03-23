@@ -346,5 +346,11 @@ namespace UhaSub
             m.IsChecked = true;
         }
 
+        private void tmSlider_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            vlc.MediaPlayer.Position = (float)(sender as Slider).Value;
+
+        }
+
     }
 }
