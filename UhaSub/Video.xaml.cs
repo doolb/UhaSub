@@ -163,7 +163,7 @@ namespace UhaSub
             get { return position; }
             set
             {
-                if (!vlc.MediaPlayer.IsPlaying)
+                if (!is_open)
                     return;
                 if (value < 0) return;
                 if (value == position) return;
@@ -216,10 +216,14 @@ namespace UhaSub
             if(is_end)
             {
                 vlc.MediaPlayer.Play(new FileInfo(path));
+
                 is_end = false;
             }
 
             vlc.MediaPlayer.Play();
+
+            // set position if need
+            vlc.MediaPlayer.Position = (float)this.position;
         }
 
         public void Pause()
@@ -228,12 +232,13 @@ namespace UhaSub
         }
 
         string path;
+        bool is_open = false;
         public void Open(string path)
         {
             this.path = path;
-
+            is_open = true;
+            
             vlc.MediaPlayer.SetMedia(new FileInfo(path), null);
-
         }
         
     }

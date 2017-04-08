@@ -29,18 +29,19 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Slider}">
                             <Grid VerticalAlignment="Center">
-                                <Border x:Name="borderBackground" Margin="6,0" Height="4" 
+                                <Border x:Name="borderBackground" Margin="15,0" Height="15" 
                                         Background="Gray" />
-                                <Canvas Margin="0,-4,0,0" VerticalAlignment="Center">
+                                <Canvas Margin="0,-15,0,0" VerticalAlignment="Center">
                                     <Border x:Name="PART_SelectionRange" 
                                             HorizontalAlignment="Left" 
-                                            Height="4" 
+                                            Height="15" 
                                             Background="{TemplateBinding Foreground}" />
                                 </Canvas>
                                 <Track x:Name="PART_Track">
                                     <Track.Thumb>
-                                        <Thumb Width="10" Height="20" 
+                                        <Thumb Width="15" Height="15" 
                                                Background="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" 
+                                               Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" 
                                                Cursor="SizeWE"/>
                                     </Track.Thumb>
                                 </Track>
@@ -78,6 +79,7 @@
 
             <Slider     Focusable="False"
                         Name="tmSlider"
+                        Margin="0,0,0,10"
                         Value="{Binding Position}"
                         IsMoveToPointEnabled="True"
                         Maximum="1" Minimum="0"
