@@ -34,18 +34,21 @@ namespace UhaSub
 
             this.sub.SubSelected += this.control.OnSubChanged;
 
-            this.video.control = this.control;
-            this.video.spec = this.spec;
+            this.video.EndReached += this.control.ReachEnd;
+            this.video.TotalTimeChanged += this.spec.Init;
 
             /*
              * set refer to control
              */
             this.control.main = this;
+            this.control.DataContext = this.video;
+            
             this.control.vlc = video.vlc;
             this.control.sub = this.sub;
             this.control.cfg = this.cfg;
             this.control.spec = this.spec;
             this.control.video = this.video;
+
             this.spec.video = this.video;
 
             

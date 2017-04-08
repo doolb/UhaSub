@@ -72,21 +72,22 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="18"
+                       
                        Margin="0 10 10 0"/>
 
 
             <Slider     Focusable="False"
                         Name="tmSlider"
-                        Value="0"
+                        Value="{Binding Position}"
                         IsMoveToPointEnabled="True"
                         Maximum="1" Minimum="0"
                         MouseUp="tmSlider_MouseUp"
                         Thumb.DragCompleted="time_DragCompleted"/>
 
             <DockPanel>
-                <TextBlock Text="0:00:00.00" Name="ctText" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding Time}" Name="ctText" HorizontalAlignment="Left"/>
                 <TextBlock Text=" / " HorizontalAlignment="Left"/>
-                <TextBlock Text="0:00:00.00" Name="ttText" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding TotalTime}" Name="ttText" HorizontalAlignment="Left"/>
 
 
                 <!-- mutex -->

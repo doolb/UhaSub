@@ -40,7 +40,7 @@ namespace UhaSub
 
         void subs_Loaded(object sender, RoutedEventArgs e)
         {
-           // locate();
+           locate();
             /* 
              * set for last column
              * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
@@ -344,6 +344,7 @@ namespace UhaSub
             SubSelected(ass);
             this.subs.ScrollIntoView(this.subs.SelectedItem);
 
+            
         }
 
         private void subs_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)

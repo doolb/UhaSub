@@ -26,8 +26,22 @@ namespace UhaSub
     /// <summary>
     /// Interaction logic for Video.xaml
     /// </summary>
-    public partial class Video : UserControl
+    public partial class Video : UserControl, INotifyPropertyChanged
     {
+        #region interface INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // This method is called by the Set accessor of each property.
+        // The CallerMemberName attribute that is applied to the optional propertyName
+        // parameter causes the property name of the caller to be substituted as an argument.
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
         public Video() 
         {
 
@@ -74,14 +88,18 @@ namespace UhaSub
 
         bool is_end = false;
 
+        public delegate void VideoReachEndDemo();
+        public event VideoReachEndDemo EndReached;
         void MediaPlayer_EndReached(object sender, VlcMediaPlayerEndReachedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
                 {
                     is_end = true;
-                    control.ReachEnd();
+                    EndReached();
                 }));
         }
+
+
         private void OnVlcControlNeedsLibDirectory(object sender, Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs e)
         {
             var currentAssembly = System.Reflection.Assembly.GetEntryAssembly();
@@ -94,16 +112,16 @@ namespace UhaSub
             e.VlcLibDirectory = new DirectoryInfo(currentDirectory);
         }
 
-
-        public Control control = null;
         void Events_TimeChanged(object sender, VlcMediaPlayerTimeChangedEventArgs e)
         {
-            time = e.NewTime;
-            clock = DateTime.Now;
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
-                control.ctText.Text = time.ToString();
+                time = e.NewTime;
+                clock = DateTime.Now;
+
+                NotifyPropertyChanged("Time");
             }));
+            
         }
 
         void Events_PlayerPositionChanged(object sender, VlcMediaPlayerPositionChangedEventArgs e)
@@ -111,22 +129,26 @@ namespace UhaSub
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 position = e.NewPosition;
-                control.tmSlider.Value = position;
+
+                NotifyPropertyChanged("Position");
+
             }));
+            
         }
 
+        public delegate void TotalTimeChangedDemo(long total_time);
+        public event TotalTimeChangedDemo TotalTimeChanged;
 
-        public Spec spec;
         void Events_LengthChanged(object sender, VlcMediaPlayerLengthChangedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
             {
                 //totalTime = (long)e.NewLength; // this lenght is error
                 totalTime = vlc.MediaPlayer.Length;
-                control.ttText.Text = totalTime.ToString();
+                NotifyPropertyChanged("TotalTime");
 
                 // sync totaltime
-                spec.Init(totalTime);
+                TotalTimeChanged(totalTime);
             }));
         }
 

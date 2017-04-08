@@ -49,7 +49,7 @@
                     BeginningEdit="subs_BeginningEdit"
                     CellEditEnding="subs_CellEditEnding"
                     ToolTip="{x:Static p:Resources.tip_sub_timeline_ck}"
-                    HorizontalScrollBarVisibility="Visible"
+                    HorizontalScrollBarVisibility="Hidden"
                     VerticalScrollBarVisibility="Visible">
 
             <!-- manaul add column
