@@ -41,6 +41,11 @@ namespace UhaSub
         void subs_Loaded(object sender, RoutedEventArgs e)
         {
            // locate();
+            /* 
+             * set for last column
+             * refer:http://stackoverflow.com/questions/3754825/programatically-set-the-width-of-a-datacolumn-for-use-with-a-datagrid
+             */
+            subs.Columns.Last().Width = new DataGridLength(1, DataGridLengthUnitType.Star);
 
         }
 
@@ -177,8 +182,10 @@ namespace UhaSub
         public void Save()
         {
             if (SubFileName == null)
+            {
+                SaveAs();
                 return;
-
+            }
             // load a default head
             if (SubHeader == null)
                 SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
