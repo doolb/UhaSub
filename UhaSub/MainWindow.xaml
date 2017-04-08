@@ -9,7 +9,8 @@
         Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"
         WindowState="Maximized" 
         KeyDown="Window_KeyDown"
-        KeyUp="Window_KeyUp">
+        KeyUp="Window_KeyUp"
+        MouseDown="Window_MouseDown">
     
         <!-- bind app setting 
             refer:http://stackoverflow.com/questions/154533/best-way-to-bind-wpf-properties-to-applicationsettings-in-c

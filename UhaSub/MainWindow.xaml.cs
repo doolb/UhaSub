@@ -218,6 +218,11 @@ namespace UhaSub
 
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.sub.subs.CommitEdit();
+        }
+
 
     }
 }
