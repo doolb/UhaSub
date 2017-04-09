@@ -11,7 +11,6 @@
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
-                <Setter Property="FontSize" Value="20"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="12 12 0 0"/>
@@ -22,11 +21,13 @@
                 <Setter Property="Width"  Value="90"/>
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
                 <Setter Property="Background" Value="Gray"/>
+
+                <EventSetter Event="Click" Handler="Button_Click"/>
+                
             </Style>
             <Style TargetType="TextBox">
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="FontSize" Value="20"/>
                 <Setter Property="Height" Value="30"/>
                 <Setter Property="Width" Value="Auto"/>
                 <Setter Property="Margin" Value="12 12 12 0"/>
@@ -82,9 +83,8 @@
 
             <Button    Grid.Column="1" Grid.Row="2"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
-                Path=go_before}"
-                       Tag="go_before"
-                       Click="Button_Click"/>
+                            Path=go_before}"
+                       Tag="go_before"/>
 
 
             <!-- go after -->
@@ -100,8 +100,7 @@
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=go_after}"
-                       Tag="go_after"
-                       Click="Button_Click"/>
+                       Tag="go_after"/>
 
         </Grid>
 
@@ -131,8 +130,7 @@
             <Button    Grid.Column="1" Grid.Row="1"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=sub_start}"
-                       Tag="sub_start"
-                       Click="Button_Click"/>
+                       Tag="sub_start"/>
 
 
             <!-- set_end -->
@@ -142,8 +140,7 @@
             <Button    Grid.Column="1" Grid.Row="2"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=sub_end}"
-                       Tag="sub_end"
-                       Click="Button_Click"/>
+                       Tag="sub_end"/>
 
 
             <!-- set_time 
@@ -158,8 +155,7 @@
             <Button    Grid.Column="1" Grid.Row="3"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=sub_time}"
-                       Tag="sub_time"
-                       Click="Button_Click"/>
+                       Tag="sub_time"/>
 
             <!-- save sub -->
             <TextBlock Text="{x:Static p:Resources.cfg_key_sub_save}"
@@ -168,8 +164,7 @@
             <Button    Grid.Column="1" Grid.Row="4"
                        Content="{Binding Source={x:Static p:Settings.Default}, 
                 Path=sub_save}"
-                       Tag="sub_save"
-                       Click="Button_Click"/>
+                       Tag="sub_save"/>
         </Grid>
 
     </Grid>

@@ -1,0 +1,6 @@
+D:\project\Windows\NET\uhasub\web\bin\web.dll.config
+D:\project\Windows\NET\uhasub\web\bin\web.dll
+D:\project\Windows\NET\uhasub\web\bin\web.pdb
+D:\project\Windows\NET\uhasub\web\obj\Debug\web.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\web\obj\Debug\web.dll
+D:\project\Windows\NET\uhasub\web\obj\Debug\web.pdb

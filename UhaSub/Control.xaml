@@ -7,94 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Grid.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},
-                    Path=text}"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
-                <Setter Property="Background"   Value="{x:Null}"/>
-                <Setter Property="Foreground"   Value="{Binding Source={x:Static p:Settings.Default},
-                    Path=foreground}"/>
-                <Setter Property="BorderBrush"  Value="{x:Null}"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-            </Style>
-
-            <!-- slider sytle
-            refer:http://stackoverflow.com/questions/14557965/how-to-change-sliders-selection-color-in-wpf
-            -->
-            <Style TargetType="{x:Type Slider}">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Slider}">
-                            <Grid VerticalAlignment="Center">
-                                <Border x:Name="borderBackground" Margin="15,0" Height="15" 
-                                        Background="Gray" />
-                                <Canvas Margin="0,-15,0,0" VerticalAlignment="Center">
-                                    <Border x:Name="PART_SelectionRange" 
-                                            HorizontalAlignment="Left" 
-                                            Height="15" 
-                                            Background="{TemplateBinding Foreground}" />
-                                </Canvas>
-                                <Track x:Name="PART_Track">
-                                    <Track.Thumb>
-                                        <Thumb Width="15" Height="15" 
-                                               Background="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"
-                                               Foreground="Azure"
-                                               Cursor="SizeWE"/>
-                                    </Track.Thumb>
-                                </Track>
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="IsSelectionRangeEnabled" Value="True" />
-                <Setter Property="SelectionStart" 
-                        Value="{Binding Minimum, RelativeSource={RelativeSource Self}}" />
-                <Setter Property="SelectionEnd" 
-                        Value="{Binding Value, RelativeSource={RelativeSource Self}}" />
-                <Setter Property="Foreground" 
-                        Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" />
-            </Style>
-
-
-            <Style TargetType="{x:Type Thumb}">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Thumb}">
-                            <Grid x:Name="Grid">
-                                <Rectangle HorizontalAlignment="Stretch" 
-                                               VerticalAlignment="Stretch" 
-                                               Width="Auto" Height="Auto" 
-                                               Fill="Transparent" />
-                                <Border x:Name="Rectangle1" 
-                                            CornerRadius="0" 
-                                            HorizontalAlignment="Stretch" 
-                                            VerticalAlignment="Stretch" 
-                                            Width="Auto" Height="Auto"  
-                                            Background="{TemplateBinding Foreground}" />
-                            </Grid>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="Tag" Value="Horizontal">
-                                    <Setter TargetName="Rectangle1" 
-                                                Property="Width" 
-                                                Value="Auto" />
-                                    <Setter TargetName="Rectangle1" 
-                                                Property="Height" 
-                                                Value="7" />
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-
-        </Grid.Resources>
-
-
-
 
         <!-- video status -->
         <StackPanel Grid.Row="1"
@@ -107,7 +19,7 @@
                        VerticalAlignment="Center"
                        FontSize="18"
                        
-                       Margin="0 10 10 0"/>
+                       Margin="0 15 10 0"/>
 
 
             <Slider     Focusable="False"
@@ -144,7 +56,9 @@
                             Maximum="100" Minimum="0"
                             IsMoveToPointEnabled="True"
                             ValueChanged="vlSlider_ValueChanged"
-                            DockPanel.Dock="Left"/>
+                            DockPanel.Dock="Left"
+                            >
+                </Slider>
 
                 <!-- open setting -->
                 <Button Content="" 
@@ -231,6 +145,7 @@
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
+
 
             </DockPanel>
 

@@ -5,9 +5,8 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Title="{x:Static p:Resources.Title}" 
         Height="350" Width="725"
-        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
-        Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"
         WindowState="Maximized" 
+        Style="{StaticResource WindowStyle}"
         KeyDown="Window_KeyDown"
         KeyUp="Window_KeyUp"
         MouseDown="Window_MouseDown">
@@ -43,7 +42,8 @@
 
 
             <!-- splite thumb -->
-            <Thumb      Foreground="Gray"
+            <Thumb  Foreground="Gray"
+                    Width="5" Height="Auto"
                     Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
                     DragStarted="Thumb_DragStarted"
                     DragDelta="Thumb_DragDelta"

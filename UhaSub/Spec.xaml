@@ -15,6 +15,12 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="Slider">
+                
+            </Style>
+        </Grid.Resources>
         
         <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"

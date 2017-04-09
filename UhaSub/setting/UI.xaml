@@ -50,6 +50,7 @@
         <TextBlock Text="{x:Static p:Resources.cfg_ui_lang}"
                    Grid.Column="0" Grid.Row="2"/>
         <ComboBox  Width="90" Height="30"
+                   FontSize="12"
                    Grid.Column="1" Grid.Row="2"
                    Loaded="LangLoaded" 
                    SelectionChanged="LangSelectionChanged"

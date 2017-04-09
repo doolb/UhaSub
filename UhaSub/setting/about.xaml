@@ -7,14 +7,15 @@
         <TextBlock Text="{x:Static p:Resources.about}"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}"
-                   FontSize="18"/>
+                   Style="{StaticResource TextStyle}"
+                    FontSize="18"/>
         
         
         <TextBlock Text="{Binding Source={x:Static p:Settings.Default}, Path=version}"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
-                   Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}"
-                   Margin="18"/>
+                   Margin="18"
+                   Style="{StaticResource TextStyle}"
+        FontSize="12"/>
     </Grid>
 </UserControl>

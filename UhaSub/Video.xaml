@@ -7,8 +7,7 @@
              xmlns:vlc="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="900">
-    <Grid Background="{Binding Source={x:Static p:Settings.Default}, 
-        Path=background}">
+    <Grid>
         
         
         

@@ -4,21 +4,19 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         Title="Setting" Height="320" Width="650"
         WindowStyle="ToolWindow"
-        Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
-        Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}">
+        Style="{StaticResource WindowStyle}"
+        FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.Resources>
-            <Style TargetType="Button">
-                <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+            <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
                 <Setter Property="FontSize" Value="32"/>
-                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"/>
-                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
-                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                
+                <EventSetter Event="Click" Handler="OnNavigate"/>
             </Style>
         </Grid.Resources>
         
@@ -26,19 +24,15 @@
                     Grid.Column="0">
             <Button Content=""
                     ToolTip="{x:Static p:Resources.UISetting}"
-                    Click="OnNavigate"
                     Tag="ui"/>
             <Button Content=""
                     ToolTip="{x:Static p:Resources.KeySetting}"
-                    Click="OnNavigate"
                     Tag="key"/>
             <Button Content=""
                     ToolTip="{x:Static p:Resources.SubSetting}"
-                    Click="OnNavigate"
                     Tag="sub"/>
             <Button Content=""
                     ToolTip="{x:Static p:Resources.AboutSetting}"
-                    Click="OnNavigate"
                     Tag="about"/> 
 
         </StackPanel>

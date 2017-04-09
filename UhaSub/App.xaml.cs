@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace UhaSub
 {
@@ -74,5 +76,41 @@ namespace UhaSub
 
 
         }
+
+
+        /*
+             * make the slider more easy to control
+             * refer:https://social.msdn.microsoft.com/Forums/vstudio/en-US/5fa7cbc2-c99f-4b71-b46c-f156bdf0a75a/making-the-slider-slide-with-one-click-anywhere-on-the-slider?forum=wpf
+             */
+        private void thumb_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+            if (e.LeftButton == MouseButtonState.Pressed
+
+                && e.MouseDevice.Captured == null)
+            {
+
+                // the left button is pressed on mouse enter
+
+                // but the mouse isn't captured, so the thumb
+
+                // must have been moved under the mouse in response
+
+                // to a click on the track.
+
+                // Generate a MouseLeftButtonDown event.
+
+                MouseButtonEventArgs args = new MouseButtonEventArgs(
+
+                    e.MouseDevice, e.Timestamp, MouseButton.Left);
+
+                args.RoutedEvent = UIElement.MouseLeftButtonDownEvent;
+
+                (sender as Thumb).RaiseEvent(args);
+
+            }
+
+        }
+
     }
 }
