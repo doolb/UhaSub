@@ -1,9 +1,10 @@
-﻿<Window x:Class="UhaSub.MainWindow"
+﻿<ui:MetroWindow x:Class="UhaSub.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:UhaSub"
         xmlns:p="clr-namespace:UhaSub.Properties"
-        Title="{x:Static p:Resources.Title}" 
+        xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="{x:Static p:Resources.Title}"
         Height="350" Width="725"
         WindowState="Maximized" 
         Style="{StaticResource WindowStyle}"
@@ -37,8 +38,11 @@
 
             <local:Video    x:Name="video" 
                         Grid.Column="0" Grid.Row="0"
-                        HorizontalAlignment="Stretch" 
-                        VerticalAlignment="Stretch"/>
+                            />
+            <TextBlock Text="slfjs"
+                       FontSize="100"
+                        Grid.Column="0" Grid.Row="0"
+                       />
 
 
             <!-- splite thumb -->
@@ -76,4 +80,4 @@
         </Grid>
     </Grid>
     
-</Window>
+</ui:MetroWindow>

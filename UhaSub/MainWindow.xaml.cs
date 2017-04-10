@@ -19,12 +19,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
+
 namespace UhaSub
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
 
 
@@ -36,6 +39,8 @@ namespace UhaSub
 
             this.video.EndReached += this.control.ReachEnd;
             this.video.TotalTimeChanged += this.spec.Init;
+
+
 
             /*
              * set refer to control

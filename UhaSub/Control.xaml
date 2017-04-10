@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:p="clr-namespace:UhaSub.Properties"
+             xmlns:m="clr-namespace:UhaSub.ui"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -22,11 +23,10 @@
                        Margin="0 15 10 0"/>
 
 
-            <Slider     Focusable="False"
-                        Name="tmSlider"
+            <m:Slider   Focusable="False"
+                        x:Name="tmSlider"
                         Margin="0,0,0,10"
                         Value="{Binding Position}"
-                        IsMoveToPointEnabled="True"
                         Maximum="1" Minimum="0"
                         MouseUp="tmSlider_MouseUp"
                         Thumb.DragCompleted="time_DragCompleted"/>
@@ -48,17 +48,15 @@
                 <!-- volume 
                 control easiler,refer:http://stackoverflow.com/questions/18018920/c-sharp-wpf-slider-going-to-exact-position
                 -->
-                <Slider     Name="vlSlider"
+                <m:Slider   x:Name="vlSlider"
                             Value="{Binding Source={x:Static p:Settings.Default}, Path=cfg_volume}"
                             Focusable="False"
                             Width="100"
                             VerticalAlignment="Top"
                             Maximum="100" Minimum="0"
-                            IsMoveToPointEnabled="True"
                             ValueChanged="vlSlider_ValueChanged"
-                            DockPanel.Dock="Left"
-                            >
-                </Slider>
+                            DockPanel.Dock="Left">
+                </m:Slider>
 
                 <!-- open setting -->
                 <Button Content="" 

@@ -49,3 +49,7 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\UhaSub.exe
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\UhaSub.pdb
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\UhaSub.csprojResolveAssemblyReference.cache
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\App.baml
+D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\System.Windows.Interactivity.dll
+D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.pdb
+D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.xml

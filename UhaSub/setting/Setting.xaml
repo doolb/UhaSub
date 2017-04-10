@@ -1,7 +1,8 @@
-﻿<Window x:Class="UhaSub.setting.Setting"
+﻿<ui:MetroWindow x:Class="UhaSub.setting.Setting"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:p="clr-namespace:UhaSub.Properties"
+        xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
         Title="Setting" Height="320" Width="650"
         WindowStyle="ToolWindow"
         Style="{StaticResource WindowStyle}"
@@ -44,4 +45,4 @@
         <Grid   Grid.Column="1"
                 Name="host"/>
     </Grid>
-</Window>
+</ui:MetroWindow>

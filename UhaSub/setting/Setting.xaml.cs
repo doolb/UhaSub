@@ -12,12 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using MahApps.Metro.Controls;
+
 namespace UhaSub.setting
 {
     /// <summary>
     /// Interaction logic for Setting.xaml
     /// </summary>
-    public partial class Setting : Window
+    public partial class Setting : MetroWindow
     {
         public Setting()
         {

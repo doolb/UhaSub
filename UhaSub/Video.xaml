@@ -8,11 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="900">
     <Grid>
-        
-        
-        
-        <vlc:VlcControl Grid.Row="0" x:Name="vlc"/>
-        
-      
+        <vlc:VlcControl x:Name="vlc"/>
     </Grid>
 </UserControl>
