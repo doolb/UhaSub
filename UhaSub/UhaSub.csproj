@@ -73,8 +73,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ColorPicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ColorPicker">
       <HintPath>..\vendor\color_picker\ColorPicker.exe</HintPath>
     </Reference>
     <Reference Include="CSCore, Version=1.1.6271.39620, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL">
@@ -84,6 +83,9 @@
     <Reference Include="MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroDemo">
+      <HintPath>..\vendor\MetroDemo.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -265,7 +267,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />

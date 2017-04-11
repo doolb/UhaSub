@@ -98,6 +98,7 @@ namespace UhaSub
         public void OnOpenSetting(object sender, RoutedEventArgs e)
         {
             var set = new setting.Setting();
+            set.DataContext = main.DataContext;
             set.ShowDialog();
 
             cfg.ReLoad();
@@ -311,7 +312,7 @@ namespace UhaSub
                      * custom function
                      * refer:https://github.com/ericnewton76/nVLC
                      */
-                    vlc.MediaPlayer.SetSubTitles(main.sub.SubFileName);
+                    vlc.MediaPlayer.SetSubTitles(sub.SubFileName);
 
                     mi_nul.IsChecked = false;
                     break;

@@ -165,9 +165,9 @@ namespace UhaSub
 
             var newImage = _lineSpectrum.CreateSpectrumLine(wave_box.Size,
                 System.Drawing.Color.Green, System.Drawing.Color.Red, 
-                ColorTranslator.FromHtml(
+                ColorTranslator.FromHtml( // set background
                 UhaSub.Properties.Settings.Default.background), true);
-
+            
             if (newImage != null)
             {
                 wave_box.Image = newImage;

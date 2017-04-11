@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MahApps.Metro.Controls.Dialogs;
+using MetroDemo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,7 @@ namespace UhaSub.setting
     /// </summary>
     public partial class UI : UserControl
     {
+
         public UI()
         {
             InitializeComponent();

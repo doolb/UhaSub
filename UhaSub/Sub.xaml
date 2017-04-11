@@ -30,9 +30,7 @@
 
     </UserControl.Resources>
     <Grid>
-        <DataGrid   Name="subs" 
-                    Background="{Binding Source={x:Static p:Settings.Default}, 
-            Path=background}" 
+        <DataGrid   Name="subs"
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
                     AutoGenerateColumns="False"

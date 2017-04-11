@@ -22,6 +22,11 @@ using System.Windows.Threading;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 
+using MetroDemo.Models;
+using MetroDemo;
+using MahApps.Metro;
+
+
 namespace UhaSub
 {
     /// <summary>
@@ -30,9 +35,13 @@ namespace UhaSub
     public partial class MainWindow : MetroWindow
     {
 
+        private readonly MainWindowViewModel _viewModel;
 
         public MainWindow()
         {
+            _viewModel = new MainWindowViewModel(DialogCoordinator.Instance);
+            DataContext = _viewModel;
+
             InitializeComponent();
 
             this.sub.SubSelected += this.control.OnSubChanged;

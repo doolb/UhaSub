@@ -18,43 +18,44 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <!-- Accent and AppTheme setting -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" />
 
                 <!-- slider -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatSlider.xaml" />
 
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ComboBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <!--metro app resources-->
 
             <Style TargetType="ContentControl" x:Key="BaseStyle">
-                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=foreground}"/>
-                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
-                <Setter Property="BorderBrush" Value="{x:Null}"/>
             </Style>
 
+            <Style TargetType="ui:MetroWindow" x:Key="WindowStyle">
 
-            <Style TargetType="ui:MetroWindow" x:Key="WindowStyle" BasedOn="{StaticResource BaseStyle}">
-                <Setter Property="TitleForeground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
             </Style>
+
 
             <Style TargetType="TextBlock" x:Key="TextStyle">
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
             </Style>
+            
 
-            <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+            <Style TargetType="Button" BasedOn="{StaticResource AccentedSquareButtonStyle}">
                 <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
             </Style>
 
-            <Style TargetType="Button" x:Key="ButtonStyle" BasedOn="{StaticResource BaseStyle}">
+            <Style TargetType="Button" x:Key="ButtonStyle" 
+                   BasedOn="{StaticResource BaseStyle}">
                 <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
+                
             </Style>
 
 
             <Style TargetType="TextBox">
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
                 <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
                 <Setter Property="BorderBrush" Value="{x:Null}"/>
             </Style>
@@ -68,7 +69,12 @@
                             <Grid x:Name="Grid">
                                 <Rectangle x:Name="Rectangle1"
                                        Width="Auto" Height="Auto"  
-                                       Fill="{TemplateBinding Foreground}"/>
+                                       >
+                                    <Rectangle.Fill>
+                                        <SolidColorBrush x:Name="brush"
+                                                         Color="Gray"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                             </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Tag" Value="Horizontal">
@@ -92,12 +98,50 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
+                
+                <Setter Property="Background" Value="Gray"/>
             </Style>
 
             <Style TargetType="m:Slider" BasedOn="{StaticResource FlatSlider}">
+                
+            </Style>
+
+
+            <!-- ComboBox style -->
+            <Style TargetType="ComboBox" BasedOn="{StaticResource MetroComboBox}">
+                
+            </Style>
+
+            <Style TargetType="ComboBoxItem" BasedOn="{StaticResource MetroComboBoxItem}">
+                
+            </Style>
+
+            <Style TargetType="{x:Type MenuItem}"
+                    BasedOn="{StaticResource MetroMenuItem}">
+                <Setter Property="HorizontalContentAlignment"
+                        Value="Left" />
+                <Setter Property="VerticalContentAlignment"
+                        Value="Center" />
+
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
             </Style>
 
             
+            
+            <Ellipse x:Key="AccentMenuIcon"
+                     Width="16"
+                     Height="16"
+                     Fill="{Binding ColorBrush, Mode=OneWay}"
+                     x:Shared="False" />
+            
+            <Style x:Key="AccentColorMenuItemStyle"
+                   BasedOn="{StaticResource MetroMenuItem}"
+                   TargetType="{x:Type MenuItem}">
+                <Setter Property="Command" Value="{Binding ChangeAccentCommand}" />
+                <Setter Property="Header" Value="{Binding Name, Mode=OneWay}" />
+                <Setter Property="Icon" Value="{StaticResource AccentMenuIcon}" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:p="clr-namespace:UhaSub.Properties"
+      xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Foreground="{Binding Source={x:Static p:Settings.Default}, Path=foreground}">
@@ -15,6 +16,14 @@
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            
+            <Style TargetType="MenuItem">
+                <Setter Property="Width" Value="90"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
             </Style>
         </Grid.Resources>
         
@@ -34,11 +43,19 @@
 
         <TextBlock Text="{x:Static p:Resources.cfg_ui_theme}"
                    Grid.Column="0" Grid.Row="0"/>
-        <Rectangle Width="90" Height="30"
-                           Fill="{Binding Source={x:Static p:Settings.Default}, Path=foreground}" 
-                           MouseUp="OnMouseUp"
-                           Tag="foreground"
-                   Grid.Column="1" Grid.Row="0"/>
+
+        <Menu  Grid.Column="1" Grid.Row="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+
+            <MenuItem Header="Color"
+                      ItemsSource="{Binding AccentColors, Mode=OneWay}" 
+                      ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}"/>
+        </Menu>
+        
+
+
+
         <TextBlock Text="{x:Static p:Resources.cfg_ui_text}"
                    Grid.Column="0" Grid.Row="1"/>
         <Rectangle Width="90" Height="30"
@@ -52,13 +69,13 @@
         <ComboBox  Width="90" Height="30"
                    FontSize="12"
                    Grid.Column="1" Grid.Row="2"
-                   Loaded="LangLoaded" 
                    SelectionChanged="LangSelectionChanged"
-                   Foreground="Gray">
+                   Loaded="LangLoaded">
            
             <ComboBoxItem Content="en"/>
             <ComboBoxItem Content="zh-CN"/>
             <ComboBoxItem Content="zh-TW"/>
+            
         </ComboBox>
 
     </Grid>

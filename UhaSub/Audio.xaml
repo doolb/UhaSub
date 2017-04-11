@@ -12,7 +12,7 @@
         refer :http://www.codescratcher.com/wpf/windows-forms-controls-in-wpf/
         -->
         <WindowsFormsHost HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch">
+                          VerticalAlignment="Stretch">
             <wf:PictureBox x:Name="wave_box"/>
         </WindowsFormsHost>
 

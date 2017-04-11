@@ -32,10 +32,10 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="foreground" Type="System.String" Scope="User">
-      <Value Profile="(Default)">SkyBlue</Value>
+      <Value Profile="(Default)">Cyan</Value>
     </Setting>
     <Setting Name="background" Type="System.String" Scope="User">
-      <Value Profile="(Default)">#333333</Value>
+      <Value Profile="(Default)">#FF252525</Value>
     </Setting>
     <Setting Name="lang" Type="System.String" Scope="User">
       <Value Profile="(Default)">en</Value>

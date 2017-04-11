@@ -6,7 +6,7 @@
              xmlns:p="clr-namespace:UhaSub.Properties"
              xmlns:m="clr-namespace:UhaSub.ui"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="600">
     <Grid>
 
         <!-- video status -->
@@ -32,9 +32,9 @@
                         Thumb.DragCompleted="time_DragCompleted"/>
 
             <DockPanel>
-                <TextBlock Text="{Binding Time}" Name="ctText" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding Time}" Name="ctText" HorizontalAlignment="Left" Style="{StaticResource TextStyle}"/>
                 <TextBlock Text=" / " HorizontalAlignment="Left"/>
-                <TextBlock Text="{Binding TotalTime}" Name="ttText" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding TotalTime}" Name="ttText" HorizontalAlignment="Left" Style="{StaticResource TextStyle}"/>
 
 
                 <!-- mutex -->
@@ -43,7 +43,7 @@
                             Click="OnMutexClick"
                             ToolTip="{x:Static p:Resources.video_mutex_tip}"
                             VerticalAlignment="Top"
-                            Margin="20 0 0 0"/>
+                            Margin="20 0 5 0"/>
 
                 <!-- volume 
                 control easiler,refer:http://stackoverflow.com/questions/18018920/c-sharp-wpf-slider-going-to-exact-position
@@ -52,7 +52,7 @@
                             Value="{Binding Source={x:Static p:Settings.Default}, Path=cfg_volume}"
                             Focusable="False"
                             Width="100"
-                            VerticalAlignment="Top"
+                            VerticalAlignment="Center"
                             Maximum="100" Minimum="0"
                             ValueChanged="vlSlider_ValueChanged"
                             DockPanel.Dock="Left">
@@ -62,28 +62,28 @@
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenSetting}" 
                         Click="OnOpenSetting"
-                        Margin="0 0 10 0"
+                        Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- save as -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.on_save_as}" 
                         Click="OnSaveAs"
-                        Margin="0 0 10 0"
+                        Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- save sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.on_save}" 
                         Click="OnSave"
-                        Margin="0 0 10 0"
+                        Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- open sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenSub}" 
                         Click="OnOpenSub"
-                        Margin="0 0 10 0"
+                        Margin="0 0 5 0"
                         DockPanel.Dock="Right">
                     <Button.ContextMenu>
                         <!-- context meun 
@@ -107,7 +107,7 @@
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenFile}" 
                         Click="OnOpenFile"
-                        Margin="10 0 10 0"
+                        Margin="10 0 5 0"
                         DockPanel.Dock="Right"/>
 
 
@@ -116,11 +116,11 @@
                             ToolTip="{x:Static p:Resources.video_play_tip}"
                             Name="plBtn"
                             FontSize="24"
+                            Margin="-10"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"
-                            VerticalContentAlignment="Top"
-                            Width="30" Height="30"
-                            Click="OnPlayClick">
+                            Width="45" Height="45"
+                            Click="OnPlayClick" VerticalContentAlignment="Top">
                     <Button.ContextMenu>
                         <ContextMenu Name="cm_play_rate">
                             <MenuItem Header="50%"

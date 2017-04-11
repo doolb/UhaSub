@@ -5,16 +5,46 @@
         xmlns:p="clr-namespace:UhaSub.Properties"
         xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
         Title="{x:Static p:Resources.Title}"
+        Style="{StaticResource WindowStyle}"
+        TitleAlignment="Center"
         Height="350" Width="725"
         WindowState="Maximized" 
-        Style="{StaticResource WindowStyle}"
         KeyDown="Window_KeyDown"
         KeyUp="Window_KeyUp"
         MouseDown="Window_MouseDown">
-    
-        <!-- bind app setting 
-            refer:http://stackoverflow.com/questions/154533/best-way-to-bind-wpf-properties-to-applicationsettings-in-c
-    -->
+
+    <ui:MetroWindow.LeftWindowCommands>
+        <ui:WindowCommands>
+            <Menu>
+                <MenuItem Header="Color"
+                          ItemsSource="{Binding AccentColors, Mode=OneWay}" 
+                          ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}"/>
+                
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New"/>
+                    <MenuItem Header="_Open"/>
+
+                    <Separator />
+
+                    <MenuItem Header="_Save"/>
+                    <MenuItem Header="Save _As"/>
+
+                    <Separator/>
+                    <MenuItem Header="_Exit"/>
+                </MenuItem>
+                
+                <MenuItem Header="_Setting">
+                    <MenuItem Header="_UI"/>
+                    <MenuItem Header="_Key"/>
+                    <MenuItem Header="_Sub"/>
+
+                    <Separator/>
+                    <MenuItem Header="_About"/>
+                    
+                </MenuItem>
+            </Menu>
+        </ui:WindowCommands>
+    </ui:MetroWindow.LeftWindowCommands>
 
     
     <Grid>
@@ -37,17 +67,12 @@
             </Grid.RowDefinitions>
 
             <local:Video    x:Name="video" 
-                        Grid.Column="0" Grid.Row="0"
+                            Grid.Column="0" Grid.Row="0"
                             />
-            <TextBlock Text="slfjs"
-                       FontSize="100"
-                        Grid.Column="0" Grid.Row="0"
-                       />
 
 
             <!-- splite thumb -->
-            <Thumb  Foreground="Gray"
-                    Width="5" Height="Auto"
+            <Thumb  Width="3" Height="Auto"
                     Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
                     DragStarted="Thumb_DragStarted"
                     DragDelta="Thumb_DragDelta"
