@@ -263,6 +263,15 @@ namespace UhaSub.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        public static string menu_head_theme {
+            get {
+                return ResourceManager.GetString("menu_head_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current Work.
         /// </summary>
         public static string menu_sub_now {

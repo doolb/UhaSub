@@ -22,9 +22,10 @@ using System.Windows.Threading;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 
-using MetroDemo.Models;
-using MetroDemo;
 using MahApps.Metro;
+using UhaSub.ViewModel;
+
+using Setting = UhaSub.Properties.Settings;
 
 
 namespace UhaSub
@@ -35,12 +36,23 @@ namespace UhaSub
     public partial class MainWindow : MetroWindow
     {
 
-        private readonly MainWindowViewModel _viewModel;
+        private readonly MainViewModel _viewModel;
 
         public MainWindow()
         {
-            _viewModel = new MainWindowViewModel(DialogCoordinator.Instance);
+            _viewModel = new MainViewModel(DialogCoordinator.Instance);
             DataContext = _viewModel;
+
+            /*
+             * set app style
+             */
+            var accent = ThemeManager.GetAccent(Setting.Default.foreground);
+            if (accent != null)
+            {
+                var theme = ThemeManager.DetectAppStyle(Application.Current);
+                ThemeManager.ChangeAppStyle(Application.Current, accent, theme.Item1);
+            }
+
 
             InitializeComponent();
 

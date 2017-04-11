@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -8,6 +9,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+
+
+using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub
 {
@@ -44,6 +48,9 @@ namespace UhaSub
              */
             System.Threading.Thread.CurrentThread.CurrentUICulture = 
                 new System.Globalization.CultureInfo(l);
+
+
+            
             
         }
 

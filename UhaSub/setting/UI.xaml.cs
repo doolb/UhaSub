@@ -1,5 +1,4 @@
 ﻿using MahApps.Metro.Controls.Dialogs;
-using MetroDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;

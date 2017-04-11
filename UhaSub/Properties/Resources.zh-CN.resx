@@ -284,4 +284,8 @@ For more information, please see http://github.com/doolb/UhaSub</comment>
   <data name="txt_second" xml:space="preserve">
     <value>秒</value>
   </data>
+  <data name="menu_head_theme" xml:space="preserve">
+    <value>主题</value>
+    <comment>Hear of Theme menuitem </comment>
+  </data>
 </root>

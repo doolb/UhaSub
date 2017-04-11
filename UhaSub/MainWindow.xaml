@@ -16,9 +16,6 @@
     <ui:MetroWindow.LeftWindowCommands>
         <ui:WindowCommands>
             <Menu>
-                <MenuItem Header="Color"
-                          ItemsSource="{Binding AccentColors, Mode=OneWay}" 
-                          ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}"/>
                 
                 <MenuItem Header="_File">
                     <MenuItem Header="_New"/>
@@ -42,6 +39,11 @@
                     <MenuItem Header="_About"/>
                     
                 </MenuItem>
+
+                <MenuItem Header="{x:Static p:Resources.menu_head_theme}"
+                          ItemsSource="{Binding AccentColors, Mode=OneWay}" 
+                          ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}"/>
+
             </Menu>
         </ui:WindowCommands>
     </ui:MetroWindow.LeftWindowCommands>

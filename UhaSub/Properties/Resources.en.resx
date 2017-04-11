@@ -278,4 +278,8 @@ Please download ffmpeg.</value>
   <data name="txt_second" xml:space="preserve">
     <value>Second</value>
   </data>
+  <data name="menu_head_theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>Hear of Theme menuitem </comment>
+  </data>
 </root>

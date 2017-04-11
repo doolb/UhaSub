@@ -53,4 +53,3 @@ D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.dll
 D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\System.Windows.Interactivity.dll
 D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.pdb
 D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MahApps.Metro.xml
-D:\project\Windows\NET\uhasub\UhaSub\bin\x86\Debug\MetroDemo.exe

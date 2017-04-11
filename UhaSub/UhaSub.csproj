@@ -84,9 +84,6 @@
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MetroDemo">
-      <HintPath>..\vendor\MetroDemo.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -130,6 +127,7 @@
     <Compile Include="Control.xaml.cs">
       <DependentUpon>Control.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\SimpleCommand.cs" />
     <Compile Include="Properties\Resources.zh-TW.Designer.cs">
       <DependentUpon>Resources.zh-TW.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -177,6 +175,7 @@
     <Compile Include="Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="wave\GradientCalculator.cs" />
     <Compile Include="wave\ISpectrumProvider.cs" />
