@@ -1,6 +1,7 @@
 ﻿using MahApps.Metro;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,6 +65,9 @@ namespace UhaSub.ViewModel
                                 case "Exit":
                                     Application.Current.Shutdown();
                                     return;
+                                case "New":
+                                    FileNew();
+                                    return;
                                 
 
                                 default:
@@ -73,6 +77,28 @@ namespace UhaSub.ViewModel
                     }
                     );
             }
+        }
+
+        public void FileNew()
+        {
+            try
+            {
+                var fileDialog = new OpenFileDialog();
+                fileDialog.Filter =
+                    "Video files (*.mp4)|*.mp4;*.mkv|All files (*.*)|*.*";
+
+                if (fileDialog.ShowDialog() == true)
+                {
+
+                    // set title
+                    Title = UhaSub.Properties.Resources.Title + "  -  " +
+                        fileDialog.FileName;
+                    RaisePropertyChanged("Title");
+
+                }
+            }
+            catch (Exception)
+            { }
         }
 
         #endregion

@@ -19,7 +19,7 @@
             <Menu>
                 
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New"/>
+                    <MenuItem Header="_New" Command="{Binding FileCommand}" CommandParameter="New"/>
                     <MenuItem Header="_Open"/>
 
                     <Separator />
