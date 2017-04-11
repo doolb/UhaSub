@@ -40,7 +40,7 @@ namespace UhaSub
 
         public MainWindow()
         {
-            _viewModel = new MainViewModel(DialogCoordinator.Instance);
+            _viewModel = new MainViewModel();
             DataContext = _viewModel;
 
             /*

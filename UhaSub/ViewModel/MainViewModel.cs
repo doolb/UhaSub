@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro;
+using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using UhaSub.Model;
-
 using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub.ViewModel
@@ -24,11 +24,9 @@ namespace UhaSub.ViewModel
         public List<AppThemeMenuData> AppThemes { get; set; }
         public List<CultureInfo> CultureInfos { get; set; }
 
-        private readonly IDialogCoordinator _dialogCoordinator;
 
-        public MainViewModel(IDialogCoordinator dialogCoordinator)
+        public MainViewModel()
         {
-            _dialogCoordinator = dialogCoordinator;
             
             // create accent color menu items for the demo
             this.AccentColors = ThemeManager.Accents
@@ -40,12 +38,46 @@ namespace UhaSub.ViewModel
                                            .Select(a => new AppThemeMenuData() { Name = a.Name, BorderColorBrush = a.Resources["BlackColorBrush"] as Brush, ColorBrush = a.Resources["WhiteColorBrush"] as Brush })
                                            .ToList();
 
-
-
-            
             CultureInfos = CultureInfo.GetCultures(CultureTypes.InstalledWin32Cultures).ToList();
 
+
+            // set title
+            this.Title = "UhaSub";
         }
+
+        #region Commands
+
+        #region menu--file command
+        private ICommand fileCommand;
+        public ICommand FileCommand
+        {
+            get
+            {
+                return this.fileCommand ??
+                    (
+                    this.fileCommand = new EasyCommand
+                    {
+                        ExecuteDelegate = x=>
+                        {
+                            switch (x as string)
+                            {
+                                case "Exit":
+                                    Application.Current.Shutdown();
+                                    return;
+                                
+
+                                default:
+                                    return;
+                            }
+                        }
+                    }
+                    );
+            }
+        }
+
+        #endregion
+
+        #endregion
 
 
         #region interface INotifyPropertyChanged

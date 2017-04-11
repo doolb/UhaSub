@@ -4,7 +4,8 @@
         xmlns:local="clr-namespace:UhaSub"
         xmlns:p="clr-namespace:UhaSub.Properties"
         xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
-        Title="{x:Static p:Resources.Title}"
+        Title="{Binding Title}"
+        TitleCharacterCasing="Normal"
         Style="{StaticResource WindowStyle}"
         TitleAlignment="Center"
         Height="350" Width="725"
@@ -27,7 +28,7 @@
                     <MenuItem Header="Save _As"/>
 
                     <Separator/>
-                    <MenuItem Header="_Exit"/>
+                    <MenuItem Header="_Exit" Command="{Binding FileCommand}" CommandParameter="Exit"/>
                 </MenuItem>
                 
                 <MenuItem Header="_Setting">

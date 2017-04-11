@@ -31,4 +31,27 @@ namespace UhaSub.Model
                 ExecuteDelegate(parameter);
         }
     }
+
+    public class EasyCommand : ICommand
+    {
+        public Action<object> ExecuteDelegate { get; set; }
+
+        
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return true; // if there is no can execute default to true
+        }
+
+        public void Execute(object parameter)
+        {
+            if (ExecuteDelegate != null)
+                ExecuteDelegate(parameter);
+        }
+    }
 }
