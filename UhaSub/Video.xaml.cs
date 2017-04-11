@@ -240,7 +240,37 @@ namespace UhaSub
             
             vlc.MediaPlayer.SetMedia(new FileInfo(path), null);
         }
+
+
+        #region Source Dependency Property
+        /*
+         * create a bindable position
+         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
+         */
+        public string Source
+        {
+            get { return (string)this.GetValue(SourceProperty); }
+            set { this.SetValue(SourceProperty, value); }
+        }
+        public static readonly DependencyProperty SourceProperty = DependencyProperty.Register(
+          "Source", typeof(string), typeof(Video), new PropertyMetadata(OnSourceChanged));
+
+        private static void OnSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Video a = d as Video;
+            a.OnSourceChanged(e);
+        }
+
+        private void OnSourceChanged(DependencyPropertyChangedEventArgs e)
+        {
+            string path = (string)e.NewValue;
+
+            this.Open(path);
+            
+        }
         
+        #endregion
+
     }
 
 }

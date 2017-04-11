@@ -25,6 +25,8 @@ namespace UhaSub.ViewModel
         public List<AppThemeMenuData> AppThemes { get; set; }
         public List<CultureInfo> CultureInfos { get; set; }
 
+        public string VideoFileName { get; set; }
+
 
         public MainViewModel()
         {
@@ -89,6 +91,10 @@ namespace UhaSub.ViewModel
 
                 if (fileDialog.ShowDialog() == true)
                 {
+                    // set video file name
+                    this.VideoFileName = fileDialog.FileName;
+                    RaisePropertyChanged("VideoFileName");
+
 
                     // set title
                     Title = UhaSub.Properties.Resources.Title + "  -  " +
