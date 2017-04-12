@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -213,6 +212,9 @@ namespace UhaSub.View
 
         public void Play()
         {
+
+            var d = this.DataContext;
+
             if(is_end)
             {
                 vlc.MediaPlayer.Play(new FileInfo(path));

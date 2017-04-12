@@ -8,35 +8,36 @@
         TitleCharacterCasing="Normal"
         TitleAlignment="Center"
         Height="350" Width="725"
+        SaveWindowPosition="True"
         WindowState="Maximized" 
         KeyDown="Window_KeyDown"
         KeyUp="Window_KeyUp"
         MouseDown="Window_MouseDown">
 
     <ui:MetroWindow.LeftWindowCommands>
-        <ui:WindowCommands>
+        <ui:WindowCommands Focusable="False">
             <Menu>
                 
                 <MenuItem Header="_File">
                     <MenuItem Header="_New" Command="{Binding FileCommand}" CommandParameter="New"/>
-                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Open" Command="{Binding FileCommand}" CommandParameter="Open"/>
 
                     <Separator />
 
-                    <MenuItem Header="_Save"/>
-                    <MenuItem Header="Save _As"/>
+                    <MenuItem Header="_Save" Command="{Binding FileCommand}" CommandParameter="Save"/>
+                    <MenuItem Header="Save _As" Command="{Binding FileCommand}" CommandParameter="SaveAs"/>
 
                     <Separator/>
                     <MenuItem Header="_Exit" Command="{Binding FileCommand}" CommandParameter="Exit"/>
                 </MenuItem>
                 
                 <MenuItem Header="_Setting">
-                    <MenuItem Header="_UI"/>
-                    <MenuItem Header="_Key"/>
-                    <MenuItem Header="_Sub"/>
+                    <MenuItem Header="_UI"  Command="{Binding SettingCommand}" CommandParameter="UI"/>
+                    <MenuItem Header="_Key" Command="{Binding SettingCommand}" CommandParameter="Key"/>
+                    <MenuItem Header="_Sub" Command="{Binding SettingCommand}" CommandParameter="Sub"/>
 
                     <Separator/>
-                    <MenuItem Header="_About"/>
+                    <MenuItem Header="_About" Command="{Binding SettingCommand}" CommandParameter="About"/>
                     
                 </MenuItem>
 
@@ -81,9 +82,10 @@
                     DragCompleted="Thumb_DragCompleted"
                     Cursor="SizeWE"/>
 
-            <local:Sub      x:Name="sub"
+            <local:Sub  x:Name="sub"
                         Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
-                        Focusable="False"/>
+                        Focusable="True"
+                        DataContext="{Binding Sub}"/>
             
             
             <local:Spec x:Name="spec"

@@ -124,6 +124,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ass.cs" />
+    <Compile Include="Model\Command.cs" />
+    <Compile Include="ViewModel\NewWindowViewModel.cs" />
+    <Compile Include="ViewModel\SubViewModel.cs" />
     <Compile Include="View\Control.xaml.cs">
       <DependentUpon>Control.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewWindow.xaml.cs">
+      <DependentUpon>NewWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\setting\about.xaml.cs">
       <DependentUpon>about.xaml</DependentUpon>
@@ -188,6 +194,10 @@
     <Compile Include="Model\wave\SpectrumBase.cs" />
     <Compile Include="Model\wave\VoicePrint3DSpectrum.cs" />
     <Page Include="View\Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -64,6 +64,9 @@ namespace UhaSub.View
         {
             if(IsUseParentDataContext)
             {
+                if (SelectedItem == null)
+                    return;
+                
                 ContentControl ctl = (this.SelectedItem as HamburgerMenuItem).Tag as ContentControl;
                 if(ctl !=null)
                 {

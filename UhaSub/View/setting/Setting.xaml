@@ -15,6 +15,7 @@
                             IsPaneOpen="False"
                             ParentDataContext="True"
                             SelectedIndex="{Binding SelectedIndex}"
+                            SelectedOptionsIndex="{Binding SelectedOptionsIndex}"
                             DisplayMode="CompactInline">
             <!--  Items  -->
             <metro:HamburgerMenu.ItemsSource>

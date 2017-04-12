@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using UhaSub.Model;
+using UhaSub.View;
 using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub.ViewModel
@@ -24,10 +25,15 @@ namespace UhaSub.ViewModel
         public string VideoFileName { get; set; }
 
 
+        public SubViewModel Sub { get; set; }
+
         public MainViewModel()
         {
             // set title
             this.Title = "UhaSub";
+
+            Sub = new SubViewModel();
+
         }
 
         #region Commands
@@ -52,6 +58,18 @@ namespace UhaSub.ViewModel
                                 case "New":
                                     FileNew();
                                     return;
+
+                                case "Open":
+                                    FileOpen();
+                                    return;
+
+                                case "Save":
+
+                                    return;
+
+                                case "SaveAs":
+
+                                    return;
                                 
 
                                 default:
@@ -67,26 +85,46 @@ namespace UhaSub.ViewModel
         {
             try
             {
-                var fileDialog = new OpenFileDialog();
-                fileDialog.Filter =
-                    "Video files (*.mp4)|*.mp4;*.mkv|All files (*.*)|*.*";
+                var win = new NewWindow();
+                var vm = new NewWindowViewModel();
+                win.DataContext = vm;
+                win.ShowDialog();
 
-                if (fileDialog.ShowDialog() == true)
+                
+                if (!vm.IsCancel)
                 {
                     // set video file name
-                    this.VideoFileName = fileDialog.FileName;
+                    this.VideoFileName = vm.VideoFileName;
                     RaisePropertyChanged("VideoFileName");
 
 
                     // set title
                     Title = UhaSub.Properties.Resources.Title + "  -  " +
-                        fileDialog.FileName;
+                        vm.VideoFileName;
                     RaisePropertyChanged("Title");
 
                 }
             }
             catch (Exception)
             { }
+        }
+
+        public void FileOpen()
+        {
+            try
+            {
+                var fileDialog = new OpenFileDialog();
+                fileDialog.Filter = "ASS files (*.ass)|*.ass";
+
+                if (fileDialog.ShowDialog() == true)
+                {
+                    Sub.Open(fileDialog.FileName);
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         #endregion
@@ -105,11 +143,12 @@ namespace UhaSub.ViewModel
                             {
                                 switch (x as string)
                                 {
-                                    case "UI":
-                                        return;
+                                    case "UI": SettingExe(0,-1);return;
+                                    case "Key": SettingExe(1, -1); return;
+                                    case "Sub": SettingExe(2, -1); return;
+                                    case "About": SettingExe(-1,0); return;
 
-                                    default:
-                                        return;
+                                    default: SettingExe(0, -1); return;
                                 }
                             }
                     }
@@ -117,7 +156,16 @@ namespace UhaSub.ViewModel
             }
         }
 
+        void SettingExe(int index =0,int option_index=0)
+        {
+            var set = new UhaSub.View.setting.Setting();
+            set.DataContext = new ViewModel.SettingViewModel(index,option_index);
+            set.ShowDialog();
+
+            UhaSub.Config.Instance.ReLoad();
+        }
         #endregion
+
         #endregion
 
 

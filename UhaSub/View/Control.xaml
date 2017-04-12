@@ -31,7 +31,7 @@
                         MouseUp="tmSlider_MouseUp"
                         Thumb.DragCompleted="time_DragCompleted"/>
 
-            <DockPanel>
+            <DockPanel Margin="0 0 0 5">
                 <TextBlock Text="{Binding Time}" Name="ctText" HorizontalAlignment="Left" Style="{StaticResource TextStyle}"/>
                 <TextBlock Text=" / " HorizontalAlignment="Left"/>
                 <TextBlock Text="{Binding TotalTime}" Name="ttText" HorizontalAlignment="Left" Style="{StaticResource TextStyle}"/>
@@ -58,31 +58,34 @@
                             DockPanel.Dock="Left">
                 </m:Slider>
 
+                <DockPanel DockPanel.Dock="Right"
+                           x:Name="menuDock">
+                    
                 <!-- open setting -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenSetting}" 
-                        Click="OnOpenSetting"
+                        Command="{Binding SettingCommand}"
                         Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- save as -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.on_save_as}" 
-                        Click="OnSaveAs"
+                        Command="{Binding FileCommand}" CommandParameter="SaveAs"
                         Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- save sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.on_save}" 
-                        Click="OnSave"
+                        Command="{Binding FileCommand}" CommandParameter="Save"
                         Margin="0 0 5 0"
                         DockPanel.Dock="Right"/>
 
                 <!-- open sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenSub}" 
-                        Click="OnOpenSub"
+                        Command="{Binding FileCommand}" CommandParameter="Open"
                         Margin="0 0 5 0"
                         DockPanel.Dock="Right">
                     <Button.ContextMenu>
@@ -106,9 +109,10 @@
                 <!-- open video and sub -->
                 <Button Content="" 
                         ToolTip="{x:Static p:Resources.OpenFile}" 
-                        Click="OnOpenFile"
+                        Command="{Binding FileCommand}" CommandParameter="New"
                         Margin="10 0 5 0"
                         DockPanel.Dock="Right"/>
+                </DockPanel>
 
 
 

@@ -30,7 +30,6 @@ namespace UhaSub.View
         {
             InitializeComponent();
 
-            subs.ItemsSource = Ass.Load();
             subs.Loaded += subs_Loaded;
         }
 
@@ -40,6 +39,7 @@ namespace UhaSub.View
 
         void subs_Loaded(object sender, RoutedEventArgs e)
         {
+
            locate();
             /* 
              * set for last column
@@ -233,7 +233,7 @@ namespace UhaSub.View
             {
                 case "txt":
                     // load txt 
-                    this.subs.ItemsSource = Ass.LoadTxt(file_name);    
+                    this.subs.ItemsSource = Ass.LoadTxt(file_name);
                     // load default header
                     SubHeader = UhaSub.Properties.Settings.Default.AssHeader;
                     break;

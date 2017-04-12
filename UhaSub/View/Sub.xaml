@@ -34,8 +34,7 @@
                     RowBackground="#454545"
                     AlternatingRowBackground="#545454"
                     AutoGenerateColumns="False"
-                    Foreground="{Binding Source={x:Static p:Settings.Default}, 
-            Path=text}" 
+                    Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}" 
                     FontSize="15"
                     BorderBrush="{x:Null}"
                     Focusable="True"
@@ -43,6 +42,8 @@
                     RowHeight="27"
                     IsReadOnly="False"
                     InitializingNewItem="subs_InitializingNewItem" 
+                    SelectedIndex="{Binding SelectedIndex}"
+                    ItemsSource="{Binding AssList}"
                     SelectionChanged="subs_SelectionChanged" Cursor="Hand"
                     BeginningEdit="subs_BeginningEdit"
                     CellEditEnding="subs_CellEditEnding"

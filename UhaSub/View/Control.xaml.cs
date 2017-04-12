@@ -29,8 +29,6 @@ namespace UhaSub.View
         public Control()
         {
             InitializeComponent();
-
-            
         }
 
 
@@ -97,14 +95,6 @@ namespace UhaSub.View
             }
         }
 
-        public void OnOpenSetting(object sender, RoutedEventArgs e)
-        {
-            var set = new UhaSub.View.setting.Setting();
-            set.DataContext = new ViewModel.SettingViewModel();
-            set.ShowDialog();
-
-            UhaSub.Config.Instance.ReLoad();
-        }
 
         public void OnSaveAs(object sender, RoutedEventArgs e)
         {

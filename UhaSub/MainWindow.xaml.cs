@@ -68,6 +68,7 @@ namespace UhaSub
              */
             this.control.main = this;
             this.control.DataContext = this.video;
+            this.control.menuDock.DataContext = _viewModel;
             
             this.control.vlc = video.vlc;
             this.control.sub = this.sub;

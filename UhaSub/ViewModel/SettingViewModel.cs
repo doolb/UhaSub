@@ -8,9 +8,11 @@ namespace UhaSub.ViewModel
 {
     public class SettingViewModel : BaseViewModel
     {
-        public SettingViewModel(int index=0)
+        public int SelectedOptionsIndex { get; set; }
+        public SettingViewModel(int index=0,int option_index =0)
         {
             this.SelectedIndex = index;
+            this.SelectedOptionsIndex = option_index;
         }
 
     }

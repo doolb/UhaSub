@@ -52,3 +52,6 @@ D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\Control.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\Spec.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\Sub.baml
 D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\Video.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\UhaSub.csprojResolveAssemblyReference.cache
+D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\NewWindow.baml
+D:\project\Windows\NET\uhasub\UhaSub\obj\x86\Debug\View\NewWindow.g.cs
