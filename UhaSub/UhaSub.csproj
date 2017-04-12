@@ -123,8 +123,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ass.cs" />
-    <Compile Include="Control.xaml.cs">
+    <Compile Include="Model\ass.cs" />
+    <Compile Include="View\Control.xaml.cs">
       <DependentUpon>Control.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\SimpleCommand.cs" />
@@ -148,31 +148,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="setting\about.xaml.cs">
+    <Compile Include="View\setting\about.xaml.cs">
       <DependentUpon>about.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Key.xaml.cs">
+    <Compile Include="View\setting\Key.xaml.cs">
       <DependentUpon>Key.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Setting.xaml.cs">
+    <Compile Include="View\setting\Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Sub.xaml.cs">
+    <Compile Include="View\setting\Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\UI.xaml.cs">
+    <Compile Include="View\setting\UI.xaml.cs">
       <DependentUpon>UI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Config.cs" />
-    <Compile Include="Spec.xaml.cs">
+    <Compile Include="Model\Config.cs" />
+    <Compile Include="View\Spec.xaml.cs">
       <DependentUpon>Spec.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sub.xaml.cs">
+    <Compile Include="View\Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Time.cs" />
-    <Compile Include="ui\Slider.cs" />
-    <Compile Include="Video.xaml.cs">
+    <Compile Include="Model\Time.cs" />
+    <Compile Include="View\Slider.cs" />
+    <Compile Include="View\Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
@@ -180,46 +180,46 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
     <Compile Include="View\HamburgerMenu.cs" />
-    <Compile Include="wave\BasicSpectrumProvider.cs" />
-    <Compile Include="wave\GradientCalculator.cs" />
-    <Compile Include="wave\ISpectrumProvider.cs" />
-    <Compile Include="wave\LineSpectrum.cs" />
-    <Compile Include="wave\ScalingStrategy.cs" />
-    <Compile Include="wave\SpectrumBase.cs" />
-    <Compile Include="wave\VoicePrint3DSpectrum.cs" />
-    <Page Include="Control.xaml">
+    <Compile Include="Model\wave\BasicSpectrumProvider.cs" />
+    <Compile Include="Model\wave\GradientCalculator.cs" />
+    <Compile Include="Model\wave\ISpectrumProvider.cs" />
+    <Compile Include="Model\wave\LineSpectrum.cs" />
+    <Compile Include="Model\wave\ScalingStrategy.cs" />
+    <Compile Include="Model\wave\SpectrumBase.cs" />
+    <Compile Include="Model\wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="View\Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\about.xaml">
+    <Page Include="View\setting\about.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Key.xaml">
+    <Page Include="View\setting\Key.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Setting.xaml">
+    <Page Include="View\setting\Setting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Sub.xaml">
+    <Page Include="View\setting\Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\UI.xaml">
+    <Page Include="View\setting\UI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Spec.xaml">
+    <Page Include="View\Spec.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sub.xaml">
+    <Page Include="View\Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Audio.xaml">
+    <Page Include="View\Audio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,14 +231,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Audio.xaml.cs">
+    <Compile Include="View\Audio.xaml.cs">
       <DependentUpon>Audio.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Video.xaml">
+    <Page Include="View\Video.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
