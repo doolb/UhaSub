@@ -103,7 +103,7 @@ namespace UhaSub.View
             set.DataContext = new ViewModel.SettingViewModel();
             set.ShowDialog();
 
-            cfg.ReLoad();
+            UhaSub.Config.Instance.ReLoad();
         }
 
         public void OnSaveAs(object sender, RoutedEventArgs e)

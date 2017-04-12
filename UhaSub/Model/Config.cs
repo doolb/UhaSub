@@ -9,9 +9,7 @@ namespace UhaSub
 {
     public class Config
     {
-        /*
-         * video control
-         */
+        #region video control
         private Key pause; // play or pause
         public Key Pause { get { return pause; } }
 
@@ -20,11 +18,9 @@ namespace UhaSub
 
         private Key after;
         public Key After { get { return after; } }
+        #endregion
 
-
-        /* 
-         * sub control
-         */
+        #region sub control
         private Key start;
         public Key Start { get { return start; } }
 
@@ -40,9 +36,9 @@ namespace UhaSub
 
         private Key down;
         public Key Down { get { return down; } }
+        #endregion
 
-
-
+        #region other
         private Key save;
         public Key Save { get { return save; } }
 
@@ -52,6 +48,19 @@ namespace UhaSub
 
         public int GoBeforeTime;
         public int GoAfterTime;
+        #endregion
+
+        private static Config instance;
+        public static Config Instance
+        {
+            get
+            {
+                return instance ??
+                (
+                    instance = new Config()
+                );
+            }
+        }
 
         public Config()
         {

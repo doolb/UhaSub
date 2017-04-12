@@ -62,7 +62,7 @@ namespace UhaSub.ViewModel
                     );
             }
         }
-
+        
         public void FileNew()
         {
             try
@@ -91,6 +91,33 @@ namespace UhaSub.ViewModel
 
         #endregion
 
+        #region menu--setting command
+        private ICommand settingCommand;
+
+        public ICommand SettingCommand
+        {
+            get
+            {
+                return settingCommand ?? (
+                    this.settingCommand = new EasyCommand
+                    {
+                        ExecuteDelegate = x =>
+                            {
+                                switch (x as string)
+                                {
+                                    case "UI":
+                                        return;
+
+                                    default:
+                                        return;
+                                }
+                            }
+                    }
+                    );
+            }
+        }
+
+        #endregion
         #endregion
 
 

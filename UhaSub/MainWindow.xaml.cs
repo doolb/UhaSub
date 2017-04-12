@@ -137,7 +137,7 @@ namespace UhaSub
 
 
 
-        Config cfg = new Config();
+        Config cfg = Config.Instance;
 
 
         bool special_start = false;
