@@ -25,16 +25,15 @@ namespace UhaSub.setting
         {
             InitializeComponent();
 
-            host.Children.Add(ui);
+            //host.Children.Add(ui);
         }
 
-        
         UI ui = new UI();
         Key key = new Key();
         Sub sub = new Sub();
         about abt = new about();
 
-
+        /*
         private void OnNavigate(object sender, RoutedEventArgs e)
         {
             host.Children.Clear();
@@ -42,7 +41,7 @@ namespace UhaSub.setting
             
             /*
              * navigate to user-control
-             */
+             
             switch (btn.Tag as string)
             {
                 case "ui": host.Children.Add(ui); break;
@@ -52,6 +51,6 @@ namespace UhaSub.setting
                 default: return;
             }
 
-        }
+        }*/
     }
 }

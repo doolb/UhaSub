@@ -175,7 +175,10 @@
     <Compile Include="Video.xaml.cs">
       <DependentUpon>Video.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\SettingViewModel.cs" />
+    <Compile Include="View\HamburgerMenu.cs" />
     <Compile Include="wave\BasicSpectrumProvider.cs" />
     <Compile Include="wave\GradientCalculator.cs" />
     <Compile Include="wave\ISpectrumProvider.cs" />

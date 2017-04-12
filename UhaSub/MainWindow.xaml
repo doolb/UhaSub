@@ -6,7 +6,6 @@
         xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
         Title="{Binding Title}"
         TitleCharacterCasing="Normal"
-        Style="{StaticResource WindowStyle}"
         TitleAlignment="Center"
         Height="350" Width="725"
         WindowState="Maximized" 
@@ -89,7 +88,6 @@
             
             <local:Spec x:Name="spec"
                         Grid.Row="1" Grid.Column="0"/>
-
 
         </Grid>
         
