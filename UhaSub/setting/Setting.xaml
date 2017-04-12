@@ -5,7 +5,7 @@
         xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:UhaSub.setting"
         xmlns:view="clr-namespace:UhaSub.View"
-        Title="Setting" Height="320" Width="650"
+        Title="{Binding Title}" Height="320" Width="650"
         WindowStyle="ToolWindow"
         Style="{StaticResource WindowStyle}"
         FontSize="20">
@@ -13,7 +13,8 @@
         <view:HamburgerMenu Foreground="White"
                             PaneBackground="#FF444444"
                             IsPaneOpen="False"
-                            SelectedIndex="0"
+                            ParentDataContext="True"
+                            SelectedIndex="{Binding SelectedIndex}"
                             DisplayMode="CompactInline">
             <!--  Items  -->
             <ui:HamburgerMenu.ItemsSource>

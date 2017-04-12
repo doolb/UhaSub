@@ -19,7 +19,6 @@ namespace UhaSub.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        public string Title { get; set; }
         
 
         public string VideoFileName { get; set; }

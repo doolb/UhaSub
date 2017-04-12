@@ -15,10 +15,13 @@ using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub.ViewModel
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : EmptyViewModel
     {
 
         #region public property
+
+        public string Title { get; set; }
+        
 
         public int SelectedIndex { get; set; }
         public List<AccentColorMenuData> AccentColors { get; set; }
@@ -40,25 +43,10 @@ namespace UhaSub.ViewModel
 
             CultureInfos = CultureInfo.GetCultures(CultureTypes.InstalledWin32Cultures).ToList();
 
+
+            this.Title = "Title";
         }
 
-
-        #region interface INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises the PropertyChanged event if needed.
-        /// </summary>
-        /// <param name="propertyName">The name of the property that changed.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        #endregion
 
     }
 

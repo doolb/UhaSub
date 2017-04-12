@@ -98,7 +98,7 @@ namespace UhaSub
         public void OnOpenSetting(object sender, RoutedEventArgs e)
         {
             var set = new setting.Setting();
-            set.DataContext = main.DataContext;
+            set.DataContext = new ViewModel.SettingViewModel();
             set.ShowDialog();
 
             cfg.ReLoad();
