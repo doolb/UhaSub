@@ -69,8 +69,7 @@
                 <RowDefinition  Height="*"/>
             </Grid.RowDefinitions>
 
-            <local:Video    x:Name="video" 
-                            Grid.Column="0" Grid.Row="0"/>
+            <ContentControl Content="{Binding VideoVM}"/>
 
 
             <!-- splite thumb -->
@@ -84,7 +83,7 @@
             <local:Sub  x:Name="sub"
                         Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
                         Focusable="True"
-                        DataContext="{Binding Sub}"/>
+                        DataContext="{Binding SubVM}"/>
             
             
             <local:Spec x:Name="spec"

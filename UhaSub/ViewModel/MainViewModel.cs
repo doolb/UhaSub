@@ -44,6 +44,8 @@ namespace UhaSub.ViewModel
             // set title
             this.Title = "UhaSub";
 
+            VideoVM = new Video();
+
             SubVM = new SubViewModel();
 
             SettingVM = new SettingViewModel(0,-1);

@@ -26,6 +26,7 @@ using MahApps.Metro;
 using UhaSub.ViewModel;
 
 using Setting = UhaSub.Properties.Settings;
+using UhaSub.View;
 
 
 namespace UhaSub
@@ -37,6 +38,8 @@ namespace UhaSub
     {
 
         private readonly MainViewModel _viewModel;
+
+        public Video video;
 
         public MainWindow()
         {
@@ -56,7 +59,7 @@ namespace UhaSub
 
             InitializeComponent();
 
-            this._viewModel.VideoVM = this.video;
+            this.video = _viewModel.VideoVM;
 
             this.sub.SubSelected += this.control.OnSubChanged;
 

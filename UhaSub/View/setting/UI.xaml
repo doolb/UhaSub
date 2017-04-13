@@ -48,7 +48,7 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center">
 
-            <MenuItem Header="Color"
+            <MenuItem Header="{Binding Source={x:Static p:Settings.Default},Path=foreground}"
                       ItemsSource="{Binding AccentColors, Mode=OneWay}" 
                       ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}"/>
         </Menu>
