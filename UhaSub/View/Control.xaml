@@ -49,12 +49,11 @@
                 control easiler,refer:http://stackoverflow.com/questions/18018920/c-sharp-wpf-slider-going-to-exact-position
                 -->
                 <m:Slider   x:Name="vlSlider"
-                            Value="{Binding Source={x:Static p:Settings.Default}, Path=cfg_volume}"
+                            Value="{Binding Volume}"
                             Focusable="False"
                             Width="100"
                             VerticalAlignment="Center"
                             Maximum="100" Minimum="0"
-                            ValueChanged="vlSlider_ValueChanged"
                             DockPanel.Dock="Left">
                 </m:Slider>
 

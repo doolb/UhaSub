@@ -70,8 +70,7 @@
             </Grid.RowDefinitions>
 
             <local:Video    x:Name="video" 
-                            Grid.Column="0" Grid.Row="0"
-                            Source="{Binding VideoFileName}"/>
+                            Grid.Column="0" Grid.Row="0"/>
 
 
             <!-- splite thumb -->

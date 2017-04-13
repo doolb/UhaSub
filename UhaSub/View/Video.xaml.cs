@@ -20,6 +20,8 @@ using System.Drawing;
 using Vlc.DotNet.Core;
 using System.IO;
 
+using Setting = UhaSub.Properties.Settings;
+
 namespace UhaSub.View
 {
     /// <summary>
@@ -33,7 +35,7 @@ namespace UhaSub.View
         // This method is called by the Set accessor of each property.
         // The CallerMemberName attribute that is applied to the optional propertyName
         // parameter causes the property name of the caller to be substituted as an argument.
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        private void RaisePropertyChanged([CallerMemberName] String propertyName = "")
         {
             if (PropertyChanged != null)
             {
@@ -41,6 +43,7 @@ namespace UhaSub.View
             }
         }
         #endregion
+        
         public Video() 
         {
 
@@ -48,8 +51,10 @@ namespace UhaSub.View
 
             LoadVlc();
 
+            this.Volume = Setting.Default.cfg_volume;
         }
 
+        private bool vlc_ok = true;
 
         
 
@@ -81,7 +86,7 @@ namespace UhaSub.View
                  * exit when can't load libvlc
                  */
                 MessageBox.Show(UhaSub.Properties.Resources.msg_vlc_no_found);
-                Environment.Exit(-1);
+                vlc_ok = false;
             }
         }
 
@@ -89,6 +94,8 @@ namespace UhaSub.View
 
         public delegate void VideoReachEndDemo();
         public event VideoReachEndDemo EndReached;
+
+        #region Vlc callback
         void MediaPlayer_EndReached(object sender, VlcMediaPlayerEndReachedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(new Action(delegate
@@ -118,7 +125,7 @@ namespace UhaSub.View
                 time = e.NewTime;
                 clock = DateTime.Now;
 
-                NotifyPropertyChanged("Time");
+                RaisePropertyChanged("Time");
             }));
             
         }
@@ -129,7 +136,7 @@ namespace UhaSub.View
             {
                 position = e.NewPosition;
 
-                NotifyPropertyChanged("Position");
+                RaisePropertyChanged("Position");
 
             }));
             
@@ -144,14 +151,15 @@ namespace UhaSub.View
             {
                 //totalTime = (long)e.NewLength; // this lenght is error
                 totalTime = vlc.MediaPlayer.Length;
-                NotifyPropertyChanged("TotalTime");
+                RaisePropertyChanged("TotalTime");
 
                 // sync totaltime
                 TotalTimeChanged(totalTime);
             }));
         }
+        #endregion
 
-
+        #region Propertys
         /*  
          * the media current position
          * between 0 and 1
@@ -210,12 +218,47 @@ namespace UhaSub.View
             get { return totalTime; }
         }
 
+        
+        private string source;
+        public string Source
+        {
+            get { return source; }
+            set { source = value;
+                this.Open(source);
+                RaisePropertyChanged(); }
+        }
+
+
+
+        private int volume;
+        public int Volume
+        {
+            get { return volume; }
+            set
+            {
+                volume = value;
+                Setting.Default.cfg_volume = value;
+                Setting.Default.Save();
+
+
+                if (vlc == null) return;
+                if (vlc.MediaPlayer.Audio == null) return;
+                vlc.MediaPlayer.Audio.Volume = value;
+
+                RaisePropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Function
         public void Play()
         {
+            if (!vlc_ok) return;
 
             var d = this.DataContext;
 
-            if(is_end)
+            if (is_end)
             {
                 vlc.MediaPlayer.Play(new FileInfo(path));
 
@@ -230,6 +273,8 @@ namespace UhaSub.View
 
         public void Pause()
         {
+            if (!vlc_ok) return;
+
             vlc.MediaPlayer.Pause();
         }
 
@@ -239,40 +284,11 @@ namespace UhaSub.View
         {
             this.path = path;
             is_open = true;
-            
+
             vlc.MediaPlayer.SetMedia(new FileInfo(path), null);
         }
 
-
-        #region Source Dependency Property
-        /*
-         * create a bindable position
-         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
-         */
-        public string Source
-        {
-            get { return (string)this.GetValue(SourceProperty); }
-            set { this.SetValue(SourceProperty, value); }
-        }
-        public static readonly DependencyProperty SourceProperty = DependencyProperty.Register(
-          "Source", typeof(string), typeof(Video), new PropertyMetadata(OnSourceChanged));
-
-        private static void OnSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            Video a = d as Video;
-            a.OnSourceChanged(e);
-        }
-
-        private void OnSourceChanged(DependencyPropertyChangedEventArgs e)
-        {
-            string path = (string)e.NewValue;
-
-            this.Open(path);
-            
-        }
-        
         #endregion
-
     }
 
 }

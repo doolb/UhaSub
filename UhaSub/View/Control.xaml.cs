@@ -64,9 +64,6 @@ namespace UhaSub.View
                     // open sub
                     sub.Open(fileDialog.FileName);
 
-                    // set title
-                    main.Title = UhaSub.Properties.Resources.Title + "  -  " +
-                        fileDialog.FileName;
     
                     spec.Open(fileDialog.FileName);
                 }
@@ -129,21 +126,6 @@ namespace UhaSub.View
             vlc.MediaPlayer.Position = (float)(sender as Slider).Value;
         }
 
-        /*
-         * chage volume
-         */
-        private void vlSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (vlc == null) return;
-            if (vlc.MediaPlayer.Audio == null) return;
-            vlc.MediaPlayer.Audio.Volume = (int)e.NewValue;
-
-            /*
-             * store setting
-             */
-            UhaSub.Properties.Settings.Default.cfg_volume = (int)e.NewValue;
-            UhaSub.Properties.Settings.Default.Save();
-        }
 
 
 
@@ -348,6 +330,35 @@ namespace UhaSub.View
             vlc.MediaPlayer.Position = (float)(sender as Slider).Value;
 
         }
+
+        #region Selected Ass Dependency Property
+        /*
+         * create a bindable position
+         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
+         */
+        public Ass Ass
+        {
+            get { return (Ass)this.GetValue(AssProperty); }
+            set { this.SetValue(AssProperty, value); }
+        }
+        public static readonly DependencyProperty AssProperty = DependencyProperty.Register(
+          "Ass", typeof(Ass), typeof(Control), new PropertyMetadata(OnAssChanged));
+
+        private static void OnAssChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as Control).OnAssChanged(e);
+        }
+
+        private void OnAssChanged(DependencyPropertyChangedEventArgs e)
+        {
+            Ass ass = (Ass)e.NewValue;
+
+            this.subView.Text = ass.Text;
+
+        }
+
+        #endregion
+
 
     }
 }

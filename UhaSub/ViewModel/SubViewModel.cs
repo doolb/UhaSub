@@ -18,6 +18,12 @@ namespace UhaSub.ViewModel
 
         private string VideoFileName;
 
+        public Ass SelectedItem
+        {
+            get;
+            set;
+        }
+
         public SubViewModel()
         {
             AssList = Ass.Load();

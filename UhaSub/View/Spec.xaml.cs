@@ -307,6 +307,32 @@ namespace UhaSub.View
             need_update = true;
         }
 
+        #region Video Source Dependency Property
+        /*
+         * create a bindable position
+         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
+         */
+        public string VideoSource
+        {
+            get { return (string)this.GetValue(VideoSourceProperty); }
+            set { this.SetValue(VideoSourceProperty, value); }
+        }
+        public static readonly DependencyProperty VideoSourceProperty = DependencyProperty.Register(
+          "VideoSource", typeof(string), typeof(Spec), new PropertyMetadata(OnVideoSourceChanged));
+
+        private static void OnVideoSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as Spec).OnVideoSourceChanged(e);
+        }
+
+        private void OnVideoSourceChanged(DependencyPropertyChangedEventArgs e)
+        {
+            string path = (string)e.NewValue;
+            this.Open(path);
+        }
+
+        #endregion
+
 
 
         #region load spectrum by ffmpeg

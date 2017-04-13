@@ -13,7 +13,7 @@ namespace UhaSub.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -87,7 +87,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SkyBlue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Cyan")]
         public string foreground {
             get {
                 return ((string)(this["foreground"]));
@@ -99,7 +99,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#333333")]
+        [global::System.Configuration.DefaultSettingValueAttribute("#FF252525")]
         public string background {
             get {
                 return ((string)(this["background"]));
@@ -219,7 +219,7 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("(2017)v1.0-beta.6")]
+        [global::System.Configuration.DefaultSettingValueAttribute("(2017)v1.0-beta.7")]
         public string version {
             get {
                 return ((string)(this["version"]));
@@ -307,6 +307,18 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
             }
             set {
                 this["cfg_video_go_after"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("UAH-WINGS")]
+        public string sub_name {
+            get {
+                return ((string)(this["sub_name"]));
+            }
+            set {
+                this["sub_name"] = value;
             }
         }
     }

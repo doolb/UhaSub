@@ -19,8 +19,15 @@
             <Setter Property="BorderBrush" Value="{x:Null}"/>
             <Setter Property="Margin" Value="4"/>
         </Style>
-        
-        
+
+        <Style x:Key="CodePageMenuItemStyle"
+                   BasedOn="{StaticResource MetroMenuItem}"
+                   TargetType="{x:Type MenuItem}">
+            <Setter Property="Command" Value="{Binding SelectCodePage}" />
+            <Setter Property="Header" Value="{Binding Name, Mode=OneWay}" />
+        </Style>
+
+
     </metro:MetroWindow.Resources>
     <Grid>
         
@@ -28,7 +35,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
             
         </Grid.ColumnDefinitions>
         
@@ -45,45 +51,55 @@
         
         
         <!-- video -->
-        <TextBlock Text="video"
-                   Grid.Column="0" Grid.Row="0"/>
-        <TextBlock Text="{Binding VideoFileName}"
-                   Grid.Column="1" Grid.Row="0"/>
-        <Button Content="Select"
-                Grid.Column="2" Grid.Row="0"
+        <Button Content="Select Video"
+                Grid.Column="0" Grid.Row="0"
                 Command="{Binding ButtonCommand}" 
                 CommandParameter="Video"/>
+        <TextBlock Text="{Binding VideoFileName}"
+                   Grid.Column="1" Grid.Row="0"/>
 
 
         <!-- sub -->
-        <TextBlock Text="sub"
-                   Grid.Column="0" Grid.Row="1"/>
-        <TextBlock Text="{Binding SubFileName}"
-                   Grid.Column="1" Grid.Row="1"/>
-        <Button Content="Select"
-                Grid.Column="2" Grid.Row="1"
+        <Button Content="Select Sub"
+                Grid.Column="0" Grid.Row="1"
                 Command="{Binding ButtonCommand}" 
                 CommandParameter="Sub"/>
+        <TextBlock Text="{Binding SubFileName}"
+                   Grid.Column="1" Grid.Row="1"/>
+        
 
         <!-- sub preview -->
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2"
-                   Text="{Binding SubPreview}"/>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"
+                   Text="{Binding SubPreview}"
+                   HorizontalAlignment="Left"/>
 
 
 
 
-        <!-- final sub  -->        
+        <!-- final sub  -->
+        <TextBlock Text="Fin Sub Name"
+                    Grid.Column="0" Grid.Row="3"/>
         <TextBox Text="{Binding FinalSubFileName}"
-                   Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3"
-                  Margin="4 0 4 0"/>
+                 Grid.Column="1" Grid.Row="3"
+                 Margin="4 0 4 0"/>
         
-        <!-- ok or cancel -->
-        <DockPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4">
-            <RadioButton Content="Default"/>
-            <RadioButton Content="Unicode"/>
-            <RadioButton Content="Ascii"/>
-
+        
+        <DockPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4">
             
+            <!-- code page--> 
+            <RadioButton Content="Default" GroupName="Code" IsChecked="{Binding IsDefaultCode}" Command="{Binding CodePageCommand}"/>
+            <RadioButton Content="Unicode" GroupName="Code" IsChecked="{Binding IsUnicodeCode}" Command="{Binding CodePageCommand}"/>
+            <Menu>
+                <MenuItem Header="CodePage"
+                          Margin="0 5 0 0"
+                          ItemsSource="{Binding CodePages,Mode=OneWay}"
+                          ItemContainerStyle="{StaticResource CodePageMenuItemStyle}"/>
+            </Menu>
+
+            <CheckBox Content="TimeLine"
+                      IsChecked="{Binding HasTimeLine}"/>
+
+            <!-- ok or cancel -->
             <Button Content="Cancel" DockPanel.Dock="Right" 
                     Command="{Binding ButtonCommand}" 
                     CommandParameter="Cancel"/>

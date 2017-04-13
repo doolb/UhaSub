@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Input;
 using UhaSub.Model;
 
+using Setting = UhaSub.Properties.Settings;
+
 namespace UhaSub.ViewModel
 {
     public class NewWindowViewModel : EmptyViewModel
@@ -19,7 +21,15 @@ namespace UhaSub.ViewModel
 
         public string FinalSubFileName { get; set; }
 
+        // encoding
         public bool IsUnicodeCode { get; set; }
+
+        public bool IsDefaultCode { get; set; }
+
+        public int CodePage { get; set; }
+        public List<CodePage> CodePages { get; set; }
+
+        public bool HasTimeLine { get; set; }
 
         public string SubPreview { get; set; }
 
@@ -27,10 +37,14 @@ namespace UhaSub.ViewModel
 
         public NewWindowViewModel()
         {
+            IsDefaultCode = true;
+
+            CodePages = Model.CodePage.CodePages;
         }
 
         #region commands
 
+        #region button command
         private ICommand buttonCommand;
         public ICommand ButtonCommand
         {
@@ -48,8 +62,8 @@ namespace UhaSub.ViewModel
                                 {
                                     case "OK":
                                         IsCancel = false;
-                                        CloseWindow();
-                                        return;
+                                        HitOk();
+                                        goto case "Cancel";
                                     case "Cancel":
                                         // close the last window
                                         CloseWindow();
@@ -87,6 +101,9 @@ namespace UhaSub.ViewModel
                 this.VideoFileName = fileDialog.FileName;
                 RaisePropertyChanged("VideoFileName");
             }
+
+            CalcFinalSubName();
+         
         }
 
         public void SelectSub()
@@ -101,18 +118,54 @@ namespace UhaSub.ViewModel
                 RaisePropertyChanged("SubFileName");
             }
 
-            // compute the final sub file name
-            this.FinalSubFileName = this.SubFileName;
+            
+            Preview();
+        }
+
+        void CalcFinalSubName()
+        {
+            // remove direction
+            string[] ss = this.VideoFileName.Split('\\','/');
+            string[] ns = ss.Last().Split('.','[', ']');
+            
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append('[');
+            sb.Append(Setting.Default.sub_name);
+            sb.Append(']');
+            for (int i = 0; i < ns.Length - 1; i++)
+            {
+                if (ns[i] == "" || ns[i] == " ") continue;
+
+                sb.Append('[');
+                sb.Append(ns[i]);
+                sb.Append(']');
+            }
+            sb.Append(".ass");
+
+
+            this.FinalSubFileName = sb.ToString();
             RaisePropertyChanged("FinalSubFileName");
 
-            Preview();
         }
 
         public void Preview()
         {
-            var strb = new StringBuilder();
-            StreamReader sr = new StreamReader(this.SubFileName,Encoding.GetEncoding(2312));
+            if (this.SubFileName == null) return;
+            if (!File.Exists(this.SubFileName)) return;
+
+            StreamReader sr;
             
+            //detech code-page
+            if(CodePage!=0)
+                sr = new StreamReader(this.SubFileName,Encoding.GetEncoding(CodePage));
+            else if(IsUnicodeCode)
+                sr = new StreamReader(this.SubFileName, Encoding.Unicode);
+            else
+                sr = new StreamReader(this.SubFileName);
+                
+            var strb = new StringBuilder();
+
             // just read ten line
             for (int i = 0; i < 10;i++ )
             {
@@ -127,13 +180,32 @@ namespace UhaSub.ViewModel
             RaisePropertyChanged("SubPreview");
         }
 
+        public void HitOk()
+        {
 
+        }
 
         internal void CloseWindow()
         {
             Application.Current.Windows[Application.Current.Windows.Count - 1].Close();
         }
 
+        #endregion
+
+        private ICommand codePageCommand;
+        public ICommand CodePageCommand
+        {
+            get
+            {
+                return codePageCommand ??
+                (
+                codePageCommand = new Command
+                {
+                    ExecuteDelegate = x => Preview()
+                }
+                );
+            }
+        }
         #endregion
     }
 }

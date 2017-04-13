@@ -40,7 +40,7 @@ namespace UhaSub
 
         public MainWindow()
         {
-            _viewModel = new MainViewModel();
+            _viewModel = MainViewModel.Instance;
             DataContext = _viewModel;
 
             /*
@@ -56,6 +56,8 @@ namespace UhaSub
 
             InitializeComponent();
 
+            this._viewModel.VideoVM = this.video;
+
             this.sub.SubSelected += this.control.OnSubChanged;
 
             this.video.EndReached += this.control.ReachEnd;
@@ -66,10 +68,10 @@ namespace UhaSub
             /*
              * set refer to control
              */
-            this.control.main = this;
             this.control.DataContext = this.video;
+            this.control.main = this;
             this.control.menuDock.DataContext = _viewModel;
-            
+            this.control.subView.DataContext = _viewModel.SubVM;
             this.control.vlc = video.vlc;
             this.control.sub = this.sub;
             this.control.cfg = this.cfg;
@@ -109,6 +111,9 @@ namespace UhaSub
                     sub.Save();
                 }
             }
+
+            // save setting 
+            Setting.Default.Save();
         }
 
 

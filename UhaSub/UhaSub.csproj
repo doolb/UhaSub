@@ -124,7 +124,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ass.cs" />
+    <Compile Include="Model\CodePage.cs" />
     <Compile Include="Model\Command.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\NewWindowViewModel.cs" />
     <Compile Include="ViewModel\SubViewModel.cs" />
     <Compile Include="View\Control.xaml.cs">
@@ -256,11 +262,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

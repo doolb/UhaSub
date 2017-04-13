@@ -20,20 +20,34 @@ namespace UhaSub.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        
 
-        public string VideoFileName { get; set; }
+        public Video VideoVM { get; set; }
 
+        public SubViewModel SubVM { get; set; }
 
-        public SubViewModel Sub { get; set; }
+        public SettingViewModel SettingVM { get; set; }
 
+        public NewWindowViewModel NewWindowVM { get; set; }
+
+        #region only one intance
+        private static MainViewModel instance;
+        public static MainViewModel Instance
+        {
+            get
+            {
+                return instance ?? (instance = new MainViewModel());
+            }
+        }
+        #endregion
         public MainViewModel()
         {
             // set title
             this.Title = "UhaSub";
 
-            Sub = new SubViewModel();
+            SubVM = new SubViewModel();
 
+            SettingVM = new SettingViewModel(0,-1);
+            NewWindowVM = new NewWindowViewModel();
         }
 
         #region Commands
@@ -86,21 +100,19 @@ namespace UhaSub.ViewModel
             try
             {
                 var win = new NewWindow();
-                var vm = new NewWindowViewModel();
-                win.DataContext = vm;
+                win.DataContext = NewWindowVM;
                 win.ShowDialog();
 
                 
-                if (!vm.IsCancel)
+                if (!NewWindowVM.IsCancel)
                 {
                     // set video file name
-                    this.VideoFileName = vm.VideoFileName;
-                    RaisePropertyChanged("VideoFileName");
+                    this.VideoVM.Source = NewWindowVM.VideoFileName;
 
 
                     // set title
                     Title = UhaSub.Properties.Resources.Title + "  -  " +
-                        vm.VideoFileName;
+                        NewWindowVM.FinalSubFileName;
                     RaisePropertyChanged("Title");
 
                 }
@@ -118,7 +130,7 @@ namespace UhaSub.ViewModel
 
                 if (fileDialog.ShowDialog() == true)
                 {
-                    Sub.Open(fileDialog.FileName);
+                    SubVM.Open(fileDialog.FileName);
                 }
             }
             catch
@@ -159,7 +171,9 @@ namespace UhaSub.ViewModel
         void SettingExe(int index =0,int option_index=0)
         {
             var set = new UhaSub.View.setting.Setting();
-            set.DataContext = new ViewModel.SettingViewModel(index,option_index);
+            set.DataContext = SettingVM;
+            SettingVM.SelectedIndex = index;
+            SettingVM.SelectedOptionsIndex = option_index;
             set.ShowDialog();
 
             UhaSub.Config.Instance.ReLoad();
