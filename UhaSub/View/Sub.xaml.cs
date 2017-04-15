@@ -329,19 +329,11 @@ namespace UhaSub.View
 
         }
 
-        /*
-         * show-sub callback
-         * refer:http://stackoverflow.com/questions/1746332/delegates-and-callbacks
-         */
-        public delegate void SubCallBackDemo(Ass ass);
-
-        public event SubCallBackDemo SubSelected;
 
         private void subs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Ass ass = this.subs.SelectedItem as Ass;
             if (ass == null) return;
-            SubSelected(ass);
             this.subs.ScrollIntoView(this.subs.SelectedItem);
 
             

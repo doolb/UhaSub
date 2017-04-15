@@ -113,6 +113,9 @@
     <Reference Include="Vlc.DotNet.Wpf">
       <HintPath>..\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="WaveForm">
+      <HintPath>..\vendor\wave\WaveForm.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -124,6 +127,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ass.cs" />
+    <Compile Include="View\AssTool.xaml.cs">
+      <DependentUpon>AssTool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\CodePage.cs" />
     <Compile Include="Model\Command.cs" />
     <Compile Include="Properties\Settings1.Designer.cs">
@@ -182,23 +188,16 @@
     <Compile Include="View\Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Time.cs" />
     <Compile Include="View\Slider.cs" />
-    <Compile Include="View\Video.xaml.cs">
-      <DependentUpon>Video.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\EmptyViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
     <Compile Include="View\HamburgerMenu.cs" />
-    <Compile Include="Model\wave\BasicSpectrumProvider.cs" />
-    <Compile Include="Model\wave\GradientCalculator.cs" />
-    <Compile Include="Model\wave\ISpectrumProvider.cs" />
-    <Compile Include="Model\wave\LineSpectrum.cs" />
-    <Compile Include="Model\wave\ScalingStrategy.cs" />
-    <Compile Include="Model\wave\SpectrumBase.cs" />
-    <Compile Include="Model\wave\VoicePrint3DSpectrum.cs" />
+    <Page Include="View\AssTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -235,10 +234,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Audio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -247,17 +242,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\Audio.xaml.cs">
-      <DependentUpon>Audio.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Video.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

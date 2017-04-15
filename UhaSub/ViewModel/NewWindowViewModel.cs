@@ -63,9 +63,12 @@ namespace UhaSub.ViewModel
                                     case "OK":
                                         IsCancel = false;
                                         HitOk();
-                                        goto case "Cancel";
+                                        CloseWindow();
+                                        return;
+
                                     case "Cancel":
                                         // close the last window
+                                        IsCancel = true;
                                         CloseWindow();
                                         return;
                                     case "Video":
@@ -167,7 +170,7 @@ namespace UhaSub.ViewModel
             var strb = new StringBuilder();
 
             // just read ten line
-            for (int i = 0; i < 10;i++ )
+            for (int i = 0; i < 50;i++ )
             {
                 if (sr.EndOfStream) break;
 

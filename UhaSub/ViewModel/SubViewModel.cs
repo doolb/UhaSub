@@ -5,11 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+using Setting = UhaSub.Properties.Settings;
+
 namespace UhaSub.ViewModel
 {
     public class SubViewModel : EmptyViewModel
     {
-        public int SelectedIndex { get; set; }
+        private int selectIndex;
+
+        public int SelectedIndex
+        {
+            get { return selectIndex; }
+            set
+            {
+                selectIndex = value;
+                RaisePropertyChanged("SelectedIndex");
+                RaisePropertyChanged("SelectedItem");
+
+                if (SelectedItem != null)
+                {
+                    AssText = SelectedItem.Text;
+                    RaisePropertyChanged("AssText");
+                }
+            }
+        }
         public string AssHead { get; set; }
 
         public string FileName { get; set; }
@@ -20,9 +39,13 @@ namespace UhaSub.ViewModel
 
         public Ass SelectedItem
         {
-            get;
-            set;
+            get {
+                if (SelectedIndex == -1 || SelectedIndex >= AssList.Count) return null;
+                return AssList[SelectedIndex]; }
+            set { SelectedIndex = AssList.FindIndex(x => x.ID == value.ID); }
         }
+
+        public string AssText { set; get; }
 
         public SubViewModel()
         {
@@ -65,14 +88,24 @@ namespace UhaSub.ViewModel
             // locate to no 0 line
             //locate();
         }
-        public void Open(string path)
+        public void Open(string path, bool has_time_line = true, bool unicode = false, int code_page = 0)
         {
             string head = null;
-            AssList = Ass.LoadAss(path, ref head);
-            AssHead = head;
+
+            if(has_time_line)
+            {
+                AssList = Ass.LoadAss(path, ref head, unicode, code_page);
+                AssHead = head;
+            }
+            else
+            {
+                AssList = Ass.LoadTxt(path,unicode,code_page);
+                AssHead = Setting.Default.AssHeader;
+            }
             RaisePropertyChanged("AssList");
 
         }
+
         #endregion
     }
 }

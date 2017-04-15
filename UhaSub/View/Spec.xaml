@@ -7,6 +7,20 @@
         Background="{Binding Source={x:Static p:Settings.Default}, Path=background}"
         MaxHeight="270"
         MaxWidth="2000">
+    
+    
+    <UserControl.Resources>
+        <Storyboard x:Key="spec_anime">
+            <DoubleAnimation
+                Storyboard.TargetName="tspec"
+                Storyboard.TargetProperty="(Canvas.Left)"
+                From="0" To="100"
+                RepeatBehavior="Forever"
+                x:Name="spec_anime_control">
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -17,6 +31,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        
 
         <ScrollViewer HorizontalScrollBarVisibility="Hidden"
                       VerticalScrollBarVisibility="Hidden"

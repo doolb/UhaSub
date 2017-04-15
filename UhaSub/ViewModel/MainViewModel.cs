@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using UhaSub.Model;
 using UhaSub.View;
+using WpfVlc;
 using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub.ViewModel
@@ -21,13 +22,15 @@ namespace UhaSub.ViewModel
     public class MainViewModel : BaseViewModel
     {
 
-        public Video VideoVM { get; set; }
+        public VlcControl VideoVM { get; set; }
 
         public SubViewModel SubVM { get; set; }
 
         public SettingViewModel SettingVM { get; set; }
 
         public NewWindowViewModel NewWindowVM { get; set; }
+
+        public WaveForm.WaveForm WaveVM { get; set; }
 
         #region only one intance
         private static MainViewModel instance;
@@ -44,12 +47,20 @@ namespace UhaSub.ViewModel
             // set title
             this.Title = "UhaSub";
 
-            VideoVM = new Video();
+            VideoVM = new VlcControl();
+            VideoVM.EndInit();
 
             SubVM = new SubViewModel();
 
             SettingVM = new SettingViewModel(0,-1);
             NewWindowVM = new NewWindowViewModel();
+
+            WaveVM = new WaveForm.WaveForm();
+        }
+
+        public void Clear()
+        {
+            WaveVM.Close();
         }
 
         #region Commands
@@ -80,11 +91,11 @@ namespace UhaSub.ViewModel
                                     return;
 
                                 case "Save":
-
+                                    FileSave();
                                     return;
 
                                 case "SaveAs":
-
+                                    FileSaveAs();
                                     return;
                                 
 
@@ -111,6 +122,10 @@ namespace UhaSub.ViewModel
                     // set video file name
                     this.VideoVM.Source = NewWindowVM.VideoFileName;
 
+
+                    // load sub
+                    if (NewWindowVM.SubFileName != null) ;
+                    SubVM.Open(NewWindowVM.SubFileName,NewWindowVM.HasTimeLine,NewWindowVM.IsUnicodeCode,NewWindowVM.CodePage);
 
                     // set title
                     Title = UhaSub.Properties.Resources.Title + "  -  " +
@@ -141,6 +156,21 @@ namespace UhaSub.ViewModel
             }
         }
 
+        public void FileSave()
+        {
+
+        }
+
+        public void FileSaveAs()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "ASS files (*.ass)|*.ass";
+            if(sfd.ShowDialog() == true)
+            {
+                Ass.Save(SubVM.AssList, SubVM.AssHead, sfd.FileName);
+            }
+
+        }
         #endregion
 
         #region menu--setting command

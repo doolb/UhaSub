@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WpfVlc;
 
 namespace UhaSub
 {
@@ -63,11 +64,18 @@ namespace UhaSub
         /* 
          * load txt file 
          */
-        static public List<Ass> LoadTxt(string file_name)
+        static public List<Ass> LoadTxt(string file_name,bool unicode = false,int code_page = 0)
         {
             List<Ass> list = new List<Ass>();
 
-            StreamReader sr = new StreamReader(file_name);
+            StreamReader sr;
+            if(code_page != 0)
+                sr = new StreamReader(file_name,Encoding.GetEncoding(code_page));
+            else if(unicode)
+                sr = new StreamReader(file_name, Encoding.Unicode);
+            else
+                sr = new StreamReader(file_name);
+
             // file should existed
 
             // read file
@@ -97,7 +105,7 @@ namespace UhaSub
         /* 
          * load ass file 
          */
-        static public List<Ass> LoadAss(string file_name,ref string header)
+        static public List<Ass> LoadAss(string file_name, ref string header, bool unicode = false, int code_page = 0)
         {
             /*
              * ass general format
@@ -107,7 +115,13 @@ namespace UhaSub
              */
             List<Ass> list = new List<Ass>();
 
-            StreamReader sr = new StreamReader(file_name);
+            StreamReader sr;
+            if (code_page != 0)
+                sr = new StreamReader(file_name, Encoding.GetEncoding(code_page));
+            else if (unicode)
+                sr = new StreamReader(file_name, Encoding.Unicode);
+            else
+                sr = new StreamReader(file_name);
 
             StringBuilder s = new StringBuilder();
 

@@ -11,9 +11,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using WpfVlc;
 
 namespace UhaSub.View
 {
@@ -31,18 +33,28 @@ namespace UhaSub.View
             var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
             ffmpeg_path = currentDirectory;
 
-            /*
-             * set a timer
-             */
-            timer = new DispatcherTimer(DispatcherPriority.Render);
-            timer.Interval = TimeSpan.FromMilliseconds(16);
-            timer.Tick += timer_Tick;
 
+            this.Loaded += Spec_Loaded;
 
+            spec_anime = (this.Resources["spec_anime"] as Storyboard);
+            spec_anime_control = spec_anime.Children.First() as DoubleAnimation;
+            
         }
 
-        DispatcherTimer timer;
-        public Video video;
+        void Spec_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            spec_anime_control.To = width;
+            spec_anime_control.SpeedRatio = 0.4;
+            //spec_anime.Begin();
+            
+        }
+
+        Storyboard spec_anime;
+        DoubleAnimation spec_anime_control;
+
+        
+        public VlcControl video;
 
         #region Sync image and timeline
         double      width=0;
@@ -61,11 +73,11 @@ namespace UhaSub.View
             Sync(video.Time);
 
             // compute the delta time
-            double delta = (DateTime.Now - video.Clock).TotalMilliseconds;
+            double delta = (DateTime.Now.Millisecond - video.Time.time);
             if (delta > 300) return;
 
             // calc offset
-            offset = delta * scroll_per_ms * video.vlc.MediaPlayer.Rate;
+            offset = delta * scroll_per_ms * video.Rate;
             if (offset_base + offset > width)
                 Canvas.SetLeft(this.tspec, width);
             else
@@ -260,12 +272,12 @@ namespace UhaSub.View
          */
         public void Pause()
         {
-            timer.Stop();
+            spec_anime.Pause();
         }
         
         public void Play()
         {
-            timer.Start();
+            spec_anime.Resume();
         }
 
         private double home, end;
@@ -307,6 +319,8 @@ namespace UhaSub.View
             need_update = true;
         }
 
+        #region dependency property
+
         #region Video Source Dependency Property
         /*
          * create a bindable position
@@ -333,8 +347,30 @@ namespace UhaSub.View
 
         #endregion
 
+        #region play status
+        public bool IsPlay
+        {
+            get { return (bool)this.GetValue(IsPlayProperty); }
+            set { this.SetValue(IsPlayProperty, value); }
+        }
+        public static readonly DependencyProperty IsPlayProperty = DependencyProperty.Register(
+          "IsPlay", typeof(bool), typeof(Spec), new PropertyMetadata(OnIsPlayChanged));
 
+        private static void OnIsPlayChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as Spec).OnIsPlayChanged(e);
+        }
 
+        private void OnIsPlayChanged(DependencyPropertyChangedEventArgs e)
+        {
+            if ((bool)e.NewValue )
+                this.Play();
+            else
+                this.Pause();
+        }
+        #endregion
+
+        #endregion
         #region load spectrum by ffmpeg
         /*
          * load spectrum for video
@@ -349,7 +385,7 @@ namespace UhaSub.View
         {
             working = true;
             // stop timer
-            this.timer.Stop();
+            spec_anime.Stop();
 
             string img = null;
 

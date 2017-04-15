@@ -87,7 +87,10 @@
             
             
             <local:Spec x:Name="spec"
-                        Grid.Row="1" Grid.Column="0"/>
+                        Grid.Row="1" Grid.Column="0"
+                        DataContext="{Binding VideoVM}"
+                        VideoSource="{Binding Source}"
+                        IsPlay="{Binding IsPlay}"/>
 
         </Grid>
         
@@ -100,8 +103,8 @@
             <local:Control  x:Name="control"
                             Grid.Column="0"/>
 
-            <local:Audio    x:Name="audio"
-                            Grid.Column="1"
+            <ContentControl Grid.Column="1"
+                            Content="{Binding WaveVM}"
                             VerticalAlignment="Stretch"/>
         </Grid>
     </Grid>

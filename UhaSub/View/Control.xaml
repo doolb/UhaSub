@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:p="clr-namespace:UhaSub.Properties"
              xmlns:m="clr-namespace:UhaSub.ui"
+             xmlns:view="clr-namespace:UhaSub.View"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="600">
     <Grid>
@@ -15,11 +16,10 @@
 
             <!-- sub preview -->
             <TextBlock Name="subView"
-                       Text="{x:Static p:Resources.video_sub_preview}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="18"
-                       
+                       Text="{Binding AssText}"
                        Margin="0 15 10 0"/>
 
 
@@ -27,9 +27,7 @@
                         x:Name="tmSlider"
                         Margin="0,0,0,10"
                         Value="{Binding Position}"
-                        Maximum="1" Minimum="0"
-                        MouseUp="tmSlider_MouseUp"
-                        Thumb.DragCompleted="time_DragCompleted"/>
+                        Maximum="1" Minimum="0"/>
 
             <DockPanel Margin="0 0 0 5">
                 <TextBlock Text="{Binding Time}" Name="ctText" HorizontalAlignment="Left" Style="{StaticResource TextStyle}"/>
@@ -91,11 +89,12 @@
                         <!-- context meun 
                         refer:http://stackoverflow.com/questions/4305565/wpf-context-menu-on-left-click
                         -->
-                        <ContextMenu Loaded="MenuSubLoaded">
+                        <ContextMenu >
                             <MenuItem Header="{x:Static p:Resources.menu_sub_nul}" 
                                       Tag="nul"
                                       Name="mi_nul"
-                                      Click="MenuSubClick"/>
+                                      Click="MenuSubClick"
+                                      IsChecked="True"/>
                             <MenuItem Header="{x:Static p:Resources.menu_sub_now}" 
                                       Tag="now"
                                       Name="mi_now"
