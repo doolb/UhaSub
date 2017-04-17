@@ -217,6 +217,9 @@
         <member name="P:WpfVlc.Fakes.ShimVlcControl.RegistCallback">
             <summary>Sets the shim of VlcControl.RegistCallback()</summary>
         </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.Reset">
+            <summary>Sets the shim of VlcControl.Reset()</summary>
+        </member>
         <member name="P:WpfVlc.Fakes.ShimVlcControl.SecondGet">
             <summary>Sets the shim of VlcControl.get_Second()</summary>
         </member>
@@ -363,6 +366,9 @@
         </member>
         <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.RegistCallback">
             <summary>Sets the shim of VlcControl.RegistCallback()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.Reset">
+            <summary>Sets the shim of VlcControl.Reset()</summary>
         </member>
         <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SecondGet">
             <summary>Sets the shim of VlcControl.get_Second()</summary>

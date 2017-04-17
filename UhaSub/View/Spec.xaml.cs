@@ -84,13 +84,13 @@ namespace UhaSub.View
 
         #region Sync image and timeline
         double      width=0;
-        double      scroll_per_ms=0;
+        double      scroll_per_msec=0;
         double      offset = 0, offset_head = 115,offset_base=0;
 
         long max_time = 0;
         internal void calc_scroll_per_ms()
         {
-            this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
+            this.scroll_per_msec = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
         }
         public void ReSet(long max_time)
         {
@@ -116,14 +116,14 @@ namespace UhaSub.View
                 return;
 
 
-            if (scroll_per_ms <= 0||
+            if (scroll_per_msec <= 0||
                 time_of_page==0)
             {
                 calc_scroll_per_ms();
-                time_of_page = (long)(width / scroll_per_ms);
+                time_of_page = (long)(width / scroll_per_msec);
             }
 
-            double w = time * scroll_per_ms;
+            double w = time * scroll_per_msec;
 
             // compute offset
             offset_base = w % width;
@@ -141,7 +141,7 @@ namespace UhaSub.View
                 // update image
                 trans.X = home - p * width;
 
-                //UpdateTimeLine();
+                UpdateTimeLine();
 
                
             }
@@ -191,12 +191,13 @@ namespace UhaSub.View
             time_line.Children.Add(t);
         }
 
-        void add_minor(double x)
+        void add_minor(double x,double height)
         {
             // Minor tick
             var tick = new Border();
             tick.Width = 1;
-            tick.Height = 7; tick.Background = tickBrush;
+            tick.Height = height; 
+            tick.Background = tickBrush;
 
             tick.VerticalAlignment = VerticalAlignment.Bottom;
             tick.HorizontalAlignment = HorizontalAlignment.Left;
@@ -215,6 +216,7 @@ namespace UhaSub.View
             tickBrush.Freeze();
             timeBrush.Freeze();
 
+
             // Draw the bottom border
             add_bottom();
 
@@ -230,39 +232,50 @@ namespace UhaSub.View
             /*
              * calc major count and minor count
              */
-            double start_time = p_now * time_of_page;
-            long start_second = (long)Math.Round(start_time / 1000);
+            double start_time_msec = p_now * time_of_page;
+            long start_time_sec = (long)Math.Round(start_time_msec / 1000);
             
-            long total_second = time_of_page / 1000;
-            long maj_interval = (long)Math.Round(maj_width_step / scroll_per_ms / 1000) * 1000;
-            long maj_interval_second = maj_interval / 1000;
-            double minor_interval = (double)maj_interval / 10;
+            long total_time_sec = time_of_page / 1000;
+            long maj_interval_sec;
+            double real_maj_width_step = maj_width_step;
+            long maj_interval_msec = (long)Math.Round(maj_width_step / scroll_per_msec);
+
+            if (maj_interval_msec < 1000)
+            {
+                maj_interval_sec = 1;
+                real_maj_width_step = 1000 * scroll_per_msec;
+            }
+            else
+                maj_interval_sec = maj_interval_msec / 1000;
+            
 
             // major start x-axis
-            double sx = start_time * scroll_per_ms;
+            double sx = start_time_msec * scroll_per_msec;
             sx %= width;
             if (sx > width * 2 / 3)
                 sx = sx - width;
 
-            // major interval x
-            double x = maj_interval * scroll_per_ms;
             // minor interval x
-            double mx = minor_interval * scroll_per_ms;
+            double mx = real_maj_width_step / 10;
             
             /*
              * add major and time
              */
             double tx = sx;
-            for(long t =0;t<=total_second;t+=maj_interval_second)
+            for(long t =0;t<=total_time_sec;t+=maj_interval_sec)
             {
-                add_major(tx,start_second + t);
+                add_major(tx,start_time_sec + t);
 
                 // add minor
-                // calc minor width intervel
-                for(long i = 1; i < 10; i++)
-                    add_minor(tx + i * mx);
+                long i=1;
+                for (; i < 5; i++)
+                    add_minor(tx + i * mx, 7);
+                add_minor(tx + i++ * mx, 10);
+                for (; i < 10;i++)
+                    add_minor(tx + i * mx, 7);
 
-                tx += x;
+
+                tx += real_maj_width_step;
             }
 
             /*
@@ -313,7 +326,7 @@ namespace UhaSub.View
 
             spec_anime_control.To = this.width;
 
-            time_of_page = (long)(width / scroll_per_ms);
+            time_of_page = (long)(width / scroll_per_msec);
             need_update = true;
         }
 
@@ -326,7 +339,7 @@ namespace UhaSub.View
             end = -(img.ActualWidth - offset_head) * this.scale.ScaleX + width;
 
             calc_scroll_per_ms();
-            time_of_page = (long)(width / scroll_per_ms);
+            time_of_page = (long)(width / scroll_per_msec);
 
             need_update = true;
         }
