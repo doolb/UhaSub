@@ -61,11 +61,9 @@ namespace UhaSub
             InitializeComponent();
 
             this.video = _viewModel.VideoVM;
-
-
             this.video.EndReached += this.control.ReachEnd;
 
-
+            
 
             /*
              * set refer to control
@@ -74,8 +72,7 @@ namespace UhaSub
             this.control.menuDock.DataContext = _viewModel;
             this.control.subView.DataContext = _viewModel.SubVM;
 
-            this.spec.video = this.video;
-
+            
             
             this.Closing += MainWindow_Closing;
 

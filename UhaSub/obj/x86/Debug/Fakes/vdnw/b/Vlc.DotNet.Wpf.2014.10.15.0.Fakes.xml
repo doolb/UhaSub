@@ -1,0 +1,1277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vlc.DotNet.Wpf.2014.10.15.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.VlcDotNetWpfDelegates">
+            <summary>Contains custom delegates used for the stubs and shims of Vlc.DotNet.Wpf</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs">
+            <summary>Shim type of Vlc.DotNet.Wpf.VlcLibDirectoryNeededEventArgs</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.#ctor(Vlc.DotNet.Wpf.VlcLibDirectoryNeededEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.Constructor">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.VlcLibDirectoryNeededEventArgs()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Wpf.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.ShimTime">
+            <summary>Shim type of WpfVlc.Time</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimTime.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimTime.#ctor(WpfVlc.Time)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimTime.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimTime.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.Constructor">
+            <summary>Sets the shim of Time.Time()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.ConstructorInt64">
+            <summary>Sets the shim of Time.Time(Int64 ms)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.EqualityOpTimeTime">
+            <summary>Sets the shim of Time.op_Equality(Time t1, Time t2)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.ImplicitOpInt64Time">
+            <summary>Sets the shim of Time.op_Implicit(Int64 value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.ImplicitOpTimeInt64">
+            <summary>Sets the shim of Time.op_Implicit(Time value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.InequalityOpTimeTime">
+            <summary>Sets the shim of Time.op_Inequality(Time t1, Time t2)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.ParseString">
+            <summary>Sets the shim of Time.Parse(String s)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.ToString">
+            <summary>Sets the shim of Time.ToString()</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.ShimTime.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimTime.AllInstances.ToString01">
+            <summary>Sets the shim of Time.ToString()</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.ShimVlcControl">
+            <summary>Shim type of WpfVlc.VlcControl</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.#ctor(WpfVlc.VlcControl)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.Interop.IWin32Window)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.Windows.Interop.IKeyboardInputSink)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.ShimVlcControl.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.BackColorGet">
+            <summary>Sets the shim of VlcControl.get_BackColor()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.BackColorSetString">
+            <summary>Sets the shim of VlcControl.set_BackColor(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.Constructor">
+            <summary>Sets the shim of VlcControl.VlcControl()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.EndInit">
+            <summary>Sets the shim of VlcControl.EndInit()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.EndReachedAddVlcControlVideoReachEndDemo">
+            <summary>Sets the shim of VlcControl.add_EndReached(VideoReachEndDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.EndReachedRemoveVlcControlVideoReachEndDemo">
+            <summary>Sets the shim of VlcControl.remove_EndReached(VideoReachEndDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.FPSGet">
+            <summary>Sets the shim of VlcControl.get_FPS()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.IsPlayGet">
+            <summary>Sets the shim of VlcControl.get_IsPlay()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.IsPlaySetBoolean">
+            <summary>Sets the shim of VlcControl.set_IsPlay(Boolean value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.LengthChangedObjectVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.LengthChanged(Object sender, VlcMediaPlayerLengthChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.LibVlcPathGet">
+            <summary>Sets the shim of VlcControl.get_LibVlcPath()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.LibVlcPathSetString">
+            <summary>Sets the shim of VlcControl.set_LibVlcPath(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.MediaPlayer_EndReachedObjectVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.MediaPlayer_EndReached(Object sender, VlcMediaPlayerEndReachedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.MutexGet">
+            <summary>Sets the shim of VlcControl.get_Mutex()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.MutexSetBoolean">
+            <summary>Sets the shim of VlcControl.set_Mutex(Boolean value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.OpenString">
+            <summary>Sets the shim of VlcControl.Open(String path)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.Pause">
+            <summary>Sets the shim of VlcControl.Pause()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.Play">
+            <summary>Sets the shim of VlcControl.Play()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.PlayerPositionChangedObjectVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.PlayerPositionChanged(Object sender, VlcMediaPlayerPositionChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.PositionGet">
+            <summary>Sets the shim of VlcControl.get_Position()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.PositionSetDouble">
+            <summary>Sets the shim of VlcControl.set_Position(Double value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of VlcControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of VlcControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.RaisePropertyChangedString">
+            <summary>Sets the shim of VlcControl.RaisePropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.RateGet">
+            <summary>Sets the shim of VlcControl.get_Rate()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.RateSetSingle">
+            <summary>Sets the shim of VlcControl.set_Rate(Single value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.RegistCallback">
+            <summary>Sets the shim of VlcControl.RegistCallback()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.SecondGet">
+            <summary>Sets the shim of VlcControl.get_Second()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.SourceGet">
+            <summary>Sets the shim of VlcControl.get_Source()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.SourceSetString">
+            <summary>Sets the shim of VlcControl.set_Source(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.SubFileGet">
+            <summary>Sets the shim of VlcControl.get_SubFile()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.SubFileSetString">
+            <summary>Sets the shim of VlcControl.set_SubFile(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeCallbackAddVlcControlTimeCallbackDemo">
+            <summary>Sets the shim of VlcControl.add_TimeCallback(TimeCallbackDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeCallbackRemoveVlcControlTimeCallbackDemo">
+            <summary>Sets the shim of VlcControl.remove_TimeCallback(TimeCallbackDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeChangedObjectVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.TimeChanged(Object sender, VlcMediaPlayerTimeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeFPSGet">
+            <summary>Sets the shim of VlcControl.get_TimeFPS()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeGet">
+            <summary>Sets the shim of VlcControl.get_Time()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TimeSetTime">
+            <summary>Sets the shim of VlcControl.set_Time(Time value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TotalTimeChangedAddVlcControlTotalTimeChangedDemo">
+            <summary>Sets the shim of VlcControl.add_TotalTimeChanged(TotalTimeChangedDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TotalTimeChangedRemoveVlcControlTotalTimeChangedDemo">
+            <summary>Sets the shim of VlcControl.remove_TotalTimeChanged(TotalTimeChangedDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.TotalTimeGet">
+            <summary>Sets the shim of VlcControl.get_TotalTime()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.VlcLibDirectoryNeededObjectVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.VlcLibDirectoryNeeded(Object sender, VlcLibDirectoryNeededEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.VolumeGet">
+            <summary>Sets the shim of VlcControl.get_Volume()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.VolumeSetInt32">
+            <summary>Sets the shim of VlcControl.set_Volume(Int32 value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl._LengthChangedb__3">
+            <summary>Sets the shim of VlcControl.&lt;LengthChanged&gt;b__3()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl._MediaPlayer_EndReachedb__0">
+            <summary>Sets the shim of VlcControl.&lt;MediaPlayer_EndReached&gt;b__0()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl._PlayerPositionChangedb__2">
+            <summary>Sets the shim of VlcControl.&lt;PlayerPositionChanged&gt;b__2()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl._TimeChangedb__1">
+            <summary>Sets the shim of VlcControl.&lt;TimeChanged&gt;b__1()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.timer_TickObjectEventArgs">
+            <summary>Sets the shim of VlcControl.timer_Tick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.ShimVlcControl.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.BackColorGet">
+            <summary>Sets the shim of VlcControl.get_BackColor()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.BackColorSetString">
+            <summary>Sets the shim of VlcControl.set_BackColor(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.EndInit">
+            <summary>Sets the shim of VlcControl.EndInit()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.EndReachedAddVlcControlVideoReachEndDemo">
+            <summary>Sets the shim of VlcControl.add_EndReached(VideoReachEndDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.EndReachedRemoveVlcControlVideoReachEndDemo">
+            <summary>Sets the shim of VlcControl.remove_EndReached(VideoReachEndDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.FPSGet">
+            <summary>Sets the shim of VlcControl.get_FPS()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.IsPlayGet">
+            <summary>Sets the shim of VlcControl.get_IsPlay()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.IsPlaySetBoolean">
+            <summary>Sets the shim of VlcControl.set_IsPlay(Boolean value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.LengthChangedObjectVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.LengthChanged(Object sender, VlcMediaPlayerLengthChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.LibVlcPathGet">
+            <summary>Sets the shim of VlcControl.get_LibVlcPath()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.LibVlcPathSetString">
+            <summary>Sets the shim of VlcControl.set_LibVlcPath(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.MediaPlayer_EndReachedObjectVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.MediaPlayer_EndReached(Object sender, VlcMediaPlayerEndReachedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.MutexGet">
+            <summary>Sets the shim of VlcControl.get_Mutex()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.MutexSetBoolean">
+            <summary>Sets the shim of VlcControl.set_Mutex(Boolean value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.OpenString">
+            <summary>Sets the shim of VlcControl.Open(String path)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.Pause">
+            <summary>Sets the shim of VlcControl.Pause()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.Play">
+            <summary>Sets the shim of VlcControl.Play()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.PlayerPositionChangedObjectVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.PlayerPositionChanged(Object sender, VlcMediaPlayerPositionChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.PositionGet">
+            <summary>Sets the shim of VlcControl.get_Position()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.PositionSetDouble">
+            <summary>Sets the shim of VlcControl.set_Position(Double value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of VlcControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of VlcControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.RaisePropertyChangedString">
+            <summary>Sets the shim of VlcControl.RaisePropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.RateGet">
+            <summary>Sets the shim of VlcControl.get_Rate()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.RateSetSingle">
+            <summary>Sets the shim of VlcControl.set_Rate(Single value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.RegistCallback">
+            <summary>Sets the shim of VlcControl.RegistCallback()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SecondGet">
+            <summary>Sets the shim of VlcControl.get_Second()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SourceGet">
+            <summary>Sets the shim of VlcControl.get_Source()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SourceSetString">
+            <summary>Sets the shim of VlcControl.set_Source(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SubFileGet">
+            <summary>Sets the shim of VlcControl.get_SubFile()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.SubFileSetString">
+            <summary>Sets the shim of VlcControl.set_SubFile(String value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeCallbackAddVlcControlTimeCallbackDemo">
+            <summary>Sets the shim of VlcControl.add_TimeCallback(TimeCallbackDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeCallbackRemoveVlcControlTimeCallbackDemo">
+            <summary>Sets the shim of VlcControl.remove_TimeCallback(TimeCallbackDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeChangedObjectVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.TimeChanged(Object sender, VlcMediaPlayerTimeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeFPSGet">
+            <summary>Sets the shim of VlcControl.get_TimeFPS()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeGet">
+            <summary>Sets the shim of VlcControl.get_Time()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TimeSetTime">
+            <summary>Sets the shim of VlcControl.set_Time(Time value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TotalTimeChangedAddVlcControlTotalTimeChangedDemo">
+            <summary>Sets the shim of VlcControl.add_TotalTimeChanged(TotalTimeChangedDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TotalTimeChangedRemoveVlcControlTotalTimeChangedDemo">
+            <summary>Sets the shim of VlcControl.remove_TotalTimeChanged(TotalTimeChangedDemo value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.TotalTimeGet">
+            <summary>Sets the shim of VlcControl.get_TotalTime()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.VlcLibDirectoryNeededObjectVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.VlcLibDirectoryNeeded(Object sender, VlcLibDirectoryNeededEventArgs e)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.VolumeGet">
+            <summary>Sets the shim of VlcControl.get_Volume()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.VolumeSetInt32">
+            <summary>Sets the shim of VlcControl.set_Volume(Int32 value)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances._LengthChangedb__3">
+            <summary>Sets the shim of VlcControl.&lt;LengthChanged&gt;b__3()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances._MediaPlayer_EndReachedb__0">
+            <summary>Sets the shim of VlcControl.&lt;MediaPlayer_EndReached&gt;b__0()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances._PlayerPositionChangedb__2">
+            <summary>Sets the shim of VlcControl.&lt;PlayerPositionChanged&gt;b__2()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances._TimeChangedb__1">
+            <summary>Sets the shim of VlcControl.&lt;TimeChanged&gt;b__1()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.ShimVlcControl.AllInstances.timer_TickObjectEventArgs">
+            <summary>Sets the shim of VlcControl.timer_Tick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.StubTime">
+            <summary>Stub type of WpfVlc.Time</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubTime.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubTime.#ctor(System.Int64)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubTime.InitializeStub">
+            <summary>Initializes a new instance of type StubTime</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubTime.ToString">
+            <summary>Sets the stub of Time.ToString()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubTime.ToString01">
+            <summary>Sets the stub of Time.ToString()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubTime.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubTime.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubTime.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WpfVlc.Fakes.StubVlcControl">
+            <summary>Stub type of WpfVlc.VlcControl</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.ArrangeOverride(System.Windows.Size)">
+            <summary>Sets the stub of WindowsFormsHost.ArrangeOverride(Size finalSize)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.ArrangeOverrideSize">
+            <summary>Sets the stub of WindowsFormsHost.ArrangeOverride(Size finalSize)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.BeginInit">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.BeginInit01">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.BuildWindowCore(System.Runtime.InteropServices.HandleRef)">
+            <summary>Sets the stub of WindowsFormsHost.BuildWindowCore(HandleRef hwndParent)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.BuildWindowCoreHandleRef">
+            <summary>Sets the stub of WindowsFormsHost.BuildWindowCore(HandleRef hwndParent)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)">
+            <summary>Sets the stub of WindowsFormsHost.DestroyWindowCore(HandleRef hwnd)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.DestroyWindowCoreHandleRef">
+            <summary>Sets the stub of WindowsFormsHost.DestroyWindowCore(HandleRef hwnd)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.Dispose(System.Boolean)">
+            <summary>Sets the stub of WindowsFormsHost.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.DisposeBoolean">
+            <summary>Sets the stub of WindowsFormsHost.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.GetLayoutClip(System.Windows.Size)">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.GetLayoutClipSize">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.GetUIParentCore">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.GetUIParentCore01">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.GetVisualChild(System.Int32)">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.GetVisualChildInt32">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.HasEffectiveKeyboardFocusGet">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.HasFocusWithinCore">
+            <summary>Sets the stub of HwndHost.HasFocusWithinCore()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.HasFocusWithinCore01">
+            <summary>Sets the stub of HwndHost.HasFocusWithinCore()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.HitTestCore(System.Windows.Media.GeometryHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.HitTestCoreGeometryHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.HitTestCorePointHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.InitializeStub">
+            <summary>Initializes a new instance of type StubVlcControl</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.IsEnabledCoreGet">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.LogicalChildrenGet">
+            <summary>Sets the stub of FrameworkElement.get_LogicalChildren()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.MeasureOverride(System.Windows.Size)">
+            <summary>Sets the stub of WindowsFormsHost.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.MeasureOverrideSize">
+            <summary>Sets the stub of WindowsFormsHost.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnAccessKeyAccessKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnApplyTemplate">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnApplyTemplate01">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnChildDesiredSizeChanged(System.Windows.UIElement)">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnChildDesiredSizeChangedUIElement">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnContextMenuClosingContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnContextMenuOpeningContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnCreateAutomationPeer">
+            <summary>Sets the stub of WindowsFormsHost.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnCreateAutomationPeer01">
+            <summary>Sets the stub of WindowsFormsHost.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGotFocusRoutedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGotMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGotStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnGotTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnInitialized(System.EventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnInitializedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsKeyboardFocusWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsKeyboardFocusedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsMouseCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsMouseCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsMouseDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsStylusCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsStylusCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnIsStylusDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of HwndHost.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of HwndHost.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of HwndHost.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of HwndHost.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnLostFocusRoutedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnLostMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnLostStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnLostTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationBoundaryFeedbackManipulationBoundaryFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationCompletedManipulationCompletedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationDeltaManipulationDeltaEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationInertiaStartingManipulationInertiaStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationStartedManipulationStartedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnManipulationStartingManipulationStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMnemonicCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)">
+            <summary>Sets the stub of HwndHost.OnMnemonicCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMnemonicCoreMSGRefModifierKeys">
+            <summary>Sets the stub of HwndHost.OnMnemonicCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseEnterMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseLeaveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPreviewTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of WindowsFormsHost.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of WindowsFormsHost.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnQueryCursorQueryCursorEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnRenderDrawingContext">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnRenderSizeChangedSizeChangedInfo">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStyleChanged(System.Windows.Style,System.Windows.Style)">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStyleChangedStyleStyle">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusEnter(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusEnterStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusLeave(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusLeaveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnToolTipClosingToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnToolTipOpeningToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTouchEnter(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTouchEnterTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTouchLeave(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTouchLeaveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnVisualChildrenChangedDependencyObjectDependencyObject">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnVisualParentChanged(System.Windows.DependencyObject)">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnVisualParentChangedDependencyObject">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.OnWindowPositionChanged(System.Windows.Rect)">
+            <summary>Sets the stub of HwndHost.OnWindowPositionChanged(Rect rcBoundingBox)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.OnWindowPositionChangedRect">
+            <summary>Sets the stub of HwndHost.OnWindowPositionChanged(Rect rcBoundingBox)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.ParentLayoutInvalidated(System.Windows.UIElement)">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.ParentLayoutInvalidatedUIElement">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.RegisterKeyboardInputSinkCore(System.Windows.Interop.IKeyboardInputSink)">
+            <summary>Sets the stub of HwndHost.RegisterKeyboardInputSinkCore(IKeyboardInputSink sink)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.RegisterKeyboardInputSinkCoreIKeyboardInputSink">
+            <summary>Sets the stub of HwndHost.RegisterKeyboardInputSinkCore(IKeyboardInputSink sink)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.ScaleChild(System.Windows.Vector)">
+            <summary>Sets the stub of WindowsFormsHost.ScaleChild(Vector newScale)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.ScaleChildVector">
+            <summary>Sets the stub of WindowsFormsHost.ScaleChild(Vector newScale)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.ShouldSerializeProperty(System.Windows.DependencyProperty)">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.ShouldSerializePropertyDependencyProperty">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.TabInto(System.Windows.Input.TraversalRequest)">
+            <summary>Sets the stub of WindowsFormsHost.TabInto(TraversalRequest request)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.TabIntoCore(System.Windows.Input.TraversalRequest)">
+            <summary>Sets the stub of HwndHost.TabIntoCore(TraversalRequest request)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.TabIntoCoreTraversalRequest">
+            <summary>Sets the stub of HwndHost.TabIntoCore(TraversalRequest request)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.TabIntoTraversalRequest">
+            <summary>Sets the stub of WindowsFormsHost.TabInto(TraversalRequest request)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.TranslateAcceleratorCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)">
+            <summary>Sets the stub of HwndHost.TranslateAcceleratorCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.TranslateAcceleratorCoreMSGRefModifierKeys">
+            <summary>Sets the stub of HwndHost.TranslateAcceleratorCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.TranslateCharCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)">
+            <summary>Sets the stub of HwndHost.TranslateCharCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.TranslateCharCoreMSGRefModifierKeys">
+            <summary>Sets the stub of HwndHost.TranslateCharCore(MSG&amp; msg, ModifierKeys modifiers)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.VisualChildrenCountGet">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="M:WpfVlc.Fakes.StubVlcControl.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+            <summary>Sets the stub of WindowsFormsHost.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)</summary>
+        </member>
+        <member name="F:WpfVlc.Fakes.StubVlcControl.WndProcIntPtrInt32IntPtrIntPtrBooleanRef">
+            <summary>Sets the stub of WindowsFormsHost.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.HasEffectiveKeyboardFocus">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.LogicalChildren">
+            <summary>Sets the stub of FrameworkElement.get_LogicalChildren()</summary>
+        </member>
+        <member name="P:WpfVlc.Fakes.StubVlcControl.VisualChildrenCount">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+    </members>
+</doc>

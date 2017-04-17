@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,6 +17,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using UhaSub.Model;
+using UhaSub.ViewModel;
 using WpfVlc;
 
 namespace UhaSub.View
@@ -22,23 +26,45 @@ namespace UhaSub.View
     /// <summary>
     /// Interaction logic for Spec.xaml
     /// </summary>
-    public partial class Spec : UserControl
+    public partial class Spec : UserControl, INotifyPropertyChanged
     {
+        #region interface INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises the PropertyChanged event if needed.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed. 
+        /// this function also using CallerMemberName, so you could not use param</param>
+        protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
+
         public Spec()
         {
             InitializeComponent();
 
-            // load ffmpeg path
+            this.DataContext = this;
+
+            // load a default ffmpeg path
             var currentAssembly = System.Reflection.Assembly.GetEntryAssembly();
             var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
             ffmpeg_path = currentDirectory;
 
 
-            this.Loaded += Spec_Loaded;
+            //this.Loaded += Spec_Loaded;
 
             spec_anime = (this.Resources["spec_anime"] as Storyboard);
             spec_anime_control = spec_anime.Children.First() as DoubleAnimation;
-            
+
+            RaisePropertyChanged("IsBusy");
+
         }
 
         void Spec_Loaded(object sender, RoutedEventArgs e)
@@ -61,35 +87,12 @@ namespace UhaSub.View
         double      scroll_per_ms=0;
         double      offset = 0, offset_head = 115,offset_base=0;
 
-        void timer_Tick(object sender, EventArgs e)
-        {
-
-            if (!prepared || working)
-                return;
-            
-            if (scroll_per_ms == 0||
-                double.IsInfinity(scroll_per_ms)) return;
-
-            Sync(video.Time);
-
-            // compute the delta time
-            double delta = (DateTime.Now.Millisecond - video.Time.time);
-            if (delta > 300) return;
-
-            // calc offset
-            offset = delta * scroll_per_ms * video.Rate;
-            if (offset_base + offset > width)
-                Canvas.SetLeft(this.tspec, width);
-            else
-                Canvas.SetLeft(this.tspec, offset_base + offset);
-        }
-
         long max_time = 0;
         internal void calc_scroll_per_ms()
         {
             this.scroll_per_ms = (img.ActualWidth - 2 * offset_head) * this.scale.ScaleX / max_time;
         }
-        public void Init(long max_time)
+        public void ReSet(long max_time)
         {
             this.max_time = max_time;
 
@@ -100,14 +103,18 @@ namespace UhaSub.View
 
         }
 
+
         /*
          * sync with vlc
          */
         int p_now = -1; // store current page index
         long time_of_page = 0; // time of one page
         bool need_update = false; // is need update image and timeline
-        public void Sync(long time)
+        public void Update(long time)
         {
+            if (working)
+                return;
+
 
             if (scroll_per_ms <= 0||
                 time_of_page==0)
@@ -120,6 +127,8 @@ namespace UhaSub.View
 
             // compute offset
             offset_base = w % width;
+                
+            Canvas.SetLeft(this.tspec, offset_base);
 
             // compute page
             int p = (int)(w / width);
@@ -132,7 +141,7 @@ namespace UhaSub.View
                 // update image
                 trans.X = home - p * width;
 
-                UpdateTimeLine();
+                //UpdateTimeLine();
 
                
             }
@@ -264,6 +273,7 @@ namespace UhaSub.View
         }
         #endregion
         #endregion
+
         #region image control
 
 
@@ -301,6 +311,8 @@ namespace UhaSub.View
             this.width = e.NewSize.Width;
             this.tspec.Height = e.NewSize.Height;
 
+            spec_anime_control.To = this.width;
+
             time_of_page = (long)(width / scroll_per_ms);
             need_update = true;
         }
@@ -319,68 +331,17 @@ namespace UhaSub.View
             need_update = true;
         }
 
-        #region dependency property
-
-        #region Video Source Dependency Property
-        /*
-         * create a bindable position
-         * refer:https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
-         */
-        public string VideoSource
-        {
-            get { return (string)this.GetValue(VideoSourceProperty); }
-            set { this.SetValue(VideoSourceProperty, value); }
-        }
-        public static readonly DependencyProperty VideoSourceProperty = DependencyProperty.Register(
-          "VideoSource", typeof(string), typeof(Spec), new PropertyMetadata(OnVideoSourceChanged));
-
-        private static void OnVideoSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            (d as Spec).OnVideoSourceChanged(e);
-        }
-
-        private void OnVideoSourceChanged(DependencyPropertyChangedEventArgs e)
-        {
-            string path = (string)e.NewValue;
-            this.Open(path);
-        }
-
-        #endregion
-
-        #region play status
-        public bool IsPlay
-        {
-            get { return (bool)this.GetValue(IsPlayProperty); }
-            set { this.SetValue(IsPlayProperty, value); }
-        }
-        public static readonly DependencyProperty IsPlayProperty = DependencyProperty.Register(
-          "IsPlay", typeof(bool), typeof(Spec), new PropertyMetadata(OnIsPlayChanged));
-
-        private static void OnIsPlayChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            (d as Spec).OnIsPlayChanged(e);
-        }
-
-        private void OnIsPlayChanged(DependencyPropertyChangedEventArgs e)
-        {
-            if ((bool)e.NewValue )
-                this.Play();
-            else
-                this.Pause();
-        }
-        #endregion
-
-        #endregion
         #region load spectrum by ffmpeg
         /*
          * load spectrum for video
          */
         static int sx = 96000;
-        public bool prepared = false;
+        
         public bool working = false;
+        public bool IsBusy { get { return working; } }
         string ffmpeg_arg = "-i \"{0}\" -filter_complex showspectrumpic=s={1}x100:color=fruit:scale=sqrt \"{2}\"";
         string ffmpeg_path;
-
+        
         public async void Open(string path)
         {
             working = true;
@@ -390,7 +351,8 @@ namespace UhaSub.View
             string img = null;
 
 
-            load.Visibility = Visibility.Visible;
+            working = true;
+            RaisePropertyChanged("IsBusy");
             /*
              * use task for long time run
              * refer:http://stackoverflow.com/questions/27089263/running-and-interacting-with-a-async-task-from-a-wpf-gui
@@ -407,14 +369,13 @@ namespace UhaSub.View
                 MessageBox.Show(UhaSub.Properties.Resources.msg_ffmpeg_no_found);
             }
 
-            load.Visibility = Visibility.Hidden;
-
+            working = false;
+            RaisePropertyChanged("IsBusy");
 
             p_now = -1;
             // update time-line
             UpdateTimeLine();
 
-            prepared = true;
             Home();
             working = false;
 
@@ -450,66 +411,12 @@ namespace UhaSub.View
                 path, sx.ToString(), s);
 
             // start ffmpet
-            StartFFmpeg(arg);
-
-
+            FFmpeg.Run(ffmpeg_path,arg);
 
             return s;
         }
 
-        /*
-         * start ffmpeg
-         * refer:https://jasonjano.wordpress.com/2010/02/09/a-simple-c-wrapper-for-ffmpeg/
-         */
-        void StartFFmpeg(string param)
-        {
-            //create a process info object so we can run our app
-            ProcessStartInfo oInfo = new ProcessStartInfo(
-                ffmpeg_path+"\\ffmpeg.exe", 
-                param);
-
-            oInfo.UseShellExecute = false;
-            oInfo.CreateNoWindow = true;
-
-            //so we are going to redirect the output and error so that we can parse the return
-            oInfo.RedirectStandardOutput = true;
-            oInfo.RedirectStandardError = true;
-
-            //Create the output and streamreader to get the output
-            string output = null; StreamReader srOutput = null;
-
-            //try the process
-            try
-            {
-                //run the process
-                Process proc = System.Diagnostics.Process.Start(oInfo);
-
-                proc.WaitForExit();
-
-                //get the output
-                srOutput = proc.StandardError;
-
-                //now put it in a string
-                output = srOutput.ReadToEnd();
-
-                proc.Close();
-            }
-            catch (Exception)
-            {
-                output = string.Empty;
-                throw new FileNotFoundException();
-            }
-            finally
-            {
-                //now, if we succeded, close out the streamreader
-                if (srOutput != null)
-                {
-                    srOutput.Close();
-                    srOutput.Dispose();
-                }
-            }
-        }
-
+        
         #endregion
 
         

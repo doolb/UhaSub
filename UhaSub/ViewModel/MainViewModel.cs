@@ -32,6 +32,8 @@ namespace UhaSub.ViewModel
 
         public WaveForm.WaveForm WaveVM { get; set; }
 
+        public Spec SpecVM { get; set; }
+
         #region only one intance
         private static MainViewModel instance;
         public static MainViewModel Instance
@@ -56,6 +58,12 @@ namespace UhaSub.ViewModel
             NewWindowVM = new NewWindowViewModel();
 
             WaveVM = new WaveForm.WaveForm();
+
+
+            SpecVM = new Spec();
+
+            VideoVM.TimeCallback += SpecVM.Update;
+            VideoVM.TotalTimeChanged += SpecVM.ReSet;
         }
 
         public void Clear()
@@ -122,6 +130,8 @@ namespace UhaSub.ViewModel
                     // set video file name
                     this.VideoVM.Source = NewWindowVM.VideoFileName;
 
+                    // set spec
+                    SpecVM.Open(NewWindowVM.VideoFileName);
 
                     // load sub
                     if (NewWindowVM.SubFileName != null) ;

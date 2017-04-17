@@ -84,6 +84,9 @@
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -101,16 +104,20 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="UIAutomationProvider" />
-    <Reference Include="Vlc.DotNet.Core">
+    <Reference Include="Vlc.DotNet.Core, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Core.Interops">
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Core.Interops.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Forms">
+    <Reference Include="Vlc.DotNet.Forms, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Wpf">
+    <Reference Include="Vlc.DotNet.Wpf, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="WaveForm">
@@ -127,6 +134,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ass.cs" />
+    <Compile Include="Model\ffmpeg.cs" />
     <Compile Include="View\AssTool.xaml.cs">
       <DependentUpon>AssTool.xaml</DependentUpon>
     </Compile>
@@ -267,6 +275,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Fakes Include="Fakes\Vlc.DotNet.Wpf.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Core.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Core.Interops.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Forms.fakes" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

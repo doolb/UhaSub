@@ -1,0 +1,1955 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcEventManagerInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.#ctor(Vlc.DotNet.Core.Interops.VlcEventManagerInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcEventManagerInstance.VlcEventManagerInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.DisposeBoolean">
+            <summary>Sets the shim of VlcEventManagerInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.ImplicitOpVlcEventManagerInstanceIntPtr">
+            <summary>Sets the shim of VlcEventManagerInstance.op_Implicit(VlcEventManagerInstance instance)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcEventManagerInstance.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcEventManagerInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.#ctor(Vlc.DotNet.Core.Interops.VlcInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcInstance.VlcInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.DisposeBoolean">
+            <summary>Sets the shim of VlcInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.ImplicitOpVlcInstanceIntPtr">
+            <summary>Sets the shim of VlcInstance.op_Implicit(VlcInstance instance)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInstance.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcInteropsManager</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.#ctor(Vlc.DotNet.Core.Interops.VlcInteropsManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.GetInteropDelegateOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets the shim of VlcInteropsManager.GetInteropDelegate()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.ConstructorDirectoryInfo">
+            <summary>Sets the shim of VlcInteropsManager.VlcInteropsManager(DirectoryInfo dynamicLinkLibrariesPath)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.Dispose">
+            <summary>Sets the shim of VlcInteropsManager.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.DisposeBoolean">
+            <summary>Sets the shim of VlcInteropsManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.AllInstances.GetInteropDelegateOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Vlc.DotNet.Core.Interops.VlcInteropsManager,``0})">
+            <summary>Sets the shim of VlcInteropsManager.GetInteropDelegate()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.AllInstances.Dispose">
+            <summary>Sets the shim of VlcInteropsManager.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcInteropsManager.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcInteropsManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcManager</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.#ctor(Vlc.DotNet.Core.Interops.VlcManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AddOptionFlagToMediaVlcMediaInstanceStringUInt32">
+            <summary>Sets the shim of VlcManager.AddOptionFlagToMedia(VlcMediaInstance mediaInstance, String option, UInt32 flag)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AddOptionToMediaVlcMediaInstanceString">
+            <summary>Sets the shim of VlcManager.AddOptionToMedia(VlcMediaInstance mediaInstance, String option)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AddOptionToMediaVlcMediaInstanceStringArray">
+            <summary>Sets the shim of VlcManager.AddOptionToMedia(VlcMediaInstance mediaInstance, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AttachEventVlcEventManagerInstanceEventTypesEventCallback">
+            <summary>Sets the shim of VlcManager.AttachEvent(VlcEventManagerInstance eventManagerInstance, EventTypes eventType, EventCallback callback)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ClearLastErrorMessage">
+            <summary>Sets the shim of VlcManager.ClearLastErrorMessage()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CloneMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.CloneMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ConstructorDirectoryInfo">
+            <summary>Sets the shim of VlcManager.VlcManager(DirectoryInfo dynamicLinkLibrariesPath)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CouldPlayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.CouldPlay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CreateMediaPlayer">
+            <summary>Sets the shim of VlcManager.CreateMediaPlayer()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CreateMediaPlayerFromMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.CreateMediaPlayerFromMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CreateNewInstanceStringArray">
+            <summary>Sets the shim of VlcManager.CreateNewInstance(String[] args)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CreateNewMediaFromLocationString">
+            <summary>Sets the shim of VlcManager.CreateNewMediaFromLocation(String mrl)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.CreateNewMediaFromPathString">
+            <summary>Sets the shim of VlcManager.CreateNewMediaFromPath(String mrl)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.DetachEventVlcEventManagerInstanceEventTypesEventCallback">
+            <summary>Sets the shim of VlcManager.DetachEvent(VlcEventManagerInstance eventManagerInstance, EventTypes eventType, EventCallback callback)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.DisposeBoolean">
+            <summary>Sets the shim of VlcManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.FreeIntPtr">
+            <summary>Sets the shim of VlcManager.Free(IntPtr instance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioChannelVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioChannel(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioFilterList">
+            <summary>Sets the shim of VlcManager.GetAudioFilterList()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioOutputDeviceCountString">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceCount(String outputName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioOutputDeviceLongNameStringInt32">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceLongName(String audioOutputDescriptionName, Int32 deviceIndex)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioOutputDeviceNameStringInt32">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceName(String audioOutputDescriptionName, Int32 deviceIndex)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioOutputsDescriptions">
+            <summary>Sets the shim of VlcManager.GetAudioOutputsDescriptions()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioTrackVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioTracksCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTracksCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetAudioTracksDescriptionsVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTracksDescriptions(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetChangeset">
+            <summary>Sets the shim of VlcManager.GetChangeset()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetCompiler">
+            <summary>Sets the shim of VlcManager.GetCompiler()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetEventTypeNameEventTypes">
+            <summary>Sets the shim of VlcManager.GetEventTypeName(EventTypes eventType)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetFramesPerSecondVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetFramesPerSecond(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetInstanceDirectoryInfo">
+            <summary>Sets the shim of VlcManager.GetInstance(DirectoryInfo dynamicLinkLibrariesPath)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetLastErrorMessage">
+            <summary>Sets the shim of VlcManager.GetLastErrorMessage()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetLengthIntPtr">
+            <summary>Sets the shim of VlcManager.GetLength(IntPtr mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaChapterCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaChapterCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaDurationVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaDuration(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaEventManagerVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaEventManager(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaFromMediaPlayerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaFromMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaMetaVlcMediaInstanceMediaMetadatas">
+            <summary>Sets the shim of VlcManager.GetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaMrlVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaMrl(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaPlayerEventManagerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerEventManager(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaPlayerStateVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerState(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaPlayerVideoHostHandleVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerVideoHostHandle(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaPositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaStateVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaState(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaStatsVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaStats(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetMediaTracksInformationsVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaTracksInformations(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetRateVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetRate(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetTimeIntPtr">
+            <summary>Sets the shim of VlcManager.GetTime(IntPtr mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustBrightnessVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustBrightness(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustContrastVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustContrast(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustGammaVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustGamma(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustHueVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustHue(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAdjustSaturationVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustSaturation(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoAspectRatioVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAspectRatio(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoCropGeometryVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoCropGeometry(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoFilterList">
+            <summary>Sets the shim of VlcManager.GetVideoFilterList()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoOpacityVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoOpacity(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoPositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoPosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoRepeatVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoRepeat(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoXVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoX(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoLogoYVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoY(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeColorVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeColor(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeOpacityVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeOpacity(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueePositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueePosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeRefreshVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeRefresh(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeSizeVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeSize(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeTextVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeText(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeTimeoutVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeTimeout(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeXVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeX(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoMarqueeYVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeY(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoSpuCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoSpuDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoSpuDescriptionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuDescription(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoSpuVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoTeletextVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTeletext(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoTrackVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoTracksCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTracksCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVideoTracksDescriptionsVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTracksDescriptions(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.GetVolumeVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVolume(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.IsMuteVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsMute(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.IsParsedMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.IsParsedMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.IsPausableVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsPausable(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.IsPlayingVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsPlaying(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.IsSeekableVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsSeekable(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.NavigateVlcMediaPlayerInstanceNavigateModes">
+            <summary>Sets the shim of VlcManager.Navigate(VlcMediaPlayerInstance mediaPlayerInstance, NavigateModes navigateMode)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.NextFrameVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.NextFrame(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ParseMediaAsyncVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ParseMediaAsync(VlcMediaInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ParseMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ParseMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.PauseVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Pause(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.PlayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Play(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseAudioOutputDescriptionAudioOutputDescriptionStructure">
+            <summary>Sets the shim of VlcManager.ReleaseAudioOutputDescription(AudioOutputDescriptionStructure description)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseInstanceVlcInstance">
+            <summary>Sets the shim of VlcManager.ReleaseInstance(VlcInstance instance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseMediaPlayerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.ReleaseMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ReleaseMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseModuleDescriptionInstanceIntPtr">
+            <summary>Sets the shim of VlcManager.ReleaseModuleDescriptionInstance(IntPtr moduleDescriptionInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ReleaseTrackDescriptionIntPtr">
+            <summary>Sets the shim of VlcManager.ReleaseTrackDescription(IntPtr trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SaveMediaMetadatasVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.SaveMediaMetadatas(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioChannelVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetAudioChannel(VlcMediaPlayerInstance mediaPlayerInstance, Int32 channel)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioDelayVlcMediaPlayerInstanceInt64">
+            <summary>Sets the shim of VlcManager.SetAudioDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int64 delay)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioOutputAudioOutputDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetAudioOutput(AudioOutputDescriptionStructure output)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioOutputDeviceVlcMediaPlayerInstanceStringString">
+            <summary>Sets the shim of VlcManager.SetAudioOutputDevice(VlcMediaPlayerInstance mediaPlayerInstance, String audioOutputDescriptionName, String deviceName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioOutputString">
+            <summary>Sets the shim of VlcManager.SetAudioOutput(String outputName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioTrackVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetAudioTrackVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMediaChapterVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance, Int32 chapter)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMediaMetaVlcMediaInstanceMediaMetadatasString">
+            <summary>Sets the shim of VlcManager.SetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMediaPlayerVideoHostHandleVlcMediaPlayerInstanceIntPtr">
+            <summary>Sets the shim of VlcManager.SetMediaPlayerVideoHostHandle(VlcMediaPlayerInstance mediaPlayerInstance, IntPtr videoHostHandle)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMediaPositionVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetMediaPosition(VlcMediaPlayerInstance mediaPlayerInstance, Single position)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMediaToMediaPlayerVlcMediaPlayerInstanceVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.SetMediaToMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance, VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetMuteVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetMute(VlcMediaPlayerInstance mediaPlayerInstance, Boolean status)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetNextMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.SetNextMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetPreviousMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.SetPreviousMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetRateVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetRate(VlcMediaPlayerInstance mediaPlayerInstance, Single rate)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetTimeIntPtrInt64">
+            <summary>Sets the shim of VlcManager.SetTime(IntPtr mediaInstance, Int64 timeInMs)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustBrightnessVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustBrightness(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustContrastVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustContrast(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustGammaVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustGamma(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustHueVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustHue(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAdjustSaturationVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustSaturation(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoAspectRatioVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoAspectRatio(VlcMediaPlayerInstance mediaPlayerInstance, String cropGeometry)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoCropGeometryVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoCropGeometry(VlcMediaPlayerInstance mediaPlayerInstance, String cropGeometry)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoDeinterlaceVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoDeinterlace(VlcMediaPlayerInstance mediaPlayerInstance, String deinterlaceMode)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoDelayVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoLogoEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoFileVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoLogoFile(VlcMediaPlayerInstance mediaPlayerInstance, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoOpacityVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoOpacity(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoPositionVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoPosition(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoRepeatVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoRepeat(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoXVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoX(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoLogoYVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoY(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeColorVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeColor(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeOpacityVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeOpacity(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueePositionVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueePosition(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeRefreshVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeRefresh(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeSizeVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeSize(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeTextVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeText(VlcMediaPlayerInstance mediaPlayerInstance, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeTimeoutVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeTimeout(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeXVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeX(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoMarqueeYVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeY(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoSpuDelayVlcMediaPlayerInstanceInt64">
+            <summary>Sets the shim of VlcManager.SetVideoSpuDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int64 delay)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoSpuVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoSpuVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoTeletextVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoTeletext(VlcMediaPlayerInstance mediaPlayerInstance, Int32 teletextPage)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoTrackVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVideoTrackVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.SetVolumeVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVolume(VlcMediaPlayerInstance mediaPlayerInstance, Int32 volume)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.StaticConstructor">
+            <summary>Sets the shim of VlcManager.VlcManager()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.StopVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Stop(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.TakeSnapshotVlcMediaPlayerInstanceFileInfoUInt32UInt32">
+            <summary>Sets the shim of VlcManager.TakeSnapshot(VlcMediaPlayerInstance mediaPlayerInstance, FileInfo file, UInt32 width, UInt32 height)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.ToggleMuteVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.ToggleMute(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.VlcVersionGet">
+            <summary>Sets the shim of VlcManager.get_VlcVersion()</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.AddOptionFlagToMediaVlcMediaInstanceStringUInt32">
+            <summary>Sets the shim of VlcManager.AddOptionFlagToMedia(VlcMediaInstance mediaInstance, String option, UInt32 flag)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.AddOptionToMediaVlcMediaInstanceString">
+            <summary>Sets the shim of VlcManager.AddOptionToMedia(VlcMediaInstance mediaInstance, String option)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.AddOptionToMediaVlcMediaInstanceStringArray">
+            <summary>Sets the shim of VlcManager.AddOptionToMedia(VlcMediaInstance mediaInstance, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.AttachEventVlcEventManagerInstanceEventTypesEventCallback">
+            <summary>Sets the shim of VlcManager.AttachEvent(VlcEventManagerInstance eventManagerInstance, EventTypes eventType, EventCallback callback)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ClearLastErrorMessage">
+            <summary>Sets the shim of VlcManager.ClearLastErrorMessage()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CloneMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.CloneMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CouldPlayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.CouldPlay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CreateMediaPlayer">
+            <summary>Sets the shim of VlcManager.CreateMediaPlayer()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CreateMediaPlayerFromMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.CreateMediaPlayerFromMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CreateNewInstanceStringArray">
+            <summary>Sets the shim of VlcManager.CreateNewInstance(String[] args)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CreateNewMediaFromLocationString">
+            <summary>Sets the shim of VlcManager.CreateNewMediaFromLocation(String mrl)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.CreateNewMediaFromPathString">
+            <summary>Sets the shim of VlcManager.CreateNewMediaFromPath(String mrl)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.DetachEventVlcEventManagerInstanceEventTypesEventCallback">
+            <summary>Sets the shim of VlcManager.DetachEvent(VlcEventManagerInstance eventManagerInstance, EventTypes eventType, EventCallback callback)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.FreeIntPtr">
+            <summary>Sets the shim of VlcManager.Free(IntPtr instance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioChannelVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioChannel(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioFilterList">
+            <summary>Sets the shim of VlcManager.GetAudioFilterList()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioOutputDeviceCountString">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceCount(String outputName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioOutputDeviceLongNameStringInt32">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceLongName(String audioOutputDescriptionName, Int32 deviceIndex)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioOutputDeviceNameStringInt32">
+            <summary>Sets the shim of VlcManager.GetAudioOutputDeviceName(String audioOutputDescriptionName, Int32 deviceIndex)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioOutputsDescriptions">
+            <summary>Sets the shim of VlcManager.GetAudioOutputsDescriptions()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioTrackVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioTracksCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTracksCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetAudioTracksDescriptionsVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetAudioTracksDescriptions(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetChangeset">
+            <summary>Sets the shim of VlcManager.GetChangeset()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetCompiler">
+            <summary>Sets the shim of VlcManager.GetCompiler()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetEventTypeNameEventTypes">
+            <summary>Sets the shim of VlcManager.GetEventTypeName(EventTypes eventType)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetFramesPerSecondVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetFramesPerSecond(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetLastErrorMessage">
+            <summary>Sets the shim of VlcManager.GetLastErrorMessage()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetLengthIntPtr">
+            <summary>Sets the shim of VlcManager.GetLength(IntPtr mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaChapterCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaChapterCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaDurationVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaDuration(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaEventManagerVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaEventManager(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaFromMediaPlayerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaFromMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaMetaVlcMediaInstanceMediaMetadatas">
+            <summary>Sets the shim of VlcManager.GetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaMrlVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaMrl(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaPlayerEventManagerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerEventManager(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaPlayerStateVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerState(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaPlayerVideoHostHandleVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPlayerVideoHostHandle(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaPositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetMediaPosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaStateVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaState(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaStatsVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaStats(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetMediaTracksInformationsVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.GetMediaTracksInformations(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetRateVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetRate(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetTimeIntPtr">
+            <summary>Sets the shim of VlcManager.GetTime(IntPtr mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustBrightnessVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustBrightness(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustContrastVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustContrast(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustGammaVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustGamma(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustHueVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustHue(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAdjustSaturationVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAdjustSaturation(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoAspectRatioVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoAspectRatio(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoCropGeometryVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoCropGeometry(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoFilterList">
+            <summary>Sets the shim of VlcManager.GetVideoFilterList()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoOpacityVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoOpacity(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoPositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoPosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoRepeatVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoRepeat(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoXVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoX(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoLogoYVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoLogoY(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeColorVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeColor(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeEnabledVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeEnabled(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeOpacityVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeOpacity(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueePositionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueePosition(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeRefreshVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeRefresh(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeSizeVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeSize(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeTextVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeText(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeTimeoutVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeTimeout(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeXVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeX(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoMarqueeYVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoMarqueeY(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoSpuCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoSpuDelayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuDelay(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoSpuDescriptionVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpuDescription(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoSpuVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoTeletextVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTeletext(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoTrackVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoTracksCountVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTracksCount(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVideoTracksDescriptionsVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVideoTracksDescriptions(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.GetVolumeVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.GetVolume(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.IsMuteVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsMute(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.IsParsedMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.IsParsedMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.IsPausableVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsPausable(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.IsPlayingVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsPlaying(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.IsSeekableVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.IsSeekable(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.NavigateVlcMediaPlayerInstanceNavigateModes">
+            <summary>Sets the shim of VlcManager.Navigate(VlcMediaPlayerInstance mediaPlayerInstance, NavigateModes navigateMode)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.NextFrameVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.NextFrame(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ParseMediaAsyncVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ParseMediaAsync(VlcMediaInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ParseMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ParseMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.PauseVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Pause(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.PlayVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Play(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseAudioOutputDescriptionAudioOutputDescriptionStructure">
+            <summary>Sets the shim of VlcManager.ReleaseAudioOutputDescription(AudioOutputDescriptionStructure description)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseInstanceVlcInstance">
+            <summary>Sets the shim of VlcManager.ReleaseInstance(VlcInstance instance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseMediaPlayerVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.ReleaseMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseMediaVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.ReleaseMedia(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseModuleDescriptionInstanceIntPtr">
+            <summary>Sets the shim of VlcManager.ReleaseModuleDescriptionInstance(IntPtr moduleDescriptionInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ReleaseTrackDescriptionIntPtr">
+            <summary>Sets the shim of VlcManager.ReleaseTrackDescription(IntPtr trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SaveMediaMetadatasVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.SaveMediaMetadatas(VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioChannelVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetAudioChannel(VlcMediaPlayerInstance mediaPlayerInstance, Int32 channel)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioDelayVlcMediaPlayerInstanceInt64">
+            <summary>Sets the shim of VlcManager.SetAudioDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int64 delay)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioOutputAudioOutputDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetAudioOutput(AudioOutputDescriptionStructure output)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioOutputDeviceVlcMediaPlayerInstanceStringString">
+            <summary>Sets the shim of VlcManager.SetAudioOutputDevice(VlcMediaPlayerInstance mediaPlayerInstance, String audioOutputDescriptionName, String deviceName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioOutputString">
+            <summary>Sets the shim of VlcManager.SetAudioOutput(String outputName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioTrackVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetAudioTrackVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMediaChapterVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance, Int32 chapter)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMediaMetaVlcMediaInstanceMediaMetadatasString">
+            <summary>Sets the shim of VlcManager.SetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMediaPlayerVideoHostHandleVlcMediaPlayerInstanceIntPtr">
+            <summary>Sets the shim of VlcManager.SetMediaPlayerVideoHostHandle(VlcMediaPlayerInstance mediaPlayerInstance, IntPtr videoHostHandle)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMediaPositionVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetMediaPosition(VlcMediaPlayerInstance mediaPlayerInstance, Single position)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMediaToMediaPlayerVlcMediaPlayerInstanceVlcMediaInstance">
+            <summary>Sets the shim of VlcManager.SetMediaToMediaPlayer(VlcMediaPlayerInstance mediaPlayerInstance, VlcMediaInstance mediaInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetMuteVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetMute(VlcMediaPlayerInstance mediaPlayerInstance, Boolean status)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetNextMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.SetNextMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetPreviousMediaChapterVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.SetPreviousMediaChapter(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetRateVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetRate(VlcMediaPlayerInstance mediaPlayerInstance, Single rate)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetTimeIntPtrInt64">
+            <summary>Sets the shim of VlcManager.SetTime(IntPtr mediaInstance, Int64 timeInMs)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustBrightnessVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustBrightness(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustContrastVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustContrast(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustGammaVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustGamma(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustHueVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustHue(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAdjustSaturationVlcMediaPlayerInstanceSingle">
+            <summary>Sets the shim of VlcManager.SetVideoAdjustSaturation(VlcMediaPlayerInstance mediaPlayerInstance, Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoAspectRatioVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoAspectRatio(VlcMediaPlayerInstance mediaPlayerInstance, String cropGeometry)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoCropGeometryVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoCropGeometry(VlcMediaPlayerInstance mediaPlayerInstance, String cropGeometry)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoDeinterlaceVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoDeinterlace(VlcMediaPlayerInstance mediaPlayerInstance, String deinterlaceMode)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoDelayVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoLogoEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoFileVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoLogoFile(VlcMediaPlayerInstance mediaPlayerInstance, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoOpacityVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoOpacity(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoPositionVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoPosition(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoRepeatVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoRepeat(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoXVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoX(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoLogoYVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoLogoY(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeColorVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeColor(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeEnabledVlcMediaPlayerInstanceBoolean">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeEnabled(VlcMediaPlayerInstance mediaPlayerInstance, Boolean value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeOpacityVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeOpacity(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueePositionVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueePosition(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeRefreshVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeRefresh(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeSizeVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeSize(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeTextVlcMediaPlayerInstanceString">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeText(VlcMediaPlayerInstance mediaPlayerInstance, String value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeTimeoutVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeTimeout(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeXVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeX(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoMarqueeYVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoMarqueeY(VlcMediaPlayerInstance mediaPlayerInstance, Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoSpuDelayVlcMediaPlayerInstanceInt64">
+            <summary>Sets the shim of VlcManager.SetVideoSpuDelay(VlcMediaPlayerInstance mediaPlayerInstance, Int64 delay)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoSpuVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoSpuVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoTeletextVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoTeletext(VlcMediaPlayerInstance mediaPlayerInstance, Int32 teletextPage)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoTrackVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance, Int32 id)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVideoTrackVlcMediaPlayerInstanceTrackDescriptionStructure">
+            <summary>Sets the shim of VlcManager.SetVideoTrack(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.SetVolumeVlcMediaPlayerInstanceInt32">
+            <summary>Sets the shim of VlcManager.SetVolume(VlcMediaPlayerInstance mediaPlayerInstance, Int32 volume)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.StopVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.Stop(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.TakeSnapshotVlcMediaPlayerInstanceFileInfoUInt32UInt32">
+            <summary>Sets the shim of VlcManager.TakeSnapshot(VlcMediaPlayerInstance mediaPlayerInstance, FileInfo file, UInt32 width, UInt32 height)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.ToggleMuteVlcMediaPlayerInstance">
+            <summary>Sets the shim of VlcManager.ToggleMute(VlcMediaPlayerInstance mediaPlayerInstance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcManager.AllInstances.VlcVersionGet">
+            <summary>Sets the shim of VlcManager.get_VlcVersion()</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcMediaEventManagerInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.#ctor(Vlc.DotNet.Core.Interops.VlcMediaEventManagerInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcMediaEventManagerInstance.VlcMediaEventManagerInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaEventManagerInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcMediaInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.#ctor(Vlc.DotNet.Core.Interops.VlcMediaInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcMediaInstance.VlcMediaInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.DisposeBoolean">
+            <summary>Sets the shim of VlcMediaInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.ImplicitOpVlcMediaInstanceIntPtr">
+            <summary>Sets the shim of VlcMediaInstance.op_Implicit(VlcMediaInstance instance)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.NewVlcManagerIntPtr">
+            <summary>Sets the shim of VlcMediaInstance.New(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.StaticConstructor">
+            <summary>Sets the shim of VlcMediaInstance.VlcMediaInstance()</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstance.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcMediaInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcMediaInstanceExtensions</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.AddOptionToMediaVlcMediaInstanceVlcManagerString">
+            <summary>Sets the shim of VlcMediaInstanceExtensions.AddOptionToMedia(VlcMediaInstance mediaInstance, VlcManager manager, String option)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.AddOptionToMediaVlcMediaInstanceVlcManagerStringArray">
+            <summary>Sets the shim of VlcMediaInstanceExtensions.AddOptionToMedia(VlcMediaInstance mediaInstance, VlcManager manager, String[] option)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaInstanceExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcMediaPlayerEventManagerInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.#ctor(Vlc.DotNet.Core.Interops.VlcMediaPlayerEventManagerInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcMediaPlayerEventManagerInstance.VlcMediaPlayerEventManagerInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerEventManagerInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.VlcMediaPlayerInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.#ctor(Vlc.DotNet.Core.Interops.VlcMediaPlayerInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.ConstructorVlcManagerIntPtr">
+            <summary>Sets the shim of VlcMediaPlayerInstance.VlcMediaPlayerInstance(VlcManager manager, IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.DisposeBoolean">
+            <summary>Sets the shim of VlcMediaPlayerInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.ImplicitOpVlcMediaPlayerInstanceIntPtr">
+            <summary>Sets the shim of VlcMediaPlayerInstance.op_Implicit(VlcMediaPlayerInstance instance)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.ShimVlcMediaPlayerInstance.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcMediaPlayerInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager">
+            <summary>Stub type of Vlc.DotNet.Core.Interops.VlcInteropsManager</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.#ctor(System.IO.DirectoryInfo)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.Dispose(System.Boolean)">
+            <summary>Sets the stub of VlcInteropsManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.DisposeBoolean">
+            <summary>Sets the stub of VlcInteropsManager.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.InitializeStub">
+            <summary>Initializes a new instance of type StubVlcInteropsManager</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Fakes.StubVlcInteropsManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.AudioOutputDescriptionStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioOutputDescriptionStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.AudioStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimAudioStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.InteropObjectInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.#ctor(Vlc.DotNet.Core.Interops.Signatures.InteropObjectInstance)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.ConstructorIntPtr">
+            <summary>Sets the shim of InteropObjectInstance.InteropObjectInstance(IntPtr pointer)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.Dispose">
+            <summary>Sets the shim of InteropObjectInstance.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.DisposeBoolean">
+            <summary>Sets the shim of InteropObjectInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.EqualityOpInteropObjectInstanceInteropObjectInstance">
+            <summary>Sets the shim of InteropObjectInstance.op_Equality(InteropObjectInstance a, InteropObjectInstance b)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.EqualsObject">
+            <summary>Sets the shim of InteropObjectInstance.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.GetHashCode">
+            <summary>Sets the shim of InteropObjectInstance.GetHashCode()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.InequalityOpInteropObjectInstanceInteropObjectInstance">
+            <summary>Sets the shim of InteropObjectInstance.op_Inequality(InteropObjectInstance a, InteropObjectInstance b)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.PointerGet">
+            <summary>Sets the shim of InteropObjectInstance.get_Pointer()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.PointerSetIntPtr">
+            <summary>Sets the shim of InteropObjectInstance.set_Pointer(IntPtr value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.Dispose">
+            <summary>Sets the shim of InteropObjectInstance.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of InteropObjectInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.EqualsObject">
+            <summary>Sets the shim of InteropObjectInstance.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.GetHashCode01">
+            <summary>Sets the shim of InteropObjectInstance.GetHashCode()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.PointerGet">
+            <summary>Sets the shim of InteropObjectInstance.get_Pointer()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimInteropObjectInstance.AllInstances.PointerSetIntPtr">
+            <summary>Sets the shim of InteropObjectInstance.set_Pointer(IntPtr value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaDurationChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaDurationChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaFreed</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaFreed.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaListItemAdded</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemAdded.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaListItemDeleted</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListItemDeleted.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaListPlayerNextItemSet</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListPlayerNextItemSet.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaListWillAddItem</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillAddItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaListWillDeleteItem</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaListWillDeleteItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaMetaChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaMetaChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaParsedChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaParsedChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerBuffering</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerBuffering.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerLengthChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerLengthChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerMediaChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerMediaChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerPausableChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPausableChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerPositionChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerPositionChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerScrambledChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerScrambledChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerSeekableChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSeekableChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerSnapshotTaken</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerSnapshotTaken.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerTimeChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTimeChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerTitleChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerTitleChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaPlayerVideoOutChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaPlayerVideoOutChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaStateChanged</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStateChanged.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaStatsStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaStatsStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaSubItemAdded</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemAdded.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaSubItemTreeAdded</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaSubItemTreeAdded.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.MediaTrackInfosStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimMediaTrackInfosStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.ModuleDescriptionStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimModuleDescriptionStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.Rectangle</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimRectangle.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.TrackDescriptionStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimTrackDescriptionStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.VideoStructure</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVideoStructure.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.VlcEventArg</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlcEventArg.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent">
+            <summary>Shim type of Vlc.DotNet.Core.Interops.Signatures.VlmMediaEvent</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.ShimVlmMediaEvent.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance">
+            <summary>Stub type of Vlc.DotNet.Core.Interops.Signatures.InteropObjectInstance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.#ctor(System.IntPtr)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.Dispose(System.Boolean)">
+            <summary>Sets the stub of InteropObjectInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.DisposeBoolean">
+            <summary>Sets the stub of InteropObjectInstance.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.Equals(System.Object)">
+            <summary>Sets the stub of InteropObjectInstance.Equals(Object obj)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.EqualsObject">
+            <summary>Sets the stub of InteropObjectInstance.Equals(Object obj)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.GetHashCode">
+            <summary>Sets the stub of InteropObjectInstance.GetHashCode()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.GetHashCode01">
+            <summary>Sets the stub of InteropObjectInstance.GetHashCode()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.InitializeStub">
+            <summary>Initializes a new instance of type StubInteropObjectInstance</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Core.Interops.Signatures.Fakes.StubInteropObjectInstance.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
