@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="UhaSub.View.setting.Key"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:UhaSub.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="540"
+             KeyDown="UserControl_KeyDown">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="12 12 0 0"/>
+            </Style>
+            
+            <Style TargetType="Button">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width"  Value="90"/>
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="Background" Value="Gray"/>
+
+                <EventSetter Event="Click" Handler="Button_Click"/>
+                
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="Auto"/>
+                <Setter Property="Margin" Value="12 12 12 0"/>
+                <Setter Property="Background" Value="{Binding Source={x:Static p:Settings.Default}, Path=background}"/>
+                <Setter Property="Foreground" Value="{Binding Source={x:Static p:Settings.Default}, Path=text}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- video control-->
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- video title -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_video}"
+                       Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                       HorizontalAlignment="Center"/>
+            <!-- play or pause -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_play_pause}"
+                       Grid.Column="0" Grid.Row="1"/>
+
+            <Button    Grid.Column="1" Grid.Row="1"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=play_pause}"
+                       Tag="play_pause"
+                       Click="Button_Click"/>
+
+
+            <!-- go before -->
+            <StackPanel Grid.Column="0" Grid.Row="2"
+                        Orientation="Horizontal">
+                <TextBlock Text="{x:Static p:Resources.cfg_key_go_before}"/>
+                <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_before}"
+                         Tag="before"
+                         TextChanged="TextBox_TextChanged"/>
+                <TextBlock Text="{x:Static p:Resources.txt_second}"/>
+            </StackPanel>
+
+            <Button    Grid.Column="1" Grid.Row="2"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                            Path=go_before}"
+                       Tag="go_before"/>
+
+
+            <!-- go after -->
+            <StackPanel Grid.Column="0" Grid.Row="3"
+                        Orientation="Horizontal">
+                <TextBlock Text="{x:Static p:Resources.cfg_key_go_after}"/>
+                <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=cfg_video_go_after}"
+                         Tag="after"
+                         TextChanged="TextBox_TextChanged"/>
+                <TextBlock Text="{x:Static p:Resources.txt_second}"/>
+
+            </StackPanel>
+            <Button    Grid.Column="1" Grid.Row="3"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=go_after}"
+                       Tag="go_after"/>
+
+        </Grid>
+
+        <!-- sub control-->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- sub title -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub}"
+                       Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                       HorizontalAlignment="Center"/>
+
+            <!-- set_start -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_start}"
+                       Grid.Column="0" Grid.Row="1"/>
+
+            <Button    Grid.Column="1" Grid.Row="1"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_start}"
+                       Tag="sub_start"/>
+
+
+            <!-- set_end -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_end}"
+                       Grid.Column="0" Grid.Row="2"/>
+
+            <Button    Grid.Column="1" Grid.Row="2"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_end}"
+                       Tag="sub_end"/>
+
+
+            <!-- set_time 
+            press down to set start
+            and release to set end
+            -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_time}"
+                       Grid.Column="0" Grid.Row="3"
+                       FontSize="15"
+                       Margin="9 0 0 0"/>
+
+            <Button    Grid.Column="1" Grid.Row="3"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_time}"
+                       Tag="sub_time"/>
+
+            <!-- save sub -->
+            <TextBlock Text="{x:Static p:Resources.cfg_key_sub_save}"
+                       Grid.Column="0" Grid.Row="4"/>
+
+            <Button    Grid.Column="1" Grid.Row="4"
+                       Content="{Binding Source={x:Static p:Settings.Default}, 
+                Path=sub_save}"
+                       Tag="sub_save"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,1919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vlc.DotNet.Forms.2014.10.15.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.VlcDotNetFormsDelegates">
+            <summary>Contains custom delegates used for the stubs and shims of Vlc.DotNet.Forms</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.Fakes.ShimVlcControl">
+            <summary>Shim type of Vlc.DotNet.Forms.VlcControl</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.#ctor(Vlc.DotNet.Forms.VlcControl)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.ComponentModel.ISynchronizeInvoke)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.Windows.Forms.IBindableComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.Windows.Forms.IDropTarget)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.Windows.Forms.IWin32Window)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AudioGet">
+            <summary>Sets the shim of VlcControl.get_Audio()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BackwardAddEventHandlerOfVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.add_Backward(EventHandler`1&lt;VlcMediaPlayerBackwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BackwardRemoveEventHandlerOfVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Backward(EventHandler`1&lt;VlcMediaPlayerBackwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BeginInit">
+            <summary>Sets the shim of VlcControl.BeginInit()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BufferingAddEventHandlerOfVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.add_Buffering(EventHandler`1&lt;VlcMediaPlayerBufferingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.BufferingRemoveEventHandlerOfVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Buffering(EventHandler`1&lt;VlcMediaPlayerBufferingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.ChapterGet">
+            <summary>Sets the shim of VlcControl.get_Chapter()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Constructor">
+            <summary>Sets the shim of VlcControl.VlcControl()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Dispose">
+            <summary>Sets the shim of VlcControl.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.DisposeBoolean">
+            <summary>Sets the shim of VlcControl.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.EncounteredErrorAddEventHandlerOfVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.add_EncounteredError(EventHandler`1&lt;VlcMediaPlayerEncounteredErrorEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.EncounteredErrorRemoveEventHandlerOfVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.remove_EncounteredError(EventHandler`1&lt;VlcMediaPlayerEncounteredErrorEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.EndInit">
+            <summary>Sets the shim of VlcControl.EndInit()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.EndReachedAddEventHandlerOfVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.add_EndReached(EventHandler`1&lt;VlcMediaPlayerEndReachedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.EndReachedRemoveEventHandlerOfVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_EndReached(EventHandler`1&lt;VlcMediaPlayerEndReachedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.FPSGet">
+            <summary>Sets the shim of VlcControl.get_FPS()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.ForwardAddEventHandlerOfVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.add_Forward(EventHandler`1&lt;VlcMediaPlayerForwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.ForwardRemoveEventHandlerOfVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Forward(EventHandler`1&lt;VlcMediaPlayerForwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.GetCurrentMedia">
+            <summary>Sets the shim of VlcControl.GetCurrentMedia()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.InitializeComponent">
+            <summary>Sets the shim of VlcControl.InitializeComponent()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.IsInDesignMode">
+            <summary>Sets the shim of VlcControl.IsInDesignMode()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.IsPlayingGet">
+            <summary>Sets the shim of VlcControl.get_IsPlaying()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.LengthChangedAddEventHandlerOfVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_LengthChanged(EventHandler`1&lt;VlcMediaPlayerLengthChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.LengthChangedRemoveEventHandlerOfVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_LengthChanged(EventHandler`1&lt;VlcMediaPlayerLengthChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.LengthGet">
+            <summary>Sets the shim of VlcControl.get_Length()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.MediaChangedAddEventHandlerOfVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_MediaChanged(EventHandler`1&lt;VlcMediaPlayerMediaChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.MediaChangedRemoveEventHandlerOfVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_MediaChanged(EventHandler`1&lt;VlcMediaPlayerMediaChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnBackward">
+            <summary>Sets the shim of VlcControl.OnBackward()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnBackwardInternalObjectVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.OnBackwardInternal(Object sender, VlcMediaPlayerBackwardEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnBufferingInternalObjectVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.OnBufferingInternal(Object sender, VlcMediaPlayerBufferingEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnBufferingSingle">
+            <summary>Sets the shim of VlcControl.OnBuffering(Single newCache)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnEncounteredError">
+            <summary>Sets the shim of VlcControl.OnEncounteredError()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnEncounteredErrorInternalObjectVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.OnEncounteredErrorInternal(Object sender, VlcMediaPlayerEncounteredErrorEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnEndReached">
+            <summary>Sets the shim of VlcControl.OnEndReached()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnEndReachedInternalObjectVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.OnEndReachedInternal(Object sender, VlcMediaPlayerEndReachedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnForward">
+            <summary>Sets the shim of VlcControl.OnForward()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnForwardInternalObjectVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.OnForwardInternal(Object sender, VlcMediaPlayerForwardEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnLengthChangedInternalObjectVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnLengthChangedInternal(Object sender, VlcMediaPlayerLengthChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnLengthChangedSingle">
+            <summary>Sets the shim of VlcControl.OnLengthChanged(Single newLength)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnMediaChangedInternalObjectVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnMediaChangedInternal(Object sender, VlcMediaPlayerMediaChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnMediaChangedVlcMedia">
+            <summary>Sets the shim of VlcControl.OnMediaChanged(VlcMedia newMedia)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnOpening">
+            <summary>Sets the shim of VlcControl.OnOpening()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnOpeningInternalObjectVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.OnOpeningInternal(Object sender, VlcMediaPlayerOpeningEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPausableChangedBoolean">
+            <summary>Sets the shim of VlcControl.OnPausableChanged(Boolean isPaused)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPausableChangedInternalObjectVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPausableChangedInternal(Object sender, VlcMediaPlayerPausableChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPaused">
+            <summary>Sets the shim of VlcControl.OnPaused()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPausedInternalObjectVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPausedInternal(Object sender, VlcMediaPlayerPausedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPlaying">
+            <summary>Sets the shim of VlcControl.OnPlaying()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPlayingInternalObjectVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.OnPlayingInternal(Object sender, VlcMediaPlayerPlayingEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPositionChangedInternalObjectVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPositionChangedInternal(Object sender, VlcMediaPlayerPositionChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnPositionChangedSingle">
+            <summary>Sets the shim of VlcControl.OnPositionChanged(Single newPosition)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnScrambledChangedInt32">
+            <summary>Sets the shim of VlcControl.OnScrambledChanged(Int32 newScrambled)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnScrambledChangedInternalObjectVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnScrambledChangedInternal(Object sender, VlcMediaPlayerScrambledChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnSeekableChangedInt32">
+            <summary>Sets the shim of VlcControl.OnSeekableChanged(Int32 newSeekable)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnSeekableChangedInternalObjectVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnSeekableChangedInternal(Object sender, VlcMediaPlayerSeekableChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnSnapshotTakenInternalObjectVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.OnSnapshotTakenInternal(Object sender, VlcMediaPlayerSnapshotTakenEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnSnapshotTakenString">
+            <summary>Sets the shim of VlcControl.OnSnapshotTaken(String fileName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnStopped">
+            <summary>Sets the shim of VlcControl.OnStopped()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnStoppedInternalObjectVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.OnStoppedInternal(Object sender, VlcMediaPlayerStoppedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnTimeChangedInt64">
+            <summary>Sets the shim of VlcControl.OnTimeChanged(Int64 newTime)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnTimeChangedInternalObjectVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnTimeChangedInternal(Object sender, VlcMediaPlayerTimeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnTitleChangedInternalObjectVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnTitleChangedInternal(Object sender, VlcMediaPlayerTitleChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnTitleChangedString">
+            <summary>Sets the shim of VlcControl.OnTitleChanged(String newTitle)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnVideoOutChangedInt32">
+            <summary>Sets the shim of VlcControl.OnVideoOutChanged(Int32 newCount)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnVideoOutChangedInternalObjectVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnVideoOutChangedInternal(Object sender, VlcMediaPlayerVideoOutChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OnVlcLibDirectoryNeeded">
+            <summary>Sets the shim of VlcControl.OnVlcLibDirectoryNeeded()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OpeningAddEventHandlerOfVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.add_Opening(EventHandler`1&lt;VlcMediaPlayerOpeningEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.OpeningRemoveEventHandlerOfVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Opening(EventHandler`1&lt;VlcMediaPlayerOpeningEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PausableChangedAddEventHandlerOfVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_PausableChanged(EventHandler`1&lt;VlcMediaPlayerPausableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PausableChangedRemoveEventHandlerOfVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_PausableChanged(EventHandler`1&lt;VlcMediaPlayerPausableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Pause">
+            <summary>Sets the shim of VlcControl.Pause()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PausedAddEventHandlerOfVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.add_Paused(EventHandler`1&lt;VlcMediaPlayerPausedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PausedRemoveEventHandlerOfVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Paused(EventHandler`1&lt;VlcMediaPlayerPausedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Play">
+            <summary>Sets the shim of VlcControl.Play()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PlayFileInfoStringArray">
+            <summary>Sets the shim of VlcControl.Play(FileInfo file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PlayStringStringArray">
+            <summary>Sets the shim of VlcControl.Play(String mrl, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PlayUriStringArray">
+            <summary>Sets the shim of VlcControl.Play(Uri uri, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PlayingAddEventHandlerOfVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.add_Playing(EventHandler`1&lt;VlcMediaPlayerPlayingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PlayingRemoveEventHandlerOfVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Playing(EventHandler`1&lt;VlcMediaPlayerPlayingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PositionChangedAddEventHandlerOfVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_PositionChanged(EventHandler`1&lt;VlcMediaPlayerPositionChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PositionChangedRemoveEventHandlerOfVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_PositionChanged(EventHandler`1&lt;VlcMediaPlayerPositionChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PositionGet">
+            <summary>Sets the shim of VlcControl.get_Position()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.PositionSetSingle">
+            <summary>Sets the shim of VlcControl.set_Position(Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Preview">
+            <summary>Sets the shim of VlcControl.Preview()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.RateGet">
+            <summary>Sets the shim of VlcControl.get_Rate()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.RateSetSingle">
+            <summary>Sets the shim of VlcControl.set_Rate(Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.RegisterEvents">
+            <summary>Sets the shim of VlcControl.RegisterEvents()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.ScrambledChangedAddEventHandlerOfVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_ScrambledChanged(EventHandler`1&lt;VlcMediaPlayerScrambledChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.ScrambledChangedRemoveEventHandlerOfVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_ScrambledChanged(EventHandler`1&lt;VlcMediaPlayerScrambledChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SeekableChangedAddEventHandlerOfVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_SeekableChanged(EventHandler`1&lt;VlcMediaPlayerSeekableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SeekableChangedRemoveEventHandlerOfVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_SeekableChanged(EventHandler`1&lt;VlcMediaPlayerSeekableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SetMediaFileInfoStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(FileInfo file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SetMediaStringStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(String mrl, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SetMediaUriStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(Uri file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SetSubTitleString">
+            <summary>Sets the shim of VlcControl.SetSubTitle(String path)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SnapshotTakenAddEventHandlerOfVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.add_SnapshotTaken(EventHandler`1&lt;VlcMediaPlayerSnapshotTakenEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SnapshotTakenRemoveEventHandlerOfVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.remove_SnapshotTaken(EventHandler`1&lt;VlcMediaPlayerSnapshotTakenEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SpuGet">
+            <summary>Sets the shim of VlcControl.get_Spu()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SpuSetInt32">
+            <summary>Sets the shim of VlcControl.set_Spu(Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.StateGet">
+            <summary>Sets the shim of VlcControl.get_State()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.Stop">
+            <summary>Sets the shim of VlcControl.Stop()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.StoppedAddEventHandlerOfVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.add_Stopped(EventHandler`1&lt;VlcMediaPlayerStoppedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.StoppedRemoveEventHandlerOfVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Stopped(EventHandler`1&lt;VlcMediaPlayerStoppedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.SubTitlesGet">
+            <summary>Sets the shim of VlcControl.get_SubTitles()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TakeSnapshotString">
+            <summary>Sets the shim of VlcControl.TakeSnapshot(String fileName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TimeChangedAddEventHandlerOfVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_TimeChanged(EventHandler`1&lt;VlcMediaPlayerTimeChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TimeChangedRemoveEventHandlerOfVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_TimeChanged(EventHandler`1&lt;VlcMediaPlayerTimeChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TimeGet">
+            <summary>Sets the shim of VlcControl.get_Time()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TimeSetInt64">
+            <summary>Sets the shim of VlcControl.set_Time(Int64 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TitleChangedAddEventHandlerOfVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_TitleChanged(EventHandler`1&lt;VlcMediaPlayerTitleChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.TitleChangedRemoveEventHandlerOfVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_TitleChanged(EventHandler`1&lt;VlcMediaPlayerTitleChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.UnregisterEvents">
+            <summary>Sets the shim of VlcControl.UnregisterEvents()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VideoGet">
+            <summary>Sets the shim of VlcControl.get_Video()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VideoOutChangedAddEventHandlerOfVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_VideoOutChanged(EventHandler`1&lt;VlcMediaPlayerVideoOutChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VideoOutChangedRemoveEventHandlerOfVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_VideoOutChanged(EventHandler`1&lt;VlcMediaPlayerVideoOutChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcControl.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcLibDirectoryNeededAddEventHandlerOfVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.add_VlcLibDirectoryNeeded(EventHandler`1&lt;VlcLibDirectoryNeededEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcLibDirectoryNeededRemoveEventHandlerOfVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.remove_VlcLibDirectoryNeeded(EventHandler`1&lt;VlcLibDirectoryNeededEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcControl.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcMediaplayerOptionsGet">
+            <summary>Sets the shim of VlcControl.get_VlcMediaplayerOptions()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.VlcMediaplayerOptionsSetStringArray">
+            <summary>Sets the shim of VlcControl.set_VlcMediaplayerOptions(String[] value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.AudioGet">
+            <summary>Sets the shim of VlcControl.get_Audio()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.BackwardAddEventHandlerOfVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.add_Backward(EventHandler`1&lt;VlcMediaPlayerBackwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.BackwardRemoveEventHandlerOfVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Backward(EventHandler`1&lt;VlcMediaPlayerBackwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.BeginInit">
+            <summary>Sets the shim of VlcControl.BeginInit()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.BufferingAddEventHandlerOfVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.add_Buffering(EventHandler`1&lt;VlcMediaPlayerBufferingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.BufferingRemoveEventHandlerOfVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Buffering(EventHandler`1&lt;VlcMediaPlayerBufferingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.ChapterGet">
+            <summary>Sets the shim of VlcControl.get_Chapter()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.Dispose">
+            <summary>Sets the shim of VlcControl.Dispose()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of VlcControl.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.EncounteredErrorAddEventHandlerOfVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.add_EncounteredError(EventHandler`1&lt;VlcMediaPlayerEncounteredErrorEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.EncounteredErrorRemoveEventHandlerOfVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.remove_EncounteredError(EventHandler`1&lt;VlcMediaPlayerEncounteredErrorEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.EndInit">
+            <summary>Sets the shim of VlcControl.EndInit()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.EndReachedAddEventHandlerOfVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.add_EndReached(EventHandler`1&lt;VlcMediaPlayerEndReachedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.EndReachedRemoveEventHandlerOfVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_EndReached(EventHandler`1&lt;VlcMediaPlayerEndReachedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.FPSGet">
+            <summary>Sets the shim of VlcControl.get_FPS()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.ForwardAddEventHandlerOfVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.add_Forward(EventHandler`1&lt;VlcMediaPlayerForwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.ForwardRemoveEventHandlerOfVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Forward(EventHandler`1&lt;VlcMediaPlayerForwardEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.GetCurrentMedia">
+            <summary>Sets the shim of VlcControl.GetCurrentMedia()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.InitializeComponent">
+            <summary>Sets the shim of VlcControl.InitializeComponent()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.IsPlayingGet">
+            <summary>Sets the shim of VlcControl.get_IsPlaying()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.LengthChangedAddEventHandlerOfVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_LengthChanged(EventHandler`1&lt;VlcMediaPlayerLengthChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.LengthChangedRemoveEventHandlerOfVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_LengthChanged(EventHandler`1&lt;VlcMediaPlayerLengthChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.LengthGet">
+            <summary>Sets the shim of VlcControl.get_Length()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.MediaChangedAddEventHandlerOfVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_MediaChanged(EventHandler`1&lt;VlcMediaPlayerMediaChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.MediaChangedRemoveEventHandlerOfVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_MediaChanged(EventHandler`1&lt;VlcMediaPlayerMediaChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnBackward">
+            <summary>Sets the shim of VlcControl.OnBackward()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnBackwardInternalObjectVlcMediaPlayerBackwardEventArgs">
+            <summary>Sets the shim of VlcControl.OnBackwardInternal(Object sender, VlcMediaPlayerBackwardEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnBufferingInternalObjectVlcMediaPlayerBufferingEventArgs">
+            <summary>Sets the shim of VlcControl.OnBufferingInternal(Object sender, VlcMediaPlayerBufferingEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnBufferingSingle">
+            <summary>Sets the shim of VlcControl.OnBuffering(Single newCache)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnEncounteredError">
+            <summary>Sets the shim of VlcControl.OnEncounteredError()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnEncounteredErrorInternalObjectVlcMediaPlayerEncounteredErrorEventArgs">
+            <summary>Sets the shim of VlcControl.OnEncounteredErrorInternal(Object sender, VlcMediaPlayerEncounteredErrorEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnEndReached">
+            <summary>Sets the shim of VlcControl.OnEndReached()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnEndReachedInternalObjectVlcMediaPlayerEndReachedEventArgs">
+            <summary>Sets the shim of VlcControl.OnEndReachedInternal(Object sender, VlcMediaPlayerEndReachedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnForward">
+            <summary>Sets the shim of VlcControl.OnForward()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnForwardInternalObjectVlcMediaPlayerForwardEventArgs">
+            <summary>Sets the shim of VlcControl.OnForwardInternal(Object sender, VlcMediaPlayerForwardEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnLengthChangedInternalObjectVlcMediaPlayerLengthChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnLengthChangedInternal(Object sender, VlcMediaPlayerLengthChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnLengthChangedSingle">
+            <summary>Sets the shim of VlcControl.OnLengthChanged(Single newLength)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnMediaChangedInternalObjectVlcMediaPlayerMediaChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnMediaChangedInternal(Object sender, VlcMediaPlayerMediaChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnMediaChangedVlcMedia">
+            <summary>Sets the shim of VlcControl.OnMediaChanged(VlcMedia newMedia)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnOpening">
+            <summary>Sets the shim of VlcControl.OnOpening()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnOpeningInternalObjectVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.OnOpeningInternal(Object sender, VlcMediaPlayerOpeningEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPausableChangedBoolean">
+            <summary>Sets the shim of VlcControl.OnPausableChanged(Boolean isPaused)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPausableChangedInternalObjectVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPausableChangedInternal(Object sender, VlcMediaPlayerPausableChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPaused">
+            <summary>Sets the shim of VlcControl.OnPaused()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPausedInternalObjectVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPausedInternal(Object sender, VlcMediaPlayerPausedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPlaying">
+            <summary>Sets the shim of VlcControl.OnPlaying()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPlayingInternalObjectVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.OnPlayingInternal(Object sender, VlcMediaPlayerPlayingEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPositionChangedInternalObjectVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnPositionChangedInternal(Object sender, VlcMediaPlayerPositionChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnPositionChangedSingle">
+            <summary>Sets the shim of VlcControl.OnPositionChanged(Single newPosition)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnScrambledChangedInt32">
+            <summary>Sets the shim of VlcControl.OnScrambledChanged(Int32 newScrambled)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnScrambledChangedInternalObjectVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnScrambledChangedInternal(Object sender, VlcMediaPlayerScrambledChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnSeekableChangedInt32">
+            <summary>Sets the shim of VlcControl.OnSeekableChanged(Int32 newSeekable)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnSeekableChangedInternalObjectVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnSeekableChangedInternal(Object sender, VlcMediaPlayerSeekableChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnSnapshotTakenInternalObjectVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.OnSnapshotTakenInternal(Object sender, VlcMediaPlayerSnapshotTakenEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnSnapshotTakenString">
+            <summary>Sets the shim of VlcControl.OnSnapshotTaken(String fileName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnStopped">
+            <summary>Sets the shim of VlcControl.OnStopped()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnStoppedInternalObjectVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.OnStoppedInternal(Object sender, VlcMediaPlayerStoppedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnTimeChangedInt64">
+            <summary>Sets the shim of VlcControl.OnTimeChanged(Int64 newTime)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnTimeChangedInternalObjectVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnTimeChangedInternal(Object sender, VlcMediaPlayerTimeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnTitleChangedInternalObjectVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnTitleChangedInternal(Object sender, VlcMediaPlayerTitleChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnTitleChangedString">
+            <summary>Sets the shim of VlcControl.OnTitleChanged(String newTitle)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnVideoOutChangedInt32">
+            <summary>Sets the shim of VlcControl.OnVideoOutChanged(Int32 newCount)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnVideoOutChangedInternalObjectVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.OnVideoOutChangedInternal(Object sender, VlcMediaPlayerVideoOutChangedEventArgs e)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OnVlcLibDirectoryNeeded">
+            <summary>Sets the shim of VlcControl.OnVlcLibDirectoryNeeded()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OpeningAddEventHandlerOfVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.add_Opening(EventHandler`1&lt;VlcMediaPlayerOpeningEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.OpeningRemoveEventHandlerOfVlcMediaPlayerOpeningEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Opening(EventHandler`1&lt;VlcMediaPlayerOpeningEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PausableChangedAddEventHandlerOfVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_PausableChanged(EventHandler`1&lt;VlcMediaPlayerPausableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PausableChangedRemoveEventHandlerOfVlcMediaPlayerPausableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_PausableChanged(EventHandler`1&lt;VlcMediaPlayerPausableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.Pause">
+            <summary>Sets the shim of VlcControl.Pause()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PausedAddEventHandlerOfVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.add_Paused(EventHandler`1&lt;VlcMediaPlayerPausedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PausedRemoveEventHandlerOfVlcMediaPlayerPausedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Paused(EventHandler`1&lt;VlcMediaPlayerPausedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.Play">
+            <summary>Sets the shim of VlcControl.Play()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PlayFileInfoStringArray">
+            <summary>Sets the shim of VlcControl.Play(FileInfo file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PlayStringStringArray">
+            <summary>Sets the shim of VlcControl.Play(String mrl, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PlayUriStringArray">
+            <summary>Sets the shim of VlcControl.Play(Uri uri, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PlayingAddEventHandlerOfVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.add_Playing(EventHandler`1&lt;VlcMediaPlayerPlayingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PlayingRemoveEventHandlerOfVlcMediaPlayerPlayingEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Playing(EventHandler`1&lt;VlcMediaPlayerPlayingEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PositionChangedAddEventHandlerOfVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_PositionChanged(EventHandler`1&lt;VlcMediaPlayerPositionChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PositionChangedRemoveEventHandlerOfVlcMediaPlayerPositionChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_PositionChanged(EventHandler`1&lt;VlcMediaPlayerPositionChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PositionGet">
+            <summary>Sets the shim of VlcControl.get_Position()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.PositionSetSingle">
+            <summary>Sets the shim of VlcControl.set_Position(Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.Preview">
+            <summary>Sets the shim of VlcControl.Preview()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.RateGet">
+            <summary>Sets the shim of VlcControl.get_Rate()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.RateSetSingle">
+            <summary>Sets the shim of VlcControl.set_Rate(Single value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.RegisterEvents">
+            <summary>Sets the shim of VlcControl.RegisterEvents()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.ScrambledChangedAddEventHandlerOfVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_ScrambledChanged(EventHandler`1&lt;VlcMediaPlayerScrambledChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.ScrambledChangedRemoveEventHandlerOfVlcMediaPlayerScrambledChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_ScrambledChanged(EventHandler`1&lt;VlcMediaPlayerScrambledChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SeekableChangedAddEventHandlerOfVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_SeekableChanged(EventHandler`1&lt;VlcMediaPlayerSeekableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SeekableChangedRemoveEventHandlerOfVlcMediaPlayerSeekableChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_SeekableChanged(EventHandler`1&lt;VlcMediaPlayerSeekableChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SetMediaFileInfoStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(FileInfo file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SetMediaStringStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(String mrl, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SetMediaUriStringArray">
+            <summary>Sets the shim of VlcControl.SetMedia(Uri file, String[] options)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SetSubTitleString">
+            <summary>Sets the shim of VlcControl.SetSubTitle(String path)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SnapshotTakenAddEventHandlerOfVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.add_SnapshotTaken(EventHandler`1&lt;VlcMediaPlayerSnapshotTakenEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SnapshotTakenRemoveEventHandlerOfVlcMediaPlayerSnapshotTakenEventArgs">
+            <summary>Sets the shim of VlcControl.remove_SnapshotTaken(EventHandler`1&lt;VlcMediaPlayerSnapshotTakenEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SpuGet">
+            <summary>Sets the shim of VlcControl.get_Spu()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SpuSetInt32">
+            <summary>Sets the shim of VlcControl.set_Spu(Int32 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.StateGet">
+            <summary>Sets the shim of VlcControl.get_State()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.Stop">
+            <summary>Sets the shim of VlcControl.Stop()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.StoppedAddEventHandlerOfVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.add_Stopped(EventHandler`1&lt;VlcMediaPlayerStoppedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.StoppedRemoveEventHandlerOfVlcMediaPlayerStoppedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_Stopped(EventHandler`1&lt;VlcMediaPlayerStoppedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.SubTitlesGet">
+            <summary>Sets the shim of VlcControl.get_SubTitles()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TakeSnapshotString">
+            <summary>Sets the shim of VlcControl.TakeSnapshot(String fileName)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TimeChangedAddEventHandlerOfVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_TimeChanged(EventHandler`1&lt;VlcMediaPlayerTimeChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TimeChangedRemoveEventHandlerOfVlcMediaPlayerTimeChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_TimeChanged(EventHandler`1&lt;VlcMediaPlayerTimeChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TimeGet">
+            <summary>Sets the shim of VlcControl.get_Time()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TimeSetInt64">
+            <summary>Sets the shim of VlcControl.set_Time(Int64 value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TitleChangedAddEventHandlerOfVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_TitleChanged(EventHandler`1&lt;VlcMediaPlayerTitleChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.TitleChangedRemoveEventHandlerOfVlcMediaPlayerTitleChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_TitleChanged(EventHandler`1&lt;VlcMediaPlayerTitleChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.UnregisterEvents">
+            <summary>Sets the shim of VlcControl.UnregisterEvents()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VideoGet">
+            <summary>Sets the shim of VlcControl.get_Video()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VideoOutChangedAddEventHandlerOfVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.add_VideoOutChanged(EventHandler`1&lt;VlcMediaPlayerVideoOutChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VideoOutChangedRemoveEventHandlerOfVlcMediaPlayerVideoOutChangedEventArgs">
+            <summary>Sets the shim of VlcControl.remove_VideoOutChanged(EventHandler`1&lt;VlcMediaPlayerVideoOutChangedEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcControl.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcLibDirectoryNeededAddEventHandlerOfVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.add_VlcLibDirectoryNeeded(EventHandler`1&lt;VlcLibDirectoryNeededEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcLibDirectoryNeededRemoveEventHandlerOfVlcLibDirectoryNeededEventArgs">
+            <summary>Sets the shim of VlcControl.remove_VlcLibDirectoryNeeded(EventHandler`1&lt;VlcLibDirectoryNeededEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcControl.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcMediaplayerOptionsGet">
+            <summary>Sets the shim of VlcControl.get_VlcMediaplayerOptions()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcControl.AllInstances.VlcMediaplayerOptionsSetStringArray">
+            <summary>Sets the shim of VlcControl.set_VlcMediaplayerOptions(String[] value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs">
+            <summary>Shim type of Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.#ctor(Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.Constructor">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.VlcLibDirectoryNeededEventArgs()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances.VlcLibDirectoryGet">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.get_VlcLibDirectory()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.ShimVlcLibDirectoryNeededEventArgs.AllInstances.VlcLibDirectorySetDirectoryInfo">
+            <summary>Sets the shim of VlcLibDirectoryNeededEventArgs.set_VlcLibDirectory(DirectoryInfo value)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.Fakes.StubVlcControl">
+            <summary>Stub type of Vlc.DotNet.Forms.VlcControl</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AllowDropGet">
+            <summary>Sets the stub of Control.get_AllowDrop()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AllowDropSetBoolean">
+            <summary>Sets the stub of Control.set_AllowDrop(Boolean value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AnchorGet">
+            <summary>Sets the stub of Control.get_Anchor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AnchorSetAnchorStyles">
+            <summary>Sets the stub of Control.set_Anchor(AnchorStyles value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToAllowDrop">
+            <summary>Attaches delegates to emulate StubVlcControl.AllowDrop as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToAnchor">
+            <summary>Attaches delegates to emulate StubVlcControl.Anchor as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToAutoScrollOffset">
+            <summary>Attaches delegates to emulate StubVlcControl.AutoScrollOffset as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToAutoSize">
+            <summary>Attaches delegates to emulate StubVlcControl.AutoSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToBackColor">
+            <summary>Attaches delegates to emulate StubVlcControl.BackColor as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToBackgroundImage">
+            <summary>Attaches delegates to emulate StubVlcControl.BackgroundImage as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToBackgroundImageLayout">
+            <summary>Attaches delegates to emulate StubVlcControl.BackgroundImageLayout as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToBindingContext">
+            <summary>Attaches delegates to emulate StubVlcControl.BindingContext as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToContextMenu">
+            <summary>Attaches delegates to emulate StubVlcControl.ContextMenu as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToContextMenuStrip">
+            <summary>Attaches delegates to emulate StubVlcControl.ContextMenuStrip as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToCursor">
+            <summary>Attaches delegates to emulate StubVlcControl.Cursor as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToDock">
+            <summary>Attaches delegates to emulate StubVlcControl.Dock as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToDoubleBuffered">
+            <summary>Attaches delegates to emulate StubVlcControl.DoubleBuffered as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToFont">
+            <summary>Attaches delegates to emulate StubVlcControl.Font as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToForeColor">
+            <summary>Attaches delegates to emulate StubVlcControl.ForeColor as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToImeModeBase">
+            <summary>Attaches delegates to emulate StubVlcControl.ImeModeBase as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToMaximumSize">
+            <summary>Attaches delegates to emulate StubVlcControl.MaximumSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToMinimumSize">
+            <summary>Attaches delegates to emulate StubVlcControl.MinimumSize as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToRightToLeft">
+            <summary>Attaches delegates to emulate StubVlcControl.RightToLeft as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubVlcControl.Site as a property with a backing field.</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.AttachBackingFieldToText">
+            <summary>Attaches delegates to emulate StubVlcControl.Text as a property with a backing field.</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoScrollOffsetGet">
+            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoScrollOffsetSetPoint">
+            <summary>Sets the stub of Control.set_AutoScrollOffset(Point value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoSizeGet">
+            <summary>Sets the stub of Control.get_AutoSize()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoSizeSetBoolean">
+            <summary>Sets the stub of Control.set_AutoSize(Boolean value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackColorGet">
+            <summary>Sets the stub of Control.get_BackColor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackColorSetColor">
+            <summary>Sets the stub of Control.set_BackColor(Color value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImageGet">
+            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImageLayoutGet">
+            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImageLayoutSetImageLayout">
+            <summary>Sets the stub of Control.set_BackgroundImageLayout(ImageLayout value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImageSetImage">
+            <summary>Sets the stub of Control.set_BackgroundImage(Image value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BindingContextGet">
+            <summary>Sets the stub of Control.get_BindingContext()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.BindingContextSetBindingContext">
+            <summary>Sets the stub of Control.set_BindingContext(BindingContext value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CanEnableImeGet">
+            <summary>Sets the stub of Control.get_CanEnableIme()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CanRaiseEventsGet">
+            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenuGet">
+            <summary>Sets the stub of Control.get_ContextMenu()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenuSetContextMenu">
+            <summary>Sets the stub of Control.set_ContextMenu(ContextMenu value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenuStripGet">
+            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenuStripSetContextMenuStrip">
+            <summary>Sets the stub of Control.set_ContextMenuStrip(ContextMenuStrip value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateAccessibilityInstance">
+            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateAccessibilityInstance01">
+            <summary>Sets the stub of Control.CreateAccessibilityInstance()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateControlsInstance">
+            <summary>Sets the stub of Control.CreateControlsInstance()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateControlsInstance01">
+            <summary>Sets the stub of Control.CreateControlsInstance()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateHandle">
+            <summary>Sets the stub of Control.CreateHandle()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateHandle01">
+            <summary>Sets the stub of Control.CreateHandle()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateParamsGet">
+            <summary>Sets the stub of Control.get_CreateParams()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CursorGet">
+            <summary>Sets the stub of Control.get_Cursor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.CursorSetCursor">
+            <summary>Sets the stub of Control.set_Cursor(Cursor value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefWndProc(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.DefWndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefWndProcMessageRef">
+            <summary>Sets the stub of Control.DefWndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultCursorGet">
+            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultImeModeGet">
+            <summary>Sets the stub of Control.get_DefaultImeMode()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMarginGet">
+            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMaximumSizeGet">
+            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMinimumSizeGet">
+            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultPaddingGet">
+            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultSizeGet">
+            <summary>Sets the stub of Control.get_DefaultSize()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.DestroyHandle">
+            <summary>Sets the stub of Control.DestroyHandle()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DestroyHandle01">
+            <summary>Sets the stub of Control.DestroyHandle()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DisplayRectangleGet">
+            <summary>Sets the stub of Control.get_DisplayRectangle()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.Dispose(System.Boolean)">
+            <summary>Sets the stub of VlcControl.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DisposeBoolean">
+            <summary>Sets the stub of VlcControl.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DockGet">
+            <summary>Sets the stub of Control.get_Dock()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DockSetDockStyle">
+            <summary>Sets the stub of Control.set_Dock(DockStyle value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DoubleBufferedGet">
+            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.DoubleBufferedSetBoolean">
+            <summary>Sets the stub of Control.set_DoubleBuffered(Boolean value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.FocusedGet">
+            <summary>Sets the stub of Control.get_Focused()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.FontGet">
+            <summary>Sets the stub of Control.get_Font()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.FontSetFont">
+            <summary>Sets the stub of Control.set_Font(Font value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ForeColorGet">
+            <summary>Sets the stub of Control.get_ForeColor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ForeColorSetColor">
+            <summary>Sets the stub of Control.set_ForeColor(Color value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetAccessibilityObjectById(System.Int32)">
+            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetAccessibilityObjectByIdInt32">
+            <summary>Sets the stub of Control.GetAccessibilityObjectById(Int32 objectId)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetPreferredSize(System.Drawing.Size)">
+            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetPreferredSizeSize">
+            <summary>Sets the stub of Control.GetPreferredSize(Size proposedSize)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Control.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetScaledBoundsRectangleSizeFBoundsSpecified">
+            <summary>Sets the stub of Control.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ImeModeBaseGet">
+            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ImeModeBaseSetImeMode">
+            <summary>Sets the stub of Control.set_ImeModeBase(ImeMode value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.InitLayout">
+            <summary>Sets the stub of Control.InitLayout()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.InitLayout01">
+            <summary>Sets the stub of Control.InitLayout()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.InitializeStub">
+            <summary>Initializes a new instance of type StubVlcControl</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.IsInputChar(System.Char)">
+            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.IsInputCharChar">
+            <summary>Sets the stub of Control.IsInputChar(Char charCode)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.IsInputKeyKeys">
+            <summary>Sets the stub of Control.IsInputKey(Keys keyData)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.LayoutEngineGet">
+            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.MaximumSizeGet">
+            <summary>Sets the stub of Control.get_MaximumSize()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.MaximumSizeSetSize">
+            <summary>Sets the stub of Control.set_MaximumSize(Size value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.MinimumSizeGet">
+            <summary>Sets the stub of Control.get_MinimumSize()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.MinimumSizeSetSize">
+            <summary>Sets the stub of Control.set_MinimumSize(Size value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.NotifyInvalidate(System.Drawing.Rectangle)">
+            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.NotifyInvalidateRectangle">
+            <summary>Sets the stub of Control.NotifyInvalidate(Rectangle invalidatedArea)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnAutoSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnAutoSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnAutoSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackgroundImageChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackgroundImageChangedEventArgs">
+            <summary>Sets the stub of Control.OnBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackgroundImageLayoutChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBackgroundImageLayoutChangedEventArgs">
+            <summary>Sets the stub of Control.OnBackgroundImageLayoutChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBindingContextChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnBindingContextChangedEventArgs">
+            <summary>Sets the stub of Control.OnBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCausesValidationChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCausesValidationChangedEventArgs">
+            <summary>Sets the stub of Control.OnCausesValidationChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
+            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnChangeUICuesUICuesEventArgs">
+            <summary>Sets the stub of Control.OnChangeUICues(UICuesEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnClick(System.EventArgs)">
+            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnClickEventArgs">
+            <summary>Sets the stub of Control.OnClick(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnClientSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnClientSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnClientSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnContextMenuChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnContextMenuChangedEventArgs">
+            <summary>Sets the stub of Control.OnContextMenuChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnContextMenuStripChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnContextMenuStripChangedEventArgs">
+            <summary>Sets the stub of Control.OnContextMenuStripChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnControlAddedControlEventArgs">
+            <summary>Sets the stub of Control.OnControlAdded(ControlEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnControlRemovedControlEventArgs">
+            <summary>Sets the stub of Control.OnControlRemoved(ControlEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCreateControl">
+            <summary>Sets the stub of Control.OnCreateControl()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCreateControl01">
+            <summary>Sets the stub of Control.OnCreateControl()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCursorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnCursorChangedEventArgs">
+            <summary>Sets the stub of Control.OnCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDockChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDockChangedEventArgs">
+            <summary>Sets the stub of Control.OnDockChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDoubleClick(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDoubleClickEventArgs">
+            <summary>Sets the stub of Control.OnDoubleClick(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragDropDragEventArgs">
+            <summary>Sets the stub of Control.OnDragDrop(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragEnter(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of Control.OnDragEnter(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragLeaveEventArgs">
+            <summary>Sets the stub of Control.OnDragLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragOver(System.Windows.Forms.DragEventArgs)">
+            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnDragOverDragEventArgs">
+            <summary>Sets the stub of Control.OnDragOver(DragEventArgs drgevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnEnabledChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnEnabledChangedEventArgs">
+            <summary>Sets the stub of Control.OnEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnEnter(System.EventArgs)">
+            <summary>Sets the stub of Control.OnEnter(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnEnterEventArgs">
+            <summary>Sets the stub of Control.OnEnter(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnFontChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnFontChangedEventArgs">
+            <summary>Sets the stub of Control.OnFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnForeColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnForeColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnGotFocus(System.EventArgs)">
+            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnGotFocusEventArgs">
+            <summary>Sets the stub of Control.OnGotFocus(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHandleCreated(System.EventArgs)">
+            <summary>Sets the stub of Control.OnHandleCreated(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHandleCreatedEventArgs">
+            <summary>Sets the stub of Control.OnHandleCreated(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHandleDestroyed(System.EventArgs)">
+            <summary>Sets the stub of Control.OnHandleDestroyed(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHandleDestroyedEventArgs">
+            <summary>Sets the stub of Control.OnHandleDestroyed(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHelpRequested(System.Windows.Forms.HelpEventArgs)">
+            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnHelpRequestedHelpEventArgs">
+            <summary>Sets the stub of Control.OnHelpRequested(HelpEventArgs hevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnImeModeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnImeModeChangedEventArgs">
+            <summary>Sets the stub of Control.OnImeModeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnInvalidated(System.Windows.Forms.InvalidateEventArgs)">
+            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnInvalidatedInvalidateEventArgs">
+            <summary>Sets the stub of Control.OnInvalidated(InvalidateEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of Control.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyPressKeyPressEventArgs">
+            <summary>Sets the stub of Control.OnKeyPress(KeyPressEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of Control.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>Sets the stub of Control.OnLayout(LayoutEventArgs levent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLayoutLayoutEventArgs">
+            <summary>Sets the stub of Control.OnLayout(LayoutEventArgs levent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLeaveEventArgs">
+            <summary>Sets the stub of Control.OnLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLocationChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLocationChangedEventArgs">
+            <summary>Sets the stub of Control.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLostFocus(System.EventArgs)">
+            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnLostFocusEventArgs">
+            <summary>Sets the stub of Control.OnLostFocus(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMarginChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMarginChangedEventArgs">
+            <summary>Sets the stub of Control.OnMarginChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseCaptureChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseCaptureChangedEventArgs">
+            <summary>Sets the stub of Control.OnMouseCaptureChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseClickMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseDoubleClickMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseDownMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseDown(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseEnter(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseEnterEventArgs">
+            <summary>Sets the stub of Control.OnMouseEnter(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseHover(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseHoverEventArgs">
+            <summary>Sets the stub of Control.OnMouseHover(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseLeave(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseLeaveEventArgs">
+            <summary>Sets the stub of Control.OnMouseLeave(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseUpMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseUp(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>Sets the stub of Control.OnMouseWheel(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMouseWheelMouseEventArgs">
+            <summary>Sets the stub of Control.OnMouseWheel(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMove(System.EventArgs)">
+            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnMoveEventArgs">
+            <summary>Sets the stub of Control.OnMove(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnNotifyMessage(System.Windows.Forms.Message)">
+            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnNotifyMessageMessage">
+            <summary>Sets the stub of Control.OnNotifyMessage(Message m)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaddingChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnPaddingChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaddingChangedEventArgs">
+            <summary>Sets the stub of Control.OnPaddingChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of Control.OnPaint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of Control.OnPaintBackground(PaintEventArgs pevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaintBackgroundPaintEventArgs">
+            <summary>Sets the stub of Control.OnPaintBackground(PaintEventArgs pevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPaintPaintEventArgs">
+            <summary>Sets the stub of Control.OnPaint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBackColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBackColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBackColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBackgroundImageChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBackgroundImageChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBackgroundImageChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBindingContextChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentBindingContextChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentBindingContextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentCursorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentCursorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentCursorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentEnabledChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentEnabledChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentEnabledChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentFontChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentFontChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentFontChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentForeColorChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentForeColorChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentForeColorChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentRightToLeftChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentRightToLeftChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentVisibleChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnParentVisibleChangedEventArgs">
+            <summary>Sets the stub of Control.OnParentVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPreviewKeyDown(System.Windows.Forms.PreviewKeyDownEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPreviewKeyDownPreviewKeyDownEventArgs">
+            <summary>Sets the stub of Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPrint(System.Windows.Forms.PaintEventArgs)">
+            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnPrintPaintEventArgs">
+            <summary>Sets the stub of Control.OnPrint(PaintEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnQueryContinueDrag(System.Windows.Forms.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnRegionChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnRegionChangedEventArgs">
+            <summary>Sets the stub of Control.OnRegionChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnResize(System.EventArgs)">
+            <summary>Sets the stub of Control.OnResize(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnResizeEventArgs">
+            <summary>Sets the stub of Control.OnResize(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnRightToLeftChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnRightToLeftChangedEventArgs">
+            <summary>Sets the stub of Control.OnRightToLeftChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnSizeChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnSizeChangedEventArgs">
+            <summary>Sets the stub of Control.OnSizeChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnStyleChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnStyleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnStyleChangedEventArgs">
+            <summary>Sets the stub of Control.OnStyleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnSystemColorsChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnSystemColorsChangedEventArgs">
+            <summary>Sets the stub of Control.OnSystemColorsChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTabIndexChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTabIndexChangedEventArgs">
+            <summary>Sets the stub of Control.OnTabIndexChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTabStopChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTabStopChangedEventArgs">
+            <summary>Sets the stub of Control.OnTabStopChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTextChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnTextChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnTextChangedEventArgs">
+            <summary>Sets the stub of Control.OnTextChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnValidated(System.EventArgs)">
+            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnValidatedEventArgs">
+            <summary>Sets the stub of Control.OnValidated(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnValidating(System.ComponentModel.CancelEventArgs)">
+            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnValidatingCancelEventArgs">
+            <summary>Sets the stub of Control.OnValidating(CancelEventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnVisibleChanged(System.EventArgs)">
+            <summary>Sets the stub of Control.OnVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.OnVisibleChangedEventArgs">
+            <summary>Sets the stub of Control.OnVisibleChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.PreProcessMessage(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.PreProcessMessageMessageRef">
+            <summary>Sets the stub of Control.PreProcessMessage(Message&amp; msg)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Control.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessCmdKeyMessageRefKeys">
+            <summary>Sets the stub of Control.ProcessCmdKey(Message&amp; msg, Keys keyData)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessDialogChar(System.Char)">
+            <summary>Sets the stub of Control.ProcessDialogChar(Char charCode)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessDialogCharChar">
+            <summary>Sets the stub of Control.ProcessDialogChar(Char charCode)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>Sets the stub of Control.ProcessDialogKey(Keys keyData)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessDialogKeyKeys">
+            <summary>Sets the stub of Control.ProcessDialogKey(Keys keyData)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyEventArgs(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyEventArgsMessageRef">
+            <summary>Sets the stub of Control.ProcessKeyEventArgs(Message&amp; m)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyMessage(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyMessageMessageRef">
+            <summary>Sets the stub of Control.ProcessKeyMessage(Message&amp; m)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyPreview(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.ProcessKeyPreview(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessKeyPreviewMessageRef">
+            <summary>Sets the stub of Control.ProcessKeyPreview(Message&amp; m)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessMnemonic(System.Char)">
+            <summary>Sets the stub of Control.ProcessMnemonic(Char charCode)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ProcessMnemonicChar">
+            <summary>Sets the stub of Control.ProcessMnemonic(Char charCode)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.Refresh">
+            <summary>Sets the stub of Control.Refresh()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.Refresh01">
+            <summary>Sets the stub of Control.Refresh()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetBackColor">
+            <summary>Sets the stub of Control.ResetBackColor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetBackColor01">
+            <summary>Sets the stub of Control.ResetBackColor()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetCursor">
+            <summary>Sets the stub of Control.ResetCursor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetCursor01">
+            <summary>Sets the stub of Control.ResetCursor()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetFont">
+            <summary>Sets the stub of Control.ResetFont()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetFont01">
+            <summary>Sets the stub of Control.ResetFont()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetForeColor">
+            <summary>Sets the stub of Control.ResetForeColor()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetForeColor01">
+            <summary>Sets the stub of Control.ResetForeColor()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetRightToLeft">
+            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetRightToLeft01">
+            <summary>Sets the stub of Control.ResetRightToLeft()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetText">
+            <summary>Sets the stub of Control.ResetText()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ResetText01">
+            <summary>Sets the stub of Control.ResetText()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.RightToLeftGet">
+            <summary>Sets the stub of Control.get_RightToLeft()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.RightToLeftSetRightToLeft">
+            <summary>Sets the stub of Control.set_RightToLeft(RightToLeft value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleChildrenGet">
+            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Control.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleControlSizeFBoundsSpecified">
+            <summary>Sets the stub of Control.ScaleControl(SizeF factor, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleCore(System.Single,System.Single)">
+            <summary>Sets the stub of Control.ScaleCore(Single dx, Single dy)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleCoreSingleSingle">
+            <summary>Sets the stub of Control.ScaleCore(Single dx, Single dy)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.Select(System.Boolean,System.Boolean)">
+            <summary>Sets the stub of Control.Select(Boolean directed, Boolean forward)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SelectBooleanBoolean">
+            <summary>Sets the stub of Control.Select(Boolean directed, Boolean forward)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>Sets the stub of Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetBoundsCoreInt32Int32Int32Int32BoundsSpecified">
+            <summary>Sets the stub of Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetClientSizeCore(System.Int32,System.Int32)">
+            <summary>Sets the stub of Control.SetClientSizeCore(Int32 x, Int32 y)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetClientSizeCoreInt32Int32">
+            <summary>Sets the stub of Control.SetClientSizeCore(Int32 x, Int32 y)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetVisibleCore(System.Boolean)">
+            <summary>Sets the stub of Control.SetVisibleCore(Boolean value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SetVisibleCoreBoolean">
+            <summary>Sets the stub of Control.SetVisibleCore(Boolean value)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ShowFocusCuesGet">
+            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ShowKeyboardCuesGet">
+            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SiteGet">
+            <summary>Sets the stub of Control.get_Site()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SiteSetISite">
+            <summary>Sets the stub of Control.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.SizeFromClientSize(System.Drawing.Size)">
+            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.SizeFromClientSizeSize">
+            <summary>Sets the stub of Control.SizeFromClientSize(Size clientSize)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.TextGet">
+            <summary>Sets the stub of Control.get_Text()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.TextSetString">
+            <summary>Sets the stub of Control.set_Text(String value)</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.Fakes.StubVlcControl.WndProc(System.Windows.Forms.Message@)">
+            <summary>Sets the stub of Control.WndProc(Message&amp; m)</summary>
+        </member>
+        <member name="F:Vlc.DotNet.Forms.Fakes.StubVlcControl.WndProcMessageRef">
+            <summary>Sets the stub of Control.WndProc(Message&amp; m)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.AllowDrop">
+            <summary>Sets the stub of Control.get_AllowDrop()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Anchor">
+            <summary>Sets the stub of Control.get_Anchor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoScrollOffset">
+            <summary>Sets the stub of Control.get_AutoScrollOffset()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.AutoSize">
+            <summary>Sets the stub of Control.get_AutoSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackColor">
+            <summary>Sets the stub of Control.get_BackColor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImage">
+            <summary>Sets the stub of Control.get_BackgroundImage()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.BackgroundImageLayout">
+            <summary>Sets the stub of Control.get_BackgroundImageLayout()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.BindingContext">
+            <summary>Sets the stub of Control.get_BindingContext()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.CanEnableIme">
+            <summary>Sets the stub of Control.get_CanEnableIme()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.CanRaiseEvents">
+            <summary>Sets the stub of Control.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenu">
+            <summary>Sets the stub of Control.get_ContextMenu()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ContextMenuStrip">
+            <summary>Sets the stub of Control.get_ContextMenuStrip()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.CreateParams">
+            <summary>Sets the stub of Control.get_CreateParams()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Cursor">
+            <summary>Sets the stub of Control.get_Cursor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultCursor">
+            <summary>Sets the stub of Control.get_DefaultCursor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultImeMode">
+            <summary>Sets the stub of Control.get_DefaultImeMode()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMargin">
+            <summary>Sets the stub of Control.get_DefaultMargin()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMaximumSize">
+            <summary>Sets the stub of Control.get_DefaultMaximumSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultMinimumSize">
+            <summary>Sets the stub of Control.get_DefaultMinimumSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultPadding">
+            <summary>Sets the stub of Control.get_DefaultPadding()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DefaultSize">
+            <summary>Sets the stub of Control.get_DefaultSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DisplayRectangle">
+            <summary>Sets the stub of Control.get_DisplayRectangle()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Dock">
+            <summary>Sets the stub of Control.get_Dock()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.DoubleBuffered">
+            <summary>Sets the stub of Control.get_DoubleBuffered()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Focused">
+            <summary>Sets the stub of Control.get_Focused()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Font">
+            <summary>Sets the stub of Control.get_Font()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ForeColor">
+            <summary>Sets the stub of Control.get_ForeColor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ImeModeBase">
+            <summary>Sets the stub of Control.get_ImeModeBase()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.LayoutEngine">
+            <summary>Sets the stub of Control.get_LayoutEngine()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.MaximumSize">
+            <summary>Sets the stub of Control.get_MaximumSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.MinimumSize">
+            <summary>Sets the stub of Control.get_MinimumSize()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.RightToLeft">
+            <summary>Sets the stub of Control.get_RightToLeft()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ScaleChildren">
+            <summary>Sets the stub of Control.get_ScaleChildren()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ShowFocusCues">
+            <summary>Sets the stub of Control.get_ShowFocusCues()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.ShowKeyboardCues">
+            <summary>Sets the stub of Control.get_ShowKeyboardCues()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Site">
+            <summary>Sets the stub of Control.get_Site()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.Fakes.StubVlcControl.Text">
+            <summary>Sets the stub of Control.get_Text()</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor">
+            <summary>Shim type of Vlc.DotNet.Forms.TypeEditors.DirectoryEditor</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.#ctor(Vlc.DotNet.Forms.TypeEditors.DirectoryEditor)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.Constructor">
+            <summary>Sets the shim of DirectoryEditor.DirectoryEditor()</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.EditValueITypeDescriptorContextIServiceProviderObject">
+            <summary>Sets the shim of DirectoryEditor.EditValue(ITypeDescriptorContext context, IServiceProvider provider, Object value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.GetEditStyleITypeDescriptorContext">
+            <summary>Sets the shim of DirectoryEditor.GetEditStyle(ITypeDescriptorContext context)</summary>
+        </member>
+        <member name="T:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.AllInstances.EditValueITypeDescriptorContextIServiceProviderObject">
+            <summary>Sets the shim of DirectoryEditor.EditValue(ITypeDescriptorContext context, IServiceProvider provider, Object value)</summary>
+        </member>
+        <member name="P:Vlc.DotNet.Forms.TypeEditors.Fakes.ShimDirectoryEditor.AllInstances.GetEditStyleITypeDescriptorContext">
+            <summary>Sets the shim of DirectoryEditor.GetEditStyle(ITypeDescriptorContext context)</summary>
+        </member>
+    </members>
+</doc>

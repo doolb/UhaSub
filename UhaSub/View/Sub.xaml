@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="UhaSub.View.Sub"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:UhaSub.Properties"
+             xmlns:local="clr-namespace:UhaSub"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             BorderBrush="{x:Null}">
+	<UserControl.Resources>
+		<Storyboard x:Key="stb_save_success">
+			<DoubleAnimationUsingKeyFrames 
+                Storyboard.TargetProperty="(UIElement.Opacity)" 
+                Storyboard.TargetName="tb_save">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.667" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tb_save">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-10"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+
+        
+
+
+    </UserControl.Resources>
+    <Grid>
+        <DataGrid   Name="subs"
+                    RowBackground="#454545"
+                    AlternatingRowBackground="#545454"
+                    AutoGenerateColumns="False"
+                    Foreground="{Binding Source={x:Static p:Settings.Default}, Path=text}" 
+                    FontSize="15"
+                    BorderBrush="{x:Null}"
+                    Focusable="True"
+                    HeadersVisibility="Column"
+                    RowHeight="27"
+                    IsReadOnly="False"
+                    InitializingNewItem="subs_InitializingNewItem" 
+                    SelectedIndex="{Binding SelectedIndex}"
+                    ItemsSource="{Binding AssList}"
+                    SelectionChanged="subs_SelectionChanged" Cursor="Hand"
+                    BeginningEdit="subs_BeginningEdit"
+                    CellEditEnding="subs_CellEditEnding"
+                    ToolTip="{x:Static p:Resources.tip_sub_timeline_ck}"
+                    HorizontalScrollBarVisibility="Hidden"
+                    VerticalScrollBarVisibility="Visible">
+
+            <!-- manaul add column
+            refer:http://stackoverflow.com/questions/15644105/change-the-background-color-of-entire-column-of-wpf-datagrid-at-runtime
+            -->
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="ticketNoColumn" 
+                                    Header="#" 
+                                    IsReadOnly="True" 
+                                    Width="Auto"
+                                    Binding="{Binding Path=ID}"/>
+                
+                <DataGridTextColumn x:Name="seatRowColumn" 
+                                    Header="{x:Static p:Resources.sub_head_start}" 
+                                    Width="Auto"
+                                    IsReadOnly="True" 
+                                    Binding="{Binding Path=Start}"/>
+                
+                <DataGridTextColumn x:Name="seatNumberColumn" 
+                                    Header="{x:Static p:Resources.sub_head_end}" 
+                                    Width="Auto"
+                                    IsReadOnly="True" 
+                                    Binding="{Binding Path=End}"/>
+                
+                <DataGridTextColumn x:Name="seatNumberCon" 
+                                    Header="{x:Static p:Resources.sub_head_text}" 
+                                    Width="*"
+                                    Binding="{Binding Path=Text}"/>
+            </DataGrid.Columns>
+            
+            <DataGrid.Resources>
+                <!-- set style for head 
+                refer:http://stackoverflow.com/questions/4486977/how-to-change-column-headers-background-color-when-using-wpf-datagrid
+            -->
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#666666" />
+                </Style>
+                
+                <Style TargetType="DataGridCell">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                    
+                </Style>
+
+                
+
+                
+
+            </DataGrid.Resources>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        
+                        <!-- multidatatigger and self binding !!!!!
+                        refer:http://stackoverflow.com/questions/5868965/usage-datatrigger-in-wpf
+                        -->
+                        <!-- overlap -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="1"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="SkyBlue"/>
+                        </MultiDataTrigger>
+
+                        <!-- too long or too short -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="2"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="Gold"/>
+                        </MultiDataTrigger>
+
+                        <!-- start > end, it's must be error -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Error}" Value="3"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=Column.DisplayIndex}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="Red"/>
+                        </MultiDataTrigger>
+
+
+
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
+        </DataGrid>
+        <TextBlock x:Name="tb_save" 
+                   Text="{x:Static p:Resources.sub_save_success}"
+                   Foreground="Cyan"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom" Opacity="0" RenderTransformOrigin="0.5,0.5">
+        	<TextBlock.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</TextBlock.RenderTransform>
+        </TextBlock>
+    </Grid>
+</UserControl>

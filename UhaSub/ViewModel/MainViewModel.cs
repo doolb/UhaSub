@@ -1,6 +1,7 @@
 ﻿using MahApps.Metro;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,37 +13,62 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using UhaSub.Model;
+using UhaSub.View;
+using WpfVlc;
 using Setting = UhaSub.Properties.Settings;
 
 namespace UhaSub.ViewModel
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : BaseViewModel
     {
-        public string Title { get; set; }
-        public int SelectedIndex { get; set; }
-        public List<AccentColorMenuData> AccentColors { get; set; }
-        public List<AppThemeMenuData> AppThemes { get; set; }
-        public List<CultureInfo> CultureInfos { get; set; }
 
+        public VlcControl VideoVM { get; set; }
 
+        public SubViewModel SubVM { get; set; }
+
+        public SettingViewModel SettingVM { get; set; }
+
+        public NewWindowViewModel NewWindowVM { get; set; }
+
+        public WaveForm.WaveForm WaveVM { get; set; }
+
+        public Spec SpecVM { get; set; }
+
+        #region only one intance
+        private static MainViewModel instance;
+        public static MainViewModel Instance
+        {
+            get
+            {
+                return instance ?? (instance = new MainViewModel());
+            }
+        }
+        #endregion
         public MainViewModel()
         {
-            
-            // create accent color menu items for the demo
-            this.AccentColors = ThemeManager.Accents
-                                            .Select(a => new AccentColorMenuData() { Name = a.Name, ColorBrush = a.Resources["AccentColorBrush"] as Brush })
-                                            .ToList();
-
-            // create metro theme color menu items for the demo
-            this.AppThemes = ThemeManager.AppThemes
-                                           .Select(a => new AppThemeMenuData() { Name = a.Name, BorderColorBrush = a.Resources["BlackColorBrush"] as Brush, ColorBrush = a.Resources["WhiteColorBrush"] as Brush })
-                                           .ToList();
-
-            CultureInfos = CultureInfo.GetCultures(CultureTypes.InstalledWin32Cultures).ToList();
-
-
             // set title
             this.Title = "UhaSub";
+
+            VideoVM = new VlcControl();
+            VideoVM.EndInit();
+
+            SubVM = new SubViewModel();
+
+            SettingVM = new SettingViewModel(0,-1);
+            NewWindowVM = new NewWindowViewModel();
+
+            WaveVM = new WaveForm.WaveForm();
+
+
+            SpecVM = new Spec();
+
+            VideoVM.TimeCallback += SpecVM.Update;
+            VideoVM.TotalTimeChanged += SpecVM.ReSet;
+        }
+
+        public void Clear()
+        {
+            WaveVM.Close();
         }
 
         #region Commands
@@ -64,6 +90,21 @@ namespace UhaSub.ViewModel
                                 case "Exit":
                                     Application.Current.Shutdown();
                                     return;
+                                case "New":
+                                    FileNew();
+                                    return;
+
+                                case "Open":
+                                    FileOpen();
+                                    return;
+
+                                case "Save":
+                                    FileSave();
+                                    return;
+
+                                case "SaveAs":
+                                    FileSaveAs();
+                                    return;
                                 
 
                                 default:
@@ -74,67 +115,116 @@ namespace UhaSub.ViewModel
                     );
             }
         }
-
-        #endregion
-
-        #endregion
-
-
-        #region interface INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises the PropertyChanged event if needed.
-        /// </summary>
-        /// <param name="propertyName">The name of the property that changed.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
+        
+        public void FileNew()
         {
-            if (PropertyChanged != null)
+            try
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                var win = new NewWindow();
+                win.DataContext = NewWindowVM;
+                win.ShowDialog();
+
+                
+                if (!NewWindowVM.IsCancel)
+                {
+                    // set video file name
+                    this.VideoVM.Source = NewWindowVM.VideoFileName;
+
+                    // set spec
+                    SpecVM.Open(NewWindowVM.VideoFileName);
+
+                    // load sub
+                    if (NewWindowVM.SubFileName != null) ;
+                    SubVM.Open(NewWindowVM.SubFileName,NewWindowVM.HasTimeLine,NewWindowVM.IsUnicodeCode,NewWindowVM.CodePage);
+
+                    // set title
+                    Title = UhaSub.Properties.Resources.Title + "  -  " +
+                        NewWindowVM.FinalSubFileName;
+                    RaisePropertyChanged("Title");
+
+                }
+            }
+            catch (Exception)
+            { }
+        }
+
+        public void FileOpen()
+        {
+            try
+            {
+                var fileDialog = new OpenFileDialog();
+                fileDialog.Filter = "ASS files (*.ass)|*.ass";
+
+                if (fileDialog.ShowDialog() == true)
+                {
+                    SubVM.Open(fileDialog.FileName);
+                }
+            }
+            catch
+            {
+
             }
         }
 
+        public void FileSave()
+        {
+
+        }
+
+        public void FileSaveAs()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "ASS files (*.ass)|*.ass";
+            if(sfd.ShowDialog() == true)
+            {
+                Ass.Save(SubVM.AssList, SubVM.AssHead, sfd.FileName);
+            }
+
+        }
+        #endregion
+
+        #region menu--setting command
+        private ICommand settingCommand;
+
+        public ICommand SettingCommand
+        {
+            get
+            {
+                return settingCommand ?? (
+                    this.settingCommand = new EasyCommand
+                    {
+                        ExecuteDelegate = x =>
+                            {
+                                switch (x as string)
+                                {
+                                    case "UI": SettingExe(0,-1);return;
+                                    case "Key": SettingExe(1, -1); return;
+                                    case "Sub": SettingExe(2, -1); return;
+                                    case "About": SettingExe(-1,0); return;
+
+                                    default: SettingExe(0, -1); return;
+                                }
+                            }
+                    }
+                    );
+            }
+        }
+
+        void SettingExe(int index =0,int option_index=0)
+        {
+            var set = new UhaSub.View.setting.Setting();
+            set.DataContext = SettingVM;
+            SettingVM.SelectedIndex = index;
+            SettingVM.SelectedOptionsIndex = option_index;
+            set.ShowDialog();
+
+            UhaSub.Config.Instance.ReLoad();
+        }
+        #endregion
+
         #endregion
 
 
     }
 
-    public class AccentColorMenuData
-    {
-        public string Name { get; set; }
-        public Brush BorderColorBrush { get; set; }
-        public Brush ColorBrush { get; set; }
-
-        private ICommand changeAccentCommand;
-
-        public ICommand ChangeAccentCommand
-        {
-            get { return this.changeAccentCommand ?? (changeAccentCommand = 
-                new SimpleCommand { 
-                    CanExecuteDelegate = x => true, 
-                    ExecuteDelegate = x => this.DoChangeTheme(x) }); }
-        }
-
-        protected virtual void DoChangeTheme(object sender)
-        {
-            var theme = ThemeManager.DetectAppStyle(Application.Current);
-            var accent = ThemeManager.GetAccent(this.Name);
-            ThemeManager.ChangeAppStyle(Application.Current, accent, theme.Item1);
-
-            // store current accent name, so it can be auto load when applicaion start next time
-            Setting.Default.foreground = this.Name;
-            Setting.Default.Save();
-        }
-    }
-
-    public class AppThemeMenuData : AccentColorMenuData
-    {
-        protected override void DoChangeTheme(object sender)
-        {
-            var theme = ThemeManager.DetectAppStyle(Application.Current);
-            var appTheme = ThemeManager.GetAppTheme(this.Name);
-            ThemeManager.ChangeAppStyle(Application.Current, theme.Item2, appTheme);
-        }
-    }
 }

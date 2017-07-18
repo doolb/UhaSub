@@ -26,6 +26,8 @@ using MahApps.Metro;
 using UhaSub.ViewModel;
 
 using Setting = UhaSub.Properties.Settings;
+using UhaSub.View;
+using WpfVlc;
 
 
 namespace UhaSub
@@ -38,9 +40,11 @@ namespace UhaSub
 
         private readonly MainViewModel _viewModel;
 
+        public VlcControl video;
+
         public MainWindow()
         {
-            _viewModel = new MainViewModel();
+            _viewModel = MainViewModel.Instance;
             DataContext = _viewModel;
 
             /*
@@ -56,27 +60,19 @@ namespace UhaSub
 
             InitializeComponent();
 
-            this.sub.SubSelected += this.control.OnSubChanged;
-
+            this.video = _viewModel.VideoVM;
             this.video.EndReached += this.control.ReachEnd;
-            this.video.TotalTimeChanged += this.spec.Init;
 
-
+            
 
             /*
              * set refer to control
              */
-            this.control.main = this;
             this.control.DataContext = this.video;
+            this.control.menuDock.DataContext = _viewModel;
+            this.control.subView.DataContext = _viewModel.SubVM;
+
             
-            this.control.vlc = video.vlc;
-            this.control.sub = this.sub;
-            this.control.cfg = this.cfg;
-            this.control.spec = this.spec;
-            this.control.video = this.video;
-
-            this.spec.video = this.video;
-
             
             this.Closing += MainWindow_Closing;
 
@@ -98,7 +94,7 @@ namespace UhaSub
 
         void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            audio.Close();
+            _viewModel.Clear();
 
             if (sub.is_changed)
             {
@@ -108,6 +104,9 @@ namespace UhaSub
                     sub.Save();
                 }
             }
+
+            // save setting 
+            Setting.Default.Save();
         }
 
 
@@ -137,9 +136,10 @@ namespace UhaSub
 
 
 
-        Config cfg = new Config();
+        Config cfg = Config.Instance;
 
 
+        #region keyboard function
         bool special_start = false;
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -157,7 +157,7 @@ namespace UhaSub
 
                 if (e.Key == cfg.Before) { video.Time -= cfg.GoBeforeTime;return; }
 
-                if (e.Key == cfg.Pause) { control.Pause(); return; }
+                if (e.Key == cfg.Pause) { video.IsPlay = false ; return; }
 
 
                 /* 
@@ -207,8 +207,9 @@ namespace UhaSub
 
             }
         }
+        #endregion
 
-
+        #region thumb drag function
         /*
          * change size 
          * refer:[Microsoft_Press]_Programming_Windows_6th_Edition (book-270)
@@ -243,6 +244,8 @@ namespace UhaSub
             update_spec();
 
         }
+
+        #endregion
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

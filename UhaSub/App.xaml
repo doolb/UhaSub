@@ -4,6 +4,7 @@
              xmlns:p="clr-namespace:UhaSub.Properties"
              xmlns:ui="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:m="clr-namespace:UhaSub.ui"
+             xmlns:view="clr-namespace:UhaSub.View"
              StartupUri="MainWindow.xaml"
              >
     <Application.Resources>
@@ -32,7 +33,8 @@
             </Style>
 
             <Style TargetType="ui:MetroWindow" x:Key="WindowStyle">
-
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColorBrush}"/>
+                <Setter Property="SaveWindowPosition" Value="True"/>
             </Style>
 
 
@@ -46,11 +48,6 @@
                 <Setter Property="BorderBrush" Value="{x:Null}"/>
             </Style>
 
-            <Style TargetType="Button" x:Key="ButtonStyle" 
-                   BasedOn="{StaticResource BaseStyle}">
-                <Setter Property="FontFamily"   Value="Segoe UI Symbol"/>
-                
-            </Style>
 
 
             <Style TargetType="TextBox">
@@ -127,7 +124,7 @@
             </Style>
 
             
-            
+            <!-- #region Accent_Menu Style -->
             <Ellipse x:Key="AccentMenuIcon"
                      Width="16"
                      Height="16"
@@ -141,7 +138,80 @@
                 <Setter Property="Header" Value="{Binding Name, Mode=OneWay}" />
                 <Setter Property="Icon" Value="{StaticResource AccentMenuIcon}" />
             </Style>
+            <!-- #endregion -->
+            
+            <!-- #region Hamburger_Menu Style -->
+            <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type ui:HamburgerMenuGlyphItem}">
+                <Grid Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe UI Symbol"
+                               Foreground="White"
+                               Text="{Binding Glyph}" />
+                    <TextBlock Grid.Column="1"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Foreground="White"
+                               Text="{Binding Label}" />
+                </Grid>
+            </DataTemplate>
 
+            <DataTemplate x:Key="OptionsMenuItemTemplate" DataType="{x:Type ui:HamburgerMenuGlyphItem}">
+                <Grid Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe UI Symbol"
+                               Foreground="White"
+                               Text="{Binding Glyph}" />
+                    <TextBlock Grid.Column="1"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Foreground="White"
+                               Text="{Binding Label}" />
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="HamburgerContentTemplate" DataType="{x:Type ui:HamburgerMenuItem}">
+                <Grid x:Name="TheContentGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="48" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0"
+                                Background="#FF444444">
+                        <TextBlock x:Name="Header"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="24"
+                                       Foreground="White"
+                                       Text="{Binding Label}" />
+                    </Border>
+                    <ContentControl x:Name="TheContent"
+                                        Grid.Row="1"
+                                        Focusable="False"
+                                        Foreground="{DynamicResource BlackBrush}"
+                                        Content="{Binding Tag}" />
+                </Grid>
+            </DataTemplate>
+
+            <Style TargetType="view:HamburgerMenu">
+                <Setter Property="ItemTemplate" Value="{StaticResource MenuItemTemplate}"/>
+                <Setter Property="OptionsItemTemplate" Value="{StaticResource OptionsMenuItemTemplate}"/>
+                <Setter Property="ContentTemplate" Value="{StaticResource HamburgerContentTemplate}"/>
+            </Style>
+            <!-- #endregion -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

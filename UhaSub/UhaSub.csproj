@@ -84,6 +84,9 @@
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -101,17 +104,24 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="UIAutomationProvider" />
-    <Reference Include="Vlc.DotNet.Core">
+    <Reference Include="Vlc.DotNet.Core, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Core.Interops">
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Core.Interops.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Forms">
+    <Reference Include="Vlc.DotNet.Forms, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Vlc.DotNet.Wpf">
+    <Reference Include="Vlc.DotNet.Wpf, Version=2014.10.15.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="WaveForm">
+      <HintPath>..\vendor\wave\WaveForm.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -123,8 +133,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ass.cs" />
-    <Compile Include="Control.xaml.cs">
+    <Compile Include="Model\ass.cs" />
+    <Compile Include="Model\ffmpeg.cs" />
+    <Compile Include="View\AssTool.xaml.cs">
+      <DependentUpon>AssTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CodePage.cs" />
+    <Compile Include="Model\Command.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\NewWindowViewModel.cs" />
+    <Compile Include="ViewModel\SubViewModel.cs" />
+    <Compile Include="View\Control.xaml.cs">
       <DependentUpon>Control.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\SimpleCommand.cs" />
@@ -148,74 +171,74 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="setting\about.xaml.cs">
+    <Compile Include="View\NewWindow.xaml.cs">
+      <DependentUpon>NewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\setting\about.xaml.cs">
       <DependentUpon>about.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Key.xaml.cs">
+    <Compile Include="View\setting\Key.xaml.cs">
       <DependentUpon>Key.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Setting.xaml.cs">
+    <Compile Include="View\setting\Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\Sub.xaml.cs">
+    <Compile Include="View\setting\Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
-    <Compile Include="setting\UI.xaml.cs">
+    <Compile Include="View\setting\UI.xaml.cs">
       <DependentUpon>UI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Config.cs" />
-    <Compile Include="Spec.xaml.cs">
+    <Compile Include="Model\Config.cs" />
+    <Compile Include="View\Spec.xaml.cs">
       <DependentUpon>Spec.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sub.xaml.cs">
+    <Compile Include="View\Sub.xaml.cs">
       <DependentUpon>Sub.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Time.cs" />
-    <Compile Include="ui\Slider.cs" />
-    <Compile Include="Video.xaml.cs">
-      <DependentUpon>Video.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="View\Slider.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\EmptyViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="wave\BasicSpectrumProvider.cs" />
-    <Compile Include="wave\GradientCalculator.cs" />
-    <Compile Include="wave\ISpectrumProvider.cs" />
-    <Compile Include="wave\LineSpectrum.cs" />
-    <Compile Include="wave\ScalingStrategy.cs" />
-    <Compile Include="wave\SpectrumBase.cs" />
-    <Compile Include="wave\VoicePrint3DSpectrum.cs" />
-    <Page Include="Control.xaml">
+    <Compile Include="ViewModel\SettingViewModel.cs" />
+    <Compile Include="View\HamburgerMenu.cs" />
+    <Page Include="View\AssTool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\about.xaml">
+    <Page Include="View\Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Key.xaml">
+    <Page Include="View\NewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Setting.xaml">
+    <Page Include="View\setting\about.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\Sub.xaml">
+    <Page Include="View\setting\Key.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="setting\UI.xaml">
+    <Page Include="View\setting\Setting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Spec.xaml">
+    <Page Include="View\setting\Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sub.xaml">
+    <Page Include="View\setting\UI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Audio.xaml">
+    <Page Include="View\Spec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Sub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,26 +250,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Audio.xaml.cs">
-      <DependentUpon>Audio.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Video.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -264,6 +275,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Fakes Include="Fakes\Vlc.DotNet.Wpf.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Core.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Core.Interops.fakes" />
+    <Fakes Include="Fakes\Vlc.DotNet.Forms.fakes" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

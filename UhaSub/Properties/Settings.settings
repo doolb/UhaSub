@@ -88,5 +88,8 @@ Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
     <Setting Name="cfg_video_go_after" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
     </Setting>
+    <Setting Name="sub_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UAH-WINGS</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
