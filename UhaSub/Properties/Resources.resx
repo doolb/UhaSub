@@ -214,7 +214,7 @@ Please select a sub file.</value>
   <data name="about" xml:space="preserve">
     <value>This sub is developed as a alternative for popsub.
 It's an open-source software.
-For more information, please see http://github.com/doolb/UhaSub
+For more information, please see https://github.com/doolb/UhaSub
 </value>
   </data>
   <data name="AboutSetting" xml:space="preserve">

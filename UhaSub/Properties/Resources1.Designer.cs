@@ -63,7 +63,7 @@ namespace UhaSub.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This sub is developed as a alternative for popsub.
         ///It&apos;s an open-source software.
-        ///For more information, please see http://github.com/doolb/UhaSub
+        ///For more information, please see https://github.com/doolb/UhaSub
         ///.
         /// </summary>
         public static string about {
