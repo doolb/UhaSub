@@ -2,7 +2,7 @@ UhaSub
 ======
 This sub is developed as a alternative for popsub.
 
-Download the [last release](https://github.com/doolb/uhasub/blob/pri/uhasub.zip)
+Download the [last release](https://github.com/doolb/uhasub/raw/master/pri/uhasub.zip)
 
 * You can use it like popsub,and it will also provide a audio **Visualization**.
 ![main view](./pri/main.PNG)
