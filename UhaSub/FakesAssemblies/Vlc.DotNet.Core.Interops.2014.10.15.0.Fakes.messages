@@ -1,0 +1,300 @@
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.IntPtrExtensions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.StringExtensions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcMediaInstanceExtensions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.LibVlcFunctionAttribute: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.InteropsHelpers: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioFilterList: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.EventCallback: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ClearLastErrorMessage: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetLastErrorMessage: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AttachEvent: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.DetachEvent: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetEventTypeName: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Free: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetChangeset: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetCompiler: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVersion: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseModuleDescription: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ModuleDescriptionStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CreateNewInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoFilterList: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.EventTypes: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VlcEventArg: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaMetaChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaSubItemAdded: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaDurationChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaParsedChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaFreed: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaStateChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaSubItemTreeAdded: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerBuffering: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerPositionChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerTimeChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerTitleChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerSeekableChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerPausableChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerScrambledChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerVideoOutChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaListItemAdded: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaListWillAddItem: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaListItemDeleted: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaListWillDeleteItem: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaListPlayerNextItemSet: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerSnapshotTaken: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerLengthChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VlmMediaEvent: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaPlayerMediaChanged: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AddOptionToMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AddOptionFlagToMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CloneMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaEventManager: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaDuration: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaMetadata: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaMrl: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaState: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaStats: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaTracksInformations: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.IsParsedMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CreateNewMediaFromLocation: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CreateNewMediaFromPath: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ParseMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ParseMediaAsync: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SaveMediaMetadatas: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMediaMetadata: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaStatsStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaTrackInfosStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AudioStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VideoStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaMetadatas: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaStates: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.MediaTrackTypes: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioChannel: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioDelay: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.IsMute: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioTrack: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioTracksCount: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioTracksDescriptions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVolume: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AudioOutputChannels: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceCount: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceName: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceLongName: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetAudioOutputDevice: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AudioOutputDeviceTypes: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputsDescriptions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseAudioOutputDescription: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetAudioOutput: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.AudioOutputDescriptionStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetAudioChannel: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetAudioDelay: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMute: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetAudioTrack: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVolume: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ToggleMute: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerEventManager: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaChapter: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaChapterCount: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetFramesPerSecond: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerVideoHostHandle: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetLength: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaFromMediaPlayer: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaPosition: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetRate: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerState: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.IsPausable: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetTime: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.IsPlaying: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.IsSeekable: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Navigate: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CreateMediaPlayer: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CreateMediaPlayerFromMedia: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetNextMediaChapter: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.NextFrame: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Pause: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Play: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetPreviousMediaChapter: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseMediaPlayer: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMediaChapter: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMediaPlayerVideoHostHandle: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMediaToMediaPlayer: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetMediaPosition: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetRate: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetTime: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Stop: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.CouldPlay: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.NavigateModes: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.Rectangle: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.ReleaseTrackDescription: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.TrackDescriptionStructure: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VideoAdjustOptions: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoAdjustFloat: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoAdjustInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoAspectRatio: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoCropGeometry: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoLogoInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoMarqueeInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoMarqueeString: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpu: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuCount: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuDelay: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuDescription: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoTeletext: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoTrack: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoTracksCount: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.GetVideoTracksDescriptions: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VideoLogoOptions: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.VideoMarqueeOptions: type is a value type.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoAdjustFloat: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoAdjustInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoAspectRatio: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoCropGeometry: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoDeinterlace: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoLogoInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoLogoString: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoMarqueeInteger: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoMarqueeString: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoSpu: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoSpuDelay: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoTeletext: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.SetVideoTrack: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Signatures.TakeSnapshot: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcEventManagerInstance: type has no family visible contructors.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcManager: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcMediaEventManagerInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcMediaInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcMediaPlayerEventManagerInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.VlcMediaPlayerInstance: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate stub for Vlc.DotNet.Core.Interops.Win32Interops: type is sealed.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.IntPtrExtensions: type is not visible to exported or assembly(Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes).
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.StringExtensions: type is not visible to exported or assembly(Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes).
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.LibVlcFunctionAttribute: type is not visible to exported or assembly(Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes).
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.InteropsHelpers: type is not visible to exported or assembly(Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes).
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioFilterList: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.EventCallback: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ClearLastErrorMessage: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetLastErrorMessage: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.AttachEvent: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.DetachEvent: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetEventTypeName: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.Free: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetChangeset: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetCompiler: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVersion: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseModuleDescription: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CreateNewInstance: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseInstance: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoFilterList: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.EventTypes: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.AddOptionToMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.AddOptionFlagToMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CloneMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaEventManager: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaDuration: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaMetadata: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaMrl: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaState: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaStats: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaTracksInformations: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.IsParsedMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CreateNewMediaFromLocation: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CreateNewMediaFromPath: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ParseMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ParseMediaAsync: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SaveMediaMetadatas: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMediaMetadata: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.MediaMetadatas: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.MediaStates: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.MediaTrackTypes: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioChannel: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioDelay: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.IsMute: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioTrack: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioTracksCount: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioTracksDescriptions: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVolume: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.AudioOutputChannels: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceCount: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceName: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputDeviceLongName: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetAudioOutputDevice: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.AudioOutputDeviceTypes: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetAudioOutputsDescriptions: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseAudioOutputDescription: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetAudioOutput: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetAudioChannel: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetAudioDelay: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMute: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetAudioTrack: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVolume: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ToggleMute: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerEventManager: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaChapter: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaChapterCount: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetFramesPerSecond: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerVideoHostHandle: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetLength: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaFromMediaPlayer: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaPosition: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetRate: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetMediaPlayerState: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.IsPausable: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetTime: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.IsPlaying: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.IsSeekable: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.Navigate: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CreateMediaPlayer: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CreateMediaPlayerFromMedia: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetNextMediaChapter: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.NextFrame: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.Pause: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.Play: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetPreviousMediaChapter: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseMediaPlayer: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMediaChapter: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMediaPlayerVideoHostHandle: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMediaToMediaPlayer: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetMediaPosition: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetRate: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetTime: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.Stop: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.CouldPlay: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.NavigateModes: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.ReleaseTrackDescription: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.VideoAdjustOptions: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoAdjustFloat: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoAdjustInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoAspectRatio: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoCropGeometry: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoLogoInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoMarqueeInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoMarqueeString: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpu: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuCount: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuDelay: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoSpuDescription: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoTeletext: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoTrack: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoTracksCount: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.GetVideoTracksDescriptions: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.VideoLogoOptions: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.VideoMarqueeOptions: type is an enum.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoAdjustFloat: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoAdjustInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoAspectRatio: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoCropGeometry: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoDeinterlace: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoLogoInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoLogoString: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoMarqueeInteger: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoMarqueeString: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoSpu: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoSpuDelay: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoTeletext: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.SetVideoTrack: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Signatures.TakeSnapshot: type is a delegate.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.VlcMediaInstance+<>c__DisplayClass1: type is not supported because of internal limitations.
+A:\uhasub\UhaSub\Fakes\Vlc.DotNet.Core.Interops.fakes : warning : Cannot generate shim for Vlc.DotNet.Core.Interops.Win32Interops: type is not visible to exported or assembly(Vlc.DotNet.Core.Interops.2014.10.15.0.Fakes).

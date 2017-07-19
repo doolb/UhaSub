@@ -9,7 +9,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>a906d6bf-4df4-4d0d-8e35-8876955baf99</ProjectGuid>
+    <ProjectGuid>8b279469-e550-4bd2-a651-352c67e6b3cb</ProjectGuid>
     <!-- update GUID here -->
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,7 +55,7 @@
       <Aliases>mqttf</Aliases>
     </Reference>
     <Reference Include="Vlc.DotNet.Wpf">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\vlc\Vlc.DotNet.Wpf.dll</HintPath>
       <Aliases>vdnw</Aliases>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
@@ -90,25 +90,25 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Vlc.DotNet.Core">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\vlc\Vlc.DotNet.Core.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\vlc\Vlc.DotNet.Core.dll</HintPath>
       <Aliases>vdnc</Aliases>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Vlc.DotNet.Forms">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\vlc\Vlc.DotNet.Forms.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\vlc\Vlc.DotNet.Forms.dll</HintPath>
       <Aliases>vdnf</Aliases>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ColorPicker">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\color_picker\ColorPicker.exe</HintPath>
+      <HintPath>A:\uhasub\vendor\color_picker\ColorPicker.exe</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="CSCore">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\wave\CSCore.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\wave\CSCore.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MahApps.Metro">
-      <HintPath>D:\project\Windows\NET\uhasub\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
+      <HintPath>A:\uhasub\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -136,7 +136,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System.Windows.Interactivity">
-      <HintPath>D:\project\Windows\NET\uhasub\packages\MahApps.Metro.1.4.3\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>A:\uhasub\packages\MahApps.Metro.1.4.3\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System.Xml">
@@ -152,11 +152,11 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Vlc.DotNet.Core.Interops">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\vlc\Vlc.DotNet.Core.Interops.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\vlc\Vlc.DotNet.Core.Interops.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="WaveForm">
-      <HintPath>D:\project\Windows\NET\uhasub\vendor\wave\WaveForm.dll</HintPath>
+      <HintPath>A:\uhasub\vendor\wave\WaveForm.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations">
