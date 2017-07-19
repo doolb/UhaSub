@@ -8,6 +8,7 @@ Download the [last release](./pri/uhasub.zip)
 ![main view](./pri/main.PNG)
 
 * **Disable** internel sub or show **Current wroking** sub
+
 ![select showing sub](./pri/sub.PNG)
 
 * Timeline check 
@@ -16,6 +17,7 @@ Download the [last release](./pri/uhasub.zip)
     * overlap with before:**blue**
     
 * You can also change **Play Speed** by right click the play button
+
 ![change play speed](./pri/speed.PNG)
 
 * In Setting, you can select **Language**,**theme** and custom you **Keyboard Shortcut**
