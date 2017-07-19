@@ -15,5 +15,6 @@ namespace UhaSub.ViewModel
             this.SelectedOptionsIndex = option_index;
         }
 
+
     }
 }

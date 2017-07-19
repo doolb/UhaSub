@@ -5,7 +5,7 @@
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:UhaSub.View.setting"
         xmlns:view="clr-namespace:UhaSub.View"
-        Title="{Binding Title}" Height="320" Width="650"
+        Title="Setting" Height="320" Width="650"
         WindowStyle="ToolWindow"
         Style="{StaticResource WindowStyle}"
         FontSize="20">

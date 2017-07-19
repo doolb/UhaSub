@@ -219,7 +219,7 @@ Please select a sub file.</comment>
   <data name="about" xml:space="preserve">
     <value>這個軟件是作為PopSub的替代而開發的。
 這是個開源軟件，如果要獲取更多信息，請訪問
-http://github.com/doolb/UhaSub</value>
+https://github.com/doolb/UhaSub</value>
     <comment>This sub is developed as a alternative for popsub.
 It's an open-source software.
 For more information, please see http://github.com/doolb/UhaSub</comment>
